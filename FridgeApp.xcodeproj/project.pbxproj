@@ -8,12 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		C45F3CBB1B9AC4E40010FEF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F3CBA1B9AC4E40010FEF0 /* AppDelegate.swift */; };
-		C45F3CBD1B9AC4E40010FEF0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F3CBC1B9AC4E40010FEF0 /* FirstViewController.swift */; };
+		C45F3CBD1B9AC4E40010FEF0 /* FridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F3CBC1B9AC4E40010FEF0 /* FridgeViewController.swift */; };
 		C45F3CBF1B9AC4E40010FEF0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F3CBE1B9AC4E40010FEF0 /* SecondViewController.swift */; };
 		C45F3CC21B9AC4E40010FEF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C45F3CC01B9AC4E40010FEF0 /* Main.storyboard */; };
 		C45F3CC41B9AC4E40010FEF0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C45F3CC31B9AC4E40010FEF0 /* Images.xcassets */; };
 		C45F3CC71B9AC4E40010FEF0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C45F3CC51B9AC4E40010FEF0 /* LaunchScreen.xib */; };
 		C45F3CD31B9AC4E40010FEF0 /* FridgeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F3CD21B9AC4E40010FEF0 /* FridgeAppTests.swift */; };
+		C45F3CDD1B9AC75E0010FEF0 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F3CDC1B9AC75E0010FEF0 /* ThirdViewController.swift */; };
+		C45F3CDF1B9ACA900010FEF0 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F3CDE1B9ACA900010FEF0 /* FourthViewController.swift */; };
+		C46E16F01BAE844E00279B69 /* ChooseAFridgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E16EF1BAE844E00279B69 /* ChooseAFridgeVC.swift */; };
+		C46F4E621BCF80B00020F682 /* NewIngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F4E611BCF80B00020F682 /* NewIngredientViewController.swift */; };
+		C48272111BB122BE00BACE1D /* FridgeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48272101BB122BE00BACE1D /* FridgeInfo.swift */; };
+		C48272131BB129AC00BACE1D /* ConfirmFridgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48272121BB129AC00BACE1D /* ConfirmFridgeVC.swift */; };
+		C485EA091BEDD65800AB9FDA /* FridgePageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485EA081BEDD65800AB9FDA /* FridgePageContentViewController.swift */; };
+		C4937B911C019C07008505B9 /* FridgeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4937B901C019C07008505B9 /* FridgeTabBarController.swift */; };
+		C4F1739F1BB69319002D9DA1 /* FoodsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F1739E1BB69319002D9DA1 /* FoodsListTableViewCell.swift */; };
+		C4F173A21BB698B5002D9DA1 /* FoodsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F173A01BB698B5002D9DA1 /* FoodsListTableViewController.swift */; };
+		C4F173A51BB97C75002D9DA1 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F173A41BB97C75002D9DA1 /* Ingredient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +41,7 @@
 		C45F3CB51B9AC4E40010FEF0 /* FridgeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FridgeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C45F3CB91B9AC4E40010FEF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C45F3CBA1B9AC4E40010FEF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C45F3CBC1B9AC4E40010FEF0 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		C45F3CBC1B9AC4E40010FEF0 /* FridgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeViewController.swift; sourceTree = "<group>"; };
 		C45F3CBE1B9AC4E40010FEF0 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		C45F3CC11B9AC4E40010FEF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C45F3CC31B9AC4E40010FEF0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -38,6 +49,17 @@
 		C45F3CCC1B9AC4E40010FEF0 /* FridgeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FridgeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C45F3CD11B9AC4E40010FEF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C45F3CD21B9AC4E40010FEF0 /* FridgeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeAppTests.swift; sourceTree = "<group>"; };
+		C45F3CDC1B9AC75E0010FEF0 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		C45F3CDE1B9ACA900010FEF0 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		C46E16EF1BAE844E00279B69 /* ChooseAFridgeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseAFridgeVC.swift; sourceTree = "<group>"; };
+		C46F4E611BCF80B00020F682 /* NewIngredientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewIngredientViewController.swift; sourceTree = "<group>"; };
+		C48272101BB122BE00BACE1D /* FridgeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeInfo.swift; sourceTree = "<group>"; };
+		C48272121BB129AC00BACE1D /* ConfirmFridgeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmFridgeVC.swift; sourceTree = "<group>"; };
+		C485EA081BEDD65800AB9FDA /* FridgePageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgePageContentViewController.swift; sourceTree = "<group>"; };
+		C4937B901C019C07008505B9 /* FridgeTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeTabBarController.swift; sourceTree = "<group>"; };
+		C4F1739E1BB69319002D9DA1 /* FoodsListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsListTableViewCell.swift; sourceTree = "<group>"; };
+		C4F173A01BB698B5002D9DA1 /* FoodsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsListTableViewController.swift; sourceTree = "<group>"; };
+		C4F173A41BB97C75002D9DA1 /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +102,20 @@
 			isa = PBXGroup;
 			children = (
 				C45F3CBA1B9AC4E40010FEF0 /* AppDelegate.swift */,
-				C45F3CBC1B9AC4E40010FEF0 /* FirstViewController.swift */,
+				C45F3CBC1B9AC4E40010FEF0 /* FridgeViewController.swift */,
+				C485EA081BEDD65800AB9FDA /* FridgePageContentViewController.swift */,
 				C45F3CBE1B9AC4E40010FEF0 /* SecondViewController.swift */,
+				C45F3CDC1B9AC75E0010FEF0 /* ThirdViewController.swift */,
+				C45F3CDE1B9ACA900010FEF0 /* FourthViewController.swift */,
 				C45F3CC01B9AC4E40010FEF0 /* Main.storyboard */,
+				C46F4E611BCF80B00020F682 /* NewIngredientViewController.swift */,
+				C4937B901C019C07008505B9 /* FridgeTabBarController.swift */,
+				C4F173A01BB698B5002D9DA1 /* FoodsListTableViewController.swift */,
+				C4F173A41BB97C75002D9DA1 /* Ingredient.swift */,
+				C4F1739E1BB69319002D9DA1 /* FoodsListTableViewCell.swift */,
+				C48272121BB129AC00BACE1D /* ConfirmFridgeVC.swift */,
+				C46E16EF1BAE844E00279B69 /* ChooseAFridgeVC.swift */,
+				C48272101BB122BE00BACE1D /* FridgeInfo.swift */,
 				C45F3CC31B9AC4E40010FEF0 /* Images.xcassets */,
 				C45F3CC51B9AC4E40010FEF0 /* LaunchScreen.xib */,
 				C45F3CB81B9AC4E40010FEF0 /* Supporting Files */,
@@ -159,11 +192,13 @@
 		C45F3CAD1B9AC4E40010FEF0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Chase Peers";
 				TargetAttributes = {
 					C45F3CB41B9AC4E40010FEF0 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = DQYDDUA4LU;
 					};
 					C45F3CCB1B9AC4E40010FEF0 = {
 						CreatedOnToolsVersion = 6.4;
@@ -215,9 +250,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C48272131BB129AC00BACE1D /* ConfirmFridgeVC.swift in Sources */,
+				C4F173A21BB698B5002D9DA1 /* FoodsListTableViewController.swift in Sources */,
+				C4937B911C019C07008505B9 /* FridgeTabBarController.swift in Sources */,
+				C46F4E621BCF80B00020F682 /* NewIngredientViewController.swift in Sources */,
 				C45F3CBF1B9AC4E40010FEF0 /* SecondViewController.swift in Sources */,
+				C4F1739F1BB69319002D9DA1 /* FoodsListTableViewCell.swift in Sources */,
 				C45F3CBB1B9AC4E40010FEF0 /* AppDelegate.swift in Sources */,
-				C45F3CBD1B9AC4E40010FEF0 /* FirstViewController.swift in Sources */,
+				C48272111BB122BE00BACE1D /* FridgeInfo.swift in Sources */,
+				C45F3CDD1B9AC75E0010FEF0 /* ThirdViewController.swift in Sources */,
+				C46E16F01BAE844E00279B69 /* ChooseAFridgeVC.swift in Sources */,
+				C45F3CBD1B9AC4E40010FEF0 /* FridgeViewController.swift in Sources */,
+				C485EA091BEDD65800AB9FDA /* FridgePageContentViewController.swift in Sources */,
+				C45F3CDF1B9ACA900010FEF0 /* FourthViewController.swift in Sources */,
+				C4F173A51BB97C75002D9DA1 /* Ingredient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +326,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -295,7 +342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -334,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -346,8 +393,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: cpeers@gmail.com (4Z536452N7)";
 				INFOPLIST_FILE = FridgeApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "DontHaveANameYet.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -356,8 +406,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: cpeers@gmail.com (4Z536452N7)";
 				INFOPLIST_FILE = FridgeApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "DontHaveANameYet.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -376,6 +429,7 @@
 				);
 				INFOPLIST_FILE = FridgeAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "DontHaveANameYet.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FridgeApp.app/FridgeApp";
 			};
@@ -391,6 +445,7 @@
 				);
 				INFOPLIST_FILE = FridgeAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "DontHaveANameYet.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FridgeApp.app/FridgeApp";
 			};
@@ -415,6 +470,7 @@
 				C45F3CD81B9AC4E40010FEF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C45F3CD91B9AC4E40010FEF0 /* Build configuration list for PBXNativeTarget "FridgeAppTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +479,7 @@
 				C45F3CDB1B9AC4E40010FEF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
