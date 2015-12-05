@@ -13,6 +13,6 @@ class FridgeTabBarController: UITabBarController {
     //These classes are now viewable by all tabs
     var MyFridge = FridgeInfo()
     
-    var Ingredients = [Ingredient]()
+    var Ingredients = [[Ingredient]]()
 
 }
