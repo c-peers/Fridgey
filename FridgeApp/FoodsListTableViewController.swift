@@ -14,6 +14,7 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
     
     var ingredients = [Ingredient]()
     var filteredIngredients = [Ingredient]()
+    var ingredientsByArea: IngredientsByLocation?
     
     // This didn't work to transfer data from another viewcontroller in the tab bar.
     //let fromFVC: FridgeInfo? = FridgeViewController().MyFridge
@@ -28,15 +29,18 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
     func sampleIngredients() {
         
         //let photo1 = UIImage(named: "meal1")!
-        let ingredient1 = Ingredient(name: "Carrot", image: UIImage(named: "blank"), expiry: "2015-10-4", amount: 400.0, location: "Blank")!
+        let ingredient1 = Ingredient(name: "Carrot", image: UIImage(named: "blank"), expiry: "2015-10-4", amount: 400.0, location: "Area 1 Door")!
         
         //let photo2 = UIImage(named: "meal2")!
-        let ingredient2 = Ingredient(name: "Eggs", image: UIImage(named: "blank"), expiry: "2015-10-2", amount: 6.0, location: "Blank")!
+        let ingredient2 = Ingredient(name: "Eggs", image: UIImage(named: "blank"), expiry: "2015-10-2", amount: 6.0, location: "Area 2 Door")!
         
         //let photo3 = UIImage(named: "meal3")!
-        let ingredient3 = Ingredient(name: "Potato", image: UIImage(named: "blank"), expiry: "2015-10-8", amount: 850.0, location: "Blank")!
-        
-        ingredients += [ingredient1, ingredient2, ingredient3]
+        let ingredient3 = Ingredient(name: "Potato", image: UIImage(named: "blank"), expiry: "2015-10-8", amount: 850.0, location: "Area 4 Door")!
+
+        //let photo3 = UIImage(named: "meal3")!
+        let ingredient4 = Ingredient(name: "Ice Cream", image: UIImage(named: "blank"), expiry: "2016-4-29", amount: 10.0, location: "Area 3 Door")!
+
+        ingredients += [ingredient1, ingredient2, ingredient3, ingredient4]
         
     }
     
@@ -67,11 +71,19 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
             sampleIngredients()
 
         }
+        
+        // Populate the list of ingredients per "Area"
+        //self.ingredientsByArea.IBLArray
+        ingredientsByArea = IngredientsByLocation.init(Location: test, Ingredients: ingredients)!
+        
         //self.tableView.registerClass(FoodsListTableViewCell.classForCoder(), forCellReuseIdentifier: "FoodsListTableViewCell")
         
         self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), atScrollPosition: UITableViewScrollPosition.Top, animated: false)
                 
         self.tableView.contentOffset = CGPointMake(0,  (self.searchDisplayController?.searchBar.frame.size.height)! - self.tableView.contentOffset.y)
+        
+        print(self.ingredientsByArea?.IBLArray[0][0])
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -101,7 +113,6 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
 //            return sections.count
         
         if test.count > 1 {
-            print("test")
             return test.count
         } else {
             return 1
@@ -114,7 +125,6 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
 //            let sections = fromFVC!.doorNames
 //            return sections[section]
         if  test.count > 1 {
-            print("test")
             return test[section]
         } else {
             return nil
@@ -124,9 +134,19 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if tableView == self.searchDisplayController!.searchResultsTableView {
+
             return self.filteredIngredients.count
+
         } else {
-            return self.ingredients.count
+            
+            //return self.ingredients.count
+
+            if self.ingredientsByArea!.IBLArray[section] != ["Empty"] {
+                return self.ingredientsByArea!.IBLArray[section].count
+            } else {
+                return 0
+            }
+            
         }
         
         // return ingredients.count
@@ -143,13 +163,29 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
             //let ingredient = ingredients[indexPath.row]
         
         let ingredient : Ingredient
+        var ingredientList = [Ingredient]()
         
             if tableView == self.searchDisplayController!.searchResultsTableView {
                 ingredient = filteredIngredients[indexPath.row]
             } else {
-                ingredient = ingredients[indexPath.row]
-            }
+                for ingredientcounter in 0 ... ingredients.count - 1 {
+                    if ingredients[ingredientcounter].location == test[indexPath.section] {
+                        ingredientList.append(ingredients[ingredientcounter])
+                        
+                    }
+                    
+                }
+                    
+            ingredient = ingredientList[indexPath.row]
         
+        }
+        
+//            if tableView == self.searchDisplayController!.searchResultsTableView {
+//                ingredient = filteredIngredients[indexPath.row]
+//            } else {
+//                ingredient = ingredients[indexPath.row]
+//            }
+//        
             //if cell.FoodName.text != nil {
             cell.FoodName?.text = ingredient.name
             //} else {
@@ -264,6 +300,11 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
                 // Which cell is the sender?
                 if let selectedIngredientCell = sender as? FoodsListTableViewCell {
                 let indexPath = tableView.indexPathForCell(selectedIngredientCell)!
+                let sectionPath = tableView.indexPathForSelectedRow
+                sectionPath?.section
+                    
+                
+                    
                 let selectedIngredient = ingredients[indexPath.row]
                 ingredientDetailViewController.ingredient = selectedIngredient
                 print("Edit ingredient")
@@ -293,8 +334,13 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
             
             } else {
 
+                let section = test.indexOf(ingredient.location)
+                
                 // Add a new ingredient.
-                let newIndexPath = NSIndexPath(forRow: ingredients.count, inSection: 0)
+                let newRow = self.ingredientsByArea?.IBLArray[section!].count
+                print("newRow")
+                print(newRow)
+                let newIndexPath = NSIndexPath(forRow: (self.ingredientsByArea?.IBLArray[section!].count)!, inSection: section!)
                 ingredients.append(ingredient)
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
 

@@ -1,4 +1,4 @@
-//
+    //
 //  NewIngredientViewController.swift
 //  FridgeApp
 //
@@ -22,10 +22,12 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
     var ingredient: Ingredient?
     
     var locationPickerData: [String] = [String]()
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        var setrow: Int
         
         let FTBC = self.tabBarController as! FridgeTabBarController
         
@@ -76,13 +78,14 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
         print("location")
         print(ingredient?.location)
         
-        var setrow: Int
+        // Set picker to the location set in the ingredient location value... If it exists.
+        if ((ingredient?.location) != nil) {
+            setrow = locationPickerData.indexOf((ingredient!.location))!
+            print("setrow")
+            print(setrow)
+            locationPicker.selectRow(setrow, inComponent: 0, animated: true)
+        }
         
-        setrow = locationPickerData.indexOf((ingredient?.location)!)!
-        print("setrow")
-        print(setrow)
-        
-        locationPicker.selectRow(setrow, inComponent: 0, animated: true)
 
         
     }
