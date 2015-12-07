@@ -15,7 +15,7 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
     var ingredients = [[Ingredient]]()
     var filteredIngredients = [[Ingredient]]()
     var ingredientsByArea: IngredientsByLocation?
-    var myFridge: [MyFridge]()
+    var myFridge = FridgeInfo()
     
     // This didn't work to transfer data from another viewcontroller in the tab bar.
     //let fromFVC: FridgeInfo? = FridgeViewController().MyFridge
@@ -44,8 +44,6 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
         // ingredients += [ingredient1, ingredient2, ingredient3, ingredient4]
         
     }
-    
-    // let sections = fridgeData.doorNames
     
     
     override func viewDidLoad() {
@@ -187,7 +185,7 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
 //                for ingredientcounter in 0 ... ingredients.count - 1 {
 //                    if ingredients[ingredientcounter].location == test[indexPath.section] {
 //                        ingredientList.append(ingredients[ingredientcounter])
-//                        
+//
 //                    }
 //
 //                }
@@ -239,7 +237,7 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
         
         if editingStyle == .Delete {
             // Delete the row from the data source
-            ingredients.removeAtIndex(indexPath.row)
+            ingredients[indexPath.section].removeAtIndex(indexPath.row)
             
             // Save after removing row
             saveIngredients()
@@ -384,6 +382,9 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
     func saveIngredients() {
         
         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(ingredients, toFile: Ingredient.ArchiveURL.path!)
+        
+        var FTBC = self.tabBarController as! FridgeTabBarController
+        FTBC.MyFridge = myFridge
         
         if !isSuccessfulSave {
             print("Couldn't save")
