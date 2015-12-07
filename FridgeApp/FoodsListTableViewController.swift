@@ -15,17 +15,14 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
     var ingredients = [[Ingredient]]()
     var filteredIngredients = [[Ingredient]]()
     var ingredientsByArea: IngredientsByLocation?
+    var myFridge: [MyFridge]()
     
     // This didn't work to transfer data from another viewcontroller in the tab bar.
     //let fromFVC: FridgeInfo? = FridgeViewController().MyFridge
     
     let test = ["Area 1 Door", "Area 2 Door", "Area 3 Door", "Area 4 Door"]
     
-    // let sections = fromFVC
-    // var forSections
-    // var sections = forSections
-    
-    
+    // Temporary Sample
     func sampleIngredients() {
         
         //let photo1 = UIImage(named: "meal1")!
@@ -61,9 +58,11 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         // Load any saved Ingredients, otherwise load sample data.
 
+        // Load global variables
         let FTBC = self.tabBarController as! FridgeTabBarController
         
         ingredients = FTBC.Ingredients
+        myFridge = FTBC.MyFridge
         
         if let savedIngredients = loadIngredients() {
 
@@ -111,11 +110,12 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
-//        if (fromFVC != nil) {
-//            let sections = fromFVC!.doorNames
-//            print(sections)
-//            return sections.count
-        
+//        if myFridge.location.count > 1 {
+//           return myFridge.location.count
+//        } else {
+//            return 1
+//        }
+
         if test.count > 1 {
             return test.count
         } else {
@@ -125,9 +125,12 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 
-//        if (fromFVC != nil) {
-//            let sections = fromFVC!.doorNames
-//            return sections[section]
+//        if  myFridge.location.count > 1 {
+//            return myFridge.location[section]
+//        } else {
+//            return nil
+//        }
+
         if  test.count > 1 {
             return test[section]
         } else {
