@@ -15,7 +15,7 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
     var ingredients = [[Ingredient]]()
     var filteredIngredients = [[Ingredient]]()
     var ingredientsByArea: IngredientsByLocation?
-    var myFridge = FridgeInfo()b 
+    var myFridge = FridgeInfo()
     
     // This didn't work to transfer data from another viewcontroller in the tab bar.
     //let fromFVC: FridgeInfo? = FridgeViewController().MyFridge

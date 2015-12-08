@@ -44,6 +44,8 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
         
         // Handle the text field’s user input through delegate callbacks.
         nameTextField.delegate = self
+        expirationTextField.delegate = self
+        amountTextField.delegate = self
         
         // Set up views if editing an existing Meal.
         if let ingredient = ingredient {
@@ -131,16 +133,24 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
         ingredient?.location = locationPickerData[row]
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
+    }
+
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         // Hide the keyboard.
         textField.resignFirstResponder()
-        return true
+        self.view.endEditing(true)
+        return false
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
         checkValidIngredientName()
-        navigationItem.title = textField.text
+        if textField == nameTextField {
+            navigationItem.title = textField.text
+        }
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
