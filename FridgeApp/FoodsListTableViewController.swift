@@ -15,7 +15,7 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
     var ingredients = [[Ingredient]]()
     var filteredIngredients = [[Ingredient]]()
     var ingredientsByArea: IngredientsByLocation?
-    var myFridge = FridgeInfo()
+    var myFridge = FridgeInfo()b 
     
     // This didn't work to transfer data from another viewcontroller in the tab bar.
     //let fromFVC: FridgeInfo? = FridgeViewController().MyFridge
@@ -44,7 +44,6 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
         // ingredients += [ingredient1, ingredient2, ingredient3, ingredient4]
         
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,32 +107,32 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
-//        if myFridge.location.count > 1 {
-//           return myFridge.location.count
-//        } else {
-//            return 1
-//        }
-
-        if test.count > 1 {
-            return test.count
+        if myFridge.doorNames.count > 1 {
+           return myFridge.doorNames.count
         } else {
             return 1
         }
+
+//        if test.count > 1 {
+//            return test.count
+//        } else {
+//            return 1
+//        }
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 
-//        if  myFridge.location.count > 1 {
-//            return myFridge.location[section]
-//        } else {
-//            return nil
-//        }
-
-        if  test.count > 1 {
-            return test[section]
+        if  myFridge.doorNames.count > 1 {
+            return myFridge.doorNames[section]
         } else {
             return nil
         }
+
+//        if  test.count > 1 {
+//            return test[section]
+//        } else {
+//            return nil
+//        }
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -298,7 +297,6 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
         return true
     }
     
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -331,8 +329,6 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
                                 
                 }
             }
-            
-            
         
         }
         else if segue.identifier == "AddIngredient" {
@@ -348,14 +344,32 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
         
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 
+                //let ingredientholder: Ingredient
+                
                 // Refresh an ingredients data
                 ingredients[selectedIndexPath.section][selectedIndexPath.row] = ingredient
+                if ingredient.location != myFridge.doorNames[selectedIndexPath.section] {
+                    
+                    ingredients[selectedIndexPath.section].removeAtIndex(selectedIndexPath.row)
+                    tableView.deleteRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
+                    
+                    let newSection = myFridge.doorNames.indexOf(ingredient.location)
+                    let newRow = self.ingredients[newSection!].count
+                    
+                    let newIndexPath = NSIndexPath(forRow: self.ingredients[newSection!].count, inSection: newSection!)
+                    ingredients[newSection!].append(ingredient)
+                    tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+                    
+                } else {
                     tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
-            
+                    tableView.reloadData()
+                }
+                
             } else {
 
                 // Add a new ingredient.
-                let section = test.indexOf(ingredient.location)
+                //let section = test.indexOf(ingredient.location)
+                let section = myFridge.doorNames.indexOf(ingredient.location)
                 print("section")
                 print(section)
                 
@@ -363,7 +377,7 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
                 print("newRow")
                 print(newRow)
 
-                let ingredientAsArray = [ingredient]
+                //let ingredientAsArray = [ingredient]
                 
                 let newIndexPath = NSIndexPath(forRow: self.ingredients[section!].count, inSection: section!)
                 ingredients[section!].append(ingredient)
@@ -398,5 +412,4 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
         
     }
 
-    
 }

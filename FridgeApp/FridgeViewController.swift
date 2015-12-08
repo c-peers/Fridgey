@@ -89,7 +89,7 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource {
 //        pageViewController.setViewControllers(viewControllers as! [UIViewController], direction: .Forward, animated: true, completion: nil)
         
         let FTBC = self.tabBarController as! FridgeTabBarController
-        var saveToFTBC = self.tabBarController as! FridgeTabBarController
+        let saveToFTBC = self.tabBarController as! FridgeTabBarController
         
         MyFridge = FTBC.MyFridge
         
