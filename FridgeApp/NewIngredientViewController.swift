@@ -138,7 +138,6 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
         super.touchesBegan(touches, withEvent: event)
     }
 
-    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         // Hide the keyboard.
         textField.resignFirstResponder()
