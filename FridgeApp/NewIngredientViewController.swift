@@ -15,6 +15,7 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
     @IBOutlet weak var expirationTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var locationPicker: UIPickerView!
+    //@IBOutlet weak var expirationPicker: UIDatePicker!
 
     var MyFridge: FridgeInfo?
     var MyFridge2: FridgeInfo?
@@ -67,9 +68,25 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
             //print(row2)
         }
         
+        var datePicker = UIDatePicker()
+        datePicker.tag = 1
+        datePicker.datePickerMode = UIDatePickerMode.Date
+        //datePicker.backgroundColor
+        
+        
+        self.expirationTextField.inputView = datePicker
+        
         // Connect data:
         self.locationPicker.delegate = self
         self.locationPicker.dataSource = self
+        
+        //self.expirationTextField.inputView = expirationPicker
+        //self.expirationPicker.backgroundColor = UIColor.whiteColor()
+        
+        // Hide the pickers
+        //self.expirationPicker.hidden = true
+        
+        
         
         // Input data into the Array:
         locationPickerData = (MyFridge?.doorNames)!
@@ -109,20 +126,57 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: DatePicker
+    // Action for popping up DatePicker
+    @IBAction func expirationDateBeingChosen(sender: UITextField) {
+
+        let datePicker = UIDatePicker()
+        datePicker.tag = 1
+        datePicker.datePickerMode = UIDatePickerMode.Date
+        sender.inputView = datePicker
+        //datePicker.addTarget(self, action: Selector("datePickerValueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+        datePicker.addTarget(self, action: Selector("expirationDatePicked:"), forControlEvents: UIControlEvents.ValueChanged)
+        
+    }
+    
+    // Set time format and put date in text view
+    func expirationDatePicked(sender: UIDatePicker) {
+        
+        let timeFormat = NSDateFormatter()
+        //timeFormat.dateStyle = .ShortStyle
+        timeFormat.dateFormat = "YYYY-MM-dd"
+        print(timeFormat.stringFromDate(sender.date))
+        expirationTextField.text = timeFormat.stringFromDate(sender.date)
+        
+    }
+    
     // MARK: Picker
     // The number of columns of data
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
+        if pickerView.tag == 2 {
+            return 1
+        } else {
+         return 0
+        }
     }
     
     // The number of rows of data
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return locationPickerData.count
+        if pickerView.tag == 2 {
+            return locationPickerData.count
+        } else {
+            return 1
+        }
     }
     
     // The data to return for the row and component (column) that's being passed in
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return locationPickerData[row]
+        if pickerView.tag == 2 {
+            return locationPickerData[row]
+        } else {
+            return "Blank"
+        }
+        
     }
     
     // Catpure the picker view selection
@@ -130,7 +184,23 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
         
-        ingredient?.location = locationPickerData[row]
+        
+//        if pickerView.tag == 1 {
+//            expirationPicker.hidden = true
+//            expirationTextField.text = String(expirationPicker)
+//        } else {
+            ingredient?.location = locationPickerData[row]
+//        }
+            
+    }
+    
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+//        if textField == expirationTextField {
+//            expirationPicker.hidden = false
+//            
+//        }
+        
+        return true
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -149,6 +219,8 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
         checkValidIngredientName()
         if textField == nameTextField {
             navigationItem.title = textField.text
+        } else if textField == expirationTextField {
+            //expirationPicker.hidden = true
         }
     }
     
