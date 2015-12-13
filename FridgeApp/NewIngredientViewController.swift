@@ -180,7 +180,6 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
         sender.inputView = locationPicker
         
         locationTextField.text = locationPickerData[locationPicker.selectedRowInComponent(0)]
-        //locationPicker.addTarget(self, action: Selector("expirationDatePicked:"), forControlEvents: UIControlEvents.ValueChanged)
         
     }
     
