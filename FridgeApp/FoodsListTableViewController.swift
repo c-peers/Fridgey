@@ -178,6 +178,8 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
         // var ingredientList = [Ingredient]()
         
             if tableView == self.searchDisplayController!.searchResultsTableView {
+                print(indexPath.section)
+                print(indexPath.row)
                 ingredient = filteredIngredients[indexPath.section][indexPath.row]
             } else {
                 ingredient = ingredients[indexPath.section][indexPath.row]
@@ -273,12 +275,12 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
         
         // Filter the array using the filter method
         self.filteredIngredients = self.ingredients.filter({( ingredient : [Ingredient]) -> Bool in
+            print("Searching")
             for x in 0...ingredient.count - 1 {
-                
-            // let categoryMatch = (scope == "All") || (ingredient.category == scope)
-            let stringMatch = ingredient[x].name.rangeOfString(searchText)
-            // return categoryMatch && (stringMatch != nil)
-            return (stringMatch != nil)
+                // let categoryMatch = (scope == "All") || (ingredient.category == scope)
+                let stringMatch = ingredient[x].name.rangeOfString(searchText)
+                // return categoryMatch && (stringMatch != nil)
+                return (stringMatch != nil)
             }
             
             return false
@@ -307,7 +309,7 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
             
             // Is search the sender?
             if self.searchDisplayController!.active {
-
+                print("Will show ingredient from search")
                 let indexPath = self.searchDisplayController!.searchResultsTableView.indexPathForSelectedRow!
                 let selectedIngredient = self.filteredIngredients[indexPath.section][indexPath.row]
                 ingredientDetailViewController.ingredient = selectedIngredient
@@ -397,7 +399,7 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
         
         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(ingredients, toFile: Ingredient.ArchiveURL.path!)
         
-        var FTBC = self.tabBarController as! FridgeTabBarController
+        let FTBC = self.tabBarController as! FridgeTabBarController
         FTBC.MyFridge = myFridge
         
         if !isSuccessfulSave {

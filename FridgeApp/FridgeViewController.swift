@@ -198,7 +198,6 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource {
         }
         
         pageViewController.setViewControllers(viewControllers as! [UIViewController], direction: .Forward, animated: true, completion: nil)
-
         
     }
     

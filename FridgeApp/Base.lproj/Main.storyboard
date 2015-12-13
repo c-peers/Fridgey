@@ -241,10 +241,10 @@ does your refridgerator have?</string>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Ingredient Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HCl-1u-Nkq">
-                                <rect key="frame" x="181" y="119" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HCl-1u-Nkq">
+                                <rect key="frame" x="181" y="119" width="120" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="lwd-oz-rGO"/>
+                                    <constraint firstAttribute="width" constant="120" id="lwd-oz-rGO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -256,7 +256,7 @@ does your refridgerator have?</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YYYY-MM-DD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q4p-4F-bTt">
-                                <rect key="frame" x="181" y="189" width="97" height="30"/>
+                                <rect key="frame" x="181" y="189" width="120" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -270,7 +270,7 @@ does your refridgerator have?</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CYj-FD-jUf">
-                                <rect key="frame" x="181" y="267" width="97" height="30"/>
+                                <rect key="frame" x="181" y="267" width="120" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -291,9 +291,14 @@ does your refridgerator have?</string>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLw-jv-76F">
-                                <rect key="frame" x="0.0" y="427" width="600" height="129"/>
-                            </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uuu-0C-MTX">
+                                <rect key="frame" x="181" y="423" width="120" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="locationBeingChosen:" destination="8rJ-Kc-sve" eventType="editingDidBegin" id="MEd-Vh-itg"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -302,13 +307,10 @@ does your refridgerator have?</string>
                             <constraint firstItem="CYj-FD-jUf" firstAttribute="trailing" secondItem="Q4p-4F-bTt" secondAttribute="trailing" id="3ec-yV-rnb"/>
                             <constraint firstItem="HCl-1u-Nkq" firstAttribute="centerY" secondItem="1Az-j4-q2c" secondAttribute="centerY" id="3n9-l9-rh9"/>
                             <constraint firstItem="7Be-6z-pra" firstAttribute="trailing" secondItem="fjM-Q0-JNO" secondAttribute="trailing" id="5RB-Qw-G4N"/>
-                            <constraint firstAttribute="trailing" secondItem="wLw-jv-76F" secondAttribute="trailing" id="63Q-om-tr1"/>
                             <constraint firstItem="4ZI-GL-2Dh" firstAttribute="trailing" secondItem="Lhg-Bd-UP0" secondAttribute="trailing" id="7M3-gT-wDV"/>
-                            <constraint firstItem="7Be-6z-pra" firstAttribute="top" secondItem="wLw-jv-76F" secondAttribute="top" id="8CI-f2-i8g"/>
-                            <constraint firstItem="DAi-e2-sSo" firstAttribute="trailing" secondItem="CYj-FD-jUf" secondAttribute="trailing" id="EQM-Pi-xaU"/>
+                            <constraint firstItem="DAi-e2-sSo" firstAttribute="trailing" secondItem="CYj-FD-jUf" secondAttribute="trailing" constant="-23" id="EQM-Pi-xaU"/>
                             <constraint firstItem="HCl-1u-Nkq" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="55" id="HQq-Bo-5n2"/>
                             <constraint firstItem="Lhg-Bd-UP0" firstAttribute="trailing" secondItem="fjM-Q0-JNO" secondAttribute="trailing" id="KcJ-o3-xX1"/>
-                            <constraint firstItem="wLw-jv-76F" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="Mag-Fa-8fh"/>
                             <constraint firstItem="Lhg-Bd-UP0" firstAttribute="top" secondItem="4ZI-GL-2Dh" secondAttribute="bottom" constant="57" id="ObM-xj-mKc"/>
                             <constraint firstItem="Q4p-4F-bTt" firstAttribute="centerY" secondItem="4ZI-GL-2Dh" secondAttribute="centerY" id="Q1K-3f-Ht8"/>
                             <constraint firstItem="CYj-FD-jUf" firstAttribute="leading" secondItem="DAi-e2-sSo" secondAttribute="leading" id="QHs-Xn-UeP"/>
@@ -318,11 +320,13 @@ does your refridgerator have?</string>
                             <constraint firstItem="4ZI-GL-2Dh" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="27" id="ZaU-6w-GdI"/>
                             <constraint firstItem="4ZI-GL-2Dh" firstAttribute="top" secondItem="1Az-j4-q2c" secondAttribute="bottom" constant="49" id="bLL-we-dJD"/>
                             <constraint firstItem="Q4p-4F-bTt" firstAttribute="top" secondItem="HCl-1u-Nkq" secondAttribute="bottom" constant="40" id="ccg-qT-JLp"/>
-                            <constraint firstItem="wLw-jv-76F" firstAttribute="bottom" secondItem="Djb-ko-YwX" secondAttribute="top" id="ile-gn-Lrc"/>
+                            <constraint firstItem="uuu-0C-MTX" firstAttribute="leading" secondItem="DAi-e2-sSo" secondAttribute="leading" id="hS6-xp-5tI"/>
+                            <constraint firstItem="uuu-0C-MTX" firstAttribute="top" secondItem="DAi-e2-sSo" secondAttribute="bottom" constant="46" id="jxe-Fs-5bY"/>
                             <constraint firstItem="fjM-Q0-JNO" firstAttribute="centerY" secondItem="DAi-e2-sSo" secondAttribute="centerY" id="kby-FO-5Lc"/>
-                            <constraint firstItem="wLw-jv-76F" firstAttribute="top" secondItem="fjM-Q0-JNO" secondAttribute="bottom" constant="55" id="mBP-0E-OQ8"/>
                             <constraint firstItem="Lhg-Bd-UP0" firstAttribute="centerY" secondItem="CYj-FD-jUf" secondAttribute="centerY" id="nD7-l4-WAH"/>
+                            <constraint firstItem="uuu-0C-MTX" firstAttribute="trailing" secondItem="CYj-FD-jUf" secondAttribute="trailing" id="r2A-mS-k6b"/>
                             <constraint firstItem="1Az-j4-q2c" firstAttribute="trailing" secondItem="4ZI-GL-2Dh" secondAttribute="trailing" id="wbA-Kj-hw9"/>
+                            <constraint firstItem="7Be-6z-pra" firstAttribute="centerY" secondItem="uuu-0C-MTX" secondAttribute="centerY" id="z3Q-n8-Cq0"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -338,7 +342,7 @@ does your refridgerator have?</string>
                         <outlet property="AddIngredientButton" destination="vwV-nK-OOx" id="244-Fb-Y4k"/>
                         <outlet property="amountTextField" destination="CYj-FD-jUf" id="MDa-St-XDA"/>
                         <outlet property="expirationTextField" destination="Q4p-4F-bTt" id="0YL-te-5Xq"/>
-                        <outlet property="locationPicker" destination="wLw-jv-76F" id="VTi-rv-qlH"/>
+                        <outlet property="locationTextField" destination="uuu-0C-MTX" id="xQZ-zw-jjW"/>
                         <outlet property="nameTextField" destination="HCl-1u-Nkq" id="wXA-dX-9sL"/>
                     </connections>
                 </viewController>

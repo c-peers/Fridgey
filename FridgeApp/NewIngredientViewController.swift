@@ -14,8 +14,9 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var expirationTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
-    @IBOutlet weak var locationPicker: UIPickerView!
+    //@IBOutlet weak var locationPicker: UIPickerView!
     //@IBOutlet weak var expirationPicker: UIDatePicker!
+    @IBOutlet weak var locationTextField: UITextField!
 
     var MyFridge: FridgeInfo?
     var MyFridge2: FridgeInfo?
@@ -59,26 +60,18 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
             //photoImageView.image = ingredient.image
             amountTextField.text = ingredient.amount.description
             expirationTextField.text = ingredient.expiry
-            //locationPicker.selectedRowInComponent(<#T##component: Int##Int#>) = ingredient.location???
-            
-            //let row2 = locationPickerData.indexOf(ingredient.location)
-            //let row3 = locationPickerData.
-
-            //print("row2")
-            //print(row2)
+            locationTextField.text = ingredient.location
         }
         
-        var datePicker = UIDatePicker()
-        datePicker.tag = 1
-        datePicker.datePickerMode = UIDatePickerMode.Date
+        //let datePicker = UIDatePicker()
+        //datePicker.tag = 1
+        //datePicker.datePickerMode = UIDatePickerMode.Date
         //datePicker.backgroundColor
-        
-        
-        self.expirationTextField.inputView = datePicker
+        //self.expirationTextField.inputView = datePicker
         
         // Connect data:
-        self.locationPicker.delegate = self
-        self.locationPicker.dataSource = self
+        //self.locationPicker.delegate = self
+        //self.locationPicker.dataSource = self
         
         //self.expirationTextField.inputView = expirationPicker
         //self.expirationPicker.backgroundColor = UIColor.whiteColor()
@@ -98,12 +91,12 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
         print(ingredient?.location)
         
         // Set picker to the location set in the ingredient location value... If it exists.
-        if ((ingredient?.location) != nil) {
-            setrow = locationPickerData.indexOf((ingredient!.location))!
-            print("setrow")
-            print(setrow)
-            locationPicker.selectRow(setrow, inComponent: 0, animated: true)
-        }
+//        if ((ingredient?.location) != nil) {
+//            setrow = locationPickerData.indexOf((ingredient!.location))!
+//            print("setrow")
+//            print(setrow)
+//            locationPicker.selectRow(setrow, inComponent: 0, animated: true)
+//        }
         
 
         
@@ -152,6 +145,51 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
     
     // MARK: Picker
     // The number of columns of data
+    @IBAction func locationBeingChosen(sender: UITextField) {
+
+        let locationPicker = UIPickerView()
+        locationPicker.tag = 2
+        
+        // Connect data:
+        locationPicker.delegate = self
+        locationPicker.dataSource = self
+        
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.Default
+        toolBar.translucent = true
+        //toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
+        
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.userInteractionEnabled = true
+        
+        locationTextField.inputAccessoryView = toolBar
+        
+        // Set picker to the location set in the ingredient location value... If it exists.
+        if ((ingredient?.location) != nil) {
+            let setrow = locationPickerData.indexOf((ingredient!.location))!
+            print("setrow")
+            print(setrow)
+            locationPicker.selectRow(setrow, inComponent: 0, animated: true)
+        }
+
+        sender.inputView = locationPicker
+        
+        locationTextField.text = locationPickerData[locationPicker.selectedRowInComponent(0)]
+        //locationPicker.addTarget(self, action: Selector("expirationDatePicked:"), forControlEvents: UIControlEvents.ValueChanged)
+        
+    }
+    
+    func donePicker() {
+        
+        locationTextField.resignFirstResponder()
+        
+    }
+    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         if pickerView.tag == 2 {
             return 1
@@ -184,22 +222,14 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
         
-        
-//        if pickerView.tag == 1 {
-//            expirationPicker.hidden = true
-//            expirationTextField.text = String(expirationPicker)
-//        } else {
             ingredient?.location = locationPickerData[row]
-//        }
+            locationTextField.text = locationPickerData[row]
+            checkValidIngredientName()
             
     }
     
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-//        if textField == expirationTextField {
-//            expirationPicker.hidden = false
-//            
-//        }
-        
+
         return true
     }
     
@@ -231,8 +261,10 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
     
     func checkValidIngredientName() {
         // Disable the Save button if the text field is empty.
-        let text = nameTextField.text ?? ""
-        AddIngredientButton.enabled = !text.isEmpty
+        let nameText = nameTextField.text ?? ""
+        let locationText = locationTextField.text ?? ""
+        
+        AddIngredientButton.enabled = !nameText.isEmpty && !locationText.isEmpty
     }
     
     
@@ -249,14 +281,10 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
             let number = numberToFloat.numberFromString(amountTextField.text!)
             let amount = number!.floatValue
             
-            let row = locationPicker.selectedRowInComponent(0)
-            let location = locationPickerData[row]
-            print("row")
-            print(row)
-            print("location")
-            print(location)
+            //let row = locationPicker.selectedRowInComponent(0)
+            let location = locationTextField.text
             
-            ingredient = Ingredient(name: name, image: nil, expiry: expiry, amount: amount, location: location)
+            ingredient = Ingredient(name: name, image: nil, expiry: expiry, amount: amount, location: location!)
         }
     }
 
