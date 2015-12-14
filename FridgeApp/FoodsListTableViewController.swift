@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate   {
+class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate, TabBarDelegate  {
         
     // MARK: Properties
     
@@ -111,6 +111,14 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
 
     func viewDidAppear() {
         
+        print("didappear")
+        self.tableView.reloadData()
+        
+    }
+    
+    func didSelectTab(tabBarController: FridgeTabBarController) {
+        
+        print("Actually reload??")
         self.tableView.reloadData()
         
     }

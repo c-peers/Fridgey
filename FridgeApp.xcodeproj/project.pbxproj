@@ -23,6 +23,7 @@
 		C48272131BB129AC00BACE1D /* ConfirmFridgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48272121BB129AC00BACE1D /* ConfirmFridgeVC.swift */; };
 		C485EA091BEDD65800AB9FDA /* FridgePageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485EA081BEDD65800AB9FDA /* FridgePageContentViewController.swift */; };
 		C4937B911C019C07008505B9 /* FridgeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4937B901C019C07008505B9 /* FridgeTabBarController.swift */; };
+		C49D0A611C1F0F6D00C23EE3 /* TabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49D0A601C1F0F6D00C23EE3 /* TabBarDelegate.swift */; };
 		C4CA4D4E1C1F073C005F6236 /* ExpireTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA4D4D1C1F073C005F6236 /* ExpireTableViewCell.swift */; };
 		C4CA4D501C1F08C6005F6236 /* ExpireTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA4D4F1C1F08C6005F6236 /* ExpireTableView.swift */; };
 		C4F1739F1BB69319002D9DA1 /* FoodsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F1739E1BB69319002D9DA1 /* FoodsListTableViewCell.swift */; };
@@ -61,6 +62,7 @@
 		C48272121BB129AC00BACE1D /* ConfirmFridgeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmFridgeVC.swift; sourceTree = "<group>"; };
 		C485EA081BEDD65800AB9FDA /* FridgePageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgePageContentViewController.swift; sourceTree = "<group>"; };
 		C4937B901C019C07008505B9 /* FridgeTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeTabBarController.swift; sourceTree = "<group>"; };
+		C49D0A601C1F0F6D00C23EE3 /* TabBarDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarDelegate.swift; sourceTree = "<group>"; };
 		C4CA4D4D1C1F073C005F6236 /* ExpireTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpireTableViewCell.swift; sourceTree = "<group>"; };
 		C4CA4D4F1C1F08C6005F6236 /* ExpireTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpireTableView.swift; sourceTree = "<group>"; };
 		C4F1739E1BB69319002D9DA1 /* FoodsListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsListTableViewCell.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				C46F4E611BCF80B00020F682 /* NewIngredientViewController.swift */,
 				C4937B901C019C07008505B9 /* FridgeTabBarController.swift */,
 				C4F173A01BB698B5002D9DA1 /* FoodsListTableViewController.swift */,
+				C49D0A601C1F0F6D00C23EE3 /* TabBarDelegate.swift */,
 				C4F1739E1BB69319002D9DA1 /* FoodsListTableViewCell.swift */,
 				C4CA4D4F1C1F08C6005F6236 /* ExpireTableView.swift */,
 				C4CA4D4D1C1F073C005F6236 /* ExpireTableViewCell.swift */,
@@ -269,6 +272,7 @@
 				C4F1739F1BB69319002D9DA1 /* FoodsListTableViewCell.swift in Sources */,
 				C45F3CBB1B9AC4E40010FEF0 /* AppDelegate.swift in Sources */,
 				C48272111BB122BE00BACE1D /* FridgeInfo.swift in Sources */,
+				C49D0A611C1F0F6D00C23EE3 /* TabBarDelegate.swift in Sources */,
 				C4CA4D501C1F08C6005F6236 /* ExpireTableView.swift in Sources */,
 				C45F3CDD1B9AC75E0010FEF0 /* ThirdViewController.swift in Sources */,
 				C46E16F01BAE844E00279B69 /* ChooseAFridgeVC.swift in Sources */,
