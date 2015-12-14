@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
+class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate  {
         
     // MARK: Properties
     
@@ -16,6 +16,8 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
     var filteredIngredients = [[Ingredient]]()
     var ingredientsByArea: IngredientsByLocation?
     var myFridge = FridgeInfo()
+    
+    let searchController = UISearchController(searchResultsController: nil)
     
     // This didn't work to transfer data from another viewcontroller in the tab bar.
     //let fromFVC: FridgeInfo? = FridgeViewController().MyFridge
@@ -72,6 +74,11 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
 
         }
         
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
+        
         // Populate the list of ingredients per "Area"
         //self.ingredientsByArea.IBLArray
         //ingredientsByArea = IngredientsByLocation.init(Location: test, Ingredients: ingredients)!
@@ -102,6 +109,18 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
 //        print(fromFVC?.doorNames)
 //        
 //    }
+    
+    
+    // MARK: - Search
+    
+    func filterContentForSearchText(searchText: String, scope: String = "All") {
+  filteredCandies = candies.filter { candy in
+    return candy.name.lowercaseString.containsString(searchText.lowercaseString)
+  }
+ 
+  tableView.reloadData()
+}
+    
     
     // MARK: - Table view data source
 
@@ -289,6 +308,14 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
         
     }
     
+    func filterContentForSearchText(searchText: String, scope: String = "All") {
+  filteredIngredients = ingredients.filter { ingredient in
+    return ingredient.name.lowercaseString.containsString(searchText.lowercaseString)
+  }
+ 
+  tableView.reloadData()
+}
+    
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
         self.filterContentForSearchText(searchString)
         return true
@@ -414,4 +441,20 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
         
     }
 
+}
+
+extension MasterViewController: UISearchBarDelegate {
+  // MARK: - UISearchBar Delegate
+  func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+    filterContentForSearchText(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
+  }
+}
+
+extension MasterViewController: UISearchResultsUpdating {
+  // MARK: - UISearchResultsUpdating Delegate
+  func updateSearchResultsForSearchController(searchController: UISearchController) {
+    let searchBar = searchController.searchBar
+    let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
+    filterContentForSearchText(searchController.searchBar.text!, scope: scope)
+  }
 }
