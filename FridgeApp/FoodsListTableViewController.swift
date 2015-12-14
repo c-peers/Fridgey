@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate, UISearchResultsUpdating   {
+class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate   {
         
     // MARK: Properties
     
@@ -76,8 +76,7 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
         
         // Initializing with searchResultsController set to nil means that
         // searchController will use this view controller to display the search results
-        searchController = UISearchController(searchResultsController: nil)
-        searchController.searchResultsUpdater = self
+        //searchController.searchResultsUpdater = self
         
         // If we are using this same view controller to present the results
         // dimming it out wouldn't make sense.  Should set probably only set
@@ -110,27 +109,22 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
     }
 
 
-//    func viewDidAppear() {
-//        
-//        if (fromFVC != nil) {
-//            self.tableView.reloadData()
-//        }
-//        
-//        print("fromFVC doorNames")
-//        print(fromFVC?.doorNames)
-//        
-//    }
+    func viewDidAppear() {
+        
+        self.tableView.reloadData()
+        
+    }
     
     
     // MARK: - Search
     
-    func filterContentForSearchText(searchText: String, scope: String = "All") {
-  filteredCandies = candies.filter { candy in
-    return candy.name.lowercaseString.containsString(searchText.lowercaseString)
-  }
- 
-  tableView.reloadData()
-}
+//    func filterContentForSearchText(searchText: String, scope: String = "All") {
+//  filteredCandies = candies.filter { candy in
+//    return candy.name.lowercaseString.containsString(searchText.lowercaseString)
+//  }
+// 
+//  tableView.reloadData()
+//}
     
     
     // MARK: - Table view data source
@@ -319,33 +313,33 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
         
     }
     
-    func updateSearchResultsForSearchController(searchController: UISearchController) {
-        let searchText = searchController.searchBar.text
-
-        filteredData = searchText.isEmpty ? ingredient : ingredient.filter({(ingredientString: String) -> Bool in
-            return ingredientString.rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
-        })
-
-        tableView.reloadData()
-    }
+//    func updateSearchResultsForSearchController(searchController: UISearchController) {
+//        let searchText = searchController.searchBar.text
+//
+//        filteredData = searchText.isEmpty ? ingredient : ingredient.filter({(ingredientString: String) -> Bool in
+//            return ingredientString.rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
+//        })
+//
+//        tableView.reloadData()
+//    }
+//
+//    func filterContentForSearchText(searchText: String, scope: String = "All") {
+//  filteredIngredients = ingredients.filter { ingredient in
+//    return ingredient.name.lowercaseString.containsString(searchText.lowercaseString)
+//  }
+// 
+//  tableView.reloadData()
+//}
     
-    func filterContentForSearchText(searchText: String, scope: String = "All") {
-  filteredIngredients = ingredients.filter { ingredient in
-    return ingredient.name.lowercaseString.containsString(searchText.lowercaseString)
-  }
- 
-  tableView.reloadData()
-}
-    
-    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
-        self.filterContentForSearchText(searchString)
-        return true
-    }
-    
-    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
-        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text!)
-        return true
-    }
+//    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
+//        self.filterContentForSearchText(searchString)
+//        return true
+//    }
+//    
+//    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
+//        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text!)
+//        return true
+//    }
     
     // MARK: - Navigation
 
@@ -464,19 +458,19 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
 
 }
 
-extension MasterViewController: UISearchBarDelegate {
-  // MARK: - UISearchBar Delegate
-  func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-    filterContentForSearchText(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
-  }
-}
-
-extension MasterViewController: UISearchResultsUpdating {
-  // MARK: - UISearchResultsUpdating Delegate
-  func updateSearchResultsForSearchController(searchController: UISearchController) {
-    let searchBar = searchController.searchBar
-    let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
-    filterContentForSearchText(searchController.searchBar.text!, scope: scope)
-  }
-}
+//extension FoodsListTableViewController: UISearchBarDelegate {
+//  // MARK: - UISearchBar Delegate
+//  func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+//    filterContentForSearchText(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
+//  }
+//}
+//
+//extension FoodsListTableViewController: UISearchResultsUpdating {
+//  // MARK: - UISearchResultsUpdating Delegate
+//  func updateSearchResultsForSearchController(searchController: UISearchController) {
+//    let searchBar = searchController.searchBar
+//    let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
+//    filterContentForSearchText(searchController.searchBar.text!, scope: scope)
+//  }
+//}
 
