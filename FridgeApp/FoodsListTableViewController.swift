@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate  {
+class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate, UISearchResultsUpdating   {
         
     // MARK: Properties
     
@@ -74,10 +74,21 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
 
         }
         
+        // Initializing with searchResultsController set to nil means that
+        // searchController will use this view controller to display the search results
+        searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
+        
+        // If we are using this same view controller to present the results
+        // dimming it out wouldn't make sense.  Should set probably only set
+        // this to yes if using another controller to display the search results.
         searchController.dimsBackgroundDuringPresentation = false
-        definesPresentationContext = true
+
+        searchController.searchBar.sizeToFit()
         tableView.tableHeaderView = searchController.searchBar
+
+        // Sets this view controller as presenting view controller for the search interface
+        definesPresentationContext = true
         
         // Populate the list of ingredients per "Area"
         //self.ingredientsByArea.IBLArray
@@ -308,6 +319,16 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
         
     }
     
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        let searchText = searchController.searchBar.text
+
+        filteredData = searchText.isEmpty ? ingredient : ingredient.filter({(ingredientString: String) -> Bool in
+            return ingredientString.rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
+        })
+
+        tableView.reloadData()
+    }
+    
     func filterContentForSearchText(searchText: String, scope: String = "All") {
   filteredIngredients = ingredients.filter { ingredient in
     return ingredient.name.lowercaseString.containsString(searchText.lowercaseString)
@@ -458,3 +479,4 @@ extension MasterViewController: UISearchResultsUpdating {
     filterContentForSearchText(searchController.searchBar.text!, scope: scope)
   }
 }
+
