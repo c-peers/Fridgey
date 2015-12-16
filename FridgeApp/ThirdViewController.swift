@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class ThirdViewController: UIViewController, TabBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,5 +20,11 @@ class ThirdViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func didSelectTab(tabBarController: FridgeTabBarController) {
+        print("thirst!")
+    }
     
+    override func viewWillAppear(animated: Bool) {
+        print("vwa")
+    }
 }

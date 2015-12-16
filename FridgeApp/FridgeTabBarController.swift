@@ -8,6 +8,10 @@
 
 import UIKit
 
+//@objc protocol RootTabBarControllerProtocol{
+//    func didSelectTab(tabBarController: FridgeTabBarController)
+//}
+
 class FridgeTabBarController: UITabBarController, UITabBarControllerDelegate {
 
     //These classes are now viewable by all tabs
@@ -15,9 +19,17 @@ class FridgeTabBarController: UITabBarController, UITabBarControllerDelegate {
     
     var Ingredients = [[Ingredient]]()
 
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     override func didReceiveMemoryWarning() {

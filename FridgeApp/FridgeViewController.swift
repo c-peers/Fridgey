@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FridgeViewController: UIViewController, UIPageViewControllerDataSource {
+class FridgeViewController: UIViewController, UIPageViewControllerDataSource, TabBarDelegate {
 
     var MyFridge: FridgeInfo?
     
@@ -157,7 +157,11 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource {
         
     }
 
-
+    func didSelectTab(tabBarController: FridgeTabBarController) {
+        print("first!")
+    }
+    
+    
     // MARK: PageView
     
     func setPageViewController() {

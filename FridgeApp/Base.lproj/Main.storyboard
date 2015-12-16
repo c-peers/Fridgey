@@ -634,7 +634,7 @@ does your refridgerator have?</string>
         <!--My Ingredients-->
         <scene sceneID="pDM-zA-vv4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0CO-oY-Pbz" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0CO-oY-Pbz" customClass="IngredientNavigationController" customModule="FridgeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Ingredients" image="Carrot" id="NZS-Op-KXT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ijz-QE-zgp">

@@ -101,6 +101,14 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
         
         //print(self.ingredientsByArea?.IBLArray[0][0])
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList:",name:"load", object: nil)
+        
+    }
+    
+    func loadList(notification: NSNotification){
+        //load data here
+        print("It actually ran?")
+        self.tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -122,7 +130,6 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
         self.tableView.reloadData()
         
     }
-    
     
     // MARK: - Search
     
