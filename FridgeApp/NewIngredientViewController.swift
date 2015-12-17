@@ -31,18 +31,18 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
         
         var setrow: Int
         
-        let FTBC = self.tabBarController as! FridgeTabBarController
+        //let FTBC = self.tabBarController as! FridgeTabBarController
         
-        MyFridge = FTBC.MyFridge
-        print("check data")
-        print(MyFridge?.doorNames)
-        print(MyFridge?.numOfDoors)
-        print(MyFridge?.fridgeName)
+        //MyFridge = FTBC.MyFridge
+        //print("check data")
+        //print(MyFridge?.doorNames)
+        //print(MyFridge?.numOfDoors)
+        //print(MyFridge?.fridgeName)
         
         //let FFVC = FridgeViewController
         //MyFridge2 = FFVC.MyFridge
         
-        print(MyFridge2?.doorNames)
+        //print(MyFridge2?.doorNames)
         
         // Handle the text field’s user input through delegate callbacks.
         nameTextField.delegate = self
@@ -82,8 +82,8 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
         
         
         // Input data into the Array:
-        locationPickerData = (MyFridge?.doorNames)!
-        print(MyFridge?.doorNames)
+        //locationPickerData = (MyFridge?.doorNames)!
+        //print(MyFridge?.doorNames)
         
         checkValidIngredientName()
         
