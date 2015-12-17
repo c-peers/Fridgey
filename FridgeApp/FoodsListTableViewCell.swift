@@ -10,13 +10,18 @@ import UIKit
 
 class FoodsListTableViewCell: UITableViewCell {
 
+    
+    //@IBOutlet weak var FoodName: UILabel!
+    
     @IBOutlet weak var FoodName: UILabel!
-    
-    @IBOutlet weak var FoodWeight: UILabel!
-    
     @IBOutlet weak var FoodImageView: UIImageView!
-    
+    //@IBOutlet weak var FoodWeight: UILabel!
+    @IBOutlet weak var FoodAmount: UILabel!
     @IBOutlet weak var FoodExpiry: UILabel!
+    
+    //@IBOutlet weak var FoodImageView: UIImageView!
+    
+    //@IBOutlet weak var FoodExpiry: UILabel!
     
 
     override func awakeFromNib() {

@@ -248,7 +248,7 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
             //if cell.FoodWeight.text == nil {
             //    cell.FoodWeight.text = "Blank"
             //} else {
-            cell.FoodWeight?.text = String(ingredient.amount)
+            cell.FoodAmount?.text = String(ingredient.amount)
             //}
             
             //if cell.FoodExpiry.text == nil {
@@ -380,12 +380,12 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
                 let sectionPath = tableView.indexPathForSelectedRow
                 sectionPath?.section
                     
-                
-                    
                 let selectedIngredient = ingredients[indexPath.section][indexPath.row]
                 ingredientDetailViewController.ingredient = selectedIngredient
                 print("Edit ingredient")
-                                
+                    
+                ingredientDetailViewController.locationPickerData = myFridge.doorNames
+                    
                 }
             }
         
@@ -441,7 +441,7 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
                 let newIndexPath = NSIndexPath(forRow: self.ingredients[section!].count, inSection: section!)
                 ingredients[section!].append(ingredient)
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
-
+                
             }
             
             // Save ingredients
