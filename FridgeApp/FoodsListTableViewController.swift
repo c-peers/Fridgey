@@ -19,9 +19,6 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
     
     let searchController = UISearchController(searchResultsController: nil)
     
-    // This didn't work to transfer data from another viewcontroller in the tab bar.
-    //let fromFVC: FridgeInfo? = FridgeViewController().MyFridge
-    
     let test = ["Area 1 Door", "Area 2 Door", "Area 3 Door", "Area 4 Door"]
     
     // Temporary Sample
@@ -381,10 +378,11 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
                 sectionPath?.section
                     
                 
-                    
                 let selectedIngredient = ingredients[indexPath.section][indexPath.row]
                 ingredientDetailViewController.ingredient = selectedIngredient
                 print("Edit ingredient")
+                
+                ingredientDetailViewController.locationPickerData = myFridge.doorNames
                                 
                 }
             }
