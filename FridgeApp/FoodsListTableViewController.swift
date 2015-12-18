@@ -8,8 +8,10 @@
 
 import UIKit
 
-class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate, TabBarDelegate  {
+class FoodsListTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate, TabBarDelegate  {
         
+    @IBOutlet var tableView: UITableView!
+
     // MARK: Properties
     
     var ingredients = [[Ingredient]]()
@@ -56,6 +58,9 @@ class FoodsListTableViewController: UITableViewController, UISearchBarDelegate, 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         // Load any saved Ingredients, otherwise load sample data.
+
+        tableView.delegate = self
+        tableView.dataSource = self
 
         // Load global variables
         let FTBC = self.tabBarController as! FridgeTabBarController
