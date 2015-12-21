@@ -302,9 +302,20 @@ does your refridgerator have?</string>
                                 </connections>
                             </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gG-EH-xZq">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="FxP-2r-Ote"/>
+                                    <navigationItem title="Title" id="sdG-ie-BE3">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Nb8-Zv-DTb">
+                                            <connections>
+                                                <action selector="cancelAction:" destination="8rJ-Kc-sve" id="oC6-3X-NCi"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Add" id="0CF-2h-UJx">
+                                            <connections>
+                                                <segue destination="eHk-To-sLt" kind="unwind" unwindAction="unwindToIngredientList:" id="vgF-a3-O8h"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -316,6 +327,7 @@ does your refridgerator have?</string>
                             <constraint firstItem="HCl-1u-Nkq" firstAttribute="centerY" secondItem="1Az-j4-q2c" secondAttribute="centerY" id="3n9-l9-rh9"/>
                             <constraint firstItem="7Be-6z-pra" firstAttribute="trailing" secondItem="fjM-Q0-JNO" secondAttribute="trailing" id="5RB-Qw-G4N"/>
                             <constraint firstItem="4ZI-GL-2Dh" firstAttribute="trailing" secondItem="Lhg-Bd-UP0" secondAttribute="trailing" id="7M3-gT-wDV"/>
+                            <constraint firstItem="1gG-EH-xZq" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="Cgn-KW-TLM"/>
                             <constraint firstItem="DAi-e2-sSo" firstAttribute="trailing" secondItem="CYj-FD-jUf" secondAttribute="trailing" constant="-23" id="EQM-Pi-xaU"/>
                             <constraint firstItem="HCl-1u-Nkq" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="55" id="HQq-Bo-5n2"/>
                             <constraint firstItem="Lhg-Bd-UP0" firstAttribute="trailing" secondItem="fjM-Q0-JNO" secondAttribute="trailing" id="KcJ-o3-xX1"/>
@@ -325,7 +337,6 @@ does your refridgerator have?</string>
                             <constraint firstItem="Q4p-4F-bTt" firstAttribute="leading" secondItem="CYj-FD-jUf" secondAttribute="leading" id="TAN-xN-Mqw"/>
                             <constraint firstItem="Q4p-4F-bTt" firstAttribute="leading" secondItem="HCl-1u-Nkq" secondAttribute="leading" id="WnO-Mc-wdJ"/>
                             <constraint firstItem="HCl-1u-Nkq" firstAttribute="leading" secondItem="1Az-j4-q2c" secondAttribute="trailing" constant="58" id="Wxc-ui-KMb"/>
-                            <constraint firstItem="1gG-EH-xZq" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="Xvi-KT-UPm"/>
                             <constraint firstItem="4ZI-GL-2Dh" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="27" id="ZaU-6w-GdI"/>
                             <constraint firstItem="4ZI-GL-2Dh" firstAttribute="top" secondItem="1Az-j4-q2c" secondAttribute="bottom" constant="49" id="bLL-we-dJD"/>
                             <constraint firstItem="Q4p-4F-bTt" firstAttribute="top" secondItem="HCl-1u-Nkq" secondAttribute="bottom" constant="40" id="ccg-qT-JLp"/>
@@ -350,7 +361,7 @@ does your refridgerator have?</string>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="AddIngredientButton" destination="vwV-nK-OOx" id="244-Fb-Y4k"/>
+                        <outlet property="AddIngredientButton" destination="0CF-2h-UJx" id="bXB-au-nGe"/>
                         <outlet property="amountTextField" destination="CYj-FD-jUf" id="MDa-St-XDA"/>
                         <outlet property="expirationTextField" destination="Q4p-4F-bTt" id="0YL-te-5Xq"/>
                         <outlet property="locationTextField" destination="uuu-0C-MTX" id="xQZ-zw-jjW"/>
@@ -360,7 +371,7 @@ does your refridgerator have?</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
                 <exit id="eHk-To-sLt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2356" y="-88"/>
+            <point key="canvasLocation" x="1724" y="-88"/>
         </scene>
         <!--Ingredients-->
         <scene sceneID="9Xd-6s-MSb">
@@ -371,7 +382,7 @@ does your refridgerator have?</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FoodsListTableViewCell" rowHeight="70" id="qPM-5A-wPT">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="70" id="qPM-5A-wPT">
                                 <rect key="frame" x="0.0" y="28" width="600" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qPM-5A-wPT" id="DXO-RK-0PB">
@@ -412,22 +423,13 @@ does your refridgerator have?</string>
                                     <outlet property="FoodImageView" destination="rRZ-Ok-Y9t" id="j5y-CJ-YCD"/>
                                     <outlet property="FoodName" destination="7B7-I4-ntt" id="kVF-WP-YsT"/>
                                     <outlet property="FoodWeight" destination="2Dg-fy-wym" id="Kng-U2-Yku"/>
-                                    <segue destination="8rJ-Kc-sve" kind="showDetail" identifier="EditIngredient" action="showViewController:sender:" id="VrY-4w-Vnb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="HCv-H2-dF5" id="9Ka-jf-uDs"/>
-                            <outlet property="delegate" destination="HCv-H2-dF5" id="HNn-nv-FaS"/>
-                        </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Ingredients" image="Carrot" id="xfX-7C-6lc"/>
                     <navigationItem key="navigationItem" title="Ingredients" id="u0i-l6-Uvu">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aX6-IO-97X">
-                            <connections>
-                                <segue destination="8rJ-Kc-sve" kind="show" identifier="AddIngredient" id="rFw-zL-PAc"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aX6-IO-97X"/>
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="SD0-wv-JsF" id="Y2r-e0-QKZ"/>
@@ -443,7 +445,7 @@ does your refridgerator have?</string>
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1584" y="-88"/>
+            <point key="canvasLocation" x="2574" y="258"/>
         </scene>
         <!--Ingredients-->
         <scene sceneID="F4g-Y0-IEK">
@@ -457,11 +459,11 @@ does your refridgerator have?</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="thE-sK-zOw">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="thE-sK-zOw">
                                 <rect key="frame" x="0.0" y="64" width="600" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="NEx-2m-NLl" customClass="FoodsListTableViewCell" customModule="FridgeApp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FoodsListTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodsListTableViewCell" rowHeight="70" id="NEx-2m-NLl" userLabel="FoodsListTableViewCell" customClass="FoodsListTableViewCell" customModule="FridgeApp">
                                         <rect key="frame" x="0.0" y="28" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NEx-2m-NLl" id="6C5-fH-XOo">
@@ -521,6 +523,7 @@ does your refridgerator have?</string>
                                             <outlet property="FoodExpiry" destination="esP-A8-9B2" id="mcg-gC-0vv"/>
                                             <outlet property="FoodImageView" destination="dGe-6B-pUT" id="u3b-Qh-Nlk"/>
                                             <outlet property="FoodName" destination="ZvV-Lh-TGm" id="f4D-f7-6Av"/>
+                                            <segue destination="8rJ-Kc-sve" kind="show" identifier="EditIngredient" id="EUW-uB-UZa"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -528,7 +531,13 @@ does your refridgerator have?</string>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XXG-cT-FBh">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="AJA-CJ-qRq"/>
+                                    <navigationItem title="Title" id="AJA-CJ-qRq">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ETh-Ai-huM">
+                                            <connections>
+                                                <segue destination="8rJ-Kc-sve" kind="show" identifier="AddIngredient" id="eUA-dd-AMQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -544,6 +553,9 @@ does your refridgerator have?</string>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ingredients" image="Carrot" id="Xeg-X9-vok"/>
+                    <connections>
+                        <outlet property="tableView" destination="thE-sK-zOw" id="KiN-uA-zb4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIw-xt-kCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -552,7 +564,7 @@ does your refridgerator have?</string>
         <!--Shopping List-->
         <scene sceneID="K12-Lr-bFw">
             <objects>
-                <viewController id="oDo-XM-Lye" customClass="ThirdViewController" customModule="FridgeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oDo-XM-Lye" customClass="ListViewController" customModule="FridgeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5JB-WQ-1Ts"/>
                         <viewControllerLayoutGuide type="bottom" id="rey-P7-cIz"/>
@@ -561,35 +573,72 @@ does your refridgerator have?</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Third View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ic7-my-8PQ">
-                                <rect key="frame" x="215" y="279" width="170" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loaded by ThirdViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TzX-Pg-cQ2">
-                                <rect key="frame" x="201" y="329" width="199" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zsa-fc-2y0">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zsa-fc-2y0">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="CNd-bA-eNs"/>
                                 </items>
                             </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZpV-9a-zyZ">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="50" minimumInteritemSpacing="40" id="vbT-MC-6wC">
+                                    <size key="itemSize" width="200" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="40"/>
+                                    <size key="footerReferenceSize" width="0.0" height="40"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ListCollectionViewCell" id="Li2-qF-cqA" customClass="ListCollectionViewCell" customModule="FridgeApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="40" width="200" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQh-cb-GPf">
+                                                    <rect key="frame" x="35" y="10" width="130" height="30"/>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.31401931714938602" green="1" blue="0.49722852693841935" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="aQh-cb-GPf" firstAttribute="leading" secondItem="Li2-qF-cqA" secondAttribute="leadingMargin" constant="27" id="BbA-dC-cxh"/>
+                                            <constraint firstItem="aQh-cb-GPf" firstAttribute="centerX" secondItem="Li2-qF-cqA" secondAttribute="centerX" id="QrH-Fg-AhZ"/>
+                                            <constraint firstItem="aQh-cb-GPf" firstAttribute="centerY" secondItem="Li2-qF-cqA" secondAttribute="centerY" id="dto-tJ-E3M"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="listName" destination="aQh-cb-GPf" id="hUq-IP-1SJ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="20D-L9-YOj">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NuB-i8-Av0">
+                                    <rect key="frame" x="0.0" y="90" width="600" height="40"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ZpV-9a-zyZ" firstAttribute="trailing" secondItem="zsa-fc-2y0" secondAttribute="trailing" id="DCN-dc-9P9"/>
                             <constraint firstAttribute="centerX" secondItem="zsa-fc-2y0" secondAttribute="centerX" id="GKy-Lj-4L2"/>
-                            <constraint firstItem="zsa-fc-2y0" firstAttribute="leading" secondItem="lfc-aF-O97" secondAttribute="leadingMargin" constant="-16" id="Mcx-H8-PG6"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zsa-fc-2y0" secondAttribute="trailing" constant="-16" id="PIZ-JR-lxK"/>
+                            <constraint firstItem="ZpV-9a-zyZ" firstAttribute="top" secondItem="zsa-fc-2y0" secondAttribute="bottom" id="I2g-Yk-d4a"/>
+                            <constraint firstItem="zsa-fc-2y0" firstAttribute="leading" secondItem="lfc-aF-O97" secondAttribute="leadingMargin" constant="-20" id="Mcx-H8-PG6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zsa-fc-2y0" secondAttribute="trailing" constant="-20" id="PIZ-JR-lxK"/>
+                            <constraint firstItem="ZpV-9a-zyZ" firstAttribute="bottom" secondItem="rey-P7-cIz" secondAttribute="top" id="R2w-xn-A0r"/>
+                            <constraint firstItem="ZpV-9a-zyZ" firstAttribute="leading" secondItem="zsa-fc-2y0" secondAttribute="leading" id="em3-Th-RvO"/>
                             <constraint firstItem="zsa-fc-2y0" firstAttribute="top" secondItem="5JB-WQ-1Ts" secondAttribute="bottom" id="wTn-Jz-Rpk"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Shopping List" image="Cart" id="gcL-sK-XS4"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ZpV-9a-zyZ" id="yjy-aC-1RU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hlu-Zd-DhP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -598,7 +647,7 @@ does your refridgerator have?</string>
         <!--Use Soon-->
         <scene sceneID="0r9-vQ-lVs">
             <objects>
-                <viewController id="0UJ-Db-tXM" customClass="FourthViewController" customModule="FridgeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0UJ-Db-tXM" customClass="ExpireTableView" customModule="FridgeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TJP-1e-J49"/>
                         <viewControllerLayoutGuide type="bottom" id="QUH-qB-qiY"/>
@@ -607,20 +656,20 @@ does your refridgerator have?</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BGT-yA-F3f">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGT-yA-F3f">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="S3g-I0-fJG"/>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jpt-c8-Pmq" customClass="ExpireTableView" customModule="FridgeApp" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jpt-c8-Pmq">
                                 <rect key="frame" x="0.0" y="216" width="600" height="274"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="274" id="SEe-6J-wgS"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="6vb-KC-rBo" customClass="ExpireTableViewCell" customModule="FridgeApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpirationListTableViewCell" rowHeight="70" id="6vb-KC-rBo" customClass="ExpireTableViewCell" customModule="FridgeApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6vb-KC-rBo" id="LSy-2u-Uhu">
@@ -639,7 +688,7 @@ does your refridgerator have?</string>
                                                         <constraint firstAttribute="width" constant="175" id="WEa-Cw-lGX"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDk-TP-8rT">
@@ -648,7 +697,7 @@ does your refridgerator have?</string>
                                                         <constraint firstAttribute="width" constant="224" id="riv-bd-pRf"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oa-Xw-Vqc">
@@ -657,7 +706,7 @@ does your refridgerator have?</string>
                                                         <constraint firstAttribute="width" constant="175" id="8Bh-Zp-9Mf"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -685,15 +734,19 @@ does your refridgerator have?</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jpt-c8-Pmq" firstAttribute="leading" secondItem="BGT-yA-F3f" secondAttribute="leading" id="FMx-oc-w1Q"/>
                             <constraint firstItem="jpt-c8-Pmq" firstAttribute="centerX" secondItem="BGT-yA-F3f" secondAttribute="centerX" id="Xsh-HF-Ooy"/>
-                            <constraint firstItem="BGT-yA-F3f" firstAttribute="leading" secondItem="REw-FF-qOU" secondAttribute="leadingMargin" constant="-16" id="YLG-IF-9zN"/>
+                            <constraint firstItem="BGT-yA-F3f" firstAttribute="leading" secondItem="REw-FF-qOU" secondAttribute="leadingMargin" constant="-20" id="YLG-IF-9zN"/>
                             <constraint firstItem="QUH-qB-qiY" firstAttribute="top" secondItem="jpt-c8-Pmq" secondAttribute="bottom" constant="61" id="hCG-bG-F9X"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BGT-yA-F3f" secondAttribute="trailing" constant="-16" id="mn4-aI-unl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BGT-yA-F3f" secondAttribute="trailing" constant="-20" id="mn4-aI-unl"/>
                             <constraint firstItem="BGT-yA-F3f" firstAttribute="top" secondItem="TJP-1e-J49" secondAttribute="bottom" id="nir-NY-d1K"/>
                             <constraint firstAttribute="centerX" secondItem="BGT-yA-F3f" secondAttribute="centerX" id="xaU-WO-Jg3"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Use Soon" image="Present" id="JpQ-2z-ept"/>
+                    <connections>
+                        <outlet property="expiryTableView" destination="jpt-c8-Pmq" id="di8-MC-EEf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DyJ-SZ-Oyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -798,6 +851,6 @@ does your refridgerator have?</string>
         <image name="Present" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rFw-zL-PAc"/>
+        <segue reference="EUW-uB-UZa"/>
     </inferredMetricsTieBreakers>
 </document>

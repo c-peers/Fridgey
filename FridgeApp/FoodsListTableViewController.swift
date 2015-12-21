@@ -8,9 +8,9 @@
 
 import UIKit
 
-class FoodsListTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate, TabBarDelegate  {
+class FoodsListTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TabBarDelegate  {
         
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
 
     // MARK: Properties
     
@@ -86,13 +86,13 @@ class FoodsListTableViewController: UITableViewController, UITableViewDataSource
         // If we are using this same view controller to present the results
         // dimming it out wouldn't make sense.  Should set probably only set
         // this to yes if using another controller to display the search results.
-        searchController.dimsBackgroundDuringPresentation = false
+        //searchController.dimsBackgroundDuringPresentation = false
 
-        searchController.searchBar.sizeToFit()
-        tableView.tableHeaderView = searchController.searchBar
+        //searchController.searchBar.sizeToFit()
+        //tableView.tableHeaderView = searchController.searchBar
 
         // Sets this view controller as presenting view controller for the search interface
-        definesPresentationContext = true
+        //definesPresentationContext = true
         
         // Populate the list of ingredients per "Area"
         //self.ingredientsByArea.IBLArray
@@ -102,7 +102,7 @@ class FoodsListTableViewController: UITableViewController, UITableViewDataSource
         
         self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), atScrollPosition: UITableViewScrollPosition.Top, animated: false)
                 
-        self.tableView.contentOffset = CGPointMake(0,  (self.searchDisplayController?.searchBar.frame.size.height)! - self.tableView.contentOffset.y)
+        //self.tableView.contentOffset = CGPointMake(0,  (self.searchDisplayController?.searchBar.frame.size.height)! - self.tableView.contentOffset.y)
         
         //print(self.ingredientsByArea?.IBLArray[0][0])
         
@@ -149,7 +149,7 @@ class FoodsListTableViewController: UITableViewController, UITableViewDataSource
     
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
         if myFridge.doorNames.count > 1 {
            return myFridge.doorNames.count
@@ -164,7 +164,7 @@ class FoodsListTableViewController: UITableViewController, UITableViewDataSource
 //        }
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 
         if  myFridge.doorNames.count > 1 {
             return myFridge.doorNames[section]
@@ -179,13 +179,13 @@ class FoodsListTableViewController: UITableViewController, UITableViewDataSource
 //        }
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if tableView == self.searchDisplayController!.searchResultsTableView {
+        //if tableView == self.searchDisplayController!.searchResultsTableView {
 
-            return self.filteredIngredients.count
+        //    return self.filteredIngredients.count
 
-        } else {
+        //} else {
             
             //return self.ingredients.count
 
@@ -195,7 +195,7 @@ class FoodsListTableViewController: UITableViewController, UITableViewDataSource
                 return 0
             }
             
-        }
+        //}
 
 //            if self.ingredientsByArea!.IBLArray[section] != ["Empty"] {
 //                return self.ingredientsByArea!.IBLArray[section].count
@@ -208,7 +208,7 @@ class FoodsListTableViewController: UITableViewController, UITableViewDataSource
         // return ingredients.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "FoodsListTableViewCell"
         
@@ -221,11 +221,11 @@ class FoodsListTableViewController: UITableViewController, UITableViewDataSource
         let ingredient : Ingredient
         // var ingredientList = [Ingredient]()
         
-            if tableView == self.searchDisplayController!.searchResultsTableView {
-                print(indexPath.section)
-                print(indexPath.row)
-                ingredient = filteredIngredients[indexPath.section][indexPath.row]
-            } else {
+//            if tableView == self.searchDisplayController!.searchResultsTableView {
+//                print(indexPath.section)
+//                print(indexPath.row)
+//                ingredient = filteredIngredients[indexPath.section][indexPath.row]
+//            } else {
                 ingredient = ingredients[indexPath.section][indexPath.row]
 //                for ingredientcounter in 0 ... ingredients.count - 1 {
 //                    if ingredients[ingredientcounter].location == test[indexPath.section] {
@@ -236,7 +236,7 @@ class FoodsListTableViewController: UITableViewController, UITableViewDataSource
 //                }
                     
         
-        }
+        //}
         
 //            if tableView == self.searchDisplayController!.searchResultsTableView {
 //                ingredient = filteredIngredients[indexPath.row]
@@ -278,7 +278,7 @@ class FoodsListTableViewController: UITableViewController, UITableViewDataSource
 
     
     // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
         if editingStyle == .Delete {
             // Delete the row from the data source
@@ -314,24 +314,24 @@ class FoodsListTableViewController: UITableViewController, UITableViewDataSource
 
     // MARK: Search
     
-    func filterContentForSearchText(searchText: String) {
-        //var ingredient : Ingredient
-        
-        // Filter the array using the filter method
-        self.filteredIngredients = self.ingredients.filter({( ingredient : [Ingredient]) -> Bool in
-            print("Searching")
-            for x in 0...ingredient.count - 1 {
-                // let categoryMatch = (scope == "All") || (ingredient.category == scope)
-                let stringMatch = ingredient[x].name.rangeOfString(searchText)
-                // return categoryMatch && (stringMatch != nil)
-                return (stringMatch != nil)
-            }
-            
-            return false
-        
-        })
-        
-    }
+//    func filterContentForSearchText(searchText: String) {
+//        //var ingredient : Ingredient
+//        
+//        // Filter the array using the filter method
+//        self.filteredIngredients = self.ingredients.filter({( ingredient : [Ingredient]) -> Bool in
+//            print("Searching")
+//            for x in 0...ingredient.count - 1 {
+//                // let categoryMatch = (scope == "All") || (ingredient.category == scope)
+//                let stringMatch = ingredient[x].name.rangeOfString(searchText)
+//                // return categoryMatch && (stringMatch != nil)
+//                return (stringMatch != nil)
+//            }
+//            
+//            return false
+//        
+//        })
+//        
+//    }
     
 //    func updateSearchResultsForSearchController(searchController: UISearchController) {
 //        let searchText = searchController.searchBar.text
@@ -365,19 +365,23 @@ class FoodsListTableViewController: UITableViewController, UITableViewDataSource
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+        let ingredientDetailViewController = segue.destinationViewController as! NewIngredientViewController
         
+        ingredientDetailViewController.locationPickerData = myFridge.doorNames
+
         if segue.identifier == "EditIngredient" {
-            let ingredientDetailViewController = segue.destinationViewController as! NewIngredientViewController
+            //let ingredientDetailViewController = segue.destinationViewController as! NewIngredientViewController
             
             // Is search the sender?
-            if self.searchDisplayController!.active {
-                print("Will show ingredient from search")
-                let indexPath = self.searchDisplayController!.searchResultsTableView.indexPathForSelectedRow!
-                let selectedIngredient = self.filteredIngredients[indexPath.section][indexPath.row]
-                ingredientDetailViewController.ingredient = selectedIngredient
-                print("From Search")
-
-            } else {
+//            if self.searchDisplayController!.active {
+//                print("Will show ingredient from search")
+//                let indexPath = self.searchDisplayController!.searchResultsTableView.indexPathForSelectedRow!
+//                let selectedIngredient = self.filteredIngredients[indexPath.section][indexPath.row]
+//                ingredientDetailViewController.ingredient = selectedIngredient
+//                print("From Search")
+//
+//            } else {
             
                 // Which cell is the sender?
                 if let selectedIngredientCell = sender as? FoodsListTableViewCell {
@@ -389,15 +393,15 @@ class FoodsListTableViewController: UITableViewController, UITableViewDataSource
                 ingredientDetailViewController.ingredient = selectedIngredient
                 print("Edit ingredient")
                     
-                ingredientDetailViewController.locationPickerData = myFridge.doorNames
+                //ingredientDetailViewController.locationPickerData = myFridge.doorNames
                     
                 }
-            }
+            //}
         
         }
         else if segue.identifier == "AddIngredient" {
                 print("Add ingredient")
-        
+            
         }
         
     }

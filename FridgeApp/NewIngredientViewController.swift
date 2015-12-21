@@ -287,4 +287,8 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
         }
     }
 
+    @IBAction func cancelAction(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+        
+    }
 }
