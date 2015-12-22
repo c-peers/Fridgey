@@ -45,6 +45,21 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
             
         }
         
+        let currentDate = NSDate()
+        let dateFormatter = NSDateFormatter()
+        
+        var dateAsString: String
+        
+        
+        dateFormatter.dateFormat = "YYYY-MM-dd"
+        dateAsString = "2015-12-19"
+        let date1 = dateFormatter.dateFromString(dateAsString)!
+        dateAsString = dateFormatter.stringFromDate(currentDate)
+        let date2 = dateFormatter.dateFromString(dateAsString)!
+        
+        var calculatedDate = NSCalendar.currentCalendar().dateByAddingUnit(NSCalendarUnit.Day, value: 20, toDate: date1, options: NSCalendarOptions.init(rawValue: 0))
+        
+        var diffDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: date1, toDate: date2, options: NSCalendarOptions.init(rawValue: 0))
         
         // Initializing with searchResultsController set to nil means that
         // searchController will use this view controller to display the search results

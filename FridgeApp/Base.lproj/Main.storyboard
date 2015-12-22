@@ -318,6 +318,13 @@ does your refridgerator have?</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Snl-c9-pIw">
+                                <rect key="frame" x="181" y="489" width="120" height="30"/>
+                                <state key="normal" title="Add to List"/>
+                                <connections>
+                                    <segue destination="E77-v0-SKt" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="pQA-vO-Nhw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -372,6 +379,33 @@ does your refridgerator have?</string>
                 <exit id="eHk-To-sLt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1724" y="-88"/>
+        </scene>
+        <!--Add To List From Ingredient Details View Controller-->
+        <scene sceneID="BwF-iL-iO2">
+            <objects>
+                <viewController id="E77-v0-SKt" customClass="AddToListFromIngredientDetailsViewController" customModule="FridgeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xr0-ai-1fR"/>
+                        <viewControllerLayoutGuide type="bottom" id="cAa-RF-gIV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t4C-MT-BYB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yj1-ok-aPy">
+                                <rect key="frame" x="19" y="20" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelAddToList:" destination="E77-v0-SKt" eventType="touchUpInside" id="NR2-8F-KY8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="axM-YX-b5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2472" y="-88"/>
         </scene>
         <!--Ingredients-->
         <scene sceneID="9Xd-6s-MSb">
@@ -445,7 +479,7 @@ does your refridgerator have?</string>
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2574" y="258"/>
+            <point key="canvasLocation" x="3294" y="130"/>
         </scene>
         <!--Ingredients-->
         <scene sceneID="F4g-Y0-IEK">
@@ -576,11 +610,17 @@ does your refridgerator have?</string>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zsa-fc-2y0">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="CNd-bA-eNs"/>
+                                    <navigationItem title="Title" id="CNd-bA-eNs">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="y3C-MG-xtA">
+                                            <connections>
+                                                <segue destination="DP0-yO-Zwj" kind="show" identifier="Add List" id="vI4-Gk-9fo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZpV-9a-zyZ">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <rect key="frame" x="0.0" y="214" width="600" height="337"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="50" minimumInteritemSpacing="40" id="vbT-MC-6wC">
                                     <size key="itemSize" width="200" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="40"/>
@@ -598,6 +638,9 @@ does your refridgerator have?</string>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQh-cb-GPf">
                                                     <rect key="frame" x="35" y="10" width="130" height="30"/>
                                                     <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <segue destination="DP0-yO-Zwj" kind="show" identifier="EditList" id="JU3-gB-GKb"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -622,16 +665,62 @@ does your refridgerator have?</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2V-a0-KHV">
+                                <rect key="frame" x="50" y="78" width="500" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ism-8A-6sE">
+                                        <rect key="frame" x="25" y="20" width="100" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="pZo-c0-fux"/>
+                                        </constraints>
+                                        <state key="normal" title="New List"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7WE-7x-9Ul">
+                                        <rect key="frame" x="25" y="77" width="100" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="968-6q-BzL">
+                                        <rect key="frame" x="375" y="20" width="100" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="5e1-wx-jJr"/>
+                                        </constraints>
+                                        <state key="normal" title="Quick List"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ifu-nb-UxV">
+                                        <rect key="frame" x="375" y="77" width="100" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="ivI-MM-401"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.31401931709999997" green="1" blue="0.49722852690000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="968-6q-BzL" firstAttribute="baseline" secondItem="ism-8A-6sE" secondAttribute="baseline" id="8pm-tf-Qht"/>
+                                    <constraint firstAttribute="trailing" secondItem="968-6q-BzL" secondAttribute="trailing" constant="25" id="Lvw-8H-UYr"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ifu-nb-UxV" secondAttribute="trailing" constant="25" id="Xt1-B7-y4A"/>
+                                    <constraint firstItem="ism-8A-6sE" firstAttribute="top" secondItem="w2V-a0-KHV" secondAttribute="top" constant="20" id="Y4q-KI-nd4"/>
+                                    <constraint firstItem="7WE-7x-9Ul" firstAttribute="trailing" secondItem="ism-8A-6sE" secondAttribute="trailing" id="bRC-a8-VMe"/>
+                                    <constraint firstItem="7WE-7x-9Ul" firstAttribute="top" secondItem="ism-8A-6sE" secondAttribute="bottom" constant="27" id="eZl-l2-M29"/>
+                                    <constraint firstItem="7WE-7x-9Ul" firstAttribute="leading" secondItem="ism-8A-6sE" secondAttribute="leading" id="qmO-GW-cL4"/>
+                                    <constraint firstItem="Ifu-nb-UxV" firstAttribute="baseline" secondItem="7WE-7x-9Ul" secondAttribute="baseline" id="wrD-Cm-MMH"/>
+                                    <constraint firstItem="ism-8A-6sE" firstAttribute="leading" secondItem="w2V-a0-KHV" secondAttribute="leading" constant="25" id="zno-VK-wMV"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZpV-9a-zyZ" firstAttribute="trailing" secondItem="zsa-fc-2y0" secondAttribute="trailing" id="DCN-dc-9P9"/>
+                            <constraint firstItem="ZpV-9a-zyZ" firstAttribute="top" secondItem="w2V-a0-KHV" secondAttribute="bottom" constant="8" symbolic="YES" id="E5z-Ig-KZh"/>
                             <constraint firstAttribute="centerX" secondItem="zsa-fc-2y0" secondAttribute="centerX" id="GKy-Lj-4L2"/>
-                            <constraint firstItem="ZpV-9a-zyZ" firstAttribute="top" secondItem="zsa-fc-2y0" secondAttribute="bottom" id="I2g-Yk-d4a"/>
+                            <constraint firstItem="ZpV-9a-zyZ" firstAttribute="top" secondItem="zsa-fc-2y0" secondAttribute="bottom" constant="150" id="I2g-Yk-d4a"/>
                             <constraint firstItem="zsa-fc-2y0" firstAttribute="leading" secondItem="lfc-aF-O97" secondAttribute="leadingMargin" constant="-20" id="Mcx-H8-PG6"/>
+                            <constraint firstItem="w2V-a0-KHV" firstAttribute="top" secondItem="zsa-fc-2y0" secondAttribute="bottom" constant="14" id="OPI-rC-q9Q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zsa-fc-2y0" secondAttribute="trailing" constant="-20" id="PIZ-JR-lxK"/>
                             <constraint firstItem="ZpV-9a-zyZ" firstAttribute="bottom" secondItem="rey-P7-cIz" secondAttribute="top" id="R2w-xn-A0r"/>
+                            <constraint firstItem="w2V-a0-KHV" firstAttribute="leading" secondItem="lfc-aF-O97" secondAttribute="leadingMargin" constant="30" id="aLv-5m-7Qq"/>
                             <constraint firstItem="ZpV-9a-zyZ" firstAttribute="leading" secondItem="zsa-fc-2y0" secondAttribute="leading" id="em3-Th-RvO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w2V-a0-KHV" secondAttribute="trailing" constant="30" id="iya-rP-5CJ"/>
                             <constraint firstItem="zsa-fc-2y0" firstAttribute="top" secondItem="5JB-WQ-1Ts" secondAttribute="bottom" id="wTn-Jz-Rpk"/>
                         </constraints>
                     </view>
@@ -843,6 +932,57 @@ does your refridgerator have?</string>
             </objects>
             <point key="canvasLocation" x="1826" y="-1561"/>
         </scene>
+        <!--List Details View Controller-->
+        <scene sceneID="pCu-e3-ye1">
+            <objects>
+                <viewController id="DP0-yO-Zwj" customClass="ListDetailsViewController" customModule="FridgeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wto-p1-OyN"/>
+                        <viewControllerLayoutGuide type="bottom" id="QFk-2j-sVN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sd7-R0-EqP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jR3-jW-xnI">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="n37-fN-1r3">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="UyS-vo-VJs">
+                                            <connections>
+                                                <action selector="cancelAction:" destination="DP0-yO-Zwj" id="Cok-co-58I"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Edit" id="X6M-ur-RS1"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qOC-KF-8SF">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GOg-RM-JZm">
+                                        <rect key="frame" x="180" y="351" width="240" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LGb-VX-kDl">
+                                        <rect key="frame" x="180" y="8" width="240" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jR3-jW-xnI" firstAttribute="leading" secondItem="Sd7-R0-EqP" secondAttribute="leading" id="6aW-yo-pnr"/>
+                            <constraint firstItem="jR3-jW-xnI" firstAttribute="top" secondItem="Wto-p1-OyN" secondAttribute="bottom" id="Ut0-Sh-19P"/>
+                            <constraint firstAttribute="trailing" secondItem="jR3-jW-xnI" secondAttribute="trailing" id="pHy-sT-Qv1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8mS-wV-w3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1450" y="698"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Carrot" width="25" height="25"/>
@@ -851,6 +991,7 @@ does your refridgerator have?</string>
         <image name="Present" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EUW-uB-UZa"/>
+        <segue reference="vI4-Gk-9fo"/>
+        <segue reference="eUA-dd-AMQ"/>
     </inferredMetricsTieBreakers>
 </document>
