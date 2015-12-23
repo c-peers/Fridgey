@@ -16,7 +16,9 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     
     var ingredients = [[Ingredient]]()
     var filteredIngredients = [[Ingredient]]()
+    var expiredIngredients = [[Ingredient]]()
     var myFridge = FridgeInfo()
+    var withinExpiryTime: Int = 14
     
     //let searchController = UISearchController(searchResultsController: nil)
     
@@ -45,21 +47,65 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
             
         }
         
-        let currentDate = NSDate()
+        // We will only show dates in the range set in the view controller.
+        let date = NSDate()
         let dateFormatter = NSDateFormatter()
         
         var dateAsString: String
         
-        
         dateFormatter.dateFormat = "YYYY-MM-dd"
         dateAsString = "2015-12-19"
-        let date1 = dateFormatter.dateFromString(dateAsString)!
-        dateAsString = dateFormatter.stringFromDate(currentDate)
-        let date2 = dateFormatter.dateFromString(dateAsString)!
+        let cellExpiryDate = dateFormatter.dateFromString(dateAsString)!
+        dateAsString = dateFormatter.stringFromDate(date)
+        let currentDate = dateFormatter.dateFromString(dateAsString)!
         
-        var calculatedDate = NSCalendar.currentCalendar().dateByAddingUnit(NSCalendarUnit.Day, value: 20, toDate: date1, options: NSCalendarOptions.init(rawValue: 0))
+        var calculatedDate = NSCalendar.currentCalendar().dateByAddingUnit(NSCalendarUnit.Day, value: 20, toDate: cellExpiryDate, options: NSCalendarOptions.init(rawValue: 0))
         
-        var diffDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: date1, toDate: date2, options: NSCalendarOptions.init(rawValue: 0))
+        var diffDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: cellExpiryDate, toDate: currentDate, options: NSCalendarOptions.init(rawValue: 0))
+        
+        for x in 0...ingredients.count - 1 {
+            
+            var arrayYValue = 0
+            
+            print("x")
+            print(x)
+            
+            for y in 0...ingredients[x].count - 1 {
+                
+                print("y")
+                print(y)
+                
+                print("Ingredient.expiration")
+                print(ingredients[x][y].expiry)
+                
+                dateAsString = ingredients[x][y].expiry
+                let cellExpiryDate = dateFormatter.dateFromString(dateAsString)!
+                diffDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: cellExpiryDate, toDate: currentDate, options: NSCalendarOptions.init(rawValue: 0))
+                
+                let NSCUDayAsString = String(NSCalendarUnit.Day)
+                let NSCUDayasInt = Int(NSCUDayAsString)
+                
+                if NSCUDayasInt <= withinExpiryTime {
+                    
+                    //let appendIngredientToExpiryArr = ingredients[x][arrayYValue]
+                    
+                    if expiredIngredients.isEmpty {
+                        expiredIngredients[0][0] = ingredients[x][arrayYValue]
+                    } else {
+                        expiredIngredients[x].append(ingredients[x][arrayYValue])
+                    }
+                    
+                    ++arrayYValue
+                    
+                } else {
+                    print("no match")
+                }
+                
+                
+                
+            }
+            
+        }
         
         // Initializing with searchResultsController set to nil means that
         // searchController will use this view controller to display the search results

@@ -392,16 +392,82 @@ does your refridgerator have?</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yj1-ok-aPy">
-                                <rect key="frame" x="19" y="20" width="48" height="30"/>
-                                <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <action selector="cancelAddToList:" destination="E77-v0-SKt" eventType="touchUpInside" id="NR2-8F-KY8"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUh-Mu-jYv">
+                                <rect key="frame" x="40" y="55" width="520" height="510"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yj1-ok-aPy">
+                                        <rect key="frame" x="8" y="8" width="48" height="30"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancelAddToList:" destination="E77-v0-SKt" eventType="touchUpInside" id="NR2-8F-KY8"/>
+                                        </connections>
+                                    </button>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mdS-bi-GIo">
+                                        <rect key="frame" x="36" y="60" width="450" height="430"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="50" minimumInteritemSpacing="40" id="uue-tR-18R">
+                                            <size key="itemSize" width="200" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="20"/>
+                                            <size key="footerReferenceSize" width="0.0" height="20"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FromIngredientsToListCollectionViewCell" id="9eY-iC-mYt" customClass="AddToListFromIngredientsCollectionViewCell" customModule="FridgeApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="20" width="200" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddx-SY-qIe">
+                                                            <rect key="frame" x="35" y="10" width="130" height="30"/>
+                                                            <state key="normal" title="Button"/>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <color key="backgroundColor" red="0.31401931709999997" green="1" blue="0.49722852690000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="ddx-SY-qIe" firstAttribute="centerY" secondItem="9eY-iC-mYt" secondAttribute="centerY" id="BEt-nc-EXd"/>
+                                                    <constraint firstItem="ddx-SY-qIe" firstAttribute="leading" secondItem="9eY-iC-mYt" secondAttribute="leadingMargin" constant="27" id="G7C-hN-Icp"/>
+                                                    <constraint firstItem="ddx-SY-qIe" firstAttribute="centerX" secondItem="9eY-iC-mYt" secondAttribute="centerX" id="wFt-Ix-JSg"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="listName" destination="ddx-SY-qIe" id="Hg1-IM-vWB"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Bfj-Mm-YnH">
+                                            <rect key="frame" x="0.0" y="0.0" width="450" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionReusableView>
+                                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3HN-Yp-Ehv">
+                                            <rect key="frame" x="0.0" y="70" width="450" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionReusableView>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="yj1-ok-aPy" firstAttribute="top" secondItem="cUh-Mu-jYv" secondAttribute="topMargin" id="59v-9t-UFM"/>
+                                    <constraint firstItem="mdS-bi-GIo" firstAttribute="top" secondItem="yj1-ok-aPy" secondAttribute="bottom" constant="22" id="Hax-l0-XjO"/>
+                                    <constraint firstAttribute="trailing" secondItem="mdS-bi-GIo" secondAttribute="trailing" constant="34" id="Mqw-Eq-fRy"/>
+                                    <constraint firstAttribute="bottom" secondItem="mdS-bi-GIo" secondAttribute="bottom" constant="20" id="Uuv-hj-Jw2"/>
+                                    <constraint firstItem="yj1-ok-aPy" firstAttribute="leading" secondItem="cUh-Mu-jYv" secondAttribute="leadingMargin" id="goV-Dr-Iyt"/>
+                                    <constraint firstItem="mdS-bi-GIo" firstAttribute="leading" secondItem="cUh-Mu-jYv" secondAttribute="leading" constant="36" id="mvT-Lh-h04"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cAa-RF-gIV" firstAttribute="top" secondItem="cUh-Mu-jYv" secondAttribute="bottom" constant="35" id="0Hq-Yi-LzP"/>
+                            <constraint firstItem="cUh-Mu-jYv" firstAttribute="top" secondItem="Xr0-ai-1fR" secondAttribute="bottom" constant="35" id="64c-AZ-opv"/>
+                            <constraint firstItem="cUh-Mu-jYv" firstAttribute="leading" secondItem="t4C-MT-BYB" secondAttribute="leading" constant="40" id="hWO-hO-r6Z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cUh-Mu-jYv" secondAttribute="trailing" constant="20" id="lpS-KY-1c6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="mdS-bi-GIo" id="FR3-Ae-PIA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="axM-YX-b5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
