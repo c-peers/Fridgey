@@ -14,6 +14,7 @@ class ExpireTableViewCell: UITableViewCell {
     @IBOutlet weak var expireFoodName: UILabel!
     @IBOutlet weak var expireFoodAmount: UILabel!
     @IBOutlet weak var expireFoodDate: UILabel!
+    @IBOutlet weak var expirationWarning: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

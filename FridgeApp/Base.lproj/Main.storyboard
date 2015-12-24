@@ -814,7 +814,7 @@ does your refridgerator have?</string>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGT-yA-F3f">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="S3g-I0-fJG"/>
+                                    <navigationItem id="S3g-I0-fJG"/>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jpt-c8-Pmq">
@@ -864,20 +864,30 @@ does your refridgerator have?</string>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOi-t2-OwT">
+                                                    <rect key="frame" x="417" y="8" width="175" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="EEh-Eb-Rj9" firstAttribute="leading" secondItem="LSy-2u-Uhu" secondAttribute="leading" id="6Ha-w9-fDl"/>
+                                                <constraint firstItem="oOi-t2-OwT" firstAttribute="leading" secondItem="6oa-Xw-Vqc" secondAttribute="leading" id="FcY-aN-P5H"/>
                                                 <constraint firstItem="6oa-Xw-Vqc" firstAttribute="trailing" secondItem="LSy-2u-Uhu" secondAttribute="trailingMargin" id="GWa-f8-aEK"/>
                                                 <constraint firstItem="yDk-TP-8rT" firstAttribute="leading" secondItem="9ez-8b-mTP" secondAttribute="leading" id="J0a-ed-hUe"/>
+                                                <constraint firstItem="oOi-t2-OwT" firstAttribute="baseline" secondItem="yDk-TP-8rT" secondAttribute="baseline" id="Jil-Bq-jLV"/>
                                                 <constraint firstAttribute="bottom" secondItem="EEh-Eb-Rj9" secondAttribute="bottom" id="Wym-OA-KRr"/>
                                                 <constraint firstItem="6oa-Xw-Vqc" firstAttribute="bottom" secondItem="LSy-2u-Uhu" secondAttribute="bottomMargin" id="aV0-Zf-jqR"/>
                                                 <constraint firstItem="yDk-TP-8rT" firstAttribute="top" secondItem="LSy-2u-Uhu" secondAttribute="topMargin" id="bY8-AY-KQw"/>
                                                 <constraint firstItem="EEh-Eb-Rj9" firstAttribute="top" secondItem="LSy-2u-Uhu" secondAttribute="top" id="dgF-m7-iSo"/>
                                                 <constraint firstItem="9ez-8b-mTP" firstAttribute="baseline" secondItem="6oa-Xw-Vqc" secondAttribute="baseline" id="ihT-5U-Vih"/>
+                                                <constraint firstItem="oOi-t2-OwT" firstAttribute="trailing" secondItem="6oa-Xw-Vqc" secondAttribute="trailing" id="tSC-w7-piD"/>
                                                 <constraint firstItem="yDk-TP-8rT" firstAttribute="leading" secondItem="EEh-Eb-Rj9" secondAttribute="trailing" constant="8" symbolic="YES" id="x3v-2U-hb7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="expirationWarning" destination="oOi-t2-OwT" id="i2N-0q-tje"/>
                                             <outlet property="expireFoodAmount" destination="9ez-8b-mTP" id="zbu-KH-wXf"/>
                                             <outlet property="expireFoodDate" destination="6oa-Xw-Vqc" id="Gv1-lJ-Cj7"/>
                                             <outlet property="expireFoodImage" destination="EEh-Eb-Rj9" id="GB7-7w-p0E"/>
@@ -886,24 +896,46 @@ does your refridgerator have?</string>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHw-9w-7Rx">
+                                <rect key="frame" x="150" y="31" width="300" height="21"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="UCR-h3-crF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gww-eN-bDv" appends="YES" id="rBg-th-Gaw"/>
+                                </connections>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dHw-9w-7Rx" firstAttribute="centerY" secondItem="BGT-yA-F3f" secondAttribute="centerY" id="ELo-qp-Ox4"/>
                             <constraint firstItem="jpt-c8-Pmq" firstAttribute="leading" secondItem="BGT-yA-F3f" secondAttribute="leading" id="FMx-oc-w1Q"/>
+                            <constraint firstItem="dHw-9w-7Rx" firstAttribute="top" secondItem="TJP-1e-J49" secondAttribute="bottom" constant="11" id="LfZ-RB-bFf"/>
                             <constraint firstItem="jpt-c8-Pmq" firstAttribute="centerX" secondItem="BGT-yA-F3f" secondAttribute="centerX" id="Xsh-HF-Ooy"/>
                             <constraint firstItem="BGT-yA-F3f" firstAttribute="leading" secondItem="REw-FF-qOU" secondAttribute="leadingMargin" constant="-20" id="YLG-IF-9zN"/>
                             <constraint firstItem="QUH-qB-qiY" firstAttribute="top" secondItem="jpt-c8-Pmq" secondAttribute="bottom" constant="61" id="hCG-bG-F9X"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BGT-yA-F3f" secondAttribute="trailing" constant="-20" id="mn4-aI-unl"/>
                             <constraint firstItem="BGT-yA-F3f" firstAttribute="top" secondItem="TJP-1e-J49" secondAttribute="bottom" id="nir-NY-d1K"/>
                             <constraint firstAttribute="centerX" secondItem="BGT-yA-F3f" secondAttribute="centerX" id="xaU-WO-Jg3"/>
+                            <constraint firstItem="dHw-9w-7Rx" firstAttribute="centerX" secondItem="BGT-yA-F3f" secondAttribute="centerX" id="yYs-61-Z3Z"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Use Soon" image="Present" id="JpQ-2z-ept"/>
                     <connections>
                         <outlet property="expiryTableView" destination="jpt-c8-Pmq" id="di8-MC-EEf"/>
+                        <outlet property="navbarTitleText" destination="dHw-9w-7Rx" id="yZD-JJ-e70"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DyJ-SZ-Oyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gww-eN-bDv">
+                    <connections>
+                        <action selector="navbarTitleWasTapped:" destination="0UJ-Db-tXM" id="Z2a-QG-rkA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="760" y="1450"/>
         </scene>

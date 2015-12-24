@@ -11,6 +11,7 @@ import UIKit
 class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var expiryTableView: UITableView!
+    @IBOutlet weak var navbarTitleText: UILabel!
     
     // MARK: Properties
     
@@ -47,6 +48,8 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
             
         }
         
+        expiredIngredients = ingredients
+        
         // We will only show dates in the range set in the view controller.
         let date = NSDate()
         let dateFormatter = NSDateFormatter()
@@ -58,11 +61,13 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         let cellExpiryDate = dateFormatter.dateFromString(dateAsString)!
         dateAsString = dateFormatter.stringFromDate(date)
         let currentDate = dateFormatter.dateFromString(dateAsString)!
+        let currentDatePlusExpiryWindow = NSCalendar.currentCalendar().dateByAddingUnit(NSCalendarUnit.Day, value: withinExpiryTime, toDate: currentDate, options: NSCalendarOptions.init(rawValue: 0))
         
         var calculatedDate = NSCalendar.currentCalendar().dateByAddingUnit(NSCalendarUnit.Day, value: 20, toDate: cellExpiryDate, options: NSCalendarOptions.init(rawValue: 0))
         
         var diffDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: cellExpiryDate, toDate: currentDate, options: NSCalendarOptions.init(rawValue: 0))
         
+        //Go through the original ingredient array and the copy. Remove all ingredients that aren't close to the set expiration date.
         for x in 0...ingredients.count - 1 {
             
             var arrayYValue = 0
@@ -82,26 +87,22 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
                 let cellExpiryDate = dateFormatter.dateFromString(dateAsString)!
                 diffDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: cellExpiryDate, toDate: currentDate, options: NSCalendarOptions.init(rawValue: 0))
                 
-                let NSCUDayAsString = String(NSCalendarUnit.Day)
-                let NSCUDayasInt = Int(NSCUDayAsString)
-                
-                if NSCUDayasInt <= withinExpiryTime {
+                // Only remove if the expiration date is greater than the current date + offset
+                if cellExpiryDate.laterDate(currentDatePlusExpiryWindow!) == cellExpiryDate {
                     
                     //let appendIngredientToExpiryArr = ingredients[x][arrayYValue]
                     
-                    if expiredIngredients.isEmpty {
-                        expiredIngredients[0][0] = ingredients[x][arrayYValue]
-                    } else {
-                        expiredIngredients[x].append(ingredients[x][arrayYValue])
-                    }
+                    print("exp ingred")
+                    print(expiredIngredients)
                     
-                    ++arrayYValue
+                    //Use arrayYValue because the indexes will change after removing a value.
+                    expiredIngredients[x].removeAtIndex(arrayYValue)
                     
                 } else {
+                    // This index is fine so increment the counter
                     print("no match")
+                    arrayYValue += 1
                 }
-                
-                
                 
             }
             
@@ -150,6 +151,11 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         
     }
         
+    @IBAction func navbarTitleWasTapped(recognizer:UITapGestureRecognizer) {
+        print("tap!")
+    }
+    
+    
     // MARK: - Search
     
     //    func filterContentForSearchText(searchText: String, scope: String = "All") {
@@ -204,7 +210,7 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         //return self.ingredients.count
         
         if self.ingredients[section].count != 0 {
-            return self.ingredients[section].count
+            return self.expiredIngredients[section].count
         } else {
             return 0
         }
@@ -238,7 +244,7 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         //                print(indexPath.row)
         //                ingredient = filteredIngredients[indexPath.section][indexPath.row]
         //            } else {
-        ingredient = ingredients[indexPath.section][indexPath.row]
+        ingredient = expiredIngredients[indexPath.section][indexPath.row]
         //                for ingredientcounter in 0 ... ingredients.count - 1 {
         //                    if ingredients[ingredientcounter].location == test[indexPath.section] {
         //                        ingredientList.append(ingredients[ingredientcounter])
