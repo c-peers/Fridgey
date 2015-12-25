@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var expiryTableView: UITableView!
     @IBOutlet weak var navbarTitleText: UILabel!
+    @IBOutlet weak var hiddenTextField: UITextField!
     
     // MARK: Properties
     
@@ -20,7 +21,8 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     var expiredIngredients = [[Ingredient]]()
     var myFridge = FridgeInfo()
     var withinExpiryTime: Int = 14
-    
+    var expirationPickerData = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
+    var expirationPicker = UIPickerView()
     //let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
@@ -36,6 +38,12 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         expiryTableView.delegate = self
         expiryTableView.dataSource = self
         
+        // Hacky hidden text field so we can tap the nav title to change the expiration window
+        hiddenTextField.hidden = true
+        hiddenTextField.inputView = expirationPicker
+        
+        navbarTitleText.text = "Expiring within \(withinExpiryTime) days"
+        
         // Load global variables
         let FTBC = self.tabBarController as! FridgeTabBarController
         
@@ -45,6 +53,199 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         if let savedIngredients = loadIngredients() {
             
             ingredients += savedIngredients
+            
+        }
+        
+        expiredIngredients = ingredients
+        
+        // Connect data:
+        expirationPicker.delegate = self
+        expirationPicker.dataSource = self
+        
+//        // We will only show dates in the range set in the view controller.
+//        let date = NSDate()
+//        let dateFormatter = NSDateFormatter()
+//        
+//        var dateAsString: String
+//        
+//        dateFormatter.dateFormat = "YYYY-MM-dd"
+//        dateAsString = "2015-12-19"
+//        let cellExpiryDate = dateFormatter.dateFromString(dateAsString)!
+//        dateAsString = dateFormatter.stringFromDate(date)
+//        let currentDate = dateFormatter.dateFromString(dateAsString)!
+//        let currentDatePlusExpiryWindow = NSCalendar.currentCalendar().dateByAddingUnit(NSCalendarUnit.Day, value: withinExpiryTime, toDate: currentDate, options: NSCalendarOptions.init(rawValue: 0))
+//        
+//        var calculatedDate = NSCalendar.currentCalendar().dateByAddingUnit(NSCalendarUnit.Day, value: 20, toDate: cellExpiryDate, options: NSCalendarOptions.init(rawValue: 0))
+//        
+//        var diffDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: cellExpiryDate, toDate: currentDate, options: NSCalendarOptions.init(rawValue: 0))
+//        
+//        //Go through the original ingredient array and the copy. Remove all ingredients that aren't close to the set expiration date.
+//        for x in 0...ingredients.count - 1 {
+//            
+//            var arrayYValue = 0
+//            
+//            print("x")
+//            print(x)
+//            
+//            for y in 0...ingredients[x].count - 1 {
+//                
+//                print("y")
+//                print(y)
+//                
+//                print("Ingredient.expiration")
+//                print(ingredients[x][y].expiry)
+//                
+//                dateAsString = ingredients[x][y].expiry
+//                let cellExpiryDate = dateFormatter.dateFromString(dateAsString)!
+//                diffDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: cellExpiryDate, toDate: currentDate, options: NSCalendarOptions.init(rawValue: 0))
+//                
+//                // Only remove if the expiration date is greater than the current date + offset
+//                if cellExpiryDate.laterDate(currentDatePlusExpiryWindow!) == cellExpiryDate {
+//                    
+//                    //let appendIngredientToExpiryArr = ingredients[x][arrayYValue]
+//                    
+//                    print("exp ingred")
+//                    print(expiredIngredients)
+//                    
+//                    //Use arrayYValue because the indexes will change after removing a value.
+//                    expiredIngredients[x].removeAtIndex(arrayYValue)
+//                    
+//                } else {
+//                    // This index is fine so increment the counter
+//                    print("no match")
+//                    arrayYValue += 1
+//                }
+//                
+//            }
+//            
+//        }
+        
+        calculateExpired()
+        
+        // Initializing with searchResultsController set to nil means that
+        // searchController will use this view controller to display the search results
+        //searchController.searchResultsUpdater = self
+        
+        // If we are using this same view controller to present the results
+        // dimming it out wouldn't make sense.  Should set probably only set
+        // this to yes if using another controller to display the search results.
+        //searchController.dimsBackgroundDuringPresentation = false
+        
+        //searchController.searchBar.sizeToFit()
+        //tableView.tableHeaderView = searchController.searchBar
+        
+        // Sets this view controller as presenting view controller for the search interface
+        //definesPresentationContext = true
+        
+        //self.tableView.registerClass(FoodsListTableViewCell.classForCoder(), forCellReuseIdentifier: "FoodsListTableViewCell")
+        
+        self.expiryTableView.scrollToRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), atScrollPosition: UITableViewScrollPosition.Top, animated: false)
+        
+        //self.tableView.contentOffset = CGPointMake(0,  (self.searchDisplayController?.searchBar.frame.size.height)! - self.tableView.contentOffset.y)
+        
+        //NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList:",name:"load", object: nil)
+
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    func viewWillAppear() {
+        
+        print("didappear")
+        
+        calculateExpired()
+        
+    }
+        
+    // MARK: Picker
+    @IBAction func navbarTitleWasTapped(recognizer:UITapGestureRecognizer) {
+        print("tap!")
+    
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.Default
+        toolBar.translucent = true
+        //toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
+        
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.userInteractionEnabled = true
+        
+        hiddenTextField.inputAccessoryView = toolBar
+        
+        // Set picker to the location set in the ingredient location value... If it exists.
+        
+            let setrow = expirationPickerData.indexOf(withinExpiryTime)
+            print("setrow")
+            print(setrow)
+        
+            self.expirationPicker.selectRow(setrow!, inComponent: 0, animated: true)
+        
+        hiddenTextField.becomeFirstResponder()
+        
+    }
+    
+    func donePicker() {
+        
+        hiddenTextField.resignFirstResponder()
+        withinExpiryTime = expirationPickerData[expirationPicker.selectedRowInComponent(0)]
+        navbarTitleText.text = "Expiring within \(withinExpiryTime) days"
+        calculateExpired()
+        self.expiryTableView.reloadInputViews()
+        self.expiryTableView.reloadData()
+
+    }
+    
+    @IBAction func hiddenTextDidBeginEditing(sender: AnyObject) {
+        
+        hiddenTextField.tintColor = UIColor.clearColor()
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.Default
+        toolBar.translucent = true
+        //toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
+        
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.userInteractionEnabled = true
+        
+        navbarTitleText.text = String(expirationPickerData[expirationPicker.selectedRowInComponent(0)])
+        
+        
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        self.view.endEditing(true)
+        return false
+    }
+        
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+            return 1
+    }
+    
+    // MARK: - (Re)Calculate expiration array
+    func calculateExpired() {
+        
+        // Restart the array
+        if let savedIngredients = loadIngredients() {
+            
+            ingredients = savedIngredients
             
         }
         
@@ -107,54 +308,21 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
             }
             
         }
-        
-        // Initializing with searchResultsController set to nil means that
-        // searchController will use this view controller to display the search results
-        //searchController.searchResultsUpdater = self
-        
-        // If we are using this same view controller to present the results
-        // dimming it out wouldn't make sense.  Should set probably only set
-        // this to yes if using another controller to display the search results.
-        //searchController.dimsBackgroundDuringPresentation = false
-        
-        //searchController.searchBar.sizeToFit()
-        //tableView.tableHeaderView = searchController.searchBar
-        
-        // Sets this view controller as presenting view controller for the search interface
-        //definesPresentationContext = true
-        
-        // Populate the list of ingredients per "Area"
-        //self.ingredientsByArea.IBLArray
-        //ingredientsByArea = IngredientsByLocation.init(Location: test, Ingredients: ingredients)!
-        
-        //self.tableView.registerClass(FoodsListTableViewCell.classForCoder(), forCellReuseIdentifier: "FoodsListTableViewCell")
-        
-        self.expiryTableView.scrollToRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), atScrollPosition: UITableViewScrollPosition.Top, animated: false)
-        
-        //self.tableView.contentOffset = CGPointMake(0,  (self.searchDisplayController?.searchBar.frame.size.height)! - self.tableView.contentOffset.y)
-        
-        //print(self.ingredientsByArea?.IBLArray[0][0])
-        
-        //NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList:",name:"load", object: nil)
 
+        
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    func viewDidAppear() {
-        
-        print("didappear")
-        self.expiryTableView.reloadData()
-        
-    }
-        
-    @IBAction func navbarTitleWasTapped(recognizer:UITapGestureRecognizer) {
-        print("tap!")
+    
+    // MARK: - PickerView
+    // The number of rows of data
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+            return expirationPickerData.count
     }
     
+    // The data to return for the row and component (column) that's being passed in
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+            return String(expirationPickerData[row])
+    }
     
     // MARK: - Search
     

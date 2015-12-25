@@ -864,7 +864,7 @@ does your refridgerator have?</string>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOi-t2-OwT">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOi-t2-OwT">
                                                     <rect key="frame" x="417" y="8" width="175" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -873,6 +873,7 @@ does your refridgerator have?</string>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="EEh-Eb-Rj9" firstAttribute="leading" secondItem="LSy-2u-Uhu" secondAttribute="leading" id="6Ha-w9-fDl"/>
+                                                <constraint firstItem="oOi-t2-OwT" firstAttribute="firstBaseline" secondItem="yDk-TP-8rT" secondAttribute="baseline" id="7qa-Ie-u3P"/>
                                                 <constraint firstItem="oOi-t2-OwT" firstAttribute="leading" secondItem="6oa-Xw-Vqc" secondAttribute="leading" id="FcY-aN-P5H"/>
                                                 <constraint firstItem="6oa-Xw-Vqc" firstAttribute="trailing" secondItem="LSy-2u-Uhu" secondAttribute="trailingMargin" id="GWa-f8-aEK"/>
                                                 <constraint firstItem="yDk-TP-8rT" firstAttribute="leading" secondItem="9ez-8b-mTP" secondAttribute="leading" id="J0a-ed-hUe"/>
@@ -909,11 +910,24 @@ does your refridgerator have?</string>
                                     <outletCollection property="gestureRecognizers" destination="gww-eN-bDv" appends="YES" id="rBg-th-Gaw"/>
                                 </connections>
                             </label>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hNf-wF-Gae">
+                                <rect key="frame" x="252" y="28" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="OgA-XA-K2N"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="hiddenTextDidBeginEditing:" destination="0UJ-Db-tXM" eventType="editingDidBegin" id="aAK-fT-OdA"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dHw-9w-7Rx" firstAttribute="centerY" secondItem="BGT-yA-F3f" secondAttribute="centerY" id="ELo-qp-Ox4"/>
                             <constraint firstItem="jpt-c8-Pmq" firstAttribute="leading" secondItem="BGT-yA-F3f" secondAttribute="leading" id="FMx-oc-w1Q"/>
+                            <constraint firstItem="hNf-wF-Gae" firstAttribute="centerX" secondItem="dHw-9w-7Rx" secondAttribute="centerX" id="Imu-NO-nki"/>
                             <constraint firstItem="dHw-9w-7Rx" firstAttribute="top" secondItem="TJP-1e-J49" secondAttribute="bottom" constant="11" id="LfZ-RB-bFf"/>
                             <constraint firstItem="jpt-c8-Pmq" firstAttribute="centerX" secondItem="BGT-yA-F3f" secondAttribute="centerX" id="Xsh-HF-Ooy"/>
                             <constraint firstItem="BGT-yA-F3f" firstAttribute="leading" secondItem="REw-FF-qOU" secondAttribute="leadingMargin" constant="-20" id="YLG-IF-9zN"/>
@@ -921,12 +935,14 @@ does your refridgerator have?</string>
                             <constraint firstAttribute="trailingMargin" secondItem="BGT-yA-F3f" secondAttribute="trailing" constant="-20" id="mn4-aI-unl"/>
                             <constraint firstItem="BGT-yA-F3f" firstAttribute="top" secondItem="TJP-1e-J49" secondAttribute="bottom" id="nir-NY-d1K"/>
                             <constraint firstAttribute="centerX" secondItem="BGT-yA-F3f" secondAttribute="centerX" id="xaU-WO-Jg3"/>
+                            <constraint firstItem="hNf-wF-Gae" firstAttribute="baseline" secondItem="dHw-9w-7Rx" secondAttribute="firstBaseline" id="xsE-XD-KLi"/>
                             <constraint firstItem="dHw-9w-7Rx" firstAttribute="centerX" secondItem="BGT-yA-F3f" secondAttribute="centerX" id="yYs-61-Z3Z"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Use Soon" image="Present" id="JpQ-2z-ept"/>
                     <connections>
                         <outlet property="expiryTableView" destination="jpt-c8-Pmq" id="di8-MC-EEf"/>
+                        <outlet property="hiddenTextField" destination="hNf-wF-Gae" id="v5Y-hI-lUV"/>
                         <outlet property="navbarTitleText" destination="dHw-9w-7Rx" id="yZD-JJ-e70"/>
                     </connections>
                 </viewController>
