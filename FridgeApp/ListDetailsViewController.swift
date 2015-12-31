@@ -10,12 +10,27 @@ import UIKit
 
 class ListDetailsViewController: UIViewController {
 
+    @IBOutlet weak var tempListView: UITextView!
     
-    
+    var listName: String?
+    var listDetails: [Int:String]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print(listName)
+        print(listDetails)
+        
+        var tempList: [String] = []
+        
+        for dictCounter in 1...listDetails!.count {
+            tempList.append(listDetails![dictCounter]!)
+        }
+        
+        print(tempList)
+        
+        //tempListView.text = tempList
+        
         // Do any additional setup after loading the view.
     }
 

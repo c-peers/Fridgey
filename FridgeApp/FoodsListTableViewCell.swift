@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FoodsListTableViewCell: UITableViewCell {
+class FoodsListTableViewCell: MGSwipeTableCell {
     
     @IBOutlet weak var FoodName: UILabel!
     @IBOutlet weak var FoodImageView: UIImageView!

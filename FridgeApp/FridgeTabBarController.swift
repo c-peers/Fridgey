@@ -18,6 +18,8 @@ class FridgeTabBarController: UITabBarController, UITabBarControllerDelegate {
     var MyFridge = FridgeInfo()
     
     var Ingredients = [[Ingredient]]()
+    
+    var ShoppingLists = Lists()
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

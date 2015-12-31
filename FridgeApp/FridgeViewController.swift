@@ -148,10 +148,10 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
         }
 
         if let pageViewController = parentViewController as? UIPageViewController {
-            pageViewController.setViewControllers(viewControllers as! [UIViewController], direction: .Forward, animated: true, completion: nil)
+            pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
         }
         
-        pageViewController.setViewControllers(viewControllers as! [UIViewController], direction: .Forward, animated: true, completion: nil)
+        pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
 
         
         
@@ -186,10 +186,10 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
         
         self.pageViewController.dataSource = self
         
-        var startVC = self.viewControllerAtIndex(0) as FridgePageContentViewController
+        let startVC = self.viewControllerAtIndex(0) as FridgePageContentViewController
         viewControllers = NSArray(object: startVC)
         
-        self.pageViewController.setViewControllers(viewControllers as! [UIViewController], direction: .Forward, animated: true, completion: nil)
+        self.pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
         
         self.pageViewController.view.frame = CGRectMake(30, 30, self.view.frame.width - 60, self.view.frame.height - 100)
         
@@ -198,10 +198,10 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
         self.pageViewController.didMoveToParentViewController(self)
         
         if let pageViewController = parentViewController as? UIPageViewController {
-            pageViewController.setViewControllers(viewControllers as! [UIViewController], direction: .Forward, animated: true, completion: nil)
+            pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
         }
         
-        pageViewController.setViewControllers(viewControllers as! [UIViewController], direction: .Forward, animated: true, completion: nil)
+        pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
         
     }
     
@@ -211,7 +211,7 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
             return FridgePageContentViewController()
         }
         
-        var vc: FridgePageContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("FridgePageContentViewController") as! FridgePageContentViewController
+        let vc: FridgePageContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("FridgePageContentViewController") as! FridgePageContentViewController
         
         vc.FridgeImage = self.fridgeImages[index] as! String
         vc.fridgeIndex = self.fridgeTitles[index] as! String
@@ -226,7 +226,7 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         
-        var vc = viewController as! FridgePageContentViewController
+        let vc = viewController as! FridgePageContentViewController
         var index = vc.pageIndex as Int
         
         if (index == 0) || (index == NSNotFound) {
@@ -241,7 +241,7 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
-        var vc = viewController as! FridgePageContentViewController
+        let vc = viewController as! FridgePageContentViewController
         var index = vc.pageIndex as Int
         
         if (index == NSNotFound) {

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "19E5F7CC895F38056D705C38800E097DF8D2EF42",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "19E5F7CC895F38056D705C38800E097DF8D2EF42" : 0,
+    "0A959C88AC07FF3B7A809BFB89EA1C760CD1610F" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4A92FC9B-507C-4B78-B330-90F74F4F5182",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "19E5F7CC895F38056D705C38800E097DF8D2EF42" : "FridgeApp\/",
+    "0A959C88AC07FF3B7A809BFB89EA1C760CD1610F" : "SWTableViewCell\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "FridgeApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "FridgeApp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CEWendel\/SWTableViewCell.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0A959C88AC07FF3B7A809BFB89EA1C760CD1610F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/c-peers\/Fridgey.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "19E5F7CC895F38056D705C38800E097DF8D2EF42"
+    }
+  ]
+}

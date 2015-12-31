@@ -33,6 +33,14 @@
 		C4F1739F1BB69319002D9DA1 /* FoodsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F1739E1BB69319002D9DA1 /* FoodsListTableViewCell.swift */; };
 		C4F173A21BB698B5002D9DA1 /* FoodsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F173A01BB698B5002D9DA1 /* FoodsListTableViewController.swift */; };
 		C4F173A51BB97C75002D9DA1 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F173A41BB97C75002D9DA1 /* Ingredient.swift */; };
+		C4F56E551C2FB082004B6F42 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = C4F56E541C2FB082004B6F42 /* Cartfile */; };
+		C4F56E681C3030E8004B6F42 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F56E671C3030E8004B6F42 /* Lists.swift */; };
+		C4F56E771C317C46004B6F42 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4F56E721C317C46004B6F42 /* Info.plist */; };
+		C4F56E781C317C46004B6F42 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4F56E721C317C46004B6F42 /* Info.plist */; };
+		C4F56E791C317C46004B6F42 /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F56E741C317C46004B6F42 /* MGSwipeButton.m */; };
+		C4F56E7A1C317C46004B6F42 /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F56E741C317C46004B6F42 /* MGSwipeButton.m */; };
+		C4F56E7B1C317C46004B6F42 /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F56E761C317C46004B6F42 /* MGSwipeTableCell.m */; };
+		C4F56E7C1C317C46004B6F42 /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F56E761C317C46004B6F42 /* MGSwipeTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C40080671C2FA6D9009BC1EC /* FridgeApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FridgeApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		C40568281C27BDA80079A92F /* ListDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailsViewController.swift; sourceTree = "<group>"; };
 		C405682C1C27C6ED0079A92F /* AddToListFromIngredientDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToListFromIngredientDetailsViewController.swift; sourceTree = "<group>"; };
 		C442CC281C0ADB2000BDC38C /* IngredientsByLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsByLocation.swift; sourceTree = "<group>"; };
@@ -90,6 +99,13 @@
 		C4F1739E1BB69319002D9DA1 /* FoodsListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsListTableViewCell.swift; sourceTree = "<group>"; };
 		C4F173A01BB698B5002D9DA1 /* FoodsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsListTableViewController.swift; sourceTree = "<group>"; };
 		C4F173A41BB97C75002D9DA1 /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		C4F56E541C2FB082004B6F42 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		C4F56E671C3030E8004B6F42 /* Lists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
+		C4F56E721C317C46004B6F42 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4F56E731C317C46004B6F42 /* MGSwipeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeButton.h; sourceTree = "<group>"; };
+		C4F56E741C317C46004B6F42 /* MGSwipeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeButton.m; sourceTree = "<group>"; };
+		C4F56E751C317C46004B6F42 /* MGSwipeTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeTableCell.h; sourceTree = "<group>"; };
+		C4F56E761C317C46004B6F42 /* MGSwipeTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeTableCell.m; sourceTree = "<group>"; };
 		C4F5D0B01C276F450072C28B /* SwiftDate.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftDate.xcodeproj; path = "../../../Downloads/SwiftDate-master-2/SwiftDate.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,32 +149,36 @@
 		C45F3CB71B9AC4E40010FEF0 /* FridgeApp */ = {
 			isa = PBXGroup;
 			children = (
+				C4F56E711C317C46004B6F42 /* MGSwipeTableCell */,
 				C45F3CBA1B9AC4E40010FEF0 /* AppDelegate.swift */,
-				C45F3CBC1B9AC4E40010FEF0 /* FridgeViewController.swift */,
-				C485EA081BEDD65800AB9FDA /* FridgePageContentViewController.swift */,
 				C45F3CBE1B9AC4E40010FEF0 /* SecondViewController.swift */,
-				C45F3CDC1B9AC75E0010FEF0 /* ListViewController.swift */,
-				C4E458F71C2777A6005B28E3 /* ListCollectionViewCell.swift */,
 				C45F3CDE1B9ACA900010FEF0 /* FourthViewController.swift */,
 				C45F3CC01B9AC4E40010FEF0 /* Main.storyboard */,
-				C49FB9041C2A501000231C8E /* AddToListFromIngredientsCollectionViewCell.swift */,
-				C46F4E611BCF80B00020F682 /* NewIngredientViewController.swift */,
 				C4937B901C019C07008505B9 /* FridgeTabBarController.swift */,
-				C4F173A01BB698B5002D9DA1 /* FoodsListTableViewController.swift */,
 				C49D0A601C1F0F6D00C23EE3 /* TabBarDelegate.swift */,
+				C48272101BB122BE00BACE1D /* FridgeInfo.swift */,
+				C45F3CBC1B9AC4E40010FEF0 /* FridgeViewController.swift */,
+				C485EA081BEDD65800AB9FDA /* FridgePageContentViewController.swift */,
+				C46E16EF1BAE844E00279B69 /* ChooseAFridgeVC.swift */,
+				C48272121BB129AC00BACE1D /* ConfirmFridgeVC.swift */,
+				C4F173A41BB97C75002D9DA1 /* Ingredient.swift */,
+				C4F173A01BB698B5002D9DA1 /* FoodsListTableViewController.swift */,
 				C4F1739E1BB69319002D9DA1 /* FoodsListTableViewCell.swift */,
+				C46F4E611BCF80B00020F682 /* NewIngredientViewController.swift */,
+				C4F56E671C3030E8004B6F42 /* Lists.swift */,
+				C45F3CDC1B9AC75E0010FEF0 /* ListViewController.swift */,
+				C40568281C27BDA80079A92F /* ListDetailsViewController.swift */,
+				C4E458F71C2777A6005B28E3 /* ListCollectionViewCell.swift */,
+				C49FB9041C2A501000231C8E /* AddToListFromIngredientsCollectionViewCell.swift */,
 				C4CA4D4F1C1F08C6005F6236 /* ExpireTableView.swift */,
 				C4CA4D4D1C1F073C005F6236 /* ExpireTableViewCell.swift */,
-				C4F173A41BB97C75002D9DA1 /* Ingredient.swift */,
-				C48272121BB129AC00BACE1D /* ConfirmFridgeVC.swift */,
-				C46E16EF1BAE844E00279B69 /* ChooseAFridgeVC.swift */,
-				C48272101BB122BE00BACE1D /* FridgeInfo.swift */,
+				C4F56E541C2FB082004B6F42 /* Cartfile */,
 				C45F3CC31B9AC4E40010FEF0 /* Images.xcassets */,
 				C45F3CC51B9AC4E40010FEF0 /* LaunchScreen.xib */,
 				C45F3CB81B9AC4E40010FEF0 /* Supporting Files */,
 				C442CC281C0ADB2000BDC38C /* IngredientsByLocation.swift */,
-				C40568281C27BDA80079A92F /* ListDetailsViewController.swift */,
 				C405682C1C27C6ED0079A92F /* AddToListFromIngredientDetailsViewController.swift */,
+				C40080671C2FA6D9009BC1EC /* FridgeApp-Bridging-Header.h */,
 			);
 			path = FridgeApp;
 			sourceTree = "<group>";
@@ -186,6 +206,18 @@
 				C45F3CD11B9AC4E40010FEF0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C4F56E711C317C46004B6F42 /* MGSwipeTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				C4F56E721C317C46004B6F42 /* Info.plist */,
+				C4F56E731C317C46004B6F42 /* MGSwipeButton.h */,
+				C4F56E741C317C46004B6F42 /* MGSwipeButton.m */,
+				C4F56E751C317C46004B6F42 /* MGSwipeTableCell.h */,
+				C4F56E761C317C46004B6F42 /* MGSwipeTableCell.m */,
+			);
+			path = MGSwipeTableCell;
 			sourceTree = "<group>";
 		};
 		C4F5D0B11C276F450072C28B /* Products */ = {
@@ -241,8 +273,8 @@
 		C45F3CAD1B9AC4E40010FEF0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Chase Peers";
 				TargetAttributes = {
 					C45F3CB41B9AC4E40010FEF0 = {
@@ -302,7 +334,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4F56E551C2FB082004B6F42 /* Cartfile in Resources */,
 				C45F3CC21B9AC4E40010FEF0 /* Main.storyboard in Resources */,
+				C4F56E771C317C46004B6F42 /* Info.plist in Resources */,
 				C45F3CC71B9AC4E40010FEF0 /* LaunchScreen.xib in Resources */,
 				C45F3CC41B9AC4E40010FEF0 /* Images.xcassets in Resources */,
 			);
@@ -312,6 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4F56E781C317C46004B6F42 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C48272131BB129AC00BACE1D /* ConfirmFridgeVC.swift in Sources */,
+				C4F56E681C3030E8004B6F42 /* Lists.swift in Sources */,
 				C4F173A21BB698B5002D9DA1 /* FoodsListTableViewController.swift in Sources */,
 				C4937B911C019C07008505B9 /* FridgeTabBarController.swift in Sources */,
 				C46F4E621BCF80B00020F682 /* NewIngredientViewController.swift in Sources */,
@@ -335,10 +371,12 @@
 				C49D0A611C1F0F6D00C23EE3 /* TabBarDelegate.swift in Sources */,
 				C4CA4D501C1F08C6005F6236 /* ExpireTableView.swift in Sources */,
 				C4E458F81C2777A6005B28E3 /* ListCollectionViewCell.swift in Sources */,
+				C4F56E7B1C317C46004B6F42 /* MGSwipeTableCell.m in Sources */,
 				C405682D1C27C6ED0079A92F /* AddToListFromIngredientDetailsViewController.swift in Sources */,
 				C45F3CDD1B9AC75E0010FEF0 /* ListViewController.swift in Sources */,
 				C46E16F01BAE844E00279B69 /* ChooseAFridgeVC.swift in Sources */,
 				C45F3CBD1B9AC4E40010FEF0 /* FridgeViewController.swift in Sources */,
+				C4F56E791C317C46004B6F42 /* MGSwipeButton.m in Sources */,
 				C485EA091BEDD65800AB9FDA /* FridgePageContentViewController.swift in Sources */,
 				C49FB9051C2A501000231C8E /* AddToListFromIngredientsCollectionViewCell.swift in Sources */,
 				C45F3CDF1B9ACA900010FEF0 /* FourthViewController.swift in Sources */,
@@ -351,6 +389,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4F56E7A1C317C46004B6F42 /* MGSwipeButton.m in Sources */,
+				C4F56E7C1C317C46004B6F42 /* MGSwipeTableCell.m in Sources */,
 				C45F3CD31B9AC4E40010FEF0 /* FridgeAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,7 +464,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -473,10 +513,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: cpeers@gmail.com (4Z536452N7)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/FridgeApp/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = FridgeApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -484,6 +527,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "DontHaveANameYet.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FridgeApp/FridgeApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -491,16 +536,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: cpeers@gmail.com (4Z536452N7)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/FridgeApp/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = FridgeApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "DontHaveANameYet.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FridgeApp/FridgeApp-Bridging-Header.h";
 			};
 			name = Release;
 		};

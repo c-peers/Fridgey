@@ -172,9 +172,10 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
+        let pickerTitle2 = UIBarButtonItem(title: "Choose an expiration window", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelPicker")
         
-        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.setItems([cancelButton, pickerTitle2, doneButton], animated: false)
         toolBar.userInteractionEnabled = true
         
         hiddenTextField.inputAccessoryView = toolBar
@@ -193,13 +194,19 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     
     func donePicker() {
         
-        hiddenTextField.resignFirstResponder()
         withinExpiryTime = expirationPickerData[expirationPicker.selectedRowInComponent(0)]
         navbarTitleText.text = "Expiring within \(withinExpiryTime) days"
         calculateExpired()
+        hiddenTextField.resignFirstResponder()
         self.expiryTableView.reloadInputViews()
         self.expiryTableView.reloadData()
 
+    }
+    
+    func cancelPicker() {
+        
+        hiddenTextField.resignFirstResponder()
+        
     }
     
     @IBAction func hiddenTextDidBeginEditing(sender: AnyObject) {
@@ -212,14 +219,13 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         toolBar.sizeToFit()
         
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        let pickerTitle = UINavigationItem(title: "Choose an expiration window")
+        let pickerTitle2 = UIBarButtonItem(title: "Choose an expiration window", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
+        //let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
         
-        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.setItems([cancelButton, pickerTitle2, doneButton], animated: false)
         toolBar.userInteractionEnabled = true
-        
-        navbarTitleText.text = String(expirationPickerData[expirationPicker.selectedRowInComponent(0)])
-        
         
     }
     

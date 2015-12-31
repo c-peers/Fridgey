@@ -21,9 +21,6 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     
     let searchController = UISearchController(searchResultsController: nil)
     
-    // This didn't work to transfer data from another viewcontroller in the tab bar.
-    //let fromFVC: FridgeInfo? = FridgeViewController().MyFridge
-    
     let test = ["Area 1 Door", "Area 2 Door", "Area 3 Door", "Area 4 Door"]
     
     // Temporary Sample
@@ -207,13 +204,39 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         
         // return ingredients.count
     }
+    
+//    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+//        
+//        let delete = UITableViewRowAction(style: .Normal, title: "Delete") { action, index in print("button was tapped")
+//        }
+//        
+//        delete.backgroundColor = UIColor.redColor()
+//        
+//        let addToList = UITableViewRowAction(style: .Normal, title: "Add to List") { action, index in print("add to list button")
+//        }
+//        //let addToList = UITableViewRowAction(style: .Normal, title: "Add to List", handler: <#T##(UITableViewRowAction, NSIndexPath) -> Void#>)
+//        
+//        addToList.backgroundColor = UIColor.blueColor()
+//        
+//        return [delete, addToList]
+//    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // the cells you would like the actions to appear needs to be editable
+        return true
+    }
+    
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "FoodsListTableViewCell"
         
         let cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! FoodsListTableViewCell
-            
+        
+        //if cell == nil
+        //{
+        //    cell = MGSwipeTableCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: reuseIdentifier)
+        //}
         
         // Fetches the appropriate meal for the data source layout.
             //let ingredient = ingredients[indexPath.row]
@@ -243,28 +266,23 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
 //            } else {
 //                ingredient = ingredients[indexPath.row]
 //            }
-//        
-            //if cell.FoodName.text != nil {
-            cell.FoodName?.text = ingredient.name
-            //} else {
-                //cell.FoodName?.text = ingredient.name
-            //}
-            
-            //if cell.FoodWeight.text == nil {
-            //    cell.FoodWeight.text = "Blank"
-            //} else {
-            cell.FoodAmount?.text = String(ingredient.amount)
-            //}
-            
-            //if cell.FoodExpiry.text == nil {
-            //    cell.FoodExpiry.text = "Blank"
-            //} else {
-            cell.FoodExpiry?.text = ingredient.expiry
-            //}
-            
-            cell.FoodImageView?.image = ingredient.image
+//
+        
+        cell.FoodName?.text = ingredient.name
+        cell.FoodAmount?.text = String(ingredient.amount)
+        cell.FoodExpiry?.text = ingredient.expiry
+        cell.FoodImageView?.image = ingredient.image
 
-            return cell
+        //cell.leftButtons = [MGSwipeButton(title: "", icon: UIImage(named:"check.png"), backgroundColor: UIColor.greenColor())
+        //    ,MGSwipeButton(title: "", icon: UIImage(named:"fav.png"), backgroundColor: UIColor.blueColor())]
+        //cell.leftSwipeSettings.transition = MGSwipeTransition.Rotate3D
+        
+        //configure right buttons
+        cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor())
+            ,MGSwipeButton(title: "Add To List",backgroundColor: UIColor.blueColor())]
+        cell.rightSwipeSettings.transition = MGSwipeTransition.Rotate3D
+        
+        return cell
         
     }
 
