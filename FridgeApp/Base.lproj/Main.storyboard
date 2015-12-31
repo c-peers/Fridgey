@@ -237,64 +237,64 @@ does your refridgerator have?</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Az-j4-q2c">
-                                <rect key="frame" x="78" y="123" width="45" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Az-j4-q2c">
+                                <rect key="frame" x="78" y="84" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HCl-1u-Nkq">
-                                <rect key="frame" x="181" y="119" width="120" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HCl-1u-Nkq">
+                                <rect key="frame" x="181" y="80" width="120" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="lwd-oz-rGO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Expiration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZI-GL-2Dh">
-                                <rect key="frame" x="47" y="193" width="76" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZI-GL-2Dh">
+                                <rect key="frame" x="47" y="154" width="76" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YYYY-MM-DD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q4p-4F-bTt">
-                                <rect key="frame" x="181" y="189" width="120" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YYYY-MM-DD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q4p-4F-bTt">
+                                <rect key="frame" x="181" y="150" width="120" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="expirationDateBeingChosen:" destination="8rJ-Kc-sve" eventType="editingDidBegin" id="rm4-ez-nYs"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhg-Bd-UP0">
-                                <rect key="frame" x="63" y="271" width="60" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhg-Bd-UP0">
+                                <rect key="frame" x="63" y="232" width="60" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CYj-FD-jUf">
-                                <rect key="frame" x="181" y="267" width="120" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CYj-FD-jUf">
+                                <rect key="frame" x="181" y="228" width="120" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjM-Q0-JNO">
-                                <rect key="frame" x="69" y="351" width="54" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjM-Q0-JNO">
+                                <rect key="frame" x="69" y="312" width="54" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DAi-e2-sSo">
-                                <rect key="frame" x="181" y="347" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DAi-e2-sSo">
+                                <rect key="frame" x="181" y="308" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Be-6z-pra">
-                                <rect key="frame" x="57" y="427" width="66" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Be-6z-pra">
+                                <rect key="frame" x="57" y="388" width="66" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uuu-0C-MTX">
-                                <rect key="frame" x="181" y="423" width="120" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uuu-0C-MTX">
+                                <rect key="frame" x="181" y="384" width="120" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -318,25 +318,33 @@ does your refridgerator have?</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Snl-c9-pIw">
-                                <rect key="frame" x="181" y="489" width="120" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Snl-c9-pIw">
+                                <rect key="frame" x="181" y="450" width="120" height="30"/>
                                 <state key="normal" title="Add to List"/>
                                 <connections>
                                     <segue destination="E77-v0-SKt" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="pQA-vO-Nhw"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lw9-RQ-jxL">
+                                <rect key="frame" x="181" y="109" width="120" height="149"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HCl-1u-Nkq" firstAttribute="trailing" secondItem="Q4p-4F-bTt" secondAttribute="trailing" id="0Xj-4E-tVj"/>
+                            <constraint firstItem="Lw9-RQ-jxL" firstAttribute="top" secondItem="1gG-EH-xZq" secondAttribute="bottom" constant="45" id="29I-XT-20U"/>
                             <constraint firstItem="DAi-e2-sSo" firstAttribute="top" secondItem="CYj-FD-jUf" secondAttribute="bottom" constant="50" id="2yw-cv-tBd"/>
                             <constraint firstItem="CYj-FD-jUf" firstAttribute="trailing" secondItem="Q4p-4F-bTt" secondAttribute="trailing" id="3ec-yV-rnb"/>
                             <constraint firstItem="HCl-1u-Nkq" firstAttribute="centerY" secondItem="1Az-j4-q2c" secondAttribute="centerY" id="3n9-l9-rh9"/>
                             <constraint firstItem="7Be-6z-pra" firstAttribute="trailing" secondItem="fjM-Q0-JNO" secondAttribute="trailing" id="5RB-Qw-G4N"/>
+                            <constraint firstItem="Lw9-RQ-jxL" firstAttribute="bottom" secondItem="CYj-FD-jUf" secondAttribute="bottom" id="5cf-Cp-29P"/>
                             <constraint firstItem="4ZI-GL-2Dh" firstAttribute="trailing" secondItem="Lhg-Bd-UP0" secondAttribute="trailing" id="7M3-gT-wDV"/>
+                            <constraint firstItem="Snl-c9-pIw" firstAttribute="leading" secondItem="uuu-0C-MTX" secondAttribute="leading" id="C3q-Yj-zVN"/>
                             <constraint firstItem="1gG-EH-xZq" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="Cgn-KW-TLM"/>
                             <constraint firstItem="DAi-e2-sSo" firstAttribute="trailing" secondItem="CYj-FD-jUf" secondAttribute="trailing" constant="-23" id="EQM-Pi-xaU"/>
-                            <constraint firstItem="HCl-1u-Nkq" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="55" id="HQq-Bo-5n2"/>
+                            <constraint firstItem="Lw9-RQ-jxL" firstAttribute="leading" secondItem="HCl-1u-Nkq" secondAttribute="leading" id="FaP-qW-7AB"/>
+                            <constraint firstItem="HCl-1u-Nkq" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="60" id="HQq-Bo-5n2"/>
                             <constraint firstItem="Lhg-Bd-UP0" firstAttribute="trailing" secondItem="fjM-Q0-JNO" secondAttribute="trailing" id="KcJ-o3-xX1"/>
                             <constraint firstItem="Lhg-Bd-UP0" firstAttribute="top" secondItem="4ZI-GL-2Dh" secondAttribute="bottom" constant="57" id="ObM-xj-mKc"/>
                             <constraint firstItem="Q4p-4F-bTt" firstAttribute="centerY" secondItem="4ZI-GL-2Dh" secondAttribute="centerY" id="Q1K-3f-Ht8"/>
@@ -344,15 +352,19 @@ does your refridgerator have?</string>
                             <constraint firstItem="Q4p-4F-bTt" firstAttribute="leading" secondItem="CYj-FD-jUf" secondAttribute="leading" id="TAN-xN-Mqw"/>
                             <constraint firstItem="Q4p-4F-bTt" firstAttribute="leading" secondItem="HCl-1u-Nkq" secondAttribute="leading" id="WnO-Mc-wdJ"/>
                             <constraint firstItem="HCl-1u-Nkq" firstAttribute="leading" secondItem="1Az-j4-q2c" secondAttribute="trailing" constant="58" id="Wxc-ui-KMb"/>
+                            <constraint firstItem="Lw9-RQ-jxL" firstAttribute="leading" secondItem="CYj-FD-jUf" secondAttribute="leading" id="Yay-Gs-tOJ"/>
                             <constraint firstItem="4ZI-GL-2Dh" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="27" id="ZaU-6w-GdI"/>
                             <constraint firstItem="4ZI-GL-2Dh" firstAttribute="top" secondItem="1Az-j4-q2c" secondAttribute="bottom" constant="49" id="bLL-we-dJD"/>
                             <constraint firstItem="Q4p-4F-bTt" firstAttribute="top" secondItem="HCl-1u-Nkq" secondAttribute="bottom" constant="40" id="ccg-qT-JLp"/>
+                            <constraint firstItem="Snl-c9-pIw" firstAttribute="top" secondItem="uuu-0C-MTX" secondAttribute="bottom" constant="36" id="cyB-C7-PyT"/>
                             <constraint firstItem="uuu-0C-MTX" firstAttribute="leading" secondItem="DAi-e2-sSo" secondAttribute="leading" id="hS6-xp-5tI"/>
                             <constraint firstItem="1gG-EH-xZq" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-20" id="jea-QW-joB"/>
                             <constraint firstItem="uuu-0C-MTX" firstAttribute="top" secondItem="DAi-e2-sSo" secondAttribute="bottom" constant="46" id="jxe-Fs-5bY"/>
                             <constraint firstItem="fjM-Q0-JNO" firstAttribute="centerY" secondItem="DAi-e2-sSo" secondAttribute="centerY" id="kby-FO-5Lc"/>
                             <constraint firstItem="Lhg-Bd-UP0" firstAttribute="centerY" secondItem="CYj-FD-jUf" secondAttribute="centerY" id="nD7-l4-WAH"/>
+                            <constraint firstItem="Lw9-RQ-jxL" firstAttribute="trailing" secondItem="CYj-FD-jUf" secondAttribute="trailing" id="pLQ-QM-PSd"/>
                             <constraint firstItem="uuu-0C-MTX" firstAttribute="trailing" secondItem="CYj-FD-jUf" secondAttribute="trailing" id="r2A-mS-k6b"/>
+                            <constraint firstItem="Snl-c9-pIw" firstAttribute="trailing" secondItem="uuu-0C-MTX" secondAttribute="trailing" id="rUU-rA-fEf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1gG-EH-xZq" secondAttribute="trailing" constant="-20" id="twG-4M-Prg"/>
                             <constraint firstItem="1Az-j4-q2c" firstAttribute="trailing" secondItem="4ZI-GL-2Dh" secondAttribute="trailing" id="wbA-Kj-hw9"/>
                             <constraint firstItem="7Be-6z-pra" firstAttribute="centerY" secondItem="uuu-0C-MTX" secondAttribute="centerY" id="z3Q-n8-Cq0"/>
@@ -370,6 +382,7 @@ does your refridgerator have?</string>
                     <connections>
                         <outlet property="AddIngredientButton" destination="0CF-2h-UJx" id="bXB-au-nGe"/>
                         <outlet property="amountTextField" destination="CYj-FD-jUf" id="MDa-St-XDA"/>
+                        <outlet property="autocompleteTableView" destination="Lw9-RQ-jxL" id="YYa-tn-BOu"/>
                         <outlet property="expirationTextField" destination="Q4p-4F-bTt" id="0YL-te-5Xq"/>
                         <outlet property="locationTextField" destination="uuu-0C-MTX" id="xQZ-zw-jjW"/>
                         <outlet property="nameTextField" destination="HCl-1u-Nkq" id="wXA-dX-9sL"/>

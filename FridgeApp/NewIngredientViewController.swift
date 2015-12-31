@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class NewIngredientViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var AddIngredientButton: UIBarButtonItem!
     @IBOutlet weak var nameTextField: UITextField!
@@ -18,12 +18,19 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
     //@IBOutlet weak var expirationPicker: UIDatePicker!
     @IBOutlet weak var locationTextField: UITextField!
 
+    @IBOutlet weak var autocompleteTableView: UITableView!
+    //let autocompleteTableView = UITableView(frame: UIScreen.mainScreen().bounds, style: UITableViewStyle.Plain)
+    
     var MyFridge: FridgeInfo?
     var MyFridge2: FridgeInfo?
     
     var ingredient: Ingredient?
     
     var locationPickerData: [String] = [String]()
+    
+    var ingredientNameChoices = ["Carrot", "Apple", "Chicken", "Hot Dog", "Steak", "Celery", "Yam", "Eggs"]
+    
+    var autocompleteDisplay = [String]()
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,22 +70,18 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
             locationTextField.text = ingredient.location
         }
         
-        //let datePicker = UIDatePicker()
-        //datePicker.tag = 1
-        //datePicker.datePickerMode = UIDatePickerMode.Date
-        //datePicker.backgroundColor
-        //self.expirationTextField.inputView = datePicker
+        print("autocomplete stuff")
+        autocompleteTableView.delegate = self
+        autocompleteTableView.dataSource = self
+        autocompleteTableView.scrollEnabled = true
+        //autocompleteTableView.frame = CGRectMake(100, 100, 100, 100)
+        autocompleteTableView.alpha = 0
         
-        // Connect data:
-        //self.locationPicker.delegate = self
-        //self.locationPicker.dataSource = self
+        print("AC Cell")
+        autocompleteTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "AutoCompleteRowIdentifier")
         
-        //self.expirationTextField.inputView = expirationPicker
-        //self.expirationPicker.backgroundColor = UIColor.whiteColor()
-        
-        // Hide the pickers
-        //self.expirationPicker.hidden = true
-        
+        print("Add subview")
+        self.view.addSubview(autocompleteTableView)
         
         
         // Input data into the Array:
@@ -117,6 +120,68 @@ class NewIngredientViewController: UIViewController, UITextFieldDelegate, UIPick
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: Text Autocomplete
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString
+        string: String) -> Bool {
+        
+            if textField == nameTextField {
+                print("change chars")
+                UIView.animateWithDuration(0.5, animations: {
+                    self.autocompleteTableView.alpha = 1.0
+                })
+                let str = nameTextField.text
+                self.search(str!)
+                return true
+
+            } else {
+                return false
+            }
+        
+    }
+    
+    func search(subString: String) {
+        autocompleteDisplay.removeAll(keepCapacity: false)
+        print("AC search")
+        
+        for curString in ingredientNameChoices
+        {
+            let myString:NSString! = curString as NSString
+            
+            let subStringRange :NSRange! = myString.rangeOfString(subString)
+            
+            if (subStringRange.location  == 0)
+            {
+                autocompleteDisplay.append(curString)
+            }
+        }
+        
+        autocompleteTableView.reloadData()
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return autocompleteDisplay.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let autoCompleteRowIdentifier = "AutoCompleteRowIdentifier"
+        let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier(autoCompleteRowIdentifier, forIndexPath: indexPath) as UITableViewCell
+        
+        let index = indexPath.row as Int
+        cell.textLabel!.text = autocompleteDisplay[index]
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let selectedCell : UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        nameTextField.text = selectedCell.textLabel!.text
+        UIView.animateWithDuration(0.5, animations: {
+            self.autocompleteTableView.alpha = 0
+        })
+        
     }
     
     // MARK: DatePicker
