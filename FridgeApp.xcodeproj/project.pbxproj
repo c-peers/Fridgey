@@ -21,6 +21,7 @@
 		C45F3CDF1B9ACA900010FEF0 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F3CDE1B9ACA900010FEF0 /* FourthViewController.swift */; };
 		C46E16F01BAE844E00279B69 /* ChooseAFridgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E16EF1BAE844E00279B69 /* ChooseAFridgeVC.swift */; };
 		C46F4E621BCF80B00020F682 /* NewIngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F4E611BCF80B00020F682 /* NewIngredientViewController.swift */; };
+		C4705D291C35031F00952CB7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C4705D281C35031F00952CB7 /* .gitignore */; };
 		C48272111BB122BE00BACE1D /* FridgeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48272101BB122BE00BACE1D /* FridgeInfo.swift */; };
 		C48272131BB129AC00BACE1D /* ConfirmFridgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48272121BB129AC00BACE1D /* ConfirmFridgeVC.swift */; };
 		C485EA091BEDD65800AB9FDA /* FridgePageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485EA081BEDD65800AB9FDA /* FridgePageContentViewController.swift */; };
@@ -87,6 +88,7 @@
 		C45F3CDE1B9ACA900010FEF0 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		C46E16EF1BAE844E00279B69 /* ChooseAFridgeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseAFridgeVC.swift; sourceTree = "<group>"; };
 		C46F4E611BCF80B00020F682 /* NewIngredientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewIngredientViewController.swift; sourceTree = "<group>"; };
+		C4705D281C35031F00952CB7 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C48272101BB122BE00BACE1D /* FridgeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeInfo.swift; sourceTree = "<group>"; };
 		C48272121BB129AC00BACE1D /* ConfirmFridgeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmFridgeVC.swift; sourceTree = "<group>"; };
 		C485EA081BEDD65800AB9FDA /* FridgePageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgePageContentViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		C45F3CAC1B9AC4E40010FEF0 = {
 			isa = PBXGroup;
 			children = (
+				C4705D281C35031F00952CB7 /* .gitignore */,
 				C4F5D0B01C276F450072C28B /* SwiftDate.xcodeproj */,
 				C45F3CB71B9AC4E40010FEF0 /* FridgeApp */,
 				C45F3CCF1B9AC4E40010FEF0 /* FridgeAppTests */,
@@ -338,6 +341,7 @@
 				C45F3CC21B9AC4E40010FEF0 /* Main.storyboard in Resources */,
 				C4F56E771C317C46004B6F42 /* Info.plist in Resources */,
 				C45F3CC71B9AC4E40010FEF0 /* LaunchScreen.xib in Resources */,
+				C4705D291C35031F00952CB7 /* .gitignore in Resources */,
 				C45F3CC41B9AC4E40010FEF0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
