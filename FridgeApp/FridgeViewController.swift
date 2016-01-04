@@ -91,14 +91,16 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
         let FTBC = self.tabBarController as! FridgeTabBarController
         let saveToFTBC = self.tabBarController as! FridgeTabBarController
         
-        MyFridge = FTBC.MyFridge
+        //MyFridge = FTBC.MyFridge
         
-        print(MyFridge?.numOfDoors)
+        //print(MyFridge?.numOfDoors)
         
-        if let savedFridge = loadFridge() {
+        MyFridge = PersistManager.sharedManager.MyFridge
+        
+        if let savedFridge = PersistManager.sharedManager.loadFridge() {
             
             MyFridge = savedFridge
-            saveToFTBC.MyFridge = savedFridge
+            //saveToFTBC.MyFridge = savedFridge
             
             print("Saved Fridge")
             print(MyFridge?.numOfDoors)
@@ -283,7 +285,8 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
             print(MyFridge!.fridgeName)
             
             // Save ingredients
-            saveFridge()
+            //saveFridge()
+            PersistManager.sharedManager.saveFridge()
             
             if (MyFridge?.numOfDoors != 0) && (MyFridge != nil) {
                 

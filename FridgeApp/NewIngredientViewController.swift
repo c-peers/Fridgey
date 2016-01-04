@@ -17,6 +17,7 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
     //@IBOutlet weak var locationPicker: UIPickerView!
     //@IBOutlet weak var expirationPicker: UIDatePicker!
     @IBOutlet weak var locationTextField: UITextField!
+    @IBOutlet weak var addtolistButton: UIButton!
 
     @IBOutlet weak var autocompleteTableView: UITableView!
     //let autocompleteTableView = UITableView(frame: UIScreen.mainScreen().bounds, style: UITableViewStyle.Plain)
@@ -26,9 +27,12 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
     
     var ingredient: Ingredient?
     
+    var mainList: Lists?
+    
     var locationPickerData: [String] = [String]()
     
-    var ingredientNameChoices = ["Carrot", "Apple", "Chicken", "Hot Dog", "Steak", "Celery", "Yam", "Eggs"]
+    //var ingredientNameChoices = ["Carrot", "Apple", "Chicken", "Hot Dog", "Steak", "Celery", "Yam", "Eggs"]
+    var ingredientNameChoices = ["Initial", "Values"]
     
     var autocompleteDisplay = [String]()
  
@@ -38,19 +42,28 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         
         var setrow: Int
         
-        //let FTBC = self.tabBarController as! FridgeTabBarController
+        // Load food name list from text file.
+        //var filePathURL: String
+        let readFile: String
         
-//        MyFridge = FTBC.MyFridge
-//        print("check data")
-//        print(MyFridge?.doorNames)
-//        print(MyFridge?.numOfDoors)
-//        print(MyFridge?.fridgeName)
+        if let filePath = NSBundle.mainBundle().pathForResource("FoodNames", ofType: "txt") {
+            //filePathURL = String(NSURL.fileURLWithPath(filePath))
+            try! readFile = String(contentsOfFile: filePath, encoding: NSUTF8StringEncoding)
+            ingredientNameChoices = readFile.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+        } else {
+            // If the file isn't there then there isn't much I can do except forgo the function.
+            print("There was an error")
+            readFile = ""
+        }
+
+        //let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
+        //let destinationPath:NSString = documentsPath.stringByAppendingString("/FoodNames.txt")
+        //try! readFile = String(contentsOfFile: filePathURL as String, encoding: NSUTF8StringEncoding)
         
-        //let FFVC = FridgeViewController
-        //MyFridge2 = FFVC.MyFridge
+        //ingredientNameChoices = readFile.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
         
-        //print(MyFridge2?.doorNames)
-        
+        print(ingredientNameChoices)
+
         // Handle the text field’s user input through delegate callbacks.
         nameTextField.delegate = self
         expirationTextField.delegate = self
@@ -126,7 +139,8 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString
         string: String) -> Bool {
         
-            if textField == nameTextField {
+            // Only run for the food name if the cadidate list file was loaded.
+            if textField == nameTextField && ingredientNameChoices.count > 2 {
                 print("change chars")
                 UIView.animateWithDuration(0.5, animations: {
                     self.autocompleteTableView.alpha = 1.0
@@ -349,6 +363,15 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
             let location = locationTextField.text
             
             ingredient = Ingredient(name: name, image: nil, expiry: expiry, amount: amount, location: location!)
+        } else if addtolistButton == (sender as? UIButton) {
+            
+            print("addtolistbutton?")
+            
+            let addtolistViewController = segue.destinationViewController as! AddToListFromIngredientDetailsViewController
+            
+            addtolistViewController.selectedIngredient = nameTextField.text!
+            addtolistViewController.mainList = mainList!
+            
         }
     }
 
@@ -356,4 +379,5 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         dismissViewControllerAnimated(true, completion: nil)
         
     }
+    
 }

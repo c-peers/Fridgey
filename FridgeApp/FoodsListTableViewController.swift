@@ -18,6 +18,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     var filteredIngredients = [[Ingredient]]()
     var ingredientsByArea: IngredientsByLocation?
     var myFridge = FridgeInfo()
+    var mainList = Lists()
     
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -62,10 +63,27 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         // Load global variables
         let FTBC = self.tabBarController as! FridgeTabBarController
         
-        ingredients = FTBC.Ingredients
-        myFridge = FTBC.MyFridge
+        //ingredients = FTBC.Ingredients
+        //myFridge = FTBC.MyFridge
+        //mainList = FTBC.ShoppingLists
         
-        if let savedIngredients = loadIngredients() {
+        ingredients = PersistManager.sharedManager.Ingredients
+        myFridge = PersistManager.sharedManager.MyFridge
+        mainList = PersistManager.sharedManager.ShoppingLists
+        
+        if let savedFridge = PersistManager.sharedManager.loadFridge() {
+            
+            myFridge = savedFridge
+            //saveToFTBC.MyFridge = savedFridge
+            
+            print("Saved Fridge")
+            print(myFridge.numOfDoors)
+            print(myFridge.doorNames)
+            print(myFridge.fridgeName)
+            
+        }
+        
+        if let savedIngredients = PersistManager.sharedManager.loadIngredients() {
 
             ingredients += savedIngredients
             
@@ -74,6 +92,12 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             // Load the sample data.
             sampleIngredients()
 
+        }
+        
+        if let savedLists = PersistManager.sharedManager.loadList() {
+            print("lists loaded")
+            mainList = savedLists
+            
         }
         
         // Initializing with searchResultsController set to nil means that
@@ -303,7 +327,8 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             ingredients[indexPath.section].removeAtIndex(indexPath.row)
             
             // Save after removing row
-            saveIngredients()
+            //saveIngredients()
+            PersistManager.sharedManager.saveIngredients()
             
             // Remove visually
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
@@ -406,9 +431,12 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
                 let indexPath = tableView.indexPathForCell(selectedIngredientCell)!
                 let sectionPath = tableView.indexPathForSelectedRow
                 sectionPath?.section
+                
+                
                     
                 let selectedIngredient = ingredients[indexPath.section][indexPath.row]
                 ingredientDetailViewController.ingredient = selectedIngredient
+                ingredientDetailViewController.mainList = mainList
                 print("Edit ingredient")
                     
                 //ingredientDetailViewController.locationPickerData = myFridge.doorNames
@@ -472,7 +500,8 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             }
             
             // Save ingredients
-            saveIngredients()
+            //saveIngredients()
+            PersistManager.sharedManager.saveIngredients()
             
         }
         
@@ -483,8 +512,8 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         
         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(ingredients, toFile: Ingredient.ArchiveURL.path!)
         
-        let FTBC = self.tabBarController as! FridgeTabBarController
-        FTBC.MyFridge = myFridge
+        //let FTBC = self.tabBarController as! FridgeTabBarController
+        //FTBC.MyFridge = myFridge
         
         if !isSuccessfulSave {
             print("Couldn't save")

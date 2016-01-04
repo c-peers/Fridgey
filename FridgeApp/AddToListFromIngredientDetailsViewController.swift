@@ -13,11 +13,33 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
     @IBOutlet weak var collectionView: UICollectionView!
     
     var list: [String] = []
+    var mainList = Lists()
+    var selectedIngredient = String()
+    var globalVars = PersistManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        list = ["test1", "test2", "test3", "test4", "test5", "test6", "test7", "test8", "test9"]
+        //list = ["test1", "test2", "test3", "test4", "test5", "test6", "test7", "test8", "test9"]
+        
+        mainList = PersistManager.sharedManager.ShoppingLists
+        
+        //if let savedLists = loadList() {
+        //    mainList = savedLists
+        //}
+        
+        // Dictionary not sorted by key
+        list = Array(mainList.lists.keys).sort(<)
+        
+        // Get rid of any blank name lists
+        if list.contains("") {
+            let index = list.indexOf("")
+            list.removeAtIndex(index!)
+        }
+    
+        print(selectedIngredient)
+        print(mainList.lists)
+        print(list)
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -70,8 +92,32 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         
     }
     
+    func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
+        let selectedList = list[indexPath.row]
+        let selectedListCount = mainList.lists[selectedList]?.count
+        mainList.lists[selectedList] = [selectedListCount! + 1 : selectedIngredient]
+        saveList()
+    }
+    
     @IBAction func cancelAddToList(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)
     }
 
+    // MARK: NSCoding
+    func saveList() {
+        
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(mainList, toFile: Lists.ArchiveURL.path!)
+        
+        if !isSuccessfulSave {
+            print("Couldn't save")
+        }
+        
+    }
+    
+    func loadList() -> Lists? {
+        
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(Lists.ArchiveURL.path!) as? Lists
+        
+    }
+    
 }

@@ -322,7 +322,7 @@ does your refridgerator have?</string>
                                 <rect key="frame" x="181" y="450" width="120" height="30"/>
                                 <state key="normal" title="Add to List"/>
                                 <connections>
-                                    <segue destination="E77-v0-SKt" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="pQA-vO-Nhw"/>
+                                    <segue destination="E77-v0-SKt" kind="presentation" identifier="AddToListFromAddIngredient" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="pQA-vO-Nhw"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lw9-RQ-jxL">
@@ -381,6 +381,7 @@ does your refridgerator have?</string>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="AddIngredientButton" destination="0CF-2h-UJx" id="bXB-au-nGe"/>
+                        <outlet property="addtolistButton" destination="Snl-c9-pIw" id="Fh4-Js-jUA"/>
                         <outlet property="amountTextField" destination="CYj-FD-jUf" id="MDa-St-XDA"/>
                         <outlet property="autocompleteTableView" destination="Lw9-RQ-jxL" id="YYa-tn-BOu"/>
                         <outlet property="expirationTextField" destination="Q4p-4F-bTt" id="0YL-te-5Xq"/>

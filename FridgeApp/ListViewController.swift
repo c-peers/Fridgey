@@ -57,7 +57,16 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         let FTBC = self.tabBarController as! FridgeTabBarController
         mainList = FTBC.ShoppingLists
         
-        sampleIngredients()
+        if let savedLists = loadList() {
+            
+            mainList = savedLists
+            
+        } else {
+            
+            // Load the sample data.
+            sampleIngredients()
+            
+        }
         
         // Dictionary not sorted by key
         list = Array(mainList.lists.keys).sort(<)
@@ -154,5 +163,26 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         //}
         
     }
+    
+    // MARK: NSCoding
+    func saveList() {
+        
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(mainList, toFile: Lists.ArchiveURL.path!)
+        
+        let FTBC = self.tabBarController as! FridgeTabBarController
+        FTBC.ShoppingLists = mainList
+        
+        if !isSuccessfulSave {
+            print("Couldn't save")
+        }
+        
+    }
+    
+    func loadList() -> Lists? {
+        
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(Lists.ArchiveURL.path!) as? Lists
+        
+    }
+
 
 }
