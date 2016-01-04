@@ -133,6 +133,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C441BBEC1C3ABB4300EDE042 /* MyFridge Tab */ = {
+			isa = PBXGroup;
+			children = (
+				C45F3CBC1B9AC4E40010FEF0 /* FridgeViewController.swift */,
+				C485EA081BEDD65800AB9FDA /* FridgePageContentViewController.swift */,
+				C46E16EF1BAE844E00279B69 /* ChooseAFridgeVC.swift */,
+				C48272121BB129AC00BACE1D /* ConfirmFridgeVC.swift */,
+			);
+			name = "MyFridge Tab";
+			sourceTree = "<group>";
+		};
+		C441BBEF1C3ABB8100EDE042 /* Foods Tab */ = {
+			isa = PBXGroup;
+			children = (
+				C4F173A01BB698B5002D9DA1 /* FoodsListTableViewController.swift */,
+				C4F1739E1BB69319002D9DA1 /* FoodsListTableViewCell.swift */,
+				C46F4E611BCF80B00020F682 /* NewIngredientViewController.swift */,
+			);
+			name = "Foods Tab";
+			sourceTree = "<group>";
+		};
+		C441BBF01C3ABBA800EDE042 /* Expiring Tab */ = {
+			isa = PBXGroup;
+			children = (
+				C4CA4D4F1C1F08C6005F6236 /* ExpireTableView.swift */,
+				C4CA4D4D1C1F073C005F6236 /* ExpireTableViewCell.swift */,
+			);
+			name = "Expiring Tab";
+			sourceTree = "<group>";
+		};
+		C441BBF11C3ABBC900EDE042 /* Unneeded? */ = {
+			isa = PBXGroup;
+			children = (
+				C45F3CBE1B9AC4E40010FEF0 /* SecondViewController.swift */,
+				C45F3CDE1B9ACA900010FEF0 /* FourthViewController.swift */,
+				C4937B901C019C07008505B9 /* FridgeTabBarController.swift */,
+				C442CC281C0ADB2000BDC38C /* IngredientsByLocation.swift */,
+			);
+			name = "Unneeded?";
+			sourceTree = "<group>";
+		};
+		C441BBF21C3ABBF300EDE042 /* Lists tab */ = {
+			isa = PBXGroup;
+			children = (
+				C45F3CDC1B9AC75E0010FEF0 /* ListViewController.swift */,
+				C4E458F71C2777A6005B28E3 /* ListCollectionViewCell.swift */,
+				C40568281C27BDA80079A92F /* ListDetailsViewController.swift */,
+			);
+			name = "Lists tab";
+			sourceTree = "<group>";
+		};
 		C45F3CAC1B9AC4E40010FEF0 = {
 			isa = PBXGroup;
 			children = (
@@ -157,37 +208,26 @@
 			isa = PBXGroup;
 			children = (
 				C4F56E711C317C46004B6F42 /* MGSwipeTableCell */,
-				C45F3CBA1B9AC4E40010FEF0 /* AppDelegate.swift */,
-				C45F3CBE1B9AC4E40010FEF0 /* SecondViewController.swift */,
-				C45F3CDE1B9ACA900010FEF0 /* FourthViewController.swift */,
+				C441BBEC1C3ABB4300EDE042 /* MyFridge Tab */,
+				C441BBEF1C3ABB8100EDE042 /* Foods Tab */,
+				C441BBF21C3ABBF300EDE042 /* Lists tab */,
+				C441BBF01C3ABBA800EDE042 /* Expiring Tab */,
+				C441BBF11C3ABBC900EDE042 /* Unneeded? */,
 				C45F3CC01B9AC4E40010FEF0 /* Main.storyboard */,
-				C4937B901C019C07008505B9 /* FridgeTabBarController.swift */,
+				C45F3CBA1B9AC4E40010FEF0 /* AppDelegate.swift */,
 				C49D0A601C1F0F6D00C23EE3 /* TabBarDelegate.swift */,
 				C48272101BB122BE00BACE1D /* FridgeInfo.swift */,
-				C45F3CBC1B9AC4E40010FEF0 /* FridgeViewController.swift */,
-				C485EA081BEDD65800AB9FDA /* FridgePageContentViewController.swift */,
-				C46E16EF1BAE844E00279B69 /* ChooseAFridgeVC.swift */,
-				C48272121BB129AC00BACE1D /* ConfirmFridgeVC.swift */,
 				C4F173A41BB97C75002D9DA1 /* Ingredient.swift */,
-				C4F173A01BB698B5002D9DA1 /* FoodsListTableViewController.swift */,
 				C441BBE91C3AA72000EDE042 /* PeristenceManager.swift */,
-				C4F1739E1BB69319002D9DA1 /* FoodsListTableViewCell.swift */,
-				C46F4E611BCF80B00020F682 /* NewIngredientViewController.swift */,
 				C441BBE21C35675000EDE042 /* FoodNames.txt */,
 				C4F56E671C3030E8004B6F42 /* Lists.swift */,
-				C45F3CDC1B9AC75E0010FEF0 /* ListViewController.swift */,
-				C4E458F71C2777A6005B28E3 /* ListCollectionViewCell.swift */,
-				C40568281C27BDA80079A92F /* ListDetailsViewController.swift */,
 				C405682C1C27C6ED0079A92F /* AddToListFromIngredientDetailsViewController.swift */,
 				C49FB9041C2A501000231C8E /* AddToListFromIngredientsCollectionViewCell.swift */,
-				C4CA4D4F1C1F08C6005F6236 /* ExpireTableView.swift */,
-				C4CA4D4D1C1F073C005F6236 /* ExpireTableViewCell.swift */,
-				C4F56E541C2FB082004B6F42 /* Cartfile */,
+				C40080671C2FA6D9009BC1EC /* FridgeApp-Bridging-Header.h */,
 				C45F3CC31B9AC4E40010FEF0 /* Images.xcassets */,
+				C4F56E541C2FB082004B6F42 /* Cartfile */,
 				C45F3CC51B9AC4E40010FEF0 /* LaunchScreen.xib */,
 				C45F3CB81B9AC4E40010FEF0 /* Supporting Files */,
-				C442CC281C0ADB2000BDC38C /* IngredientsByLocation.swift */,
-				C40080671C2FA6D9009BC1EC /* FridgeApp-Bridging-Header.h */,
 			);
 			path = FridgeApp;
 			sourceTree = "<group>";
