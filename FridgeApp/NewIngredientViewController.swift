@@ -40,8 +40,6 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        var setrow: Int
-        
         // Load food name list from text file.
         //var filePathURL: String
         let readFile: String
@@ -379,5 +377,55 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         dismissViewControllerAnimated(true, completion: nil)
         
     }
+    
+    @IBAction func unwindToNewIngredient(sender: UIStoryboardSegue) {
+        
+        if let addToListFromIngredientDetailsViewController = sender.sourceViewController as? AddToListFromIngredientDetailsViewController {
+            
+            let selectedList = addToListFromIngredientDetailsViewController.selectedList
+            
+            addToListFromIngredientDetailsViewController.mainList.lists[selectedList]
+
+            
+            
+        //let selectedList = list[indexPath.row]
+        //let selectedListCount = mainList.lists[selectedList]?.count
+        //mainList.lists[selectedList] = [selectedListCount! + 1 : selectedIngredient]
+        //saveList()
+
+        
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                
+                //let ingredientholder: Ingredient
+                
+                // Refresh an ingredients data
+                ingredients[selectedIndexPath.section][selectedIndexPath.row] = ingredient
+                if ingredient.location != myFridge.doorNames[selectedIndexPath.section] {
+                    
+                    ingredients[selectedIndexPath.section].removeAtIndex(selectedIndexPath.row)
+                    tableView.deleteRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
+                    
+                    let newSection = myFridge.doorNames.indexOf(ingredient.location)
+                    let newRow = self.ingredients[newSection!].count
+                    
+                    let newIndexPath = NSIndexPath(forRow: self.ingredients[newSection!].count, inSection: newSection!)
+                    ingredients[newSection!].append(ingredient)
+                    tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+                    
+                } else {
+                    tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
+                    tableView.reloadData()
+                }
+                
+            }
+            
+            // Save ingredients
+            //saveIngredients()
+            PersistManager.sharedManager.saveIngredients()
+            
+        }
+        
+    }
+
     
 }

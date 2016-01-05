@@ -57,7 +57,7 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         let FTBC = self.tabBarController as! FridgeTabBarController
         mainList = FTBC.ShoppingLists
         
-        if let savedLists = loadList() {
+        if let savedLists = PersistManager.sharedManager.loadList() {
             
             mainList = savedLists
             
@@ -163,6 +163,8 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         //}
         
     }
+    
+    
     
     // MARK: NSCoding
     func saveList() {

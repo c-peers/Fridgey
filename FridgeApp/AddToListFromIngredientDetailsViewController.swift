@@ -15,6 +15,7 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
     var list: [String] = []
     var mainList = Lists()
     var selectedIngredient = String()
+    var selectedList: String = ""
     var globalVars = PersistManager()
     
     override func viewDidLoad() {
@@ -93,10 +94,10 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
     }
     
     func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
-        let selectedList = list[indexPath.row]
+        selectedList = list[indexPath.row]
         let selectedListCount = mainList.lists[selectedList]?.count
         mainList.lists[selectedList] = [selectedListCount! + 1 : selectedIngredient]
-        saveList()
+        //saveList()
     }
     
     @IBAction func cancelAddToList(sender: UIButton) {

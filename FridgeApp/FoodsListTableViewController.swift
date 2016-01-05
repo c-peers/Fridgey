@@ -439,7 +439,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
                 ingredientDetailViewController.mainList = mainList
                 print("Edit ingredient")
                     
-                //ingredientDetailViewController.locationPickerData = myFridge.doorNames
+                ingredientDetailViewController.locationPickerData = myFridge.doorNames
                     
                 }
             //}
