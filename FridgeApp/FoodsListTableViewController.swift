@@ -71,6 +71,9 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         myFridge = PersistManager.sharedManager.MyFridge
         mainList = PersistManager.sharedManager.ShoppingLists
         
+        print("d00r")
+        print(myFridge.doorNames)
+        
         if let savedFridge = PersistManager.sharedManager.loadFridge() {
             
             myFridge = savedFridge
@@ -142,6 +145,17 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         // Dispose of any resources that can be recreated.
     }
 
+    func viewWillAppear() {
+        ingredients = PersistManager.sharedManager.Ingredients
+        myFridge = PersistManager.sharedManager.MyFridge
+        mainList = PersistManager.sharedManager.ShoppingLists
+
+        print("VWA")
+        print(ingredients)
+        print(myFridge.doorNames)
+        print(mainList.lists)
+    }
+    
 
     func viewDidAppear() {
         

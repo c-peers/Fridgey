@@ -54,8 +54,8 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     
-        let FTBC = self.tabBarController as! FridgeTabBarController
-        mainList = FTBC.ShoppingLists
+        //let FTBC = self.tabBarController as! FridgeTabBarController
+        //mainList = FTBC.ShoppingLists
         
         if let savedLists = PersistManager.sharedManager.loadList() {
             
@@ -94,8 +94,11 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    func viewWillAppear() {
         print("vwa")
+        mainList = PersistManager.sharedManager.ShoppingLists
+        
+        print(mainList.lists)
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {

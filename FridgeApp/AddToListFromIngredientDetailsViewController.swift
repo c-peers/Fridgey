@@ -16,7 +16,7 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
     var mainList = Lists()
     var selectedIngredient = String()
     var selectedList: String = ""
-    var globalVars = PersistManager()
+    //var globalVars = PersistManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +25,9 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         
         mainList = PersistManager.sharedManager.ShoppingLists
         
-        //if let savedLists = loadList() {
-        //    mainList = savedLists
-        //}
+        if let savedLists = PersistManager.sharedManager.loadList() {
+            mainList = savedLists
+        }
         
         // Dictionary not sorted by key
         list = Array(mainList.lists.keys).sort(<)
@@ -97,6 +97,8 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         selectedList = list[indexPath.row]
         let selectedListCount = mainList.lists[selectedList]?.count
         mainList.lists[selectedList] = [selectedListCount! + 1 : selectedIngredient]
+        
+        print(mainList.lists[selectedList])
         //saveList()
     }
     

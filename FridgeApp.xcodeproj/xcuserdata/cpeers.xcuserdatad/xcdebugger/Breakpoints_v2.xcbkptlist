@@ -72,11 +72,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FridgeApp/FoodsListTableViewController.swift"
-            timestampString = "473608658.357151"
+            timestampString = "473784062.260212"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
             landmarkName = "tableView(_:titleForHeaderInSection:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -88,11 +88,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FridgeApp/FoodsListTableViewController.swift"
-            timestampString = "473608658.357151"
+            timestampString = "473784062.260212"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
             landmarkName = "tableView(_:titleForHeaderInSection:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -104,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FridgeApp/FoodsListTableViewController.swift"
-            timestampString = "473608658.357151"
+            timestampString = "473784062.260212"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
             landmarkName = "tableView(_:titleForHeaderInSection:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -120,11 +120,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FridgeApp/FoodsListTableViewController.swift"
-            timestampString = "473608658.357151"
+            timestampString = "473784062.260212"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "258"
-            endingLineNumber = "258"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -136,11 +136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FridgeApp/FoodsListTableViewController.swift"
-            timestampString = "473608658.357151"
+            timestampString = "473784062.260212"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "231"
-            endingLineNumber = "231"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
             landmarkName = "FoodsListTableViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -152,11 +152,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FridgeApp/FoodsListTableViewController.swift"
-            timestampString = "473608658.357151"
+            timestampString = "473784062.260212"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "268"
-            endingLineNumber = "268"
+            startingLineNumber = "282"
+            endingLineNumber = "282"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -168,11 +168,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FridgeApp/NewIngredientViewController.swift"
-            timestampString = "473694166.829712"
+            timestampString = "473781027.521156"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "353"
-            endingLineNumber = "353"
+            startingLineNumber = "352"
+            endingLineNumber = "352"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -424,11 +424,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FridgeApp/NewIngredientViewController.swift"
-            timestampString = "473694166.829712"
+            timestampString = "473781027.521156"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "230"
-            endingLineNumber = "230"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
             landmarkName = "locationBeingChosen(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -440,11 +440,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FridgeApp/NewIngredientViewController.swift"
-            timestampString = "473694166.829712"
+            timestampString = "473781027.521156"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "360"
-            endingLineNumber = "360"
+            startingLineNumber = "359"
+            endingLineNumber = "359"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -504,11 +504,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FridgeApp/FoodsListTableViewController.swift"
-            timestampString = "473608658.357151"
+            timestampString = "473784062.260212"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300"
+            startingLineNumber = "314"
+            endingLineNumber = "314"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -645,28 +645,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FridgeApp/AddToListFromIngredientDetailsViewController.swift"
-            timestampString = "473608012.495866"
+            timestampString = "473780159.572085"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "AddToListFromIngredientDetailsViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FridgeApp/ListViewController.swift"
-            timestampString = "473606222.72409"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
-            landmarkName = "saveList()"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "cancelAddToList(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -676,12 +660,28 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FridgeApp/FoodsListTableViewController.swift"
-            timestampString = "473608645.216014"
+            filePath = "FridgeApp/ListViewController.swift"
+            timestampString = "473784062.260212"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "ListViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FridgeApp/FoodsListTableViewController.swift"
+            timestampString = "473781027.521156"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
