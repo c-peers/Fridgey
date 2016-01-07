@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PersistManager {
+class PersistManager: NSObject {
     
     // These are the properties you can store in your singleton
     var MyFridge = FridgeInfo()
@@ -26,65 +26,103 @@ class PersistManager {
         return Static.instance
     }
     
-    // MARK: NSCoding
-    
-    func save() {
-        let path = documentsDirectory()
-        println("save: \(path)")
-        // Each Stuff object conforms to NSCoding, so can be archived
-        // using NSKeyedArchiver
-        NSKeyedArchiver.archiveRootObject(self.MyFridge, toFile: path)
-        NSKeyedArchiver.archiveRootObject(self.Ingredients, toFile: path)
-        NSKeyedArchiver.archiveRootObject(self.ShoppingLists, toFile: path)
+    func initialLoading() {
+        MyFridge = self.loadFridge()!
+        //Ingredients = self.loadIngredients()!
+        //ShoppingLists = self.loadList()!
+        
     }
     
-    //func saveFridge() {
-    //    
-    //    let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(MyFridge, toFile: FridgeInfo.ArchiveURL.path!)
-    //    
-    //    if !isSuccessfulSave {
-    //        print("Couldn't save")
-    //    }
-    //    
-    //}
+    // MARK: NSCoding
+//    func save() {
+//        let path = documentsDirectory()
+//        print("save: \(path)")
+//        // Each Stuff object conforms to NSCoding, so can be archived
+//        // using NSKeyedArchiver
+//        NSKeyedArchiver.archiveRootObject(self.MyFridge, toFile: path)
+//        NSKeyedArchiver.archiveRootObject(self.Ingredients, toFile: path)
+//        NSKeyedArchiver.archiveRootObject(self.ShoppingLists, toFile: path)
+//    }
     
-    //func loadFridge() -> FridgeInfo? {
-    //    
-    //    return NSKeyedUnarchiver.unarchiveObjectWithFile(FridgeInfo.ArchiveURL.path!) as? FridgeInfo
-    //    
-    //}
+    func encode() {
+        print(PersistManager.path())
+        let dbPath = NSURL(fileURLWithPath: PersistManager.path()).URLByAppendingPathComponent("Fridge")
+        NSKeyedArchiver.archiveRootObject(MyFridge, toFile: dbPath.path!)
+    }
+    
+    func decode() -> FridgeInfo? {
+        print(PersistManager.path())
+        let dbPath = NSURL(fileURLWithPath: PersistManager.path()).URLByAppendingPathComponent("Fridge")
 
-    //func saveIngredients() {
-    //    
-    //    let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(Ingredients, toFile: Ingredient.ArchiveURL.path!)
-    //    
-    //    if !isSuccessfulSave {
-    //        print("Couldn't save")
-    //    }
-    //    
-    //}
+        let decodedObject = NSKeyedUnarchiver.unarchiveObjectWithFile(dbPath.path!) as? FridgeInfo
+        
+        return decodedObject
+    }
     
-    //func loadIngredients() -> [[Ingredient]]? {
-    //    
-    //    return NSKeyedUnarchiver.unarchiveObjectWithFile(Ingredient.ArchiveURL.path!) as? [[Ingredient]]
-    //    
-    //}
+    class func path() -> String {
+        let documentsFolder = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as String
+        let path = documentsFolder
+        //let documentsPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).first
+        //let path = documentsPath?.stringByAppendingString("/DB")
+        return path
+    }
+    
+    func saveFridge() {
+        
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(MyFridge, toFile: FridgeInfo.ArchiveURL.path!)
+        
+        print("Fridge saved?")
+        
+        if !isSuccessfulSave {
+            print("Couldn't save")
+        }
+        
+    }
+    
+    func loadFridge() -> FridgeInfo? {
+        print("Fridge loaded")
+        print(FridgeInfo.ArchiveURL.path!)
+        
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(FridgeInfo.ArchiveURL.path!) as? FridgeInfo
+        
+    }
 
-    //func saveList() {
-    //    
-    //    let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(ShoppingLists, toFile: Lists.ArchiveURL.path!)
-    //            
-    //    if !isSuccessfulSave {
-    //        print("Couldn't save")
-    //    }
-    //    
-    //}
+    func saveIngredients() {
+        
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(Ingredients, toFile: Ingredient.ArchiveURL.path!)
+        print("Ingredients saved?")
+
+        if !isSuccessfulSave {
+            print("Couldn't save")
+        }
+        
+    }
     
-    //func loadList() -> Lists? {
-    //    
-    //    return NSKeyedUnarchiver.unarchiveObjectWithFile(Lists.ArchiveURL.path!) as? Lists
-    //    
-    //}
+    func loadIngredients() -> [[Ingredient]]? {
+        print("Ingredients loaded")
+        print(Ingredient.ArchiveURL.path!)
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(Ingredient.ArchiveURL.path!) as? [[Ingredient]]
+        
+    }
+
+    func saveList() {
+        
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(ShoppingLists, toFile: Lists.ArchiveURL.path!)
+        print("Lists saved?")
+        
+        if !isSuccessfulSave {
+            print("Couldn't save")
+        }
+        
+    }
+    
+    func loadList() -> Lists? {
+        print("Lists loaded")
+        print(Lists.ArchiveURL.path!)
+        
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(Lists.ArchiveURL.path!) as? Lists
+        
+    }
 
     
 }
