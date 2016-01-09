@@ -1,5 +1,5 @@
 //
-//  PeristenceManager.swift
+//  Singleton.swift
 //  FridgeApp
 //
 //  Created by Chase Peers on 1/4/16.
@@ -27,7 +27,7 @@ class PersistManager: NSObject {
     }
     
     func initialLoading() {
-        MyFridge = self.loadFridge()!
+        //MyFridge = self.loadFridge()!
         //Ingredients = self.loadIngredients()!
         //ShoppingLists = self.loadList()!
         

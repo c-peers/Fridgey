@@ -14,10 +14,12 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var expirationTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
+    //@IBOutlet weak var amountTextField: UITextField!
     //@IBOutlet weak var locationPicker: UIPickerView!
     //@IBOutlet weak var expirationPicker: UIDatePicker!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var addtolistButton: UIButton!
+    @IBOutlet weak var test: UITextField!
 
     @IBOutlet weak var autocompleteTableView: UITableView!
     //let autocompleteTableView = UITableView(frame: UIScreen.mainScreen().bounds, style: UITableViewStyle.Plain)
@@ -65,7 +67,10 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         // Handle the text field’s user input through delegate callbacks.
         nameTextField.delegate = self
         expirationTextField.delegate = self
-        amountTextField.delegate = self
+        //amountTextField.delegate = self
+        //test.delegate = self
+        
+        amountTextField.keyboardType = .NumberPad
         
         // Set up views if editing an existing Meal.
         if let ingredient = ingredient {
@@ -182,6 +187,7 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         
         let index = indexPath.row as Int
         cell.textLabel!.text = autocompleteDisplay[index]
+        cell.textLabel!.font = UIFont(name: cell.textLabel!.font.fontName, size: 14)
         
         return cell
     }
@@ -304,7 +310,6 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-
         return true
     }
     
@@ -324,8 +329,6 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         checkValidIngredientName()
         if textField == nameTextField {
             navigationItem.title = textField.text
-        } else if textField == expirationTextField {
-            //expirationPicker.hidden = true
         }
     }
     

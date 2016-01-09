@@ -1,0 +1,8 @@
+Carrot
+Apple
+Chicken
+Hot Dog
+Steak
+Celery
+Yam
+Eggs

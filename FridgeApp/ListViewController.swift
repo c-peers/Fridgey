@@ -16,8 +16,8 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
     var mainList = Lists()
     var list: [String] = []
     
-    // Temporary Sample
-    func sampleIngredients() {
+    // Temporary Sample    
+    func sampleLists() {
         
         print("mainList")
         print(mainList)
@@ -48,8 +48,7 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         print(mainList)
         
     }
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -57,16 +56,23 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         //let FTBC = self.tabBarController as! FridgeTabBarController
         //mainList = FTBC.ShoppingLists
         
-        if let savedLists = PersistManager.sharedManager.loadList() {
-            
-            mainList = savedLists
-            
-        } else {
-            
-            // Load the sample data.
-            sampleIngredients()
-            
-        }
+//        if let savedLists = PersistManager.sharedManager.loadList() {
+//            
+//            mainList = savedLists
+//            
+//        } else {
+//            
+//            // Load the sample data.
+//            sampleIngredients()
+//            
+//        }
+        
+        let loadSingleton = PersistenceHandler()
+        print(loadSingleton.load("Lists"))
+
+        mainList = PersistManager.sharedManager.ShoppingLists
+        
+        //sampleLists()
         
         // Dictionary not sorted by key
         list = Array(mainList.lists.keys).sort(<)

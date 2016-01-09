@@ -23,10 +23,14 @@ class ListDetailsViewController: UIViewController {
         
         var tempList: [String] = []
         
+        if listDetails != nil {
+            
         for dictCounter in 1...listDetails!.count {
             tempList.append(listDetails![dictCounter]!)
         }
-        
+
+        }
+            
         print(tempList)
         
         //tempListView.text = tempList

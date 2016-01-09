@@ -61,11 +61,14 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         tableView.dataSource = self
 
         // Load global variables
-        let FTBC = self.tabBarController as! FridgeTabBarController
+        //let FTBC = self.tabBarController as! FridgeTabBarController
         
         //ingredients = FTBC.Ingredients
         //myFridge = FTBC.MyFridge
         //mainList = FTBC.ShoppingLists
+
+        let loadSingleton = PersistenceHandler()
+        loadSingleton.load("Ingredients")
         
         ingredients = PersistManager.sharedManager.Ingredients
         myFridge = PersistManager.sharedManager.MyFridge
@@ -74,28 +77,28 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         print("d00r")
         print(myFridge.doorNames)
         
-        if let savedFridge = PersistManager.sharedManager.loadFridge() {
-            
-            myFridge = savedFridge
-            //saveToFTBC.MyFridge = savedFridge
-            
-            print("Saved Fridge")
-            print(myFridge.numOfDoors)
-            print(myFridge.doorNames)
-            print(myFridge.fridgeName)
-            
-        }
+//        if let savedFridge = PersistManager.sharedManager.loadFridge() {
+//            
+//            myFridge = savedFridge
+//            //saveToFTBC.MyFridge = savedFridge
+//            
+//            print("Saved Fridge")
+//            print(myFridge.numOfDoors)
+//            print(myFridge.doorNames)
+//            print(myFridge.fridgeName)
+//            
+//        }
         
-        if let savedIngredients = PersistManager.sharedManager.loadIngredients() {
-
-            ingredients += savedIngredients
-            
-        } else {
-
+//        if let savedIngredients = PersistManager.sharedManager.loadIngredients() {
+//
+//            ingredients += savedIngredients
+//            
+//        } else {
+//
             // Load the sample data.
             sampleIngredients()
 
-        }
+        //}
         
         if let savedLists = PersistManager.sharedManager.loadList() {
             print("lists loaded")
@@ -342,7 +345,11 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             
             // Save after removing row
             //saveIngredients()
-            PersistManager.sharedManager.saveIngredients()
+            //PersistManager.sharedManager.saveIngredients()
+            PersistManager.sharedManager.Ingredients = ingredients
+            
+            let saveSingleton = PersistenceHandler()
+            saveSingleton.save()
             
             // Remove visually
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
@@ -515,7 +522,12 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             
             // Save ingredients
             //saveIngredients()
-            PersistManager.sharedManager.saveIngredients()
+            //PersistManager.sharedManager.saveIngredients()
+            PersistManager.sharedManager.Ingredients = ingredients
+
+            let saveSingleton = PersistenceHandler()
+            saveSingleton.save()
+
             
         }
         

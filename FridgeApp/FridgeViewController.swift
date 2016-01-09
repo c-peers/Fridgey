@@ -102,22 +102,29 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
         MyFridge = PersistManager.sharedManager.MyFridge
         
         //if let savedFridge = PersistManager.sharedManager.loadFridge() {
-        if let savedFridge = PersistManager.sharedManager.decode() {
+//        if let savedFridge = PersistManager.sharedManager.decode() {
+//        
+//            MyFridge = savedFridge
+//            print(savedFridge)
+//            //saveToFTBC.MyFridge = savedFridge
+//            
+//            print("Saved Fridge")
+//            print(MyFridge?.numOfDoors)
+//            print(MyFridge?.doorNames)
+//            print(MyFridge?.fridgeName)
+//            
+//        } else {
+//            
+//            // No fridge, set defaults... for now.
+//            MyFridge = FridgeInfo(fridgeName: "Fridge", numOfDoors: 2, doorNames: ["1", "2"])!
+//        }
         
-            MyFridge = savedFridge
-            print(savedFridge)
-            //saveToFTBC.MyFridge = savedFridge
-            
-            print("Saved Fridge")
-            print(MyFridge?.numOfDoors)
-            print(MyFridge?.doorNames)
-            print(MyFridge?.fridgeName)
-            
-        } else {
-            
-            // No fridge, set defaults... for now.
-            MyFridge = FridgeInfo(fridgeName: "Fridge", numOfDoors: 2, doorNames: ["1", "2"])!
-        }
+        let loadSingleton = PersistenceHandler()
+        loadSingleton.load("Fridge")
+        
+        print(PersistManager.sharedManager.MyFridge.doorNames)
+        
+        MyFridge = PersistManager.sharedManager.MyFridge
         
         setPageViewController()
 
@@ -292,11 +299,15 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
             
             // Save ingredients
             //saveFridge()
-            PersistManager.sharedManager.saveFridge()
-            PersistManager.sharedManager.encode()
+            //PersistManager.sharedManager.saveFridge()
+            //PersistManager.sharedManager.encode()
+            
+            PersistManager.sharedManager.MyFridge = MyFridge!
             
             print(PersistManager.sharedManager.MyFridge.doorNames)
             
+            let saveSingleton = PersistenceHandler()
+            saveSingleton.save()
             
             if (MyFridge?.numOfDoors != 0) && (MyFridge != nil) {
                 
