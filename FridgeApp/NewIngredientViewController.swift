@@ -20,6 +20,8 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var addtolistButton: UIButton!
     @IBOutlet weak var test: UITextField!
+    @IBOutlet weak var listAddedView: UIView!
+    @IBOutlet weak var listAddedText: UILabel!
 
     @IBOutlet weak var autocompleteTableView: UITableView!
     //let autocompleteTableView = UITableView(frame: UIScreen.mainScreen().bounds, style: UITableViewStyle.Plain)
@@ -70,12 +72,15 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         //amountTextField.delegate = self
         //test.delegate = self
         
+        addtolistButton.enabled = false
+
         amountTextField.keyboardType = .NumberPad
         
         // Set up views if editing an existing Meal.
         if let ingredient = ingredient {
             // Update title and change add -> edit
             navigationItem.title = ingredient.name
+            addtolistButton.enabled = true
             AddIngredientButton.title = "Edit"
 
             // Populate fields with existing data
@@ -98,6 +103,8 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         
         print("Add subview")
         self.view.addSubview(autocompleteTableView)
+        
+        listAddedView.alpha = 0
         
         // Input data into the Array:
         //locationPickerData = (MyFridge?.doorNames)!
@@ -329,6 +336,7 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         checkValidIngredientName()
         if textField == nameTextField {
             navigationItem.title = textField.text
+            addtolistButton.enabled = true
         }
     }
     
@@ -365,13 +373,23 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
             ingredient = Ingredient(name: name, image: nil, expiry: expiry, amount: amount, location: location!)
         } else if addtolistButton == (sender as? UIButton) {
             
-            print("addtolistbutton?")
+            print(nameTextField.text)
             
-            let addtolistViewController = segue.destinationViewController as! AddToListFromIngredientDetailsViewController
-            
-            addtolistViewController.selectedIngredient = nameTextField.text!
-            addtolistViewController.mainList = mainList!
-            
+            if (nameTextField.text! != "") {
+                print("addtolistbutton?")
+                
+                let addtolistViewController = segue.destinationViewController as! AddToListFromIngredientDetailsViewController
+                
+                addtolistViewController.selectedIngredient = nameTextField.text!
+                //addtolistViewController.mainList = mainList!
+                
+            } else {
+                let alertController = UIAlertController(title: "No Food Name", message:
+                    "You must input a food name before addding it to a list.", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                
+                self.presentViewController(alertController, animated: true, completion: nil)
+            }
         }
     }
 
@@ -385,16 +403,45 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         if let addToListFromIngredientDetailsViewController = sender.sourceViewController as? AddToListFromIngredientDetailsViewController {
             
             let selectedList = addToListFromIngredientDetailsViewController.selectedList
+//            
+//            let selectedListDetails = addToListFromIngredientDetailsViewController.mainList.lists[selectedList]
+//
+//            print(selectedList)
+//            print(selectedListDetails)
+//            
+//            PersistManager.sharedManager.ShoppingLists.lists[selectedList] = selectedListDetails
+//            
+//            // Save lists
+//            PersistManager.sharedManager.saveList()
             
-            let selectedListDetails = addToListFromIngredientDetailsViewController.mainList.lists[selectedList]
-
+            print("unwind ingredient added")
             print(selectedList)
-            print(selectedListDetails)
             
-            PersistManager.sharedManager.ShoppingLists.lists[selectedList] = selectedListDetails
+            //let DynamicView = UIView(frame: CGRectMake(150, 150, 200, 200))
+            //DynamicView.backgroundColor = UIColor.grayColor()
+            //DynamicView.layer.cornerRadius = 25
+            //DynamicView.layer.borderWidth = 2
+            //DynamicView.alpha = 0
+            //self.view.addSubview(DynamicView)
+            //UIView.animateWithDuration(0.4, animations: {
+            //    DynamicView.alpha = 0.8
+            //})
+            //UIView.animateWithDuration(0.8, animations: {
+            //    DynamicView.alpha = 0
+            //})
+            //DynamicView.removeFromSuperview()
+
+            listAddedText.text = nameTextField.text! + " added to " + selectedList
+            print(listAddedText.text)
             
-            // Save lists
-            PersistManager.sharedManager.saveList()
+            UIView.animateWithDuration(2.5, animations: {
+                self.listAddedView.alpha = 0.8
+            })
+            UIView.animateWithDuration(2.5, animations: {
+                self.listAddedView.alpha = 0
+            })
+            
+            
             
         }
         

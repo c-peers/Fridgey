@@ -154,6 +154,8 @@
 				C4F173A01BB698B5002D9DA1 /* FoodsListTableViewController.swift */,
 				C4F1739E1BB69319002D9DA1 /* FoodsListTableViewCell.swift */,
 				C46F4E611BCF80B00020F682 /* NewIngredientViewController.swift */,
+				C405682C1C27C6ED0079A92F /* AddToListFromIngredientDetailsViewController.swift */,
+				C49FB9041C2A501000231C8E /* AddToListFromIngredientsCollectionViewCell.swift */,
 			);
 			name = "Foods Tab";
 			sourceTree = "<group>";
@@ -227,8 +229,6 @@
 				C49B91651C40D1ED0066938C /* FoodNames.txt */,
 				C441BBE21C35675000EDE042 /* FoodNames(bak).txt */,
 				C4F56E671C3030E8004B6F42 /* Lists.swift */,
-				C405682C1C27C6ED0079A92F /* AddToListFromIngredientDetailsViewController.swift */,
-				C49FB9041C2A501000231C8E /* AddToListFromIngredientsCollectionViewCell.swift */,
 				C40080671C2FA6D9009BC1EC /* FridgeApp-Bridging-Header.h */,
 				C45F3CC31B9AC4E40010FEF0 /* Images.xcassets */,
 				C4F56E541C2FB082004B6F42 /* Cartfile */,

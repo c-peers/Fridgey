@@ -76,9 +76,10 @@ class PersistenceHandler {
                     return true
                     
                 } else {
+                
                     sampleLists()
                     return false
-            }
+                }
             
             default:
                 return false

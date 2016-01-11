@@ -10,6 +10,7 @@ import UIKit
 
 class AddToListFromIngredientsCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var listName: UIButton!    
+    //@IBOutlet weak var listName: UIButton!
+    @IBOutlet weak var listName: UILabel!
     
 }

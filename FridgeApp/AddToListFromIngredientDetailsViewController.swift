@@ -25,9 +25,9 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         
         mainList = PersistManager.sharedManager.ShoppingLists
         
-        if let savedLists = PersistManager.sharedManager.loadList() {
-            mainList = savedLists
-        }
+        //if let savedLists = PersistManager.sharedManager.loadList() {
+        //    mainList = savedLists
+        //}
         
         // Dictionary not sorted by key
         list = Array(mainList.lists.keys).sort(<)
@@ -86,21 +86,40 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         
         cell.contentView.layer.cornerRadius = 2.0
         
-        cell.listName.setTitle(list[indexPath.row], forState: .Normal)
+        //cell.listName.setTitle(list[indexPath.row], forState: .Normal)
+        cell.listName.text = list[indexPath.row]
         print(list[indexPath.row])
         
         return cell
         
     }
     
-    func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
+    //func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+
+        print("selected?")
         selectedList = list[indexPath.row]
         let selectedListCount = mainList.lists[selectedList]?.count
-        mainList.lists[selectedList] = [selectedListCount! + 1 : selectedIngredient]
+        print(mainList.lists[selectedList])
+        mainList.lists[selectedList]![selectedListCount! + 1] = selectedIngredient
         
         print(mainList.lists[selectedList])
-        //saveList()
-    }
+
+        PersistManager.sharedManager.ShoppingLists.lists[selectedList] = mainList.lists[selectedList]
+        
+        // Save lists
+        let saveList = PersistenceHandler()
+        saveList.save()
+        
+        print(PersistManager.sharedManager.ShoppingLists.lists)
+        
+        //dismissViewControllerAnimated(true, completion: nil)
+        
+        //Can't do a regular unwind segue because then this whole function is called out of order. Perform the unwind manually so that the above can run.
+        print("manual unwind")
+        self.performSegueWithIdentifier("addToListSelected", sender: self)
+        
+        }
     
     @IBAction func cancelAddToList(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)

@@ -121,6 +121,7 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
         
         let loadSingleton = PersistenceHandler()
         loadSingleton.load("Fridge")
+        loadSingleton.load("Lists")
         
         print(PersistManager.sharedManager.MyFridge.doorNames)
         
