@@ -125,21 +125,4 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         dismissViewControllerAnimated(true, completion: nil)
     }
 
-    // MARK: NSCoding
-    func saveList() {
-        
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(mainList, toFile: Lists.ArchiveURL.path!)
-        
-        if !isSuccessfulSave {
-            print("Couldn't save")
-        }
-        
-    }
-    
-    func loadList() -> Lists? {
-        
-        return NSKeyedUnarchiver.unarchiveObjectWithFile(Lists.ArchiveURL.path!) as? Lists
-        
-    }
-    
 }

@@ -16,37 +16,6 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
     var viewControllers: NSArray!
     var fridgeTitles: NSArray!
     var fridgeImages: NSArray!
-
-//    required init(coder aDecoder: NSCoder!) {
-//        super.init(coder: aDecoder)!
-//    }
-//    
-//    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
-//        
-//        
-//        if let savedFridge = loadFridge() {
-//            
-//            let FTBC = self.tabBarController as! FridgeTabBarController
-//            var saveToFTBC = self.tabBarController as! FridgeTabBarController
-//
-//            MyFridge = savedFridge
-//            saveToFTBC.MyFridge = savedFridge
-//            
-//            print("Saved Fridge")
-//            print(MyFridge?.numOfDoors)
-//            print(MyFridge?.doorNames)
-//            print(MyFridge?.fridgeName)
-//            
-//        } else {
-//            
-//            // No fridge, set defaults... for now.
-//            MyFridge = FridgeInfo(fridgeName: "Fridge", numOfDoors: 2, doorNames: ["1", "2"])!
-//        }
-//        
-//        // Must call designated initializer.
-//        self.init()
-//        
-//    }
     
     
     override func viewDidLoad() {
@@ -92,13 +61,6 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
         
         print(PersistManager.sharedManager.MyFridge.doorNames)
         
-        let FTBC = self.tabBarController as! FridgeTabBarController
-        let saveToFTBC = self.tabBarController as! FridgeTabBarController
-        
-        //MyFridge = FTBC.MyFridge
-        
-        //print(MyFridge?.numOfDoors)
-        
         MyFridge = PersistManager.sharedManager.MyFridge
         
         //if let savedFridge = PersistManager.sharedManager.loadFridge() {
@@ -121,6 +83,7 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
         
         let loadSingleton = PersistenceHandler()
         loadSingleton.load("Fridge")
+        loadSingleton.load("Ingredients")
         loadSingleton.load("Lists")
         
         print(PersistManager.sharedManager.MyFridge.doorNames)
@@ -146,18 +109,8 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
             self.fridgeTitles = NSArray(object: (MyFridge?.fridgeName)!)
             self.fridgeImages = NSArray(objects: "1")
         
-//        if (MyFridge != nil) {
-//            
-//            print("not nil!")
-//            // self.fridgeTitles = NSArray(objects: "A", "B")
-//            // self.fridgeImages = NSArray(objects: "1", "2")
-//            self.fridgeTitles = NSArray(object: (MyFridge?.fridgeName)!)
-//            self.fridgeImages = NSArray(objects: "1")
-//            
         } else {
             print("Fridge not set, viewWillAppear")
-            //self.fridgeTitles = NSArray(object: "Add a Fridge")
-            //self.fridgeImages = NSArray(object: "Blank")
             self.fridgeTitles = NSArray(object: "Add a Fridge")
             self.fridgeImages = NSArray(object: "Blank")
             
@@ -299,7 +252,6 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
             print(MyFridge!.fridgeName)
             
             // Save ingredients
-            //saveFridge()
             //PersistManager.sharedManager.saveFridge()
             //PersistManager.sharedManager.encode()
             
@@ -338,24 +290,6 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
         }
         
     }
-
-    // MARK: NSCoding
-    func saveFridge() {
-        
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(MyFridge!, toFile: FridgeInfo.ArchiveURL.path!)
-        
-        if !isSuccessfulSave {
-            print("Couldn't save")
-        }
-        
-    }
-    
-    func loadFridge() -> FridgeInfo? {
-        
-        return NSKeyedUnarchiver.unarchiveObjectWithFile(FridgeInfo.ArchiveURL.path!) as? FridgeInfo
-        
-    }
-
     
     
 }

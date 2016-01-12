@@ -16,13 +16,10 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     
     var ingredients = [[Ingredient]]()
     var filteredIngredients = [[Ingredient]]()
-    var ingredientsByArea: IngredientsByLocation?
     var myFridge = FridgeInfo()
     var mainList = Lists()
     
     let searchController = UISearchController(searchResultsController: nil)
-    
-    let test = ["Area 1 Door", "Area 2 Door", "Area 3 Door", "Area 4 Door"]
     
     // Temporary Sample
     func sampleIngredients() {
@@ -59,13 +56,6 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
 
         tableView.delegate = self
         tableView.dataSource = self
-
-        // Load global variables
-        //let FTBC = self.tabBarController as! FridgeTabBarController
-        
-        //ingredients = FTBC.Ingredients
-        //myFridge = FTBC.MyFridge
-        //mainList = FTBC.ShoppingLists
 
         let loadSingleton = PersistenceHandler()
         loadSingleton.load("Ingredients")
@@ -121,17 +111,11 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         // Sets this view controller as presenting view controller for the search interface
         //definesPresentationContext = true
         
-        // Populate the list of ingredients per "Area"
-        //self.ingredientsByArea.IBLArray
-        //ingredientsByArea = IngredientsByLocation.init(Location: test, Ingredients: ingredients)!
-        
         //self.tableView.registerClass(FoodsListTableViewCell.classForCoder(), forCellReuseIdentifier: "FoodsListTableViewCell")
         
         self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), atScrollPosition: UITableViewScrollPosition.Top, animated: false)
                 
         //self.tableView.contentOffset = CGPointMake(0,  (self.searchDisplayController?.searchBar.frame.size.height)! - self.tableView.contentOffset.y)
-        
-        //print(self.ingredientsByArea?.IBLArray[0][0])
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList:",name:"load", object: nil)
         
@@ -171,7 +155,9 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         ingredients = PersistManager.sharedManager.Ingredients
         myFridge = PersistManager.sharedManager.MyFridge
         mainList = PersistManager.sharedManager.ShoppingLists
-
+        
+        print(PersistManager.sharedManager.Ingredients)
+        
         print("Actually reload??")
         self.tableView.reloadData()
         
@@ -198,11 +184,6 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             return 1
         }
 
-//        if test.count > 1 {
-//            return test.count
-//        } else {
-//            return 1
-//        }
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -213,11 +194,6 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             return nil
         }
 
-//        if  test.count > 1 {
-//            return test[section]
-//        } else {
-//            return nil
-//        }
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -238,12 +214,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             
         //}
 
-//            if self.ingredientsByArea!.IBLArray[section] != ["Empty"] {
-//                return self.ingredientsByArea!.IBLArray[section].count
-//            } else {
-//                return 0
-//            }
-//            
+//
 //        }
         
         // return ingredients.count
@@ -347,7 +318,6 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             ingredients[indexPath.section].removeAtIndex(indexPath.row)
             
             // Save after removing row
-            //saveIngredients()
             //PersistManager.sharedManager.saveIngredients()
             PersistManager.sharedManager.Ingredients = ingredients
             
@@ -492,7 +462,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
                     tableView.deleteRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
                     
                     let newSection = myFridge.doorNames.indexOf(ingredient.location)
-                    let newRow = self.ingredients[newSection!].count
+                    //let newRow = self.ingredients[newSection!].count
                     
                     let newIndexPath = NSIndexPath(forRow: self.ingredients[newSection!].count, inSection: newSection!)
                     ingredients[newSection!].append(ingredient)
@@ -506,7 +476,6 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             } else {
 
                 // Add a new ingredient.
-                //let section = test.indexOf(ingredient.location)
                 let section = myFridge.doorNames.indexOf(ingredient.location)
                 print("section")
                 print(section)
@@ -514,8 +483,6 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
                 let newRow = self.ingredients[section!].count
                 print("newRow")
                 print(newRow)
-
-                //let ingredientAsArray = [ingredient]
                 
                 let newIndexPath = NSIndexPath(forRow: self.ingredients[section!].count, inSection: section!)
                 ingredients[section!].append(ingredient)
@@ -524,7 +491,6 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             }
             
             // Save ingredients
-            //saveIngredients()
             //PersistManager.sharedManager.saveIngredients()
             PersistManager.sharedManager.Ingredients = ingredients
 
@@ -536,26 +502,6 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         
     }
     
-    // MARK: NSCoding
-    func saveIngredients() {
-        
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(ingredients, toFile: Ingredient.ArchiveURL.path!)
-        
-        //let FTBC = self.tabBarController as! FridgeTabBarController
-        //FTBC.MyFridge = myFridge
-        
-        if !isSuccessfulSave {
-            print("Couldn't save")
-        }
-        
-    }
-    
-    func loadIngredients() -> [[Ingredient]]? {
-        
-        return NSKeyedUnarchiver.unarchiveObjectWithFile(Ingredient.ArchiveURL.path!) as? [[Ingredient]]
-        
-    }
-
 }
 
 //extension FoodsListTableViewController: UISearchBarDelegate {

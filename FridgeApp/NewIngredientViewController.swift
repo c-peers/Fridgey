@@ -14,12 +14,10 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var expirationTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
-    //@IBOutlet weak var amountTextField: UITextField!
     //@IBOutlet weak var locationPicker: UIPickerView!
     //@IBOutlet weak var expirationPicker: UIDatePicker!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var addtolistButton: UIButton!
-    @IBOutlet weak var test: UITextField!
     @IBOutlet weak var listAddedView: UIView!
     @IBOutlet weak var listAddedText: UILabel!
 
@@ -70,7 +68,6 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         nameTextField.delegate = self
         expirationTextField.delegate = self
         //amountTextField.delegate = self
-        //test.delegate = self
         
         addtolistButton.enabled = false
 
@@ -95,6 +92,10 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         autocompleteTableView.delegate = self
         autocompleteTableView.dataSource = self
         autocompleteTableView.scrollEnabled = true
+        autocompleteTableView.layer.borderWidth = 0.5
+        autocompleteTableView.layer.borderColor = UIColor.grayColor().CGColor
+        //autocompleteTableView.separatorColor = UIColor.blackColor()
+        
         //autocompleteTableView.frame = CGRectMake(100, 100, 100, 100)
         autocompleteTableView.alpha = 0
         
@@ -154,7 +155,7 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
                 UIView.animateWithDuration(0.5, animations: {
                     self.autocompleteTableView.alpha = 1.0
                 })
-                let str = nameTextField.text
+                let str = nameTextField.text?.lowercaseString
                 self.search(str!)
                 return true
 
@@ -170,14 +171,21 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         
         for curString in ingredientNameChoices
         {
-            let myString:NSString! = curString as NSString
+
+            //let myString:NSString! = curString.lowercaseString as NSString
+            //let subStringRange :NSRange! = myString.rangeOfString(subString)
+
+            //if (subStringRange.location  == 0)
+            //{
+            //    autocompleteDisplay.append(curString)
+            //}
+
+            let myString = curString.lowercaseString as NSString
             
-            let subStringRange :NSRange! = myString.rangeOfString(subString)
-            
-            if (subStringRange.location  == 0)
-            {
+            if myString.containsString(subString) {
                 autocompleteDisplay.append(curString)
             }
+            
         }
         
         autocompleteTableView.reloadData()
