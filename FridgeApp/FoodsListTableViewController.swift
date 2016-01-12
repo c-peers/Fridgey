@@ -168,7 +168,10 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     func didSelectTab(tabBarController: FridgeTabBarController) {
-        
+        ingredients = PersistManager.sharedManager.Ingredients
+        myFridge = PersistManager.sharedManager.MyFridge
+        mainList = PersistManager.sharedManager.ShoppingLists
+
         print("Actually reload??")
         self.tableView.reloadData()
         

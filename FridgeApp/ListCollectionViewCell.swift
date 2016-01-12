@@ -11,7 +11,8 @@ import UIKit
 class ListCollectionViewCell: UICollectionViewCell {
     
     //@IBOutlet weak var ListName: UITextField!
-    @IBOutlet weak var listName: UIButton!
+    //@IBOutlet weak var listName: UIButton!
+    @IBOutlet weak var listName: UILabel!
     
     
 }

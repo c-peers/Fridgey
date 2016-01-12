@@ -33,6 +33,14 @@ class ListDetailsViewController: UIViewController {
             
         print(tempList)
         
+        for x in 1...listDetails!.count {
+            if x == 1 {
+                tempListView.text = listDetails![x]
+            } else {
+                tempListView.text = tempListView.text + "\n" + listDetails![x]!
+            }
+        }
+        
         //tempListView.text = tempList
         
         // Do any additional setup after loading the view.

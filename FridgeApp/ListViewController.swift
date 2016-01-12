@@ -125,7 +125,8 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         cell.contentView.layer.cornerRadius = 2.0
         
-        cell.listName.setTitle(list[indexPath.row], forState: .Normal)
+        //cell.listName.setTitle(list[indexPath.row], forState: .Normal)
+        cell.listName.text = list[indexPath.row]
         print(list[indexPath.row])
         
         return cell

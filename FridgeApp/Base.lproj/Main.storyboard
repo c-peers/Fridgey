@@ -762,21 +762,24 @@ does your refridgerator have?</string>
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQh-cb-GPf">
-                                                    <rect key="frame" x="35" y="10" width="130" height="30"/>
-                                                    <state key="normal" title="Button"/>
-                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgO-Hz-iQ9">
+                                                    <rect key="frame" x="35" y="8" width="130" height="35"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" red="0.31401931714938602" green="1" blue="0.49722852693841935" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="aQh-cb-GPf" firstAttribute="leading" secondItem="Li2-qF-cqA" secondAttribute="leadingMargin" constant="27" id="BbA-dC-cxh"/>
-                                            <constraint firstItem="aQh-cb-GPf" firstAttribute="centerX" secondItem="Li2-qF-cqA" secondAttribute="centerX" id="QrH-Fg-AhZ"/>
-                                            <constraint firstItem="aQh-cb-GPf" firstAttribute="centerY" secondItem="Li2-qF-cqA" secondAttribute="centerY" id="dto-tJ-E3M"/>
+                                            <constraint firstItem="dgO-Hz-iQ9" firstAttribute="leading" secondItem="Li2-qF-cqA" secondAttribute="leadingMargin" constant="27" id="2y3-Dt-WwC"/>
+                                            <constraint firstItem="dgO-Hz-iQ9" firstAttribute="centerX" secondItem="Li2-qF-cqA" secondAttribute="centerX" id="Zs6-RX-aJu"/>
+                                            <constraint firstItem="dgO-Hz-iQ9" firstAttribute="top" secondItem="Li2-qF-cqA" secondAttribute="topMargin" id="l1Q-eC-rEs"/>
+                                            <constraint firstItem="dgO-Hz-iQ9" firstAttribute="centerY" secondItem="Li2-qF-cqA" secondAttribute="centerY" id="rGK-oQ-7bp"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="listName" destination="aQh-cb-GPf" id="hUq-IP-1SJ"/>
+                                            <outlet property="listName" destination="dgO-Hz-iQ9" id="62g-tL-K2L"/>
                                             <segue destination="DP0-yO-Zwj" kind="show" identifier="EditList" id="Nig-TY-LJm"/>
                                         </connections>
                                     </collectionViewCell>
