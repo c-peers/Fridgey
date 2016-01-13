@@ -351,11 +351,6 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
             return 1
         }
         
-        //        if test.count > 1 {
-        //            return test.count
-        //        } else {
-        //            return 1
-        //        }
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -366,11 +361,6 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
             return nil
         }
         
-        //        if  test.count > 1 {
-        //            return test[section]
-        //        } else {
-        //            return nil
-        //        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -389,17 +379,6 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
             return 0
         }
         
-        //}
-        
-        //            if self.ingredientsByArea!.IBLArray[section] != ["Empty"] {
-        //                return self.ingredientsByArea!.IBLArray[section].count
-        //            } else {
-        //                return 0
-        //            }
-        //
-        //        }
-        
-        // return ingredients.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -411,31 +390,8 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         // Fetches the appropriate meal for the data source layout.
         let ingredient : Ingredient
-        // var ingredientList = [Ingredient]()
-        
-        //            if tableView == self.searchDisplayController!.searchResultsTableView {
-        //                print(indexPath.section)
-        //                print(indexPath.row)
-        //                ingredient = filteredIngredients[indexPath.section][indexPath.row]
-        //            } else {
+
         ingredient = expiredIngredients[indexPath.section][indexPath.row]
-        //                for ingredientcounter in 0 ... ingredients.count - 1 {
-        //                    if ingredients[ingredientcounter].location == test[indexPath.section] {
-        //                        ingredientList.append(ingredients[ingredientcounter])
-        //
-        //                    }
-        //
-        //                }
-        
-        
-        //}
-        
-        //            if tableView == self.searchDisplayController!.searchResultsTableView {
-        //                ingredient = filteredIngredients[indexPath.row]
-        //            } else {
-        //                ingredient = ingredients[indexPath.row]
-        //            }
-        //
 
         cell.expireFoodName?.text = ingredient.name
         cell.expireFoodAmount?.text = String(ingredient.amount)

@@ -21,6 +21,9 @@
 		C45F3CD31B9AC4E40010FEF0 /* FridgeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F3CD21B9AC4E40010FEF0 /* FridgeAppTests.swift */; };
 		C45F3CDD1B9AC75E0010FEF0 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F3CDC1B9AC75E0010FEF0 /* ListViewController.swift */; };
 		C45F3CDF1B9ACA900010FEF0 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45F3CDE1B9ACA900010FEF0 /* FourthViewController.swift */; };
+		C46B8FE71C45C5A00067F254 /* ListDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46B8FE61C45C5A00067F254 /* ListDetailsTableViewCell.swift */; };
+		C46B8FEB1C4642400067F254 /* ListDetailAddExistingIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46B8FEA1C4642400067F254 /* ListDetailAddExistingIngredient.swift */; };
+		C46B8FED1C4643BA0067F254 /* ListDetailAddExistingIngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46B8FEC1C4643BA0067F254 /* ListDetailAddExistingIngredientCell.swift */; };
 		C46E16F01BAE844E00279B69 /* ChooseAFridgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E16EF1BAE844E00279B69 /* ChooseAFridgeVC.swift */; };
 		C46F4E621BCF80B00020F682 /* NewIngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F4E611BCF80B00020F682 /* NewIngredientViewController.swift */; };
 		C4705D291C35031F00952CB7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C4705D281C35031F00952CB7 /* .gitignore */; };
@@ -92,6 +95,9 @@
 		C45F3CD21B9AC4E40010FEF0 /* FridgeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeAppTests.swift; sourceTree = "<group>"; };
 		C45F3CDC1B9AC75E0010FEF0 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		C45F3CDE1B9ACA900010FEF0 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		C46B8FE61C45C5A00067F254 /* ListDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		C46B8FEA1C4642400067F254 /* ListDetailAddExistingIngredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailAddExistingIngredient.swift; sourceTree = "<group>"; };
+		C46B8FEC1C4643BA0067F254 /* ListDetailAddExistingIngredientCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailAddExistingIngredientCell.swift; sourceTree = "<group>"; };
 		C46E16EF1BAE844E00279B69 /* ChooseAFridgeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseAFridgeVC.swift; sourceTree = "<group>"; };
 		C46F4E611BCF80B00020F682 /* NewIngredientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewIngredientViewController.swift; sourceTree = "<group>"; };
 		C4705D281C35031F00952CB7 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -186,6 +192,9 @@
 				C45F3CDC1B9AC75E0010FEF0 /* ListViewController.swift */,
 				C4E458F71C2777A6005B28E3 /* ListCollectionViewCell.swift */,
 				C40568281C27BDA80079A92F /* ListDetailsViewController.swift */,
+				C46B8FE61C45C5A00067F254 /* ListDetailsTableViewCell.swift */,
+				C46B8FEA1C4642400067F254 /* ListDetailAddExistingIngredient.swift */,
+				C46B8FEC1C4643BA0067F254 /* ListDetailAddExistingIngredientCell.swift */,
 			);
 			name = "Lists tab";
 			sourceTree = "<group>";
@@ -418,6 +427,7 @@
 				C48272131BB129AC00BACE1D /* ConfirmFridgeVC.swift in Sources */,
 				C4F56E681C3030E8004B6F42 /* Lists.swift in Sources */,
 				C4F173A21BB698B5002D9DA1 /* FoodsListTableViewController.swift in Sources */,
+				C46B8FEB1C4642400067F254 /* ListDetailAddExistingIngredient.swift in Sources */,
 				C4937B911C019C07008505B9 /* FridgeTabBarController.swift in Sources */,
 				C46F4E621BCF80B00020F682 /* NewIngredientViewController.swift in Sources */,
 				C4CA4D4E1C1F073C005F6236 /* ExpireTableViewCell.swift in Sources */,
@@ -429,6 +439,7 @@
 				C49D0A611C1F0F6D00C23EE3 /* TabBarDelegate.swift in Sources */,
 				C4CA4D501C1F08C6005F6236 /* ExpireTableView.swift in Sources */,
 				C441BBEA1C3AA72000EDE042 /* Singleton.swift in Sources */,
+				C46B8FE71C45C5A00067F254 /* ListDetailsTableViewCell.swift in Sources */,
 				C4E458F81C2777A6005B28E3 /* ListCollectionViewCell.swift in Sources */,
 				C4F56E7B1C317C46004B6F42 /* MGSwipeTableCell.m in Sources */,
 				C405682D1C27C6ED0079A92F /* AddToListFromIngredientDetailsViewController.swift in Sources */,
@@ -439,6 +450,7 @@
 				C4F56E791C317C46004B6F42 /* MGSwipeButton.m in Sources */,
 				C485EA091BEDD65800AB9FDA /* FridgePageContentViewController.swift in Sources */,
 				C49FB9051C2A501000231C8E /* AddToListFromIngredientsCollectionViewCell.swift in Sources */,
+				C46B8FED1C4643BA0067F254 /* ListDetailAddExistingIngredientCell.swift in Sources */,
 				C45F3CDF1B9ACA900010FEF0 /* FourthViewController.swift in Sources */,
 				C4F173A51BB97C75002D9DA1 /* Ingredient.swift in Sources */,
 				C40568291C27BDA80079A92F /* ListDetailsViewController.swift in Sources */,

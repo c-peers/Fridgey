@@ -158,7 +158,7 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
             let indexPath = indexPaths[0] as NSIndexPath
             let selectedList = list[indexPath.row]
             listDetailViewController.listName = list[indexPath.row]
-            listDetailViewController.listDetails = mainList.lists[selectedList]!
+            listDetailViewController.listDetailsDic = mainList.lists[selectedList]!
             print("Edit list")
                 
                 //ingredientDetailViewController.locationPickerData = myFridge.doorNames

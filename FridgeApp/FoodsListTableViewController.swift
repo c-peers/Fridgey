@@ -288,19 +288,33 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         cell.FoodExpiry?.text = ingredient.expiry
         cell.FoodImageView?.image = ingredient.image
 
-        //cell.leftButtons = [MGSwipeButton(title: "", icon: UIImage(named:"check.png"), backgroundColor: UIColor.greenColor())
-        //    ,MGSwipeButton(title: "", icon: UIImage(named:"fav.png"), backgroundColor: UIColor.blueColor())]
-        //cell.leftSwipeSettings.transition = MGSwipeTransition.Rotate3D
+        cell.leftButtons = [MGSwipeButton(title: "", icon: UIImage(named:"check.png"), backgroundColor: UIColor.greenColor())
+            ,MGSwipeButton(title: "", icon: UIImage(named:"fav.png"), backgroundColor: UIColor.blueColor())]
+        cell.leftSwipeSettings.transition = MGSwipeTransition.Rotate3D
         
         //configure right buttons
         cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor())
             ,MGSwipeButton(title: "Add To List",backgroundColor: UIColor.blueColor())]
-        cell.rightSwipeSettings.transition = MGSwipeTransition.Rotate3D
+        cell.rightSwipeSettings.transition = MGSwipeTransition.ClipCenter
+        
+//        let deleteButton = MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor(), callback: {( sender: MGSwipeTableCell!) -> Void in
+//            self.ingredients[indexPath.section].removeAtIndex(indexPath.row)
+//            
+//            // Save after removing row
+//            //PersistManager.sharedManager.saveIngredients()
+//            PersistManager.sharedManager.Ingredients = self.ingredients
+//            
+//            let saveSingleton = PersistenceHandler()
+//            saveSingleton.save()
+//            
+//            // Remove visually
+//            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+//            })
         
         return cell
         
     }
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

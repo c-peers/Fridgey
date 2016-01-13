@@ -62,7 +62,7 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         
         //ingredientNameChoices = readFile.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
         
-        print(ingredientNameChoices)
+        //print(ingredientNameChoices)
 
         // Handle the text field’s user input through delegate callbacks.
         nameTextField.delegate = self
