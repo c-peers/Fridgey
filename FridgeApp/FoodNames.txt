@@ -25,10 +25,12 @@ Red Wine
 White Wine
 Rose Wine
 Dessert Wine
-wine, table, red, Barbera~^~ALCOHOLIC BEV,WINE,TABLE,RED,BARBERA~^~~^~~^~~^~~^0^~~^6.25^3.36^8.37^3.92
-wine, table, red, Burgundy~^~ALCOHOLIC BEV,WINE,TABLE,RED,BURGUNDY~^~~^~~^~~^~~^0^~~^6.25^3.36^8.37^3.92
-wine, table, red, Cabernet Franc~^~ALCOHOLIC BEV,WINE,TABLE,RED,CABERNET FRANC~^~~^~~^~~^~~^0^~~^6.25^3.36^8.37^3.92
-wine, table, red, Cabernet Sauvignon~^~ALCOHOLIC BEV,WINE,TABLE,RED,CABERNET SAUVIGNON~^~~^~~^~~^~~^0^~~^6.25^3.36^8.37^3.92
+Red Wine (Barbera)
+Red Wine (Burgundy)
+Red Wine (Cabernet Franc)
+Red Wine (Cabernet Sauvignon)
+Red Wine ()
+Red Wine ()
 wine, table, red, Carignane~^~ALCOHOLIC BEV,WINE,TABLE,RED,CARIGNANE~^~~^~~^~~^~~^0^~~^6.25^3.36^8.37^3.92
 wine, table, red, Claret~^~ALCOHOLIC BEV,WINE,TABLE,RED,CLARET~^~~^~~^~~^~~^0^~~^6.25^3.36^8.37^3.92
 wine, table, red, Gamay~^~ALCOHOLIC BEV,WINE,TABLE,RED,GAMAY~^~~^~~^~~^~~^0^~~^6.25^3.36^8.37^3.92

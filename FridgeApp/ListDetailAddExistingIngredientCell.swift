@@ -10,7 +10,20 @@ import UIKit
 
 class ListDetailAddExistingIngredientCell: UITableViewCell {
 
-    @IBOutlet weak var existingIngredientImage: UIView!
     @IBOutlet weak var existingIngredientName: UILabel!
+    @IBOutlet weak var existingIngredientImage: UIImageView!
+    @IBOutlet weak var selectedButton: UIButton!
+
+    
+    //@IBAction func ingredientWasSelected(sender: AnyObject) {
+        
+        //print("was selected")
+        //let button = sender as! UIButton
+        //let cell = button.superview?.superview as! ListDetailAddExistingIngredientCell
+        //var row = existingIngredientTable.indexPathForCell(cell)?.row
+        
+        //print(row)
+   
+    //}
     
 }

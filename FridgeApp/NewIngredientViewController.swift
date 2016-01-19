@@ -20,6 +20,7 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var addtolistButton: UIButton!
     @IBOutlet weak var listAddedView: UIView!
     @IBOutlet weak var listAddedText: UILabel!
+    //@IBOutlet weak var scrollView: UIScrollView!
 
     @IBOutlet weak var autocompleteTableView: UITableView!
     //let autocompleteTableView = UITableView(frame: UIScreen.mainScreen().bounds, style: UITableViewStyle.Plain)
@@ -64,6 +65,8 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         
         //print(ingredientNameChoices)
 
+        //scrollView.contentSize = CGSizeMake(320, 900)
+        
         // Handle the text field’s user input through delegate callbacks.
         nameTextField.delegate = self
         expirationTextField.delegate = self

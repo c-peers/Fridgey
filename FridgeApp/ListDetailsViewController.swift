@@ -106,5 +106,42 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         dismissViewControllerAnimated(true, completion: nil)
     }
         
-    
+    @IBAction func unwindToListDetails(sender: UIStoryboardSegue) {
+        
+        if let listDetailAddExistingIngredient = sender.sourceViewController as? ListDetailAddExistingIngredient {
+            
+            let selectedIngredients = listDetailAddExistingIngredient.selectedIngredients
+            
+            print("unwind add to list")
+            print(selectedIngredients)
+            
+            print(listDetails)
+            
+            listDetails += selectedIngredients
+            
+            print(listDetails)
+
+            //listName
+            
+            let selectedListCount = listDetailsDic!.count
+            
+            for count in 1...selectedIngredients.count {
+                listDetailsDic![count + selectedListCount] = selectedIngredients[count - 1]
+                
+            }
+            
+            print(listDetailsDic)
+            
+            PersistManager.sharedManager.ShoppingLists.lists[listName!] = listDetailsDic
+            
+            // Save lists
+            let saveList = PersistenceHandler()
+            saveList.save()
+            
+            listTableView.reloadData()
+        
+        }
+        
+    }
+
 }
