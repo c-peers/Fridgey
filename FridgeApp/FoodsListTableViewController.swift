@@ -11,6 +11,8 @@ import UIKit
 class FoodsListTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TabBarDelegate, MGSwipeTableCellDelegate {
         
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var listAddedText: UILabel!
+    @IBOutlet weak var listAddedView: UIView!
 
     // MARK: Properties
     
@@ -18,6 +20,8 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     var filteredIngredients = [[Ingredient]]()
     var myFridge = FridgeInfo()
     var mainList = Lists()
+    
+    var selectedIngredient = ""
     
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -53,7 +57,9 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         // Load any saved Ingredients, otherwise load sample data.
-
+        
+        listAddedView.alpha = 0
+        
         tableView.delegate = self
         tableView.dataSource = self
 
@@ -210,6 +216,11 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         if (direction == MGSwipeDirection.LeftToRight && index == 0) {
             
             print("add to list from ingredients table")
+            selectedIngredient = ingredient.name
+            
+            let controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddToListFromIngredientTab") as! AddToListFromIngredientDetailsViewController
+            controller.previousVC = "FoodsListTableViewController"
+            self.presentViewController(controller, animated: true, completion: nil)
             
         }
         
@@ -556,6 +567,25 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             let saveSingleton = PersistenceHandler()
             saveSingleton.save()
 
+            
+        }
+    
+        if let addToListFromIngredientDetailsViewController = sender.sourceViewController as? AddToListFromIngredientDetailsViewController {
+            
+            let selectedList = addToListFromIngredientDetailsViewController.selectedList
+
+            print("unwind ingredient added")
+            print(selectedList)
+            
+            listAddedText.text = selectedIngredient + " added to " + selectedList
+            print(listAddedText.text)
+            
+            UIView.animateWithDuration(2.5, animations: {
+                self.listAddedView.alpha = 0.8
+            })
+            UIView.animateWithDuration(2.5, animations: {
+                self.listAddedView.alpha = 0
+            })
             
         }
         

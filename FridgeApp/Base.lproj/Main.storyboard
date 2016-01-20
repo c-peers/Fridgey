@@ -436,7 +436,7 @@ does your refridgerator have?</string>
         <!--Add To List From Ingredient Details View Controller-->
         <scene sceneID="BwF-iL-iO2">
             <objects>
-                <viewController id="E77-v0-SKt" customClass="AddToListFromIngredientDetailsViewController" customModule="FridgeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddToListFromIngredientTab" useStoryboardIdentifierAsRestorationIdentifier="YES" id="E77-v0-SKt" customClass="AddToListFromIngredientDetailsViewController" customModule="FridgeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xr0-ai-1fR"/>
                         <viewControllerLayoutGuide type="bottom" id="cAa-RF-gIV"/>
@@ -556,6 +556,7 @@ does your refridgerator have?</string>
                         <outlet property="backgroundView" destination="cUh-Mu-jYv" id="KdU-uL-iem"/>
                         <outlet property="collectionView" destination="mdS-bi-GIo" id="FR3-Ae-PIA"/>
                         <segue destination="UOh-jl-qdZ" kind="unwind" identifier="addToListSelected" unwindAction="unwindToNewIngredient:" id="y9i-8h-hHB"/>
+                        <segue destination="UOh-jl-qdZ" kind="unwind" identifier="addToFullList" unwindAction="unwindToIngredientList:" id="KaE-ME-nRU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="axM-YX-b5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -578,6 +579,26 @@ does your refridgerator have?</string>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="thE-sK-zOw">
                                 <rect key="frame" x="0.0" y="64" width="600" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" alpha="0.80000001192092896" contentMode="scaleToFill" id="Nd8-sr-C4j">
+                                    <rect key="frame" x="0.0" y="98" width="600" height="336"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ye0-DC-T3W">
+                                            <rect key="frame" x="85" y="25" width="430" height="286"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="ye0-DC-T3W" firstAttribute="leading" secondItem="Nd8-sr-C4j" secondAttribute="leading" constant="85" id="1Ib-xo-WWM"/>
+                                        <constraint firstItem="ye0-DC-T3W" firstAttribute="centerX" secondItem="Nd8-sr-C4j" secondAttribute="centerX" id="60G-in-dpg"/>
+                                        <constraint firstItem="ye0-DC-T3W" firstAttribute="centerY" secondItem="Nd8-sr-C4j" secondAttribute="centerY" id="Nhv-Dw-DZS"/>
+                                        <constraint firstAttribute="height" constant="336" id="P4n-4A-bGi"/>
+                                        <constraint firstItem="ye0-DC-T3W" firstAttribute="top" secondItem="Nd8-sr-C4j" secondAttribute="top" constant="25" id="ugf-Dr-Ksx"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FoodsListTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodsListTableViewCell" rowHeight="70" id="NEx-2m-NLl" userLabel="FoodsListTableViewCell" customClass="FoodsListTableViewCell" customModule="FridgeApp">
                                         <rect key="frame" x="0.0" y="28" width="600" height="70"/>
@@ -670,7 +691,10 @@ does your refridgerator have?</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ingredients" image="Carrot" id="Xeg-X9-vok"/>
                     <connections>
+                        <outlet property="listAddedText" destination="ye0-DC-T3W" id="E8d-Sx-3CT"/>
+                        <outlet property="listAddedView" destination="Nd8-sr-C4j" id="fEV-ap-MFe"/>
                         <outlet property="tableView" destination="thE-sK-zOw" id="KiN-uA-zb4"/>
+                        <segue destination="E77-v0-SKt" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="xUh-LB-vRU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIw-xt-kCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1372,6 +1396,7 @@ does your refridgerator have?</string>
         <image name="Unselected" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="xUh-LB-vRU"/>
         <segue reference="EUW-uB-UZa"/>
         <segue reference="vI4-Gk-9fo"/>
     </inferredMetricsTieBreakers>

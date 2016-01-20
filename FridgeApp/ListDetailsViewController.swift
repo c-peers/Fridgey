@@ -75,6 +75,33 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         
     }
     
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // the cells you would like the actions to appear needs to be editable
+        return true
+    }
+    
+    // Override to support editing the table view.
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if editingStyle == .Delete {
+            // Delete the row from the data source
+            
+            //ingredients[indexPath.section].removeAtIndex(indexPath.row)
+            print("delete")
+            // Save after removing row
+            //PersistManager.sharedManager.saveIngredients()
+            //PersistManager.sharedManager.Ingredients = ingredients
+            
+            //let saveSingleton = PersistenceHandler()
+            //saveSingleton.save()
+            
+            // Remove visually
+            //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        } else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "ListDetailsTableViewCell"

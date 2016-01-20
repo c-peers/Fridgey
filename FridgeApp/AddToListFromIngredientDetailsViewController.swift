@@ -17,7 +17,8 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
     var mainList = Lists()
     var selectedIngredient = String()
     var selectedList: String = ""
-    //var globalVars = PersistManager()
+    
+    var previousVC = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +39,7 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
             let index = list.indexOf("")
             list.removeAtIndex(index!)
         }
-    
+        
         print(selectedIngredient)
         print(mainList.lists)
         print(list)
@@ -130,8 +131,19 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         //dismissViewControllerAnimated(true, completion: nil)
         
         //Can't do a regular unwind segue because then this whole function is called out of order. Perform the unwind manually so that the above can run.
-        print("manual unwind")
-        self.performSegueWithIdentifier("addToListSelected", sender: self)
+        
+        if previousVC == "FoodsListTableViewController" {
+            self.performSegueWithIdentifier("addToFullList", sender: self)
+            //let preVC = self.storyboard?.instantiateViewControllerWithIdentifier(previousVC) as! FoodsListTableViewController
+            //self.unwindForSegue(unwindToIngredientList, towardsViewController: preVC)
+            
+        } else {
+
+            print("manual unwind to new/edit ingredient")
+            self.performSegueWithIdentifier("addToListSelected", sender: self)
+            
+        }
+
         
         }
     
