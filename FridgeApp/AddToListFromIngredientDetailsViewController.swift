@@ -11,6 +11,7 @@ import UIKit
 class AddToListFromIngredientDetailsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var backgroundView: UIView!
     
     var list: [String] = []
     var mainList = Lists()
@@ -48,6 +49,19 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         collectionView.backgroundColor = UIColor.whiteColor()
         
         self.view.backgroundColor = UIColor(white: 0, alpha: 0.4)
+        
+        backgroundView.layer.cornerRadius = 8
+        backgroundView.layer.masksToBounds = true
+        
+        backgroundView.layer.borderColor = UIColor.grayColor().CGColor
+        backgroundView.layer.borderWidth = 0.5
+        
+        backgroundView.layer.shadowColor = UIColor.blackColor().CGColor
+        backgroundView.layer.shadowOffset = CGSizeZero
+        backgroundView.layer.shadowRadius = 5.0
+        backgroundView.layer.shadowOpacity = 0.5
+        backgroundView.layer.masksToBounds = false
+        backgroundView.clipsToBounds = false
         
         // Do any additional setup after loading the view.
     }

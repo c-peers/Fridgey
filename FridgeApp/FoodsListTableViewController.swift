@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FoodsListTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TabBarDelegate  {
+class FoodsListTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TabBarDelegate, MGSwipeTableCellDelegate {
         
     @IBOutlet weak var tableView: UITableView!
 
@@ -173,6 +173,49 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
 //  tableView.reloadData()
 //}
     
+    // MARK: MGSwipe
+    
+    func swipeTableCell(cell: MGSwipeTableCell!, canSwipe direction: MGSwipeDirection) -> Bool {
+        return true
+    }
+    
+    func swipeTableCell(cell: MGSwipeTableCell!, didChangeSwipeState state: MGSwipeState, gestureIsActive: Bool) {
+        
+    }
+    
+    func swipeTableCell(cell: MGSwipeTableCell!, tappedButtonAtIndex index: Int, direction: MGSwipeDirection, fromExpansion: Bool) -> Bool {
+        
+        let indexPath = tableView.indexPathForCell(cell)
+        let ingredient = ingredients[indexPath!.section][indexPath!.row]
+        
+        if (direction == MGSwipeDirection.RightToLeft && index == 0) {
+            
+            print("deleting from MGSwipe")
+            
+            // Delete the row from the data source
+            ingredients[indexPath!.section].removeAtIndex(indexPath!.row)
+            
+            // Save after removing row
+            //PersistManager.sharedManager.saveIngredients()
+            PersistManager.sharedManager.Ingredients = ingredients
+            
+            let saveSingleton = PersistenceHandler()
+            saveSingleton.save()
+            
+            // Remove visually
+            tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
+            
+        }
+        
+        if (direction == MGSwipeDirection.LeftToRight && index == 0) {
+            
+            print("add to list from ingredients table")
+            
+        }
+        
+        return true
+        
+    }
     
     // MARK: - Table view data source
 
@@ -288,14 +331,16 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         cell.FoodExpiry?.text = ingredient.expiry
         cell.FoodImageView?.image = ingredient.image
 
-        cell.leftButtons = [MGSwipeButton(title: "", icon: UIImage(named:"check.png"), backgroundColor: UIColor.greenColor())
-            ,MGSwipeButton(title: "", icon: UIImage(named:"fav.png"), backgroundColor: UIColor.blueColor())]
-        cell.leftSwipeSettings.transition = MGSwipeTransition.Rotate3D
+        cell.leftButtons = [MGSwipeButton(title: "Add to List", icon: UIImage(named:"check.png"), backgroundColor: UIColor.blueColor())]
+        cell.leftSwipeSettings.transition = MGSwipeTransition.Border
         
         //configure right buttons
-        cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor())
-            ,MGSwipeButton(title: "Add To List",backgroundColor: UIColor.blueColor())]
+        cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor())]
+        //cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor())
+        //    ,MGSwipeButton(title: "Add To List",backgroundColor: UIColor.blueColor())]
         cell.rightSwipeSettings.transition = MGSwipeTransition.ClipCenter
+        
+        cell.delegate = self
         
 //        let deleteButton = MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor(), callback: {( sender: MGSwipeTableCell!) -> Void in
 //            self.ingredients[indexPath.section].removeAtIndex(indexPath.row)

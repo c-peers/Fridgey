@@ -553,6 +553,7 @@ does your refridgerator have?</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundView" destination="cUh-Mu-jYv" id="KdU-uL-iem"/>
                         <outlet property="collectionView" destination="mdS-bi-GIo" id="FR3-Ae-PIA"/>
                         <segue destination="UOh-jl-qdZ" kind="unwind" identifier="addToListSelected" unwindAction="unwindToNewIngredient:" id="y9i-8h-hHB"/>
                     </connections>
@@ -1062,10 +1063,10 @@ does your refridgerator have?</string>
             </objects>
             <point key="canvasLocation" x="1826" y="-1561"/>
         </scene>
-        <!--View Controller-->
+        <!--List Details Add New Ingredient-->
         <scene sceneID="s8h-ss-zN7">
             <objects>
-                <viewController id="oY1-lP-qmn" sceneMemberID="viewController">
+                <viewController id="oY1-lP-qmn" customClass="ListDetailsAddNewIngredient" customModule="FridgeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3hL-s9-8bR"/>
                         <viewControllerLayoutGuide type="bottom" id="Ws5-M7-kU8"/>
@@ -1073,6 +1074,15 @@ does your refridgerator have?</string>
                     <view key="view" contentMode="scaleToFill" id="5Dk-U1-LY9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rol-da-rOl">
+                                <rect key="frame" x="20" y="20" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="cancel:" destination="oY1-lP-qmn" eventType="touchUpInside" id="lrj-Vh-O6G"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -1173,7 +1183,7 @@ does your refridgerator have?</string>
                                                 <rect key="frame" x="263" y="2" width="115" height="30"/>
                                                 <state key="normal" title="Add From Fridge"/>
                                                 <connections>
-                                                    <segue destination="J2v-oX-cPg" kind="show" identifier="listDetailsAddExisting" id="rB7-fI-joF"/>
+                                                    <segue destination="J2v-oX-cPg" kind="presentation" identifier="listDetailsAddExisting" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="rB7-fI-joF"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mf0-UT-33Z">
@@ -1344,6 +1354,7 @@ does your refridgerator have?</string>
                     </view>
                     <connections>
                         <outlet property="addSelected" destination="ofK-4f-vxp" id="NQP-F0-DwM"/>
+                        <outlet property="backgroundView" destination="EsM-l0-8lB" id="SZf-ew-Grj"/>
                         <outlet property="existingIngredientTable" destination="c9g-qS-bNZ" id="R17-zZ-7Qu"/>
                     </connections>
                 </viewController>

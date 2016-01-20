@@ -210,6 +210,8 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
     
     @IBAction func hiddenTextDidBeginEditing(sender: AnyObject) {
+        print("This one?")
+        
         
         hiddenTextField.tintColor = UIColor.clearColor()
         let toolBar = UIToolbar()

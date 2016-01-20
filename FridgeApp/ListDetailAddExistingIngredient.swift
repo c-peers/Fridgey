@@ -12,6 +12,7 @@ class ListDetailAddExistingIngredient: UIViewController, UITableViewDataSource, 
 
     @IBOutlet weak var existingIngredientTable: UITableView!
     @IBOutlet weak var addSelected: UIButton!
+    @IBOutlet weak var backgroundView: UIView!
     
     var existingIngredients = PersistManager.sharedManager.Ingredients
     var myFridge = PersistManager.sharedManager.MyFridge
@@ -27,6 +28,21 @@ class ListDetailAddExistingIngredient: UIViewController, UITableViewDataSource, 
         existingIngredientTable.dataSource = self
         
         addSelected.enabled = false
+        
+        self.view.backgroundColor = UIColor(white: 0, alpha: 0.4)
+        
+        backgroundView.layer.cornerRadius = 8
+        backgroundView.layer.masksToBounds = true
+        
+        backgroundView.layer.borderColor = UIColor.grayColor().CGColor
+        backgroundView.layer.borderWidth = 0.5
+        
+        backgroundView.layer.shadowColor = UIColor.blackColor().CGColor
+        backgroundView.layer.shadowOffset = CGSizeZero
+        backgroundView.layer.shadowRadius = 5.0
+        backgroundView.layer.shadowOpacity = 0.5
+        backgroundView.layer.masksToBounds = false
+        backgroundView.clipsToBounds = false
         
         print("Add from existing")
         print(myFridge.doorNames)
