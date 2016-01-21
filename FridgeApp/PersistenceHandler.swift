@@ -177,18 +177,18 @@ class PersistenceHandler {
     func sampleLists() {
         
         //let list1Dic = ["Super1 List" : [1:"Carrots", 2:"Brocolli"]]
-        let list1Dic = [1:"Carrots", 2:"Brocolli"]
+        let list1Dic = ["Carrots", "Brocolli"]
         //let list1 = Lists.addList("Super 1 List", list1Dic)
         PersistManager.sharedManager.ShoppingLists.addList("Super 1 List", listDetail: list1Dic)
         //let list1 = Lists(listName: "Super 1 List", listDetail: list1Dic)
         
         //let list2Dic = ["Super 2 List" : [1:"Potatoes", 2:"Milk", 3:"Eggs"]]
-        let list2Dic = [1:"Potatoes", 2:"Milk", 3:"Eggs"]
+        let list2Dic = ["Potatoes", "Milk", "Eggs"]
         PersistManager.sharedManager.ShoppingLists.addList("Super 2 List", listDetail: list2Dic)
         //let list2 = Lists(lists: list2Dic)!
         
         //let list3Dic = ["Super 3 List" : [1:"Juice", 2: "Pop"]]
-        let list3Dic = [1:"Juice", 2: "Pop"]
+        let list3Dic = ["Juice", "Pop"]
         PersistManager.sharedManager.ShoppingLists.addList("Super 3 List", listDetail: list3Dic)
         //let list3 = Lists(lists: list3Dic)
         

@@ -16,7 +16,7 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var addNewButton: UIButton!
     
     var listName: String?
-    var listDetailsDic: [Int:String]?
+    //var listDetailsDic: [String]?
     var listDetails: [String] = []
     
     override func viewDidLoad() {
@@ -26,25 +26,27 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         listTableView.dataSource = self
         
         print(listName)
-        print(listDetailsDic)
+        //print(listDetailsDic)
         
-        if listDetailsDic != nil {
-            
-        for dictCounter in 1...listDetailsDic!.count {
-            listDetails.append(listDetailsDic![dictCounter]!)
-        }
-
-        }
-            
+        
+        
+//        if listDetailsDic != nil {
+//            
+//        for dictCounter in 1...listDetailsDic!.count {
+//            listDetails.append(listDetailsDic![dictCounter]!)
+//        }
+//
+//        }
+        
         print(listDetails)
         
-        for x in 1...listDetailsDic!.count {
-            if x == 1 {
-                tempListView.text = listDetailsDic![x]
-            } else {
-                tempListView.text = tempListView.text + "\n" + listDetailsDic![x]!
-            }
-        }
+//        for x in 1...listDetailsDic!.count {
+//            if x == 1 {
+//                tempListView.text = listDetailsDic![x]
+//            } else {
+//                tempListView.text = tempListView.text + "\n" + listDetailsDic![x]
+//            }
+//        }
         
     }
 
@@ -90,20 +92,21 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
             print("delete")
 
             // Remove from the actual list
-            listDetailsDic.removeValueForKey(listDetails(indexPath.row))
+            //listDetailsDic?.removeAtIndex(indexPath.row)
+            //listDetailsDic.removeValueForKey(listDetails(indexPath.row))
 
             // Now emove from the "list"
             self.listDetails.removeAtIndex(indexPath.row)
 
             // Copy list to singleton
-            PersistManager.sharedManager.ShoppingLists.lists[listName!] = listDetailsDic
+            PersistManager.sharedManager.ShoppingLists.lists[listName!] = listDetails
 
             // Save lists
             let saveList = PersistenceHandler()
             saveList.save()
             
             // Remove visually
-            //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
 
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -158,16 +161,17 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
 
             //listName
             
-            let selectedListCount = listDetailsDic!.count
+            //let selectedListCount = listDetailsDic!.count
+            let selectedListCount = listDetails.count
             
-            for count in 1...selectedIngredients.count {
-                listDetailsDic![count + selectedListCount] = selectedIngredients[count - 1]
-                
-            }
+//            for count in 1...selectedIngredients.count {
+//                listDetailsDic![count + selectedListCount] = selectedIngredients[count - 1]
+//                
+//            }
             
-            print(listDetailsDic)
+            print(listDetails)
             
-            PersistManager.sharedManager.ShoppingLists.lists[listName!] = listDetailsDic
+            PersistManager.sharedManager.ShoppingLists.lists[listName!] = listDetails
             
             // Save lists
             let saveList = PersistenceHandler()

@@ -23,7 +23,7 @@ class Lists : NSObject, NSCoding {
     
     override init() {
         self.listName = ""
-        self.listDetail = [:]
+        self.listDetail = [""]
         self.lists = ["":[""]]
     }
     

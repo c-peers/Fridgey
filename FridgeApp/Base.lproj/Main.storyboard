@@ -1139,7 +1139,7 @@ does your refridgerator have?</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOC-KF-8SF">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qOC-KF-8SF">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LGb-VX-kDl">
@@ -1241,18 +1241,30 @@ does your refridgerator have?</string>
                                     <constraint firstItem="F9z-VV-ZS3" firstAttribute="top" secondItem="LGb-VX-kDl" secondAttribute="bottom" constant="8" symbolic="YES" id="wFz-FJ-Fmg"/>
                                 </constraints>
                             </scrollView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Uu-eY-yy5">
+                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items/>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="6Uu-eY-yy5" firstAttribute="bottom" secondItem="Sd7-R0-EqP" secondAttribute="bottomMargin" id="2yK-6y-Qmb"/>
                             <constraint firstAttribute="trailing" secondItem="qOC-KF-8SF" secondAttribute="trailing" id="3EZ-Bi-jto"/>
                             <constraint firstItem="jR3-jW-xnI" firstAttribute="top" secondItem="Wto-p1-OyN" secondAttribute="bottom" id="4os-fB-l5V"/>
+                            <constraint firstItem="6Uu-eY-yy5" firstAttribute="leading" secondItem="Sd7-R0-EqP" secondAttribute="leadingMargin" constant="-20" id="EZW-Sa-Jt5"/>
                             <constraint firstItem="qOC-KF-8SF" firstAttribute="top" secondItem="jR3-jW-xnI" secondAttribute="bottom" id="Em1-ed-wMV"/>
                             <constraint firstItem="jR3-jW-xnI" firstAttribute="leading" secondItem="qOC-KF-8SF" secondAttribute="leading" id="SKo-3i-eNw"/>
                             <constraint firstItem="qOC-KF-8SF" firstAttribute="leading" secondItem="Sd7-R0-EqP" secondAttribute="leading" id="T00-tJ-lYK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6Uu-eY-yy5" secondAttribute="trailing" constant="-20" id="Y8Z-9b-lmm"/>
                             <constraint firstItem="qOC-KF-8SF" firstAttribute="bottom" secondItem="QFk-2j-sVN" secondAttribute="top" id="luU-73-eLL"/>
                             <constraint firstItem="qOC-KF-8SF" firstAttribute="trailing" secondItem="jR3-jW-xnI" secondAttribute="trailing" id="ndb-jm-eAy"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="action" id="auQ-RK-MYt"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addExistingButton" destination="Ib9-k1-frW" id="Gp3-Ns-2yJ"/>
                         <outlet property="addNewButton" destination="mf0-UT-33Z" id="3wr-tP-4fw"/>
