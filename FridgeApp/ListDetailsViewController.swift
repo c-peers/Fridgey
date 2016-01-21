@@ -84,19 +84,27 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
         if editingStyle == .Delete {
+             
             // Delete the row from the data source
-            
             //ingredients[indexPath.section].removeAtIndex(indexPath.row)
             print("delete")
-            // Save after removing row
-            //PersistManager.sharedManager.saveIngredients()
-            //PersistManager.sharedManager.Ingredients = ingredients
-            
-            //let saveSingleton = PersistenceHandler()
-            //saveSingleton.save()
+
+            // Remove from the actual list
+            listDetailsDic.removeValueForKey(listDetails(indexPath.row))
+
+            // Now emove from the "list"
+            self.listDetails.removeAtIndex(indexPath.row)
+
+            // Copy list to singleton
+            PersistManager.sharedManager.ShoppingLists.lists[listName!] = listDetailsDic
+
+            // Save lists
+            let saveList = PersistenceHandler()
+            saveList.save()
             
             // Remove visually
             //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
