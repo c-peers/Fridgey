@@ -107,6 +107,8 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
             
             // Remove visually
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
+            tableView.reloadData()
 
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view

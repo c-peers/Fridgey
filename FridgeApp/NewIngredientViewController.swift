@@ -100,7 +100,7 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         //autocompleteTableView.separatorColor = UIColor.blackColor()
         
         //autocompleteTableView.frame = CGRectMake(100, 100, 100, 100)
-        autocompleteTableView.alpha = 0
+        autocompleteTableView.alpha = 1
         
         print("AC Cell")
         autocompleteTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "AutoCompleteRowIdentifier")
@@ -160,6 +160,8 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
                 })
                 let str = nameTextField.text?.lowercaseString
                 self.search(str!)
+                autocompleteTableView.reloadData()
+
                 return true
 
             } else {
@@ -354,6 +356,12 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
     func textFieldDidBeginEditing(textField: UITextField) {
         // Disable the Save button while editing.
         AddIngredientButton.enabled = false
+        
+        if textField == nameTextField {
+            UIView.animateWithDuration(0.5, animations: {
+                self.autocompleteTableView.alpha = 1.0
+            })
+        }
     }
     
     func checkValidIngredientName() {

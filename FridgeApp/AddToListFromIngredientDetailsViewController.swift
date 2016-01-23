@@ -100,6 +100,7 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("FromIngredientsToListCollectionViewCell", forIndexPath: indexPath) as! AddToListFromIngredientsCollectionViewCell
         
         cell.contentView.layer.cornerRadius = 2.0
+        cell.layer.cornerRadius = 8
         
         //cell.listName.setTitle(list[indexPath.row], forState: .Normal)
         cell.listName.text = list[indexPath.row]
@@ -116,7 +117,7 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         selectedList = list[indexPath.row]
         let selectedListCount = mainList.lists[selectedList]?.count
         print(mainList.lists[selectedList])
-        mainList.lists[selectedList]![selectedListCount! + 1] = selectedIngredient
+        mainList.lists[selectedList]!.append(selectedIngredient)
         
         print(mainList.lists[selectedList])
 
@@ -133,6 +134,7 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         //Can't do a regular unwind segue because then this whole function is called out of order. Perform the unwind manually so that the above can run.
         
         if previousVC == "FoodsListTableViewController" {
+            print("manual unwind to full list")
             self.performSegueWithIdentifier("addToFullList", sender: self)
             //let preVC = self.storyboard?.instantiateViewControllerWithIdentifier(previousVC) as! FoodsListTableViewController
             //self.unwindForSegue(unwindToIngredientList, towardsViewController: preVC)
