@@ -22,6 +22,8 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var listAddedText: UILabel!
     //@IBOutlet weak var scrollView: UIScrollView!
 
+    @IBOutlet weak var autocompleteView: UIView!
+    @IBOutlet weak var autocompleteTable: UITableView!
     @IBOutlet weak var autocompleteTableView: UITableView!
     //let autocompleteTableView = UITableView(frame: UIScreen.mainScreen().bounds, style: UITableViewStyle.Plain)
     
@@ -56,7 +58,7 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
             print("There was an error")
             readFile = ""
         }
-
+        
         //let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
         //let destinationPath:NSString = documentsPath.stringByAppendingString("/FoodNames.txt")
         //try! readFile = String(contentsOfFile: filePathURL as String, encoding: NSUTF8StringEncoding)
@@ -92,23 +94,38 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         }
         
         print("autocomplete stuff")
-        autocompleteTableView.delegate = self
-        autocompleteTableView.dataSource = self
-        autocompleteTableView.scrollEnabled = true
-        autocompleteTableView.layer.borderWidth = 0.5
-        autocompleteTableView.layer.borderColor = UIColor.grayColor().CGColor
+//        autocompleteTableView.delegate = self
+//        autocompleteTableView.dataSource = self
+//        autocompleteTableView.scrollEnabled = true
+//        autocompleteTableView.layer.borderWidth = 0.5
+//        autocompleteTableView.layer.borderColor = UIColor.grayColor().CGColor
+        self.autocompleteTable.delegate = self
+        self.autocompleteTable.dataSource = self
+        self.autocompleteTable.scrollEnabled = true
+        self.autocompleteTable.layer.borderWidth = 0.5
+        self.autocompleteTable.layer.borderColor = UIColor.grayColor().CGColor
+        self.autocompleteView.alpha = 0
+        //self.autocompleteTable.alpha = 0
+        
+        self.autocompleteView.layer.cornerRadius = 8
+        self.autocompleteTable.layer.cornerRadius = 8
+        
         //autocompleteTableView.separatorColor = UIColor.blackColor()
         
         //autocompleteTableView.frame = CGRectMake(100, 100, 100, 100)
-        autocompleteTableView.alpha = 1
+        //autocompleteTableView.alpha = 1.0
         
         print("AC Cell")
-        autocompleteTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "AutoCompleteRowIdentifier")
+        //autocompleteTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "AutoCompleteRowIdentifier")
+        autocompleteTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "AutoCompleteRowIdentifier")
         
         print("Add subview")
-        self.view.addSubview(autocompleteTableView)
+        //self.view.addSubview(autocompleteTableView)
+        //self.view.addSubview(autocompleteTable)
+        
         
         listAddedView.alpha = 0
+        listAddedView.hidden = true
         
         // Input data into the Array:
         //locationPickerData = (MyFridge?.doorNames)!
@@ -151,16 +168,26 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
     // MARK: Text Autocomplete
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString
         string: String) -> Bool {
-        
+            
+            // Textfield.text doesn't include the character just added to the textfield.
+            var text: NSString = textField.text!
+            // That means we have to run this command to add that one last character.
+            text = text.stringByReplacingCharactersInRange(range, withString: string)
+            print(text)
+            
             // Only run for the food name if the cadidate list file was loaded.
             if textField == nameTextField && ingredientNameChoices.count > 2 {
                 print("change chars")
+                
                 UIView.animateWithDuration(0.5, animations: {
-                    self.autocompleteTableView.alpha = 1.0
+                    //self.autocompleteTableView.alpha = 1.0
+                    self.autocompleteView.alpha = 1.0
+                    //self.autocompleteTable.alpha = 1.0
                 })
-                let str = nameTextField.text?.lowercaseString
-                self.search(str!)
-                autocompleteTableView.reloadData()
+                //let str = nameTextField.text?.lowercaseString
+                let str = text.lowercaseString
+                self.search(str)
+                autocompleteTable.reloadData()
 
                 return true
 
@@ -193,7 +220,8 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
             
         }
         
-        autocompleteTableView.reloadData()
+        //autocompleteTableView.reloadData()
+        autocompleteTable.reloadData()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -216,7 +244,9 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         let selectedCell : UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
         nameTextField.text = selectedCell.textLabel!.text
         UIView.animateWithDuration(0.5, animations: {
-            self.autocompleteTableView.alpha = 0
+            //self.autocompleteTableView.alpha = 0
+            self.autocompleteView.alpha = 0
+            //self.autocompleteTable.alpha = 0
         })
         
     }
@@ -350,6 +380,12 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         if textField == nameTextField {
             navigationItem.title = textField.text
             addtolistButton.enabled = true
+            UIView.animateWithDuration(0.5, animations: {
+                //self.autocompleteTableView.alpha = 0
+                self.autocompleteView.alpha = 0
+                //self.autocompleteTable.alpha = 0
+            })
+
         }
     }
     
@@ -359,7 +395,9 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         
         if textField == nameTextField {
             UIView.animateWithDuration(0.5, animations: {
-                self.autocompleteTableView.alpha = 1.0
+                //self.autocompleteTableView.alpha = 1.0
+                self.autocompleteView.alpha = 1.0
+                //self.autocompleteTable.alpha = 1.0
             })
         }
     }

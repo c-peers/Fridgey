@@ -333,13 +333,31 @@ does your refridgerator have?</string>
                                             <constraint firstAttribute="height" constant="336" id="w5a-JC-cQO"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lw9-RQ-jxL">
-                                        <rect key="frame" x="115" y="45" width="240" height="200"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWl-VM-3Ed">
+                                        <rect key="frame" x="121" y="43" width="240" height="197"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N4T-xy-Zz0">
+                                                <rect key="frame" x="8" y="8" width="224" height="181"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </tableView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.31401931709999997" green="1" blue="0.49722852690000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="2k3-sn-us9"/>
+                                            <constraint firstAttribute="bottom" secondItem="N4T-xy-Zz0" secondAttribute="bottom" constant="5" id="3JW-dA-NbX"/>
+                                            <constraint firstAttribute="trailing" secondItem="N4T-xy-Zz0" secondAttribute="trailing" constant="5" id="7Dy-d1-tfT"/>
+                                            <constraint firstItem="N4T-xy-Zz0" firstAttribute="top" secondItem="oWl-VM-3Ed" secondAttribute="top" constant="5" id="UcR-iN-zEb"/>
+                                            <constraint firstItem="N4T-xy-Zz0" firstAttribute="bottom" secondItem="oWl-VM-3Ed" secondAttribute="bottomMargin" id="WBM-Mp-0bO"/>
+                                            <constraint firstItem="N4T-xy-Zz0" firstAttribute="top" secondItem="oWl-VM-3Ed" secondAttribute="topMargin" id="ctl-RH-RsS"/>
+                                            <constraint firstAttribute="width" constant="240" id="i9I-yp-bvV"/>
+                                            <constraint firstItem="N4T-xy-Zz0" firstAttribute="leading" secondItem="oWl-VM-3Ed" secondAttribute="leadingMargin" id="qqm-MV-9Vb"/>
                                         </constraints>
-                                    </tableView>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="WBM-Mp-0bO"/>
+                                                <exclude reference="ctl-RH-RsS"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="4ZI-GL-2Dh" firstAttribute="trailing" secondItem="Lhg-Bd-UP0" secondAttribute="trailing" id="0GG-VD-IGt"/>
@@ -351,16 +369,12 @@ does your refridgerator have?</string>
                                     <constraint firstItem="Snl-c9-pIw" firstAttribute="leading" secondItem="uuu-0C-MTX" secondAttribute="leading" id="4Ay-jo-pft"/>
                                     <constraint firstItem="fjM-Q0-JNO" firstAttribute="centerY" secondItem="DAi-e2-sSo" secondAttribute="centerY" id="6tY-m6-N8A"/>
                                     <constraint firstItem="Lhg-Bd-UP0" firstAttribute="centerY" secondItem="CYj-FD-jUf" secondAttribute="centerY" id="Eh5-l4-ZDu"/>
-                                    <constraint firstItem="fjM-Q0-JNO" firstAttribute="top" secondItem="Lw9-RQ-jxL" secondAttribute="bottom" constant="3" id="Eit-1S-uY9"/>
                                     <constraint firstItem="HCl-1u-Nkq" firstAttribute="top" secondItem="yMB-bu-LKm" secondAttribute="top" constant="16" id="H5Y-Ck-12M"/>
                                     <constraint firstItem="fjM-Q0-JNO" firstAttribute="trailing" secondItem="7Be-6z-pra" secondAttribute="trailing" id="IGm-ef-UBY"/>
-                                    <constraint firstItem="Lw9-RQ-jxL" firstAttribute="top" secondItem="HCl-1u-Nkq" secondAttribute="top" constant="29" id="Ih2-YI-Fbo"/>
                                     <constraint firstItem="Q4p-4F-bTt" firstAttribute="leading" secondItem="HCl-1u-Nkq" secondAttribute="leading" id="Knr-to-G7F"/>
                                     <constraint firstItem="4ZI-GL-2Dh" firstAttribute="leading" secondItem="yMB-bu-LKm" secondAttribute="leading" constant="47" id="Lhm-Fk-AaR"/>
                                     <constraint firstItem="HCl-1u-Nkq" firstAttribute="trailing" secondItem="Q4p-4F-bTt" secondAttribute="trailing" id="M5e-Wj-dCH"/>
                                     <constraint firstItem="CYj-FD-jUf" firstAttribute="leading" secondItem="DAi-e2-sSo" secondAttribute="leading" id="MEf-gj-zKF"/>
-                                    <constraint firstItem="fjM-Q0-JNO" firstAttribute="top" secondItem="Lw9-RQ-jxL" secondAttribute="bottom" constant="3" id="OoO-Nt-KPO"/>
-                                    <constraint firstItem="Lw9-RQ-jxL" firstAttribute="leading" secondItem="yMB-bu-LKm" secondAttribute="leading" constant="115" id="Q7B-oy-Vpe"/>
                                     <constraint firstItem="4ZI-GL-2Dh" firstAttribute="trailing" secondItem="1Az-j4-q2c" secondAttribute="trailing" id="UZA-7f-vFX"/>
                                     <constraint firstItem="CYj-FD-jUf" firstAttribute="trailing" secondItem="Q4p-4F-bTt" secondAttribute="trailing" id="Uxu-RN-Cxl"/>
                                     <constraint firstItem="3tC-bG-THD" firstAttribute="centerX" secondItem="yMB-bu-LKm" secondAttribute="centerX" id="Wf7-DT-Ogb"/>
@@ -369,22 +383,18 @@ does your refridgerator have?</string>
                                     <constraint firstItem="uuu-0C-MTX" firstAttribute="centerY" secondItem="7Be-6z-pra" secondAttribute="centerY" id="a8Z-Xh-4Aw"/>
                                     <constraint firstItem="uuu-0C-MTX" firstAttribute="top" secondItem="DAi-e2-sSo" secondAttribute="bottom" constant="46" id="b4o-Bx-uEz"/>
                                     <constraint firstItem="CYj-FD-jUf" firstAttribute="top" secondItem="Q4p-4F-bTt" secondAttribute="bottom" constant="48" id="bcb-sa-EH2"/>
-                                    <constraint firstItem="Lw9-RQ-jxL" firstAttribute="top" secondItem="1Az-j4-q2c" secondAttribute="bottom" constant="4" id="chY-y3-0N9"/>
                                     <constraint firstItem="3tC-bG-THD" firstAttribute="top" secondItem="HCl-1u-Nkq" secondAttribute="bottom" constant="10" id="fi2-Gz-gSE"/>
                                     <constraint firstItem="HCl-1u-Nkq" firstAttribute="leading" secondItem="1Az-j4-q2c" secondAttribute="trailing" constant="58" id="jVw-Ak-k1M"/>
                                     <constraint firstAttribute="bottom" secondItem="Snl-c9-pIw" secondAttribute="bottom" constant="76" id="k2b-fl-yde"/>
+                                    <constraint firstItem="oWl-VM-3Ed" firstAttribute="centerX" secondItem="CYj-FD-jUf" secondAttribute="centerX" id="kwF-2i-gS5"/>
                                     <constraint firstItem="Snl-c9-pIw" firstAttribute="trailing" secondItem="uuu-0C-MTX" secondAttribute="trailing" id="pNZ-0t-RzP"/>
                                     <constraint firstItem="DAi-e2-sSo" firstAttribute="top" secondItem="CYj-FD-jUf" secondAttribute="bottom" constant="50" id="pcG-Wk-pO2"/>
+                                    <constraint firstItem="oWl-VM-3Ed" firstAttribute="top" secondItem="yMB-bu-LKm" secondAttribute="top" constant="43" id="pej-jo-Pkj"/>
                                     <constraint firstItem="uuu-0C-MTX" firstAttribute="leading" secondItem="DAi-e2-sSo" secondAttribute="leading" id="sFp-p7-iga"/>
                                     <constraint firstItem="HCl-1u-Nkq" firstAttribute="centerY" secondItem="1Az-j4-q2c" secondAttribute="centerY" id="u9c-ab-1dz"/>
                                     <constraint firstItem="uuu-0C-MTX" firstAttribute="trailing" secondItem="CYj-FD-jUf" secondAttribute="trailing" id="uiU-A9-Uoj"/>
+                                    <constraint firstItem="fjM-Q0-JNO" firstAttribute="top" secondItem="oWl-VM-3Ed" secondAttribute="bottom" constant="8" symbolic="YES" id="ydG-x1-Sye"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="chY-y3-0N9"/>
-                                        <exclude reference="Eit-1S-uY9"/>
-                                    </mask>
-                                </variation>
                             </scrollView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gG-EH-xZq">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
@@ -428,7 +438,8 @@ does your refridgerator have?</string>
                         <outlet property="AddIngredientButton" destination="0CF-2h-UJx" id="bXB-au-nGe"/>
                         <outlet property="addtolistButton" destination="Snl-c9-pIw" id="Fh4-Js-jUA"/>
                         <outlet property="amountTextField" destination="CYj-FD-jUf" id="0un-K2-Hu6"/>
-                        <outlet property="autocompleteTableView" destination="Lw9-RQ-jxL" id="gm5-iD-o5e"/>
+                        <outlet property="autocompleteTable" destination="N4T-xy-Zz0" id="6qX-mS-Dks"/>
+                        <outlet property="autocompleteView" destination="oWl-VM-3Ed" id="PT1-Bl-7s4"/>
                         <outlet property="expirationTextField" destination="Q4p-4F-bTt" id="0YL-te-5Xq"/>
                         <outlet property="listAddedText" destination="ZSk-YA-ZiQ" id="yl8-Ca-VXb"/>
                         <outlet property="listAddedView" destination="3tC-bG-THD" id="hw7-Fr-BoE"/>
@@ -1416,8 +1427,8 @@ does your refridgerator have?</string>
         <image name="Unselected" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pQA-vO-Nhw"/>
-        <segue reference="eUA-dd-AMQ"/>
         <segue reference="vI4-Gk-9fo"/>
+        <segue reference="eUA-dd-AMQ"/>
+        <segue reference="pQA-vO-Nhw"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -152,11 +152,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FridgeApp/NewIngredientViewController.swift"
-            timestampString = "475126979.609999"
+            timestampString = "475336689.348321"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "382"
-            endingLineNumber = "382"
+            startingLineNumber = "421"
+            endingLineNumber = "421"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -408,11 +408,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FridgeApp/NewIngredientViewController.swift"
-            timestampString = "475126845.605936"
+            timestampString = "475336689.348321"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "252"
-            endingLineNumber = "252"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
             landmarkName = "locationBeingChosen(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -424,11 +424,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FridgeApp/NewIngredientViewController.swift"
-            timestampString = "475126979.609999"
+            timestampString = "475336689.348321"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "389"
-            endingLineNumber = "389"
+            startingLineNumber = "428"
+            endingLineNumber = "428"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -581,11 +581,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FridgeApp/NewIngredientViewController.swift"
-            timestampString = "474522544.750999"
+            timestampString = "475217150.885907"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -597,11 +597,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FridgeApp/NewIngredientViewController.swift"
-            timestampString = "474522544.750999"
+            timestampString = "475336603.493216"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -715,6 +715,22 @@
             startingLineNumber = "154"
             endingLineNumber = "154"
             landmarkName = "wasSelected(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FridgeApp/NewIngredientViewController.swift"
+            timestampString = "475336689.348321"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
+            landmarkName = "textField(_:shouldChangeCharactersInRange:replacementString:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
