@@ -339,10 +339,15 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
 //
         
         cell.FoodName?.text = ingredient.name
-        cell.FoodAmount?.text = String(ingredient.amount)
         cell.FoodExpiry?.text = ingredient.expiry
         cell.FoodImageView?.image = ingredient.image
 
+        if ingredient.amount == 0.0 {
+            cell.FoodAmount?.text = ""
+        } else {
+            cell.FoodAmount?.text = String(ingredient.amount)
+        }
+        
         cell.leftButtons = [MGSwipeButton(title: "Add to List", icon: UIImage(named:"check.png"), backgroundColor: UIColor.blueColor())]
         cell.leftSwipeSettings.transition = MGSwipeTransition.Border
         

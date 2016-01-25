@@ -38,9 +38,9 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
     
     //var ingredientNameChoices = ["Carrot", "Apple", "Chicken", "Hot Dog", "Steak", "Celery", "Yam", "Eggs"]
     var ingredientNameChoices = ["Initial", "Values"]
-    
     var autocompleteDisplay = [String]()
- 
+    var autocompleteIngredientChosen = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -59,13 +59,10 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
             readFile = ""
         }
         
-        //let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
-        //let destinationPath:NSString = documentsPath.stringByAppendingString("/FoodNames.txt")
-        //try! readFile = String(contentsOfFile: filePathURL as String, encoding: NSUTF8StringEncoding)
+        print("ingredient name choices")
+        print(ingredientNameChoices.count)
         
-        //ingredientNameChoices = readFile.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
-        
-        //print(ingredientNameChoices)
+        print(ingredientNameChoices)
 
         //scrollView.contentSize = CGSizeMake(320, 900)
         
@@ -241,6 +238,11 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        checkValidIngredientName()
+        
+        autocompleteIngredientChosen = true
+        
         let selectedCell : UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
         nameTextField.text = selectedCell.textLabel!.text
         UIView.animateWithDuration(0.5, animations: {
@@ -422,12 +424,43 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
             
             let numberToFloat = NSNumberFormatter()
             let number = numberToFloat.numberFromString(amountTextField.text!)
-            let amount = number!.floatValue
+            
+            let amount: Float
+            
+            if let _ = number {
+                amount = (number?.floatValue)!
+            } else {
+                amount = 0.0
+            }
             
             //let row = locationPicker.selectedRowInComponent(0)
             let location = locationTextField.text
             
             ingredient = Ingredient(name: name, image: nil, expiry: expiry, amount: amount, location: location!)
+            
+            // Finally check and see if the ingredient is in the autocomplete list
+            
+            let ingredientExists = ingredientNameChoices.contains(name)
+            
+            if !autocompleteIngredientChosen && !ingredientExists {
+                
+                print("add ingredient")
+                
+                if let filePath = NSBundle.mainBundle().pathForResource("FoodNames", ofType: "txt") {
+                    //filePathURL = String(NSURL.fileURLWithPath(filePath))
+                    
+                    ingredientNameChoices.append(name)
+                    try! name.writeToFile(filePath, atomically: false, encoding: NSUTF8StringEncoding)
+                    
+                    } else {
+                    // If the file isn't there then there isn't much I can do except forgo the function.
+                    print("There was an error")
+
+                }
+                
+            }
+            
+            
         } else if addtolistButton == (sender as? UIButton) {
             
             print(nameTextField.text)
