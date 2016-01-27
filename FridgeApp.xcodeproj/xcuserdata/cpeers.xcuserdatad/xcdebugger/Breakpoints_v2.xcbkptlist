@@ -693,11 +693,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FridgeApp/ListDetailAddExistingIngredient.swift"
-            timestampString = "474953415.599661"
+            timestampString = "475579166.732396"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "wasSelected(_:)"
             landmarkType = "5">
          </BreakpointContent>

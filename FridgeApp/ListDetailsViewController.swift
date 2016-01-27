@@ -14,10 +14,16 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var addExistingButton: UIButton!
     @IBOutlet weak var addNewButton: UIButton!
     @IBOutlet weak var shareButton: UIBarButtonItem!
+    @IBOutlet weak var finishedShopping: UIBarButtonItem!
     
     var listName: String?
     //var listDetailsDic: [String]?
     var listDetails: [String] = []
+    
+    var selectedFromList = [""]
+
+    
+    var existingIngredients = PersistManager.sharedManager.Ingredients
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +34,7 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         print(listName)
         //print(listDetailsDic)
         
+        selectedFromList.removeFirst()
         
         
 //        if listDetailsDic != nil {
@@ -119,7 +126,16 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         cell.listItemNumber.text = String(rowNumber)
         print(listIngredient)
         cell.listItemName.text = listIngredient
-        cell.selectedButton.hidden = true
+        
+        let emptyCircle = UIImage(named: "Unselected")
+        let filledCircle = UIImage(named: "Selected")
+        
+        cell.selectedButton.setImage(emptyCircle, forState: .Normal)
+        cell.selectedButton.setImage(filledCircle, forState: .Selected)
+        cell.selectedButton.setImage(filledCircle, forState: [.Highlighted,.Selected])
+        
+        cell.selectedButton.adjustsImageWhenHighlighted = false
+        cell.selectedButton.hidden = false
         
         return cell
         
@@ -180,17 +196,53 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
 
     // MARK: - Add List to Fridge
     @IBAction func finishedShoppingTapped(sender: UIBarButtonItem) {
-                
-    
+        
+        if finishedShopping.title == "Finished Shopping" {
+            finishedShopping.title = "Add Selected"
+        } else {
+        
+        }
     
     }
+    
+    @IBAction func wasSelected(sender: AnyObject) {
+        
+        //if selectedIngredients.count < 1 {
+        //    addSelected.enabled = false
+        //} else {
+        //    addSelected.enabled = true
+        //}
+        
+        let button = sender as! UIButton
+        let cell = button.superview?.superview as! ListDetailsTableViewCell
+        let sectionAndRow = listTableView.indexPathForCell(cell)
+        let row = sectionAndRow?.row
+        
+        print(row)
+        print(button.selected)
+        
+        let name = listDetails[row!]
+        
+        if button.selected == true {
+            button.selected = false
+            if selectedFromList.contains(name) == true {
+                let index = selectedFromList.indexOf(name)
+                selectedFromList.removeAtIndex(index!)
+            }
+            print(selectedFromList)
+        } else {
+            button.selected = true
+            selectedFromList.append(name)
+            print(selectedFromList)
+        }
+        
+    }
+
     
     // MARK: - Share Menu
     @IBAction func shareButtonTapped(sender: UIBarButtonItem) {
         
-        let textToShare = "Swift is awesome!  Check out this website about it!"
-        
-        let objectsToShare = [textToShare, listDetails]
+        let objectsToShare = [listDetails]
         let activityVC = UIActivityViewController(activityItems: objectsToShare as [AnyObject], applicationActivities: nil)
             
         //New Excluded Activities Code

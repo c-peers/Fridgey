@@ -116,19 +116,12 @@ class ListDetailAddExistingIngredient: UIViewController, UITableViewDataSource, 
         
         print(cell.selectedButton.tag)
         //cell.selectedButton.addTarget(self, action: "wasSelected:", forControlEvents: .TouchUpInside)
-        //cell.selectedButton.addTarget(self, action: "a:", forControlEvents: .TouchDown)
         return cell
         
     }
     
 
     @IBAction func wasSelected(sender: AnyObject) {
-        
-        //if selectedIngredients.count < 1 {
-        //    addSelected.enabled = false
-        //} else {
-        //    addSelected.enabled = true
-        //}
         
         let button = sender as! UIButton
         let cell = button.superview?.superview as! ListDetailAddExistingIngredientCell

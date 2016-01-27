@@ -1203,7 +1203,7 @@ does your refridgerator have?</string>
                                                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             </state>
                                                             <connections>
-                                                                <action selector="wasSelected:" destination="J2v-oX-cPg" eventType="touchUpInside" id="DFr-V3-LPh"/>
+                                                                <action selector="wasSelected:" destination="DP0-yO-Zwj" eventType="touchUpInside" id="3MD-8r-PaI"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -1294,6 +1294,7 @@ does your refridgerator have?</string>
                     <connections>
                         <outlet property="addExistingButton" destination="Ib9-k1-frW" id="Gp3-Ns-2yJ"/>
                         <outlet property="addNewButton" destination="mf0-UT-33Z" id="3wr-tP-4fw"/>
+                        <outlet property="finishedShopping" destination="X6M-ur-RS1" id="P40-eO-KQd"/>
                         <outlet property="listTableView" destination="LGb-VX-kDl" id="Vt0-De-F9Y"/>
                     </connections>
                 </viewController>
