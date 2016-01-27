@@ -21,7 +21,6 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     var listDetails: [String] = []
     
     var selectedFromList = [""]
-
     
     var existingIngredients = PersistManager.sharedManager.Ingredients
     
@@ -135,7 +134,12 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         cell.selectedButton.setImage(filledCircle, forState: [.Highlighted,.Selected])
         
         cell.selectedButton.adjustsImageWhenHighlighted = false
-        cell.selectedButton.hidden = false
+        
+        if finishedShopping.title == "Finished Shopping" {
+            cell.selectedButton.hidden = true
+        } else {
+            cell.selectedButton.hidden = false
+        }
         
         return cell
         
@@ -199,8 +203,28 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         
         if finishedShopping.title == "Finished Shopping" {
             finishedShopping.title = "Add Selected"
+            listTableView.reloadData()
         } else {
-        
+            
+            var ingredients = PersistManager.sharedManager.Ingredients
+            var ingredientsToBeAdded = [Ingredient]()
+            
+            for ingredient in 0...selectedFromList.count - 1 {
+                let addIngredient = [Ingredient(name: selectedFromList[ingredient], image: nil, expiry: "", amount: 0.0, location: "Area 1 Door")!]
+                ingredientsToBeAdded += addIngredient
+            }
+            
+            if ingredientsToBeAdded.count > 0 {
+                ingredients[0] += ingredientsToBeAdded
+            }
+            
+            PersistManager.sharedManager.Ingredients = ingredients
+            
+            let saveIngredients = PersistenceHandler()
+            saveIngredients.save()
+            
+            
+            
         }
     
     }
