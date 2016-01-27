@@ -10,10 +10,10 @@ import UIKit
 
 class ListDetailsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet weak var tempListView: UITextView!
     @IBOutlet weak var listTableView: UITableView!
     @IBOutlet weak var addExistingButton: UIButton!
     @IBOutlet weak var addNewButton: UIButton!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
     
     var listName: String?
     //var listDetailsDic: [String]?
@@ -39,14 +39,6 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
 //        }
         
         print(listDetails)
-        
-//        for x in 1...listDetailsDic!.count {
-//            if x == 1 {
-//                tempListView.text = listDetailsDic![x]
-//            } else {
-//                tempListView.text = tempListView.text + "\n" + listDetailsDic![x]
-//            }
-//        }
         
     }
 
@@ -127,6 +119,7 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         cell.listItemNumber.text = String(rowNumber)
         print(listIngredient)
         cell.listItemName.text = listIngredient
+        cell.selectedButton.hidden = true
         
         return cell
         
@@ -185,4 +178,25 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         
     }
 
+    // MARK: - Add List to Fridge
+    @IBAction func finishedShoppingTapped(sender: UIBarButtonItem) {
+                
+    
+    
+    }
+    
+    // MARK: - Share Menu
+    @IBAction func shareButtonTapped(sender: UIBarButtonItem) {
+        
+        let textToShare = "Swift is awesome!  Check out this website about it!"
+        
+        let objectsToShare = [textToShare, listDetails]
+        let activityVC = UIActivityViewController(activityItems: objectsToShare as [AnyObject], applicationActivities: nil)
+            
+        //New Excluded Activities Code
+        activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList]
+
+        self.presentViewController(activityVC, animated: true, completion: nil)
+        
+    }
 }

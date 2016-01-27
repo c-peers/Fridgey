@@ -12,5 +12,6 @@ class ListDetailsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var listItemNumber: UILabel!
     @IBOutlet weak var listItemName: UILabel!
+    @IBOutlet weak var selectedButton: UIButton!
     
 }

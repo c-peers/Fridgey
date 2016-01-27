@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FoodsListTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TabBarDelegate, MGSwipeTableCellDelegate {
+class FoodsListTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, TabBarDelegate, MGSwipeTableCellDelegate {
         
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var listAddedText: UILabel!
@@ -17,6 +17,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     // MARK: Properties
     
     var ingredients = [[Ingredient]]()
+    var ingredientNames = [[""]]
     var filteredIngredients = [[Ingredient]]()
     var myFridge = FridgeInfo()
     var mainList = Lists()
@@ -24,6 +25,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     var selectedIngredient = ""
     
     let searchController = UISearchController(searchResultsController: nil)
+    var filteredData = [""]
     
     // Temporary Sample
     func sampleIngredients() {
@@ -92,7 +94,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
 //        } else {
 //
             // Load the sample data.
-            sampleIngredients()
+            //sampleIngredients()
 
         //}
         
@@ -101,6 +103,36 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             mainList = savedLists
             
         }
+        
+        // I'm having trouble with searching through my ingredients so I made a 2d array with just the ingredient names.
+        
+        // Remove the [""]
+        ingredientNames.removeAll()
+        
+        for x in 0...ingredients.count - 1 {
+            
+            for y in 0...ingredients[x].count - 1 {
+                
+                if y == 0 {
+                    ingredientNames.append([ingredients[x][y].name])
+                } else {
+                    ingredientNames[x].append(ingredients[x][y].name)
+                }
+                
+            }
+         
+        }
+        
+        print(ingredientNames)
+        
+        print("flatten")
+        print(Array(ingredientNames.flatten()))
+        
+        searchController.searchResultsUpdater = self
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.sizeToFit()
+        self.tableView.tableHeaderView = searchController.searchBar
         
         // Initializing with searchResultsController set to nil means that
         // searchController will use this view controller to display the search results
@@ -144,9 +176,9 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         mainList = PersistManager.sharedManager.ShoppingLists
 
         print("VWA")
-        print(ingredients)
-        print(myFridge.doorNames)
-        print(mainList.lists)
+        //print(ingredients)
+        //print(myFridge.doorNames)
+        //print(mainList.lists)
     }
     
 
@@ -162,7 +194,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         myFridge = PersistManager.sharedManager.MyFridge
         mainList = PersistManager.sharedManager.ShoppingLists
         
-        print(PersistManager.sharedManager.Ingredients)
+        //print(PersistManager.sharedManager.Ingredients)
         
         print("Actually reload??")
         self.tableView.reloadData()
@@ -178,6 +210,46 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
 // 
 //  tableView.reloadData()
 //}
+   
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+     
+        //if searchController.searchBar.text?.characters.count > 0 {
+            
+            filteredData.removeAll(keepCapacity: false)
+            //filteredData = ingredientNames.flatten().filter({$0 == searchController.searchBar.text!})
+//            filteredData = ingredients.filter({ ingredient in
+//                return ingredient.name.lowercaseString.containsString(searchController.searchBar.text!)
+//            })
+//            for section in 0...ingredients.count - 1 {
+//                filteredData = ingredients[section].filter({ ingredient in
+//                    return ingredient.name.lowercaseString.containsString(searchController.searchBar.text!) })
+//            }
+//            self.tableView.reloadData()
+//            
+//            filteredCandies = candies.filter { candy in
+//                return candy.name.lowercaseString.containsString(searchText.lowercaseString)
+//            }
+//            
+//            print(filteredData)
+//
+//        } else {
+//            
+//            filteredData.removeAll(keepCapacity: false)
+//            filteredData = Array(ingredientNames.flatten())
+//            tableView.reloadData()
+//        }
+        
+        //let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
+        
+        
+        //filteredData = ingredients.flatten().filter({$0 == searchController.searchBar.text!})
+        
+        //let array = (ingredients[0] as NSArray).filteredArrayUsingPredicate(searchPredicate)
+        //filteredData = array as! [String]
+        
+        
+        
+    }
     
     // MARK: MGSwipe
     
@@ -312,32 +384,28 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             //let ingredient = ingredients[indexPath.row]
         
         let ingredient : Ingredient
-        // var ingredientList = [Ingredient]()
+
+        //if searchController.active {
+        //    cell.textLabel?.text = filteredData[indexPath.row]
+        //}
+        //else {
         
 //            if tableView == self.searchDisplayController!.searchResultsTableView {
 //                print(indexPath.section)
 //                print(indexPath.row)
 //                ingredient = filteredIngredients[indexPath.section][indexPath.row]
 //            } else {
-                ingredient = ingredients[indexPath.section][indexPath.row]
-//                for ingredientcounter in 0 ... ingredients.count - 1 {
-//                    if ingredients[ingredientcounter].location == test[indexPath.section] {
-//                        ingredientList.append(ingredients[ingredientcounter])
-//
-//                    }
-//
-//                }
-                    
-        
-        //}
-        
+
 //            if tableView == self.searchDisplayController!.searchResultsTableView {
 //                ingredient = filteredIngredients[indexPath.row]
 //            } else {
 //                ingredient = ingredients[indexPath.row]
 //            }
 //
-        
+
+            ingredient = ingredients[indexPath.section][indexPath.row]
+
+            
         cell.FoodName?.text = ingredient.name
         cell.FoodExpiry?.text = ingredient.expiry
         cell.FoodImageView?.image = ingredient.image
@@ -373,6 +441,8 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
 //            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
 //            })
         
+        //}
+            
         return cell
         
     }
