@@ -446,17 +446,24 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
                 
                 print("add ingredient")
                 
-                if let filePath = NSBundle.mainBundle().pathForResource("FoodNames", ofType: "txt") {
-                    //filePathURL = String(NSURL.fileURLWithPath(filePath))
-                    
-                    ingredientNameChoices.append(name)
-                    try! name.writeToFile(filePath, atomically: false, encoding: NSUTF8StringEncoding)
-                    
-                    } else {
-                    // If the file isn't there then there isn't much I can do except forgo the function.
-                    print("There was an error")
-
-                }
+                addNewIngredientToList(name)
+                
+//                if let filePath = NSBundle.mainBundle().pathForResource("FoodNames", ofType: "txt") {
+//                    
+//                    if let fileHandle = NSFileHandle(forWritingAtPath: filePath) {
+//                        fileHandle.seekToEndOfFile()
+//                        fileHandle.writeData(data)
+//                        fileHandle.closeFile()
+//                    }
+//                    else {
+//                        print("Can't open fileHandle")
+//                    }
+//                    
+//                    } else {
+//                    // If the file isn't there then there isn't much I can do except forgo the function.
+//                    print("There was an error")
+//
+//                }
                 
             }
             
@@ -481,6 +488,31 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
                 self.presentViewController(alertController, animated: true, completion: nil)
             }
         }
+    }
+    
+    func addNewIngredientToList(ingredientToAdd: String) {
+        
+        let toSave = "\(ingredientToAdd)\n"
+        let data = toSave.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
+        
+        if let filePath = NSBundle.mainBundle().pathForResource("FoodNames", ofType: "txt") {
+            
+            if let fileHandle = NSFileHandle(forWritingAtPath: filePath) {
+                fileHandle.seekToEndOfFile()
+                fileHandle.writeData(data)
+                fileHandle.closeFile()
+            }
+            else {
+                print("Can't open fileHandle")
+            }
+            
+        } else {
+            // If the file isn't there then there isn't much I can do except forgo the function.
+            print("There was an error")
+            
+        }
+
+        
     }
 
     @IBAction func cancelAction(sender: UIBarButtonItem) {
