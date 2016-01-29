@@ -60,7 +60,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         // Load any saved Ingredients, otherwise load sample data.
         
-        listAddedView.alpha = 0
+        listAddedView.alpha = 0.8
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -655,6 +655,8 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             
             listAddedText.text = selectedIngredient + " added to " + selectedList
             print(listAddedText.text)
+            
+            self.listAddedView.hidden = false
             
             UIView.animateWithDuration(2.5, animations: {
                 self.listAddedView.alpha = 0.8

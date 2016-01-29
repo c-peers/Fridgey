@@ -396,6 +396,8 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         AddIngredientButton.enabled = false
         
         if textField == nameTextField {
+            autocompleteIngredientChosen = false
+            print(autocompleteIngredientChosen)
             UIView.animateWithDuration(0.5, animations: {
                 //self.autocompleteTableView.alpha = 1.0
                 self.autocompleteView.alpha = 1.0
@@ -446,7 +448,7 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
                 
                 print("add ingredient")
                 
-                addNewIngredientToList(name)
+                //addNewIngredientToList(name)
                 
 //                if let filePath = NSBundle.mainBundle().pathForResource("FoodNames", ofType: "txt") {
 //                    
@@ -490,14 +492,39 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         }
     }
     
-    func addNewIngredientToList(ingredientToAdd: String) {
+    @IBAction func addEditButtonTapped(sender: UIBarButtonItem) {
         
+        // Check and see if the user wants to save the ingredient name to the autocomplete list.
+        // All of the code has to go in the buttons because the UIAlertController doesn't wait for an answer.
+        
+        let alertController = UIAlertController(title: "Add Ingredient?", message:
+            "This ingredient is not available through autocomplete. Would you like to add it?", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "No Thanks", style: UIAlertActionStyle.Cancel,handler: {(alert: UIAlertAction!) in print("Cancel");
+            self.performSegueWithIdentifier("addEditIngredientUnwind", sender: self)
+            return
+        }))
+        //{(alert: UIAlertAction!) in print("Cancel"); addStatus = false}
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in print("Add");
+            let name = self.nameTextField.text!;
+            self.addNewIngredientToList(name);
+            self.performSegueWithIdentifier("addEditIngredientUnwind", sender: self)
+        }))
+        //{(alert: UIAlertAction!) in print("Add")}
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
+    }
+    
+    func addNewIngredientToList(ingredientToAdd: String) -> Void {
+        
+        // Add a line break to the ingredient name so the next ingredient isn't on the same line.
         let toSave = "\(ingredientToAdd)\n"
         let data = toSave.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
         
         if let filePath = NSBundle.mainBundle().pathForResource("FoodNames", ofType: "txt") {
             
             if let fileHandle = NSFileHandle(forWritingAtPath: filePath) {
+                // Move to the end of the file and add the data. Should just be one line.
                 fileHandle.seekToEndOfFile()
                 fileHandle.writeData(data)
                 fileHandle.closeFile()
@@ -514,7 +541,7 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
 
         
     }
-
+    
     @IBAction func cancelAction(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
         

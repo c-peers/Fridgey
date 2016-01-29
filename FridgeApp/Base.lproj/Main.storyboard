@@ -407,7 +407,7 @@ does your refridgerator have?</string>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Add" id="0CF-2h-UJx">
                                             <connections>
-                                                <segue destination="eHk-To-sLt" kind="unwind" unwindAction="unwindToIngredientList:" id="vgF-a3-O8h"/>
+                                                <action selector="addEditButtonTapped:" destination="8rJ-Kc-sve" id="c2f-z3-KFc"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -427,11 +427,7 @@ does your refridgerator have?</string>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="New Ingredient" id="iQl-3B-0Bp">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="vwV-nK-OOx">
-                            <connections>
-                                <segue destination="eHk-To-sLt" kind="unwind" unwindAction="unwindToIngredientList:" id="Af8-gk-zii"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="vwV-nK-OOx"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -445,6 +441,7 @@ does your refridgerator have?</string>
                         <outlet property="listAddedView" destination="3tC-bG-THD" id="hw7-Fr-BoE"/>
                         <outlet property="locationTextField" destination="uuu-0C-MTX" id="xQZ-zw-jjW"/>
                         <outlet property="nameTextField" destination="HCl-1u-Nkq" id="wXA-dX-9sL"/>
+                        <segue destination="eHk-To-sLt" kind="unwind" identifier="addEditIngredientUnwind" unwindAction="unwindToIngredientList:" id="COF-rv-BaY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -598,26 +595,6 @@ does your refridgerator have?</string>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="thE-sK-zOw">
                                 <rect key="frame" x="0.0" y="64" width="600" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <view key="tableFooterView" alpha="0.80000001192092896" contentMode="scaleToFill" id="Nd8-sr-C4j">
-                                    <rect key="frame" x="0.0" y="98" width="600" height="336"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ye0-DC-T3W">
-                                            <rect key="frame" x="85" y="25" width="430" height="286"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                    <constraints>
-                                        <constraint firstItem="ye0-DC-T3W" firstAttribute="leading" secondItem="Nd8-sr-C4j" secondAttribute="leading" constant="85" id="1Ib-xo-WWM"/>
-                                        <constraint firstItem="ye0-DC-T3W" firstAttribute="centerX" secondItem="Nd8-sr-C4j" secondAttribute="centerX" id="60G-in-dpg"/>
-                                        <constraint firstItem="ye0-DC-T3W" firstAttribute="centerY" secondItem="Nd8-sr-C4j" secondAttribute="centerY" id="Nhv-Dw-DZS"/>
-                                        <constraint firstAttribute="height" constant="336" id="P4n-4A-bGi"/>
-                                        <constraint firstItem="ye0-DC-T3W" firstAttribute="top" secondItem="Nd8-sr-C4j" secondAttribute="top" constant="25" id="ugf-Dr-Ksx"/>
-                                    </constraints>
-                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FoodsListTableViewCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="FoodsListTableViewCell" rowHeight="70" id="NEx-2m-NLl" userLabel="FoodsListTableViewCell" customClass="FoodsListTableViewCell" customModule="FridgeApp">
                                         <rect key="frame" x="0.0" y="28" width="600" height="70"/>
@@ -684,6 +661,34 @@ does your refridgerator have?</string>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nd8-sr-C4j">
+                                <rect key="frame" x="80" y="145" width="440" height="281"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ye0-DC-T3W">
+                                        <rect key="frame" x="25" y="25" width="390" height="231"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ye0-DC-T3W" firstAttribute="centerX" secondItem="Nd8-sr-C4j" secondAttribute="centerX" id="60G-in-dpg"/>
+                                    <constraint firstAttribute="bottom" secondItem="ye0-DC-T3W" secondAttribute="bottom" constant="25" id="FAn-I0-MT5"/>
+                                    <constraint firstItem="ye0-DC-T3W" firstAttribute="centerY" secondItem="Nd8-sr-C4j" secondAttribute="centerY" id="Nhv-Dw-DZS"/>
+                                    <constraint firstAttribute="height" constant="336" id="P4n-4A-bGi"/>
+                                    <constraint firstItem="ye0-DC-T3W" firstAttribute="leading" secondItem="Nd8-sr-C4j" secondAttribute="leading" constant="25" id="RFB-D2-Ttq"/>
+                                    <constraint firstAttribute="trailing" secondItem="ye0-DC-T3W" secondAttribute="trailing" constant="25" id="ofo-H9-YBt"/>
+                                    <constraint firstItem="ye0-DC-T3W" firstAttribute="top" secondItem="Nd8-sr-C4j" secondAttribute="top" constant="25" id="ugf-Dr-Ksx"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="P4n-4A-bGi"/>
+                                        <exclude reference="60G-in-dpg"/>
+                                        <exclude reference="Nhv-Dw-DZS"/>
+                                    </mask>
+                                </variation>
+                            </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XXG-cT-FBh">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
@@ -699,13 +704,17 @@ does your refridgerator have?</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Nd8-sr-C4j" firstAttribute="leading" secondItem="H9N-d4-3zT" secondAttribute="leadingMargin" constant="60" id="NCa-hW-NnK"/>
                             <constraint firstAttribute="trailing" secondItem="XXG-cT-FBh" secondAttribute="trailing" id="PUw-fi-fYI"/>
                             <constraint firstItem="XXG-cT-FBh" firstAttribute="leading" secondItem="H9N-d4-3zT" secondAttribute="leading" id="UIE-Ow-4BZ"/>
                             <constraint firstItem="thE-sK-zOw" firstAttribute="trailing" secondItem="XXG-cT-FBh" secondAttribute="trailing" id="czT-uW-1zo"/>
                             <constraint firstItem="thE-sK-zOw" firstAttribute="top" secondItem="XXG-cT-FBh" secondAttribute="bottom" id="d5D-XB-XA0"/>
+                            <constraint firstItem="Nd8-sr-C4j" firstAttribute="top" secondItem="LWZ-Fw-VQm" secondAttribute="bottom" constant="125" id="dz2-VH-g7U"/>
                             <constraint firstItem="thE-sK-zOw" firstAttribute="leading" secondItem="XXG-cT-FBh" secondAttribute="leading" id="f5M-nz-fzN"/>
                             <constraint firstItem="thE-sK-zOw" firstAttribute="bottom" secondItem="b3G-94-eR7" secondAttribute="top" constant="69" id="l35-ra-1eL"/>
                             <constraint firstItem="XXG-cT-FBh" firstAttribute="top" secondItem="H9N-d4-3zT" secondAttribute="top" constant="20" id="oGc-cE-7Sl"/>
+                            <constraint firstItem="b3G-94-eR7" firstAttribute="top" secondItem="Nd8-sr-C4j" secondAttribute="bottom" constant="125" id="ued-QA-EqE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nd8-sr-C4j" secondAttribute="trailing" constant="60" id="xlG-zV-SPy"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ingredients" image="Carrot" id="Xeg-X9-vok"/>
@@ -1434,8 +1443,8 @@ does your refridgerator have?</string>
         <image name="Unselected" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vI4-Gk-9fo"/>
-        <segue reference="xUh-LB-vRU"/>
         <segue reference="eUA-dd-AMQ"/>
+        <segue reference="pQA-vO-Nhw"/>
+        <segue reference="vI4-Gk-9fo"/>
     </inferredMetricsTieBreakers>
 </document>
