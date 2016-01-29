@@ -122,7 +122,6 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         
         
         listAddedView.alpha = 0
-        listAddedView.hidden = true
         
         // Input data into the Array:
         //locationPickerData = (MyFridge?.doorNames)!
@@ -566,33 +565,28 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
             print("unwind ingredient added")
             print(selectedList)
             
-            //let DynamicView = UIView(frame: CGRectMake(150, 150, 200, 200))
-            //DynamicView.backgroundColor = UIColor.grayColor()
-            //DynamicView.layer.cornerRadius = 25
-            //DynamicView.layer.borderWidth = 2
-            //DynamicView.alpha = 0
-            //self.view.addSubview(DynamicView)
-            //UIView.animateWithDuration(0.4, animations: {
-            //    DynamicView.alpha = 0.8
-            //})
-            //UIView.animateWithDuration(0.8, animations: {
-            //    DynamicView.alpha = 0
-            //})
-            //DynamicView.removeFromSuperview()
-
             listAddedText.text = nameTextField.text! + " added to " + selectedList
             print(listAddedText.text)
             
-            UIView.animateWithDuration(2.5, animations: {
-                self.listAddedView.alpha = 0.8
-            })
-            UIView.animateWithDuration(2.5, animations: {
-                self.listAddedView.alpha = 0
-            })
-            
-            
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) { () -> Void in
+                self.fadeInOut()
+            }
+
+//            UIView.animateWithDuration(2.5, animations: {
+//                self.listAddedView.alpha = 0.8
+//            })
+//            UIView.animateWithDuration(2.5, animations: {
+//                self.listAddedView.alpha = 0
+//            })
             
         }
+        
+    }
+
+    func fadeInOut() {
+        
+        UIView.animateWithDuration(NSTimeInterval(2.5), delay: 0.0, options: UIViewAnimationOptions.CurveLinear, animations: { self.listAddedView.alpha = 0.8; print("Fade In") }, completion: nil)
+        UIView.animateWithDuration(NSTimeInterval(2.5), delay: 1.0, options: UIViewAnimationOptions.CurveLinear, animations: { self.listAddedView.alpha = 0.0; print("Fade Out") }, completion: nil)
         
     }
 

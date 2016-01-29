@@ -177,7 +177,7 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
             //listName
             
             //let selectedListCount = listDetailsDic!.count
-            let selectedListCount = listDetails.count
+            //let selectedListCount = listDetails.count
             
 //            for count in 1...selectedIngredients.count {
 //                listDetailsDic![count + selectedListCount] = selectedIngredients[count - 1]

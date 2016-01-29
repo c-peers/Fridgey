@@ -560,7 +560,7 @@ does your refridgerator have?</string>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="cUh-Mu-jYv" secondAttribute="trailing" constant="20" id="DRi-ha-6HN"/>
                             <constraint firstItem="cAa-RF-gIV" firstAttribute="top" secondItem="cUh-Mu-jYv" secondAttribute="bottom" constant="35" id="ahv-Oe-p3p"/>
@@ -664,7 +664,7 @@ does your refridgerator have?</string>
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nd8-sr-C4j">
                                 <rect key="frame" x="80" y="145" width="440" height="281"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ye0-DC-T3W">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ye0-DC-T3W">
                                         <rect key="frame" x="25" y="25" width="390" height="231"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -722,7 +722,7 @@ does your refridgerator have?</string>
                         <outlet property="listAddedText" destination="ye0-DC-T3W" id="E8d-Sx-3CT"/>
                         <outlet property="listAddedView" destination="Nd8-sr-C4j" id="fEV-ap-MFe"/>
                         <outlet property="tableView" destination="thE-sK-zOw" id="KiN-uA-zb4"/>
-                        <segue destination="E77-v0-SKt" kind="presentation" identifier="AddToList" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="xUh-LB-vRU"/>
+                        <segue destination="E77-v0-SKt" kind="presentation" identifier="AddToList" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="xUh-LB-vRU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIw-xt-kCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1443,8 +1443,8 @@ does your refridgerator have?</string>
         <image name="Unselected" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eUA-dd-AMQ"/>
-        <segue reference="pQA-vO-Nhw"/>
         <segue reference="vI4-Gk-9fo"/>
+        <segue reference="xUh-LB-vRU"/>
+        <segue reference="eUA-dd-AMQ"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -60,7 +60,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         // Load any saved Ingredients, otherwise load sample data.
         
-        listAddedView.alpha = 0.8
+        listAddedView.alpha = 0.0
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -653,22 +653,26 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             print("unwind ingredient added")
             print(selectedList)
             
-            listAddedText.text = selectedIngredient + " added to " + selectedList
+            self.listAddedText.text = selectedIngredient + " added to " + selectedList
             print(listAddedText.text)
             
             self.listAddedView.hidden = false
             
-            UIView.animateWithDuration(2.5, animations: {
-                self.listAddedView.alpha = 0.8
-            })
-            UIView.animateWithDuration(2.5, animations: {
-                self.listAddedView.alpha = 0
-            })
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) { () -> Void in
+                self.fadeInOut()
+            }
             
         }
         
     }
     
+    func fadeInOut() {
+        
+        UIView.animateWithDuration(NSTimeInterval(2.0), delay: 0.0, options: UIViewAnimationOptions.CurveLinear, animations: { self.listAddedView.alpha = 0.8; print("Fade In") }, completion: nil)
+        UIView.animateWithDuration(NSTimeInterval(2.0), delay: 1.0, options: UIViewAnimationOptions.CurveLinear, animations: { self.listAddedView.alpha = 0.0; print("Fade Out") }, completion: nil)
+        
+    }
+
 }
 
 //extension FoodsListTableViewController: UISearchBarDelegate {
