@@ -203,8 +203,14 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         
         if finishedShopping.title == "Finished Shopping" {
             finishedShopping.title = "Add Selected"
+            //finishedShopping.enabled = false
             listTableView.reloadData()
         } else {
+            
+            guard selectedFromList.count > 0 else {
+                finishedShopping.title = "Finished Shopping"
+                return
+            }
             
             var ingredients = PersistManager.sharedManager.Ingredients
             var ingredientsToBeAdded = [Ingredient]()
@@ -223,7 +229,8 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
             let saveIngredients = PersistenceHandler()
             saveIngredients.save()
             
-            
+            print("Dismiss")
+            dismissViewControllerAnimated(true, completion: nil)
             
         }
     

@@ -41,6 +41,9 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
     var autocompleteDisplay = [String]()
     var autocompleteIngredientChosen = false
     
+    var expirationTextFieldOriginalText = ""
+    var fridgeAreaTextFieldOriginalText = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -256,12 +259,43 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
     // Action for popping up DatePicker
     @IBAction func expirationDateBeingChosen(sender: UITextField) {
 
+        expirationTextFieldOriginalText = expirationTextField.text!
+        
         let datePicker = UIDatePicker()
         datePicker.tag = 1
         datePicker.datePickerMode = UIDatePickerMode.Date
-        sender.inputView = datePicker
         //datePicker.addTarget(self, action: Selector("datePickerValueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+        
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.Default
+        toolBar.translucent = true
+        toolBar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "pickedDate")
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelDate")
+        
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.userInteractionEnabled = true
+
+        expirationTextField.inputAccessoryView = toolBar
+
+        sender.inputView = datePicker
+
         datePicker.addTarget(self, action: Selector("expirationDatePicked:"), forControlEvents: UIControlEvents.ValueChanged)
+        
+    }
+    
+    func pickedDate() {
+        
+        expirationTextField.resignFirstResponder()
+        
+    }
+    
+    func cancelDate() {
+        
+        expirationTextField.text! = expirationTextFieldOriginalText
+        expirationTextField.resignFirstResponder()
+        expirationTextFieldOriginalText = ""
         
     }
     
@@ -280,6 +314,8 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
     // The number of columns of data
     @IBAction func locationBeingChosen(sender: UITextField) {
 
+        fridgeAreaTextFieldOriginalText = locationTextField.text!
+        
         let locationPicker = UIPickerView()
         locationPicker.tag = 2
         
@@ -293,9 +329,9 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         //toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
         toolBar.sizeToFit()
         
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "pickedLocation")
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelLocationPicker")
         
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.userInteractionEnabled = true
@@ -308,6 +344,9 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
             print("setrow")
             print(setrow)
             locationPicker.selectRow(setrow, inComponent: 0, animated: true)
+        } else if fridgeAreaTextFieldOriginalText != "" {
+            let setrow = locationPickerData.indexOf(fridgeAreaTextFieldOriginalText)
+            locationPicker.selectRow(setrow!, inComponent: 0, animated: true)
         }
 
         sender.inputView = locationPicker
@@ -316,11 +355,21 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         
     }
     
-    func donePicker() {
+    func cancelLocationPicker() {
+        
+        locationTextField.text! = fridgeAreaTextFieldOriginalText
+        locationTextField.resignFirstResponder()
+        fridgeAreaTextFieldOriginalText = ""
+
+        
+    }
+    
+    func pickedLocation() {
         
         locationTextField.resignFirstResponder()
         
     }
+
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         if pickerView.tag == 2 {
