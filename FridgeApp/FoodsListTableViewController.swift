@@ -658,7 +658,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             
             self.listAddedView.hidden = false
             
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) { () -> Void in
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1.5 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) { () -> Void in
                 self.fadeInOut()
             }
             

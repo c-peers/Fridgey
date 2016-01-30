@@ -593,7 +593,7 @@ does your refridgerator have?</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="thE-sK-zOw">
-                                <rect key="frame" x="0.0" y="64" width="600" height="556"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FoodsListTableViewCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="FoodsListTableViewCell" rowHeight="70" id="NEx-2m-NLl" userLabel="FoodsListTableViewCell" customClass="FoodsListTableViewCell" customModule="FridgeApp">
@@ -706,12 +706,12 @@ does your refridgerator have?</string>
                         <constraints>
                             <constraint firstItem="Nd8-sr-C4j" firstAttribute="leading" secondItem="H9N-d4-3zT" secondAttribute="leadingMargin" constant="60" id="NCa-hW-NnK"/>
                             <constraint firstAttribute="trailing" secondItem="XXG-cT-FBh" secondAttribute="trailing" id="PUw-fi-fYI"/>
+                            <constraint firstItem="thE-sK-zOw" firstAttribute="bottom" secondItem="b3G-94-eR7" secondAttribute="top" id="QyZ-T7-P4W"/>
                             <constraint firstItem="XXG-cT-FBh" firstAttribute="leading" secondItem="H9N-d4-3zT" secondAttribute="leading" id="UIE-Ow-4BZ"/>
                             <constraint firstItem="thE-sK-zOw" firstAttribute="trailing" secondItem="XXG-cT-FBh" secondAttribute="trailing" id="czT-uW-1zo"/>
                             <constraint firstItem="thE-sK-zOw" firstAttribute="top" secondItem="XXG-cT-FBh" secondAttribute="bottom" id="d5D-XB-XA0"/>
                             <constraint firstItem="Nd8-sr-C4j" firstAttribute="top" secondItem="LWZ-Fw-VQm" secondAttribute="bottom" constant="125" id="dz2-VH-g7U"/>
                             <constraint firstItem="thE-sK-zOw" firstAttribute="leading" secondItem="XXG-cT-FBh" secondAttribute="leading" id="f5M-nz-fzN"/>
-                            <constraint firstItem="thE-sK-zOw" firstAttribute="bottom" secondItem="b3G-94-eR7" secondAttribute="top" constant="69" id="l35-ra-1eL"/>
                             <constraint firstItem="XXG-cT-FBh" firstAttribute="top" secondItem="H9N-d4-3zT" secondAttribute="top" constant="20" id="oGc-cE-7Sl"/>
                             <constraint firstItem="b3G-94-eR7" firstAttribute="top" secondItem="Nd8-sr-C4j" secondAttribute="bottom" constant="125" id="ued-QA-EqE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nd8-sr-C4j" secondAttribute="trailing" constant="60" id="xlG-zV-SPy"/>
@@ -1443,8 +1443,8 @@ does your refridgerator have?</string>
         <image name="Unselected" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vI4-Gk-9fo"/>
         <segue reference="xUh-LB-vRU"/>
+        <segue reference="vI4-Gk-9fo"/>
         <segue reference="eUA-dd-AMQ"/>
     </inferredMetricsTieBreakers>
 </document>

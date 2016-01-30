@@ -107,7 +107,7 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
             // self.fridgeTitles = NSArray(objects: "A", "B")
             // self.fridgeImages = NSArray(objects: "1", "2")
             self.fridgeTitles = NSArray(object: (MyFridge?.fridgeName)!)
-            self.fridgeImages = NSArray(objects: "1")
+            self.fridgeImages = NSArray(objects: "Fridge")
         
         } else {
             print("Fridge not set, viewWillAppear")
@@ -141,7 +141,7 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
             // self.fridgeTitles = NSArray(objects: "A", "B")
             // self.fridgeImages = NSArray(objects: "1", "2")
             self.fridgeTitles = NSArray(object: (MyFridge?.fridgeName)!)
-            self.fridgeImages = NSArray(objects: "1")
+            self.fridgeImages = NSArray(objects: "Fridge")
             
         } else {
 

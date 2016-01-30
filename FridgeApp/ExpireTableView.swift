@@ -293,7 +293,7 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
                 print(ingredients[x][y].expiry)
                 
                 dateAsString = ingredients[x][y].expiry
-                let cellExpiryDate = dateFormatter.dateFromString(dateAsString)!
+                 let cellExpiryDate = dateFormatter.dateFromString(dateAsString)!
                 //diffDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: cellExpiryDate, toDate: currentDate, options: NSCalendarOptions.init(rawValue: 0))
                 
                 // Only remove if the expiration date is greater than the current date + offset

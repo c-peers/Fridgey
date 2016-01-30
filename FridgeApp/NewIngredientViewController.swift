@@ -417,7 +417,14 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
     // MARK: Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if AddIngredientButton == (sender as? UIBarButtonItem) {
+        print("segues?")
+        print(segue)
+        print(sender)
+
+        
+        
+        //if AddIngredientButton == (sender as? UIBarButtonItem) {
+        if segue.identifier == "addEditIngredientUnwind" {
             let name = nameTextField.text!
             //let image =
             let expiry = expirationTextField.text!
@@ -493,25 +500,14 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
     
     @IBAction func addEditButtonTapped(sender: UIBarButtonItem) {
         
-        // Check and see if the user wants to save the ingredient name to the autocomplete list.
-        // All of the code has to go in the buttons because the UIAlertController doesn't wait for an answer.
+        let ingredientExists = ingredientNameChoices.contains(nameTextField.text!)
         
-        let alertController = UIAlertController(title: "Add Ingredient?", message:
-            "This ingredient is not available through autocomplete. Would you like to add it?", preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "No Thanks", style: UIAlertActionStyle.Cancel,handler: {(alert: UIAlertAction!) in print("Cancel");
+        if !autocompleteIngredientChosen && !ingredientExists {
+            addToAutoCompleteQuery()
+        } else {
             self.performSegueWithIdentifier("addEditIngredientUnwind", sender: self)
-            return
-        }))
-        //{(alert: UIAlertAction!) in print("Cancel"); addStatus = false}
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in print("Add");
-            let name = self.nameTextField.text!;
-            self.addNewIngredientToList(name);
-            self.performSegueWithIdentifier("addEditIngredientUnwind", sender: self)
-        }))
-        //{(alert: UIAlertAction!) in print("Add")}
-        
-        self.presentViewController(alertController, animated: true, completion: nil)
-        
+        }
+
     }
     
     func addNewIngredientToList(ingredientToAdd: String) -> Void {
@@ -538,6 +534,29 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
             
         }
 
+        
+    }
+    
+    func addToAutoCompleteQuery() {
+        
+        // Check and see if the user wants to save the ingredient name to the autocomplete list.
+        // All of the code has to go in the buttons because the UIAlertController doesn't wait for an answer.
+        
+        let alertController = UIAlertController(title: "Add Ingredient?", message:
+            "This ingredient is not available through autocomplete. Would you like to add it?", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "No Thanks", style: UIAlertActionStyle.Cancel,handler: {(alert: UIAlertAction!) in print("Cancel");
+            self.performSegueWithIdentifier("addEditIngredientUnwind", sender: self)
+            return
+        }))
+        //{(alert: UIAlertAction!) in print("Cancel"); addStatus = false}
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in print("Add");
+            let name = self.nameTextField.text!;
+            self.addNewIngredientToList(name);
+            self.performSegueWithIdentifier("addEditIngredientUnwind", sender: self)
+        }))
+        //{(alert: UIAlertAction!) in print("Add")}
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
         
     }
     
