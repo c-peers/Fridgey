@@ -8,11 +8,19 @@
 
 import UIKit
 
-class ListCollectionViewCell: UICollectionViewCell {
+class ListCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
     
-    //@IBOutlet weak var ListName: UITextField!
-    //@IBOutlet weak var listName: UIButton!
     @IBOutlet weak var listName: UILabel!
+    @IBOutlet weak var nameNewListText: UITextField!
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true;
+    }
     
+    func textFieldDidEndEditing(textField: UITextField) {
+        
+    }
+
 }

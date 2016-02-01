@@ -422,6 +422,7 @@ class NewIngredientViewController: UIViewController, UITableViewDelegate, UITabl
         // Hide the keyboard.
         textField.resignFirstResponder()
         self.view.endEditing(true)
+        
         return false
     }
     

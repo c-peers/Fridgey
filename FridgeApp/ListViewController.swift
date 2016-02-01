@@ -8,13 +8,15 @@
 
 import UIKit
 
-class ListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    //var mainList = [String:[]]
     var mainList = Lists()
     var list: [String] = []
+    
+    // Text Field Delegate objects
+    let ListTextFieldDelegate = ListViewCollectionTextFieldDelegate()
     
     // Temporary Sample    
     func sampleLists() {
@@ -93,11 +95,18 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         collectionView.backgroundColor = UIColor.whiteColor()
         
+        self.subscribeToKeyboardNotifications()
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        //self.unsubscribeFromKeyboardNotifications()
     }
     
     func viewWillAppear() {
@@ -107,6 +116,25 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         print(mainList.lists)
     }
     
+    func subscribeToKeyboardNotifications() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        //NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        self.view.frame.origin.y -= getKeyboardHeight(notification)
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        self.view.frame.origin.y += getKeyboardHeight(notification)
+    }
+    
+    func getKeyboardHeight(notification: NSNotification) -> CGFloat {
+        let userInfo = notification.userInfo
+        let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue // of CGRect
+        return keyboardSize.CGRectValue().height
+    }
+    
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
         
@@ -114,7 +142,6 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        print(list.count)
         return list.count
         
     }
@@ -123,14 +150,28 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ListCollectionViewCell", forIndexPath: indexPath) as! ListCollectionViewCell
         
+        cell.nameNewListText.hidden = true
+        
         cell.contentView.layer.cornerRadius = 2.0
         
         cell.layer.cornerRadius = 8
         
+        print(list[indexPath.row])
+        
+        if list[indexPath.row] == "To Name" {
+            print("are you coming here?")
+            cell.listName.text = ""
+            cell.nameNewListText.hidden = false
+            cell.nameNewListText.returnKeyType = UIReturnKeyType.Done
+            cell.nameNewListText.delegate = self
+            //cell.nameNewListText.becomeFirstResponder()
+            cell.nameNewListText.performSelector("becomeFirstResponder", withObject: nil, afterDelay: 0)
+                        
+        } else {
+            cell.listName.text = list[indexPath.row]
+        }
         
         //cell.listName.setTitle(list[indexPath.row], forState: .Normal)
-        cell.listName.text = list[indexPath.row]
-        print(list[indexPath.row])
         
         return cell
         
@@ -140,7 +181,60 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         print("goinghere?")
         //self.performSegueWithIdentifier("EditList", sender: self)
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        
+        print("entered?")
+        
+        let indexPath = NSIndexPath(forRow: list.count - 1, inSection: 0)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ListCollectionViewCell", forIndexPath: indexPath) as! ListCollectionViewCell
+        
+        cell.listName.text = textField.text
+        
+        print(mainList.lists)
+        
+        // We have our actual List name now so rename the lists and remove the temporary list.
+        list[list.count - 1] = textField.text!
+        let toRemoveIndex = mainList.lists.indexForKey("To Name")
+        mainList.lists.removeAtIndex(toRemoveIndex!)
+        mainList.addList(textField.text!, listDetail: [])
+        
+        print(mainList.lists)
+        
+        // We only needed the textField so write the label name. Now let's hide the field.
+        textField.hidden = true
+        textField.text = nil
+        textField.alpha = 0.0
+        
+        // We just added a new list so let's save.
+        let saveList = PersistenceHandler()
+        saveList.save()
+        
+        collectionView.reloadData()
+        
+    }
 
+
+    @IBAction func addNewList() {
+        
+        //Make a temporary list so that the collection view doesn't cause a crash because the array is out of bounds.
+        list.append("To Name")
+        
+        let listItems = []
+        mainList.addList("To Name", listDetail: listItems as! [String])
+        
+        let indexPath = NSIndexPath(forRow: list.count - 1, inSection: 0)
+        collectionView.insertItemsAtIndexPaths([indexPath])
+        collectionView.reloadData()
+        
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         let listDetailViewController = segue.destinationViewController as! ListDetailsViewController

@@ -29,6 +29,7 @@
 		C46E16F01BAE844E00279B69 /* ChooseAFridgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E16EF1BAE844E00279B69 /* ChooseAFridgeVC.swift */; };
 		C46F4E621BCF80B00020F682 /* NewIngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F4E611BCF80B00020F682 /* NewIngredientViewController.swift */; };
 		C4705D291C35031F00952CB7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C4705D281C35031F00952CB7 /* .gitignore */; };
+		C47B681A1C5DE672009B7F75 /* ListViewCollectionTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47B68191C5DE672009B7F75 /* ListViewCollectionTextFieldDelegate.swift */; };
 		C48272111BB122BE00BACE1D /* FridgeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48272101BB122BE00BACE1D /* FridgeInfo.swift */; };
 		C48272131BB129AC00BACE1D /* ConfirmFridgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48272121BB129AC00BACE1D /* ConfirmFridgeVC.swift */; };
 		C485EA091BEDD65800AB9FDA /* FridgePageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485EA081BEDD65800AB9FDA /* FridgePageContentViewController.swift */; };
@@ -105,6 +106,7 @@
 		C46E16EF1BAE844E00279B69 /* ChooseAFridgeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseAFridgeVC.swift; sourceTree = "<group>"; };
 		C46F4E611BCF80B00020F682 /* NewIngredientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewIngredientViewController.swift; sourceTree = "<group>"; };
 		C4705D281C35031F00952CB7 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		C47B68191C5DE672009B7F75 /* ListViewCollectionTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewCollectionTextFieldDelegate.swift; sourceTree = "<group>"; };
 		C48272101BB122BE00BACE1D /* FridgeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeInfo.swift; sourceTree = "<group>"; };
 		C48272121BB129AC00BACE1D /* ConfirmFridgeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmFridgeVC.swift; sourceTree = "<group>"; };
 		C485EA081BEDD65800AB9FDA /* FridgePageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgePageContentViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				C45F3CDC1B9AC75E0010FEF0 /* ListViewController.swift */,
+				C47B68191C5DE672009B7F75 /* ListViewCollectionTextFieldDelegate.swift */,
 				C4E458F71C2777A6005B28E3 /* ListCollectionViewCell.swift */,
 				C40568281C27BDA80079A92F /* ListDetailsViewController.swift */,
 				C46B8FE61C45C5A00067F254 /* ListDetailsTableViewCell.swift */,
@@ -436,6 +439,7 @@
 				C46B8FEB1C4642400067F254 /* ListDetailAddExistingIngredient.swift in Sources */,
 				C4937B911C019C07008505B9 /* FridgeTabBarController.swift in Sources */,
 				C46F4E621BCF80B00020F682 /* NewIngredientViewController.swift in Sources */,
+				C47B681A1C5DE672009B7F75 /* ListViewCollectionTextFieldDelegate.swift in Sources */,
 				C4CA4D4E1C1F073C005F6236 /* ExpireTableViewCell.swift in Sources */,
 				C442CC291C0ADB2000BDC38C /* IngredientsByLocation.swift in Sources */,
 				C45F3CBF1B9AC4E40010FEF0 /* SecondViewController.swift in Sources */,

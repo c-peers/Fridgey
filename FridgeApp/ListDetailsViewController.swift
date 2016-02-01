@@ -24,6 +24,8 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     
     var existingIngredients = PersistManager.sharedManager.Ingredients
     
+    var newIngredientAdded = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,7 +36,6 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         //print(listDetailsDic)
         
         selectedFromList.removeFirst()
-        
         
 //        if listDetailsDic != nil {
 //            
@@ -56,6 +57,19 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     /*
     // MARK: - TableView
     */
+    
+    @IBAction func addNew() {
+        
+        newIngredientAdded = true
+        
+        listDetails.append("To Name")
+        
+        listTableView.beginUpdates()
+        let indexPath = NSIndexPath(forRow: listDetails.count - 1, inSection: 0)
+        listTableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        listTableView.endUpdates()
+                
+    }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
@@ -124,7 +138,12 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         let rowNumber = indexPath.row + 1
         cell.listItemNumber.text = String(rowNumber)
         print(listIngredient)
-        cell.listItemName.text = listIngredient
+        
+        if listIngredient == "To Name" {
+            print("Do stuff")
+        } else {
+            cell.listItemName.text = listIngredient            
+        }
         
         let emptyCircle = UIImage(named: "Unselected")
         let filledCircle = UIImage(named: "Selected")
