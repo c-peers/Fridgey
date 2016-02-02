@@ -1,27 +1,2607 @@
+100 Grand
+3 Musketeers
+3 Musketeers (Bite Size)
+5th Avenue
+Abalone
 Abiyuch
-Acerola juice
+Acai Berry Drink
 Acerola
+Acerola juice
+Acorn Flour
 Acorn stew
+Acorns
+Adzuki Beans
+After Eight Mints
 Agave
-Low Carb Beer
-Light Beer
+Alaska Pollock
+Alfalfa seeds
+Allspice
+Almond Butter
+Almond Joy
+Almond Joy Bites
+Almond Milk
+Almond Milk (Chocolate)
+Almond Milk (Vanilla)
+Almond Oil
+Almond Paste
+Almonds
+Aloe Vera Drink
+Amaranth grain
+Amaranth leaves
+American Cheese
+Ancho Pepper
+Anchovies
+Anchovies (Canned)
+Angelfood
+Animal Cookies
+Animal Cookies (Frosted)
+Animal Crackers
+Animal fat
+Anise Seed
+Antelope
+Apple Butter
+Apple Crisp
+Apple Juice
+Apple juice concentrate
+Apple Pie
+Apple Pie Filling
+Apple Strudel
+Apples
+Apples (Fuji)
+Apples (Gala)
+Apples (Golden Delicious)
+Apples (Granny Smith)
+Apples (Red Delicious)
+Applesauce
+Apricot Kernel Oil
+Apricot nectar
+Apricots
+Arizona Green Tea
+Arizona Tea
+Arrowhead
+Arrowroot
+Arrowroot flour
+Artichokes
+Arugula
+Asparagus
+Atlantic Mackerel
+Atlantic Pollock
+Atlantic Salmon
+Au Jus
+Avocado Oil
+Avocados
+Azuki Beans
+Babassu Oil
+Baby Carrots
+Baby Food
+Baby Food (Apple and Blueberry)
+Baby Food (Apple and Cinnamon Puffs)
+Baby Food (Apple and Raspberry)
+Baby Food (Apple and Sweet Potato)
+Baby Food (Apple Juice)
+Baby Food (Apple Yogurt Dessert)
+Baby Food (Apple, Carrot and Squash)
+Baby Food (Apple, Mango and Kiwi)
+Baby Food (Apple-Banana Juice )
+Baby Food (Apple-Cherry Juice)
+Baby Food (Apple-Cranberry Juice)
+Baby Food (Apple-Grape Juice)
+Baby Food (Apple-Peach Juice)
+Baby Food (Apple-Plum Juice)
+Baby Food (Apple-Prune Juice)
+Baby Food (Apple-Sweet Potato Juice)
+Baby Food (Apples and Chicken)
+Baby Food (Apples with Ham)
+Baby Food (Applesauce and Apricots)
+Baby Food (Applesauce and Banana)
+Baby Food (Applesauce and Cherries)
+Baby Food (Applesauce and Papaya)
+Baby Food (Applesauce and Pineapple)
+Baby Food (Applesauce)
+Baby Food (Apricot with Tapioca)
+Baby Food (Arrowroot Cookies)
+Baby Food (Banana and Pineapple)
+Baby Food (Banana and Strawberry)
+Baby Food (Banana Apple Dessert)
+Baby Food (Banana Juice)
+Baby Food (Banana Pudding)
+Baby Food (Banana with Mixed Berries)
+Baby Food (Banana with Orange)
+Baby Food (Banana Yogurt)
+Baby Food (Banana)
+Baby Food (Bananas with Apples, Pears)
+Baby Food (Bananas with Tapioca)
+Baby Food (Barley Cereal)
+Baby Food (Beef and Rice)
+Baby Food (Beef Lasagna)
+Baby Food (Beef Noodle)
+Baby Food (Beef Stew)
+Baby Food (Beef with Vegetables)
+Baby Food (Beef)
+Baby Food (Beets)
+Baby Food (Blueberry Yogurt)
+Baby Food (Broccoli and Chicken)
+Baby Food (Brown Rice Cereal)
+Baby Food (Butternut Squash and Corn)
+Baby Food (Carrots and Beef)
+Baby Food (Carrots)
+Baby Food (Cereal Bar)
+Baby Food (Cereal with Egg Yolks)
+Baby Food (Cereal with Eggs)
+Baby Food (Cherry Cobbler)
+Baby Food (Cherry Vanila Pudding)
+Baby Food (Chicken and Rice)
+Baby Food (Chicken Noodle with Vegetables)
+Baby Food (Chicken Noodle)
+Baby Food (Chicken Soup)
+Baby Food (Chicken Stew)
+Baby Food (Chicken Sticks)
+Baby Food (Chicken)
+Baby Food (Cookies)
+Baby Food (Corn and Sweet Potatoes)
+Baby Food (Creamed Corn)
+Baby Food (Custard Pudding)
+Baby Food (Diced Apples)
+Baby Food (Dutch Apple)
+Baby Food (Egg Yolks and Bacon)
+Baby Food (Finger Snacks Cereal)
+Baby Food (Fruit Cookies)
+Baby Food (Fruit Dessert)
+Baby Food (Fruit Juice)
+Baby Food (Fruit Pudding)
+Baby Food (Fruit Punch)
+Baby Food (Fruit Strips)
+Baby Food (Fruit Supreme)
+Baby Food (Grape Juice)
+Baby Food (Green Beans and Potatoes)
+Baby Food (Green Beans and Turkey)
+Baby Food (Green Beans)
+Baby Food (Guava and Papaya)
+Baby Food (Ham)
+Baby Food (High Protein Cereal)
+Baby Food (High Protein with Apple, Orange)
+Baby Food (Lamb)
+Baby Food (Lil Crunchies)
+Baby Food (Macaroni and Cheese)
+Baby Food (Macaroni and Tomato, Beef)
+Baby Food (Mango with Tapioca)
+Baby Food (Mashed Cheddar Potatoes)
+Baby Food (Meat Sticks)
+Baby Food (Mixed Cereal with Applesauce)
+Baby Food (Mixed Cereal with Applesauce, Bananas)
+Baby Food (Mixed Cereal with Bananas)
+Baby Food (Mixed Cereal with Honey)
+Baby Food (Mixed Cereal)
+Baby Food (Mixed Juice)
+Baby Food (Mixed Vegetables)
+Baby Food (Oatmeal with Applesauce)
+Baby Food (Oatmeal with Applesauce, Bananas)
+Baby Food (Oatmeal with Bananas)
+Baby Food (Oatmeal with Fruit)
+Baby Food (Oatmeal with Honey)
+Baby Food (Oatmeal)
+Baby Food (Orange Juice)
+Baby Food (Orange-Apple Juice)
+Baby Food (Orange-Apple-Banana Juice)
+Baby Food (Orange-Apricot Juice)
+Baby Food (Orange-Banana Juice)
+Baby Food (Orange-Carrot Juice)
+Baby Food (Orange-Pineapple Juice)
+Baby Food (Orange-Prune Juice)
+Baby Food (Pasta with Vegetables)
+Baby Food (Pasta)
+Baby Food (Peach Cobbler)
+Baby Food (Peach Melba)
+Baby Food (Peach Yogurt)
+Baby Food (Peaches)
+Baby Food (Pear Juice)
+Baby Food (Pears and Pineapple)
+Baby Food (Pears)
+Baby Food (Peas and Brown Rice)
+Baby Food (Peas)
+Baby Food (Plums with Tapioca)
+Baby Food (Plums)
+Baby Food (Pork)
+Baby Food (Potatoes with Cheese, Ham)
+Baby Food (Potatoes)
+Baby Food (Pretzels)
+Baby Food (Prunes with Tapioca)
+Baby Food (Prunes)
+Baby Food (Ravioli)
+Baby Food (Rice and Apples)
+Baby Food (Rice Biscuits)
+Baby Food (Rice with Applesauce, Bananas)
+Baby Food (Rice with Bananas)
+Baby Food (Rice with Honey)
+Baby Food (Rice with Pears)
+Baby Food (Rice with Pears, Apples)
+Baby Food (Rice)
+Baby Food (Spaghetti)
+Baby Food (Spinach)
+Baby Food (Squash)
+Baby Food (Sweet Potatoes and Chicken)
+Baby Food (Sweet Potatoes)
+Baby Food (Teething Biscuits)
+Baby Food (Tropical Fruit Medley)
+Baby Food (Tropical Fruit)
+Baby Food (Turkey and Rice)
+Baby Food (Turkey Sticks)
+Baby Food (Turkey)
+Baby Food (Turkey, Rice, Vegetables)
+Baby Food (Tutti Frutti)
+Baby Food (Veal)
+Baby Food (Vegetable Crackers)
+Baby Food (Vegetables and Bacon)
+Baby Food (Vegetables and Beef)
+Baby Food (Vegetables and Brown Rice)
+Baby Food (Vegetables and Chicken)
+Baby Food (Vegetables and Dumplings)
+Baby Food (Vegetables and Ham)
+Baby Food (Vegetables and Lamb)
+Baby Food (Vegetables and Noodles)
+Baby Food (Vegetables and Turkey)
+Baby Food (Whole Grain Cereal)
+Baby Food (Whole Wheat Cereal)
+Baby Food (Yogurt Melts)
+Baby Food (Yogurt with Fruit)
+Baby Food (Yogurt)
+Baby Formula
+Baby Lima beans
+Baby Ruth
+Baby Zucchini
+Bacon
+Bacon (Pre-cooked)
+Bacon (Pre-sliced)
+Bacon and beef sticks
+Bacon Grease
+Bagel Chips
+Bagels
+Bagels (Cinnamon-Raisin)
+Bagels (Egg)
+Bagels (Multigrain)
+Bagels (Oat Bran)
+Bagels (Wheat)
+Bagels (Whold Grain)
+Baked Beans
+Baked Beans (with Beef)
+Baked Beans (with Franks)
+Baked Beans (with Pork)
+Baked Potatoes
+Baking chocolate
+Baking Powder
+Baking Soda
+Balsam-pear
+Bamboo shoots
+Banana Bread
+Banana Chips
+Banana Cream Pie
+Banana Melon
+Bananas
+Barbecue loaf
+Barley
+Barley flour
+Barley malt flour
+Barley meal
+Barley Tea
+Basella
+Basil
+Bass
+Bay Leaf
+BBQ Chicken
+Bean Dip
+Bear
+Bearded Seal Oil
+Beaver
+Beechnuts
+Beef
+Beef (Boneless Bottom Round)
+Beef (Boneless Chuck Eye Ribs)
+Beef (Boneless Chuck Eye Roast)
+Beef (Boneless Chuck Eye Steak)
+Beef (Boneless Rib Eye Roast)
+Beef (Boneless Rib Eye Steak)
+Beef (Boneless Short Ribs)
+Beef (Boneless Tenderloin)
+Beef (Boneless Tip Round)
+Beef (Boneless Top Loin)
+Beef (Boneless Top Round)
+Beef (Boneless Top Sirloin)
+Beef (Bottom Round)
+Beef (Bottom Sirloin)
+Beef (Brain)
+Beef (Breakfast Strips)
+Beef (Brisket)
+Beef (Carcass)
+Beef (Chuck Eye Ribs)
+Beef (Chuck Eye Roast)
+Beef (Chuck Eye Steak)
+Beef (Chuck)
+Beef (Dried)
+Beef (External Fat)
+Beef (Eye of Round)
+Beef (Flank Steak)
+Beef (Grass Fed)
+Beef (Ground)
+Beef (Heart)
+Beef (Kidneys)
+Beef (Liver)
+Beef (Loin)
+Beef (Lungs)
+Beef (Mechanically Separated Beef)
+Beef (Medallions)
+Beef (Pancreas)
+Beef (Porterhouse Steak)
+Beef (Rib Eye Roast)
+Beef (Rib Eye Steak)
+Beef (Rib)
+Beef (Roast)
+Beef (Round)
+Beef (Rump)
+Beef (Seam Fat)
+Beef (Short Ribs)
+Beef (Shoulder)
+Beef (Skirt Steak)
+Beef (Smoked)
+Beef (Spleen)
+Beef (Suet)
+Beef (Sweetbread)
+Beef (T-Bone Steak)
+Beef (Tenderloin)
+Beef (Thymus)
+Beef (Tip Round)
+Beef (Tongue)
+Beef (Top Loin)
+Beef (Top Round)
+Beef (Top Sirloin)
+Beef (Tripe)
+Beef and Pork Salami
+Beef Bologna
+Beef Composite
+Beef Gravy
+Beef Jerky
+Beef Macaroni
+Beef Pot Pie
+Beef Salami
+Beef sausage
+Beef stew
+Beef Sticks
+Beefalo
 Beer
-Creme de Menthe
-Daiquiri
-Gin
-Rum
-Vodka
-Whiskey
+Beerwurst
+Beet greens
+Beets
+Berliner Sausage
+Biscuit
+Biscuit (with Chicken)
+Biscuit (with Egg and Bacon)
+Biscuit (with Egg and Cheese)
+Biscuit (with Egg and Ham)
+Biscuit (with Egg and Sausage)
+Biscuit (with Egg and Steak)
+Biscuit (with Egg)
+Biscuit (with Egg, Cheese, and Bacon)
+Biscuit (with Ham)
+Biscuit (with Sausage)
+Biscuit Dough
+Biscuit Mix
+Biscuits
+Bison
+Bison (Chuck)
+Bison (ground)
+Bison (Ribeye)
+Bison (Top Round)
+Bison (Top Sirloin)
+Bit-O'-Honey
+Bite-sized Pretzels
+Bitter Gourd
+Black Beans
+Black Bear Meat
+Black Currants
+Black Olives
+Black Pepper
+Black Tea (Apple)
+Black Tea (Decaffeinated)
+Black Tea (Lemon)
+Black Tea (Milk)
+Black Tea (Peach)
+Black Tea (Sweet)
+Black Turtle Beans
+Blackberries
+Blackberry juice
+Blackberry Pie
+Blackfish
+Blood sausage
+Blueberries
+Blueberry Muffin
+Blueberry Pie
+Blueberry Pie Filling
+Bluefin Tuna
+Bluefish
+Boar
+Bockwurst
+Boiled Potatoes
+Bok Choy
+Bologna
+Boneless Cured Ham
+Boneless Ham
+Borage
+Boston Brown Bread
+Boston Cream Pie
+Bottled Water
+Boysenberries
+Bratwurst (Beef and Pork)
+Bratwurst (Chicken)
+Bratwurst (Mixed)
+Bratwurst (Pork)
+Bratwurst (Veal)
+Braunschweiger
+Brazilnuts
+Bread (French)
+Bread (Gluten Free)
+Bread (Italian)
+Bread (Multi-grain)
+Bread (Oat Bran)
+Bread (Oatmeal)
+Bread (Raisin)
+Bread (Rice Bran)
+Bread (Rye)
+Bread (Wheat Bran)
+Bread (Wheat)
+Bread (White)
+Bread (Whole Wheat)
+Bread crumbs
+Bread Pickles
+Bread Roll
+Bread sticks
+Bread stuffing
+Breadfruit
+Breadfruit Seeds
+Breadsticks
+Breakfast Bagel
+Breakfast Bagel (Sausage, Egg, Cheese)
+Breakfast Bagel (Steak, Egg, Cheese)
+Breakfast bar
+Breakfast Burrito
+Breakfast Drink
+Breakfast Drink (Chocolate)
+Breakfast tart
+Broadbeans
+Broccoli
+Broccoli Flower
+Broccoli Leaves
+Broccoli raab
+Broccoli Spears
+Broccoli Stalks
+Broiled Chicken
+Brook Trout
+Brotwurst
+Brown Gravy
+Brown Rice Chips
+Brownie Mix
+Brownies
+Brussels Sprouts
+Buckwheat
+Buckwheat flour
+Buckwheat groats
+Buffalo
+Buffalo Steak
+Bulgur
+Buns
+Buns (Hamburger)
+Buns (Hot Dog)
+Burbot
+Burdock root
+Burrito
+Burrito (Beans and Beef)
+Burrito (Beans and Cheese)
+Burrito (Beans)
+Burrito (Beans, Cheese, and Beef)
+Butter
+Butter Cookie Dough
+Butter Cookies
+Butter oil
+Butter Pecan Ice Cream
+Butter replacement
+Butter-Margarine Blend
+Butterbur
+Butterfinger Bar
+Butterfinger Crisp
+Butterfish
+Buttermilk
+Butternuts
+Butterscotch
+Butterscotch Topping
+Buttle Pickles
+Cabbage
+Cabbage (Japanese)
+Cabbage (Mustard)
+Cabbage (Napa)
+Cabbage (Red)
+Cabbage (Saboy)
+Canada Goose
+Canadian bacon
+Candied fruit
+Candy Bits
+Cane Syrup
+Canne Butterbur
+Canne Succotash
+Canned Anchovies
+Canned Apples
+Canned Apricots
+Canned Asparagus
+Canned Au Jus
+Canned Baked Beans
+Canned Bamboo shoots
+Canned Beets
+Canned Black Beans
+Canned Black Olives
+Canned Black Turtle Beans
+Canned Blackberries
+Canned Blueberries
+Canned Boysenberries
+Canned Broadbeans
+Canned Capers
+Canned Carrot Juice
+Canned Carrots
+Canned Cherries
+Canned Chickpeas
+Canned Chili
+Canned Chili Beans
+Canned Chili with Beans
+Canned Cod
+Canned Corn
+Canned Cranberry Beans
+Canned Cranberry Sauce
+Canned Cream Corn
+Canned Fava Beans
+Canned Figs
+Canned French Beans
+Canned Fruit Cocktail
+Canned Garbanzo Beans
+Canned Gooseberries
+Canned Grapes
+Canned Gravy
+Canned Great Nothern Beans
+Canned Green Beans
+Canned Green Olives
+Canned Green Peas
+Canned Jackfruit
+Canned Kidney Beans
+Canned Lima beans
+Canned Mandarin Oranges
+Canned Mixed Vegetables
+Canned Mung Beans
+Canned Navy Beans
+Canned Papaya
+Canned Peaches
+Canned Pears
+Canned Peas
+Canned Peas and Carrots
+Canned Peas and Onions
+Canned Pineapple
+Canned Pink Beans
+Canned Pink Grapefruit
+Canned Pinto Beans
+Canned Plums
+Canned Potatoes
+Canned Prunes
+Canned Pumpkin
+Canned Raspberries
+Canned Ravioli
+Canned Red Kidney Beans
+Canned Sardine
+Canned Sauerkraut
+Canned Shellie Beans
+Canned Small White Beans
+Canned Snap Beans
+Canned Sour Cherries
+Canned Spinach
+Canned Strawberries
+Canned Sweet Cherries
+Canned Sweet Potato
+Canned Tangerines
+Canned Tuna
+Canned Turnip Greens
+Canned White Beans
+Canned White Corn
+Canned White Grapefruit
+Canned Yellow Beans
+Canned Yellow Snap Beans
+Canola Oil
+Cantaloupe
+Cape-gooseberries
+Capers
+Capon
+Carambola
+Caramel
+Caramel Topping
+Caramello
+Caraway Seed
+Cardamom
+Cardoon
+Caribou
+Carissa
+Carob
+Carob flour
+Carp
+Carrot Cake
+Carrot Juice
+Carrots
+Casaba Melon
+Cashew Butter
+Cashew Nuts
+Cashews
+Cassava
+Cassava Chips
+Catfish
+Catsup
+Cattail
+Cauliflower
+Caviar
+Cayenne Pepper
+Celeriac
+Celery
+Celery flakes
+Celery Seed
+Celtuce
+Cereal Bar
+Cereal Bar (Fruit)
+Cereal Bar (Puffed Rice)
+Cervelat
+Chapati
+Chard
+Chayote
+Cheese ()
+Cheese (American Cheddar)
+Cheese (American)
+Cheese (Blue)
+Cheese (Brick)
+Cheese (Brie)
+Cheese (Camembert)
+Cheese (Caraway)
+Cheese (Cheddar)
+Cheese (Cheshire)
+Cheese (Colby)
+Cheese (Cottage)
+Cheese (Dry White)
+Cheese (Edam)
+Cheese (Extra Sharp Cheddar)
+Cheese (Feta)
+Cheese (Fontina)
+Cheese (Fresh)
+Cheese (Gjetost)
+Cheese (Goat)
+Cheese (Gouda)
+Cheese (Gruyere)
+Cheese (Limburger)
+Cheese (Mexican)
+Cheese (Mild Cheddar)
+Cheese (Monterey)
+Cheese (Mozzarella)
+Cheese (Muenster)
+Cheese (Neufchatel)
+Cheese (Parmesan)
+Cheese (Pimento)
+Cheese (Port de Salut)
+Cheese (Provolone)
+Cheese (Queso Anejo)
+Cheese (Queso Asadero)
+Cheese (Queso Blanco)
+Cheese (Queso Chihuahua)
+Cheese (Queso Cotija)
+Cheese (Queso Fresco)
+Cheese (Queso Seco)
+Cheese (Ricotta)
+Cheese (Romano)
+Cheese (Roquefort)
+Cheese (Sharp Cheddar)
+Cheese (Swiss)
+Cheese (Tilsit)
+Cheese (White)
+Cheese Bread
+Cheese Crackers
+Cheese Dip
+Cheese Puffs
+Cheese Sauce
+Cheese Spread
+Cheese Sticks
+Cheese Twists
+Cheeseburger
+Cheesecake
+Cheesefurter
+Cherimoya
+Cherries
+Cherry Fudge Cake
+Cherry Pie
+Cherry Pie Filling
+Chervil
+Chestnuts
+Chestnuts (Chinese)
+Chestnuts (European)
+Chestnuts (Japanese)
+Chewing gum
+Chicken
+Chicken (BBQ)
+Chicken (Breast)
+Chicken (Canned)
+Chicken (Dark Meat)
+Chicken (Drumstick)
+Chicken (Giblets)
+Chicken (Heart)
+Chicken (Leg)
+Chicken (Liver)
+Chicken (Neck)
+Chicken (Roast)
+Chicken (Skin)
+Chicken (Skinless Breast)
+Chicken (Skinless Drumstick)
+Chicken (Skinless Leg)
+Chicken (Skinless Thigh)
+Chicken (Skinless Wing)
+Chicken (Stew)
+Chicken (Thigh)
+Chicken (Whole)
+Chicken (Wing)
+Chicken and Biscuits
+Chicken Bologna
+Chicken Breast
+Chicken Club Sandwich
+Chicken Feet
+Chicken Fillet Sandwich
+Chicken Fingers
+Chicken Gizzard
+Chicken Gravy
+Chicken Leg
+Chicken Nuggets
+Chicken Patty
+Chicken Pot Pie
+Chicken Sandwich
+Chicken Sausage
+Chicken spread
+Chicken Tenders
+Chicken Thigh
+Chicken Wings
+Chicken Wrap
+Chickpea flour
+Chickpeas
+Chicory
+Chicory greens
+Chicory roots
+Chilchen
+Chili
+Chili Beans
+Chili con carne with Beans
+Chili Pepper
+Chili Powder
+Chili with Beans
+Chilidog
+Chinese Broccoli
+Chinese Cabbage
+Chinese Preserving Melon
+Chinook Salmon
+Chipped Ham
+Chiton
+Chives
+Chocolate
+Chocolate (Dark)
+Chocolate Cake
+Chocolate Caramel Ice Cream
+Chocolate Chip Cookie Dough
+Chocolate Chip Cookie Sandwich
+Chocolate Chip Cookies
+Chocolate Cookie Dough
+Chocolate Cookie Sandwich
+Chocolate Cookies
+Chocolate Covered Biscuits
+Chocolate Covered Caramel
+Chocolate Covered Cherries
+Chocolate Covered Coffee Beans
+Chocolate Covered Ice Cream Bar
+Chocolate Covered Marshmallows
+Chocolate Covered Peanuts
+Chocolate Covered Pretzels
+Chocolate Covered Raisins
+Chocolate Covered Sugar Wafer
+Chocolate Creme Pie
+Chocolate Drink
+Chocolate Drink (Powder)
+Chocolate Eclair
+Chocolate Filling Cookies
+Chocolate Flavored Soda
+Chocolate Graham Crackers
+Chocolate Ice Cream
+Chocolate Marshmallow Fudge
+Chocolate Milk
+Chocolate Mousse Pie
+Chocolate Spread
+Chocolate Syrup
+Chocolate Wafers
+Chocolate-flavored Hazelnut Spread
+Chokecherries
+Chopped Ham
+Chorizo
+Chowchow Pickles
+Chrysanthemum
+Chrysanthemum Leaves
+Chum Salmon
+Chunky Bar
+Chunky Peanut Butter
+Cilantro
+Cinnamon
+Cinnamon Bread
+Cinnamon Buns
+Cinnamon Rolls
+Cisco
+Citronella
+Citrus Drink
+Citrus Juice Drink
+Clam
+Clam Juice
+Clementines
+Clif Z Bar
+Cloudberries
+Cloves
+Club Sandwich
+Club Soda
+Coca-Cola
+Coca-Cola (Caffeine Free)
+Cockles
+Cocktail Mix
+Cocoa Butter Oil
+Cocoa Mix
+Cocoa Powder
+Cocoavia
+Cocoavia (Almonds)
+Cocoavia (Blueberry and Almond)
+Cocoavia (Crispy)
+Coconut Bar
+Coconut Cream
+Coconut Cream Pie
+Coconut Custard Pie
+Coconut Ice Cream
+Coconut Macaroon
+Coconut Meat
+Coconut Milk
+Coconut Oil
+Coconut Water
+Cod
+Cod (Canned)
+Cod (Frozen)
+Coffee
+Coffee (Chicory)
+Coffee (Decaffeinated)
+Coffee (Espresso)
+Coffee (Instant)
+Coffee (Mocha)
+Coffee (with Milk)
+Coffee (with Vanilla)
 Coffee Liqueur
-Hard Lemonade
-Pina Ccolada
-Sake
-Tequila
-Whiskey Sour
-Red Wine
-White Wine
-Rose Wine
+Coffeecake
+Coffeecake (Cheese)
+Coffeecake (Cinnamon)
+Coffeecake (Creme-filled)
+Coffeecake (Fruit)
+Coho Salmon
+Coke
+Coke (Caffeine Free)
+Cola
+Cola (Caffeine Free)
+Coleslaw
+Collards
+Combos
+Conch
+Condensed Milk
+Cookie Dough
+Cookie Dough (Butter)
+Cookie Dough (Chocolate Chip)
+Cookie Dough (Chocolate)
+Cookie Dough (Peanut Butter)
+Cookie Dough (Sugar)
+Cookie Dough (Vanilla)
+Cookies
+Cookies (Butter)
+Cookies (Chocolate Chip)
+Cookies (Chocolate Filling)
+Cookies (Chocolate)
+Cookies (Creme Filling)
+Cookies (Fortune)
+Cookies (Gluten-free)
+Cookies (Iced)
+Cookies (Oatmeal)
+Cookies (Peanut Butter Filling)
+Cookies (Peanut Butter)
+Cookies (Raisin)
+Cookies (Sugar)
+Cookies (Vanilla)
+Cooking Oil
+Coriander
+Coriander Leaf
+Coriander Seed
+Corn
+Corn Bran
+Corn Cakes
+Corn Dogs
+Corn Flour
+Corn Flour (Blue)
+Corn Flour (Masa)
+Corn Flour (White)
+Corn Flour (Yellow)
+Corn Muffin
+Corn Nuts
+Corn Oil
+Corn Pudding
+Corn Puffs
+Corn Puffs (BBQ)
+Corn Puffs (Cheese)
+Corn Snacks
+Corn Snacks (BBQ)
+Corn Snacks (Cheese)
+Corn Snacks (Onion)
+Corn Snacks (Plain)
+Corn Syrup
+Corn Tea
+Cornbread
+Corned Beef
+Corned Beef Hash
+Corned Beef Loaf
+Cornish Game Hen
+Cornmeal (Blue)
+Cornmeal (White)
+Cornmeal (Yellow)
+Cornsalad
+Cornstarch
+Cottage Cheese
+Cottage Cheese (Lowfat)
+CottonSeed Flour
+Cottonseed Oil
+Country Style Gravy
+Couscous
+Cowpeas
+Cowpeas (Blackeyes)
+Cowpeas (Catjang)
+Crab (Alaska King)
+Crab (Blue)
+Crab (Dungeness)
+Crab (Queen)
+Crab Legs
+Crabapples
+Cracked-wheat Bread
+Cracker meal
+Crackers
+Crackers (Cheese)
+Crackers (Cream)
+Crackers (Gluten-free)
+Crackers (Milk)
+Crackers (Multigrain)
+Crackers (Rye)
+Crackers (Saltines)
+Crackers (Wheat)
+Crackers (Whole Wheat)
+Crackers (with Cheese)
+Crackers (with Peanut Butter)
+Cranberries
+Cranberry Beans
+Cranberry Juice
+Cranberry Juice Ccocktail
+Cranberry Juice Cocktail
+Cranberry-Apple Juice
+Cranberry-Apricot Juice
+Cranberry-Cherry Juice
+Cranberry-Energy Juice
+Cranberry-Grape Juice
+Cranberry-Lemonade Juice
+Cranberry-orange relish
+Cranberry-Pomegranate Juice
+Cranberry-Raspberry Juice
+Crayfish
+Cream
+Cream (Half and Half)
+Cream (Heavy)
+Cream (Light)
+Cream Cheese
+Cream Cheese (Lowfat)
+Cream of Tartar
+Cream Puff
+Cream Puff Shell
+Cream Soda
+Cream Substitute (Liquid)
+Cream Substitute (Powdered)
+Creamsicle
+Creamy Peanut Butter
+Creme de Menthe
+Creme Filling Cookies
+Cress
+Crispbread
+Crisped Rice Bar
+Crisped Rice Bar (Almond)
+Crisped Rice Bar (Chocolate Chip)
+Croaker
+Croissant
+Croissant (with Egg and Cheese)
+Croissant (with Egg, Cheese, and Bacon)
+Croissant (with Egg, Cheese, and Ham)
+Croissant (with Egg, Cheese, and Sausage)
+Croissants
+Croutons
+Crunch Bar
+Cucumber
+Cumin Seed
+Cupcake
+Cupu Assu Oil
+Cured Ham
+Currants
+Curry Powder
+Cusk
+Custard-apple
+Cuttlefish
+Daiquiri
+Dandelion Greens
+Danish (Cheese)
+Danish (Cinnamon)
+Danish (Fruit)
+Danish (Lemon)
+Danish (Nut)
+Danish (Raspberry)
+Dark Chocolate
+Date (Deglet Noor)
+Date (Medjool)
+Deer
+Deer (Ground)
+Deer (Loin)
+Deer (Tenderloin)
+Deer (Top Round)
+Dehydrated Apples
+Dehydrated Apricots
+Dehydrated Bananas
+Dehydrated Carrots
+Dehydrated Onion Flakes
+Dehydrated Peaches
+Dehydrated Potato Flakes
+Dehydrated Prunes
 Dessert Wine
+Devilfish
+Diet Cran-Cherry Juice
+Diet Cranberry Juice
+Dill Pickles
+Dill Seed
+Dill Weed
+Dinner Rolls
+Dinner Rolls (Egg)
+Dinner Rolls (Oat Bran)
+Dinner Rolls (Rye)
+Dinner Rolls (Sweet)
+Dinner Rolls (Wheat)
+Dinner Rolls (Whole Wheat)
+Dip (Bean)
+Dip (Cheese)
+Dip (Salsa and Cheese)
+Dip (Salsa con Queso)
+Dip (Salsa)
+Divinity
+Dock
+Double Cheeseburger
+Double Hamburger
+Doughnuts
+Doughnuts (Cake)
+Doughnuts (Chocolate)
+Doughnuts (Creme Filled)
+Doughnuts (Custard Filled)
+Doughnuts (French Cruller)
+Doughnuts (Glazed)
+Doughnuts (Jelly Filled)
+Dove
+Dove Dark Chocolate
+Dove Milk Chocolate
+Dr. Pepper
+Dried Acorns
+Dried Apples
+Dried Apricots
+Dried Blueberries
+Dried Boysenberries
+Dried Chives
+Dried Corn
+Dried Cranberries
+Dried Figs
+Dried Gourd Strips
+Dried Jellyfish
+Dried Jujube
+Dried Longans
+Dried Mango
+Dried Peaches
+Dried Pears
+Dried Persimmons
+Dried Plums
+Dried Seeds
+Dried Seeds (Brednut Tree Seeds)
+Dried Seeds (Chia Seeds)
+Dried Seeds (Cottonseed)
+Dried Seeds (Flaxseed)
+Dried Seeds (Hemp)
+Dried Seeds (Lotus)
+Dried Seeds (Pumpkin)
+Dried Seeds (Safflower)
+Dried Seeds (Sesame)
+Dried Seeds (Sisymbrium)
+Dried Seeds (Squash)
+Dried Seeds (Sunflower)
+Dried Seeds (Watermelon)
+Dried White Corn
+Drum
+Drumstick Leaves
+Drumstick Pods
+Duck
+Duck (Breast)
+Duck (Leg)
+Duck (Liver)
+Duck (Wing)
+Dulce de Leche
+Dumpling
+Dumpling (Cheese)
+Dumpling (Potato)
+Durian
+Dutch Apple Pie
+Dutch Brand Loaf
+Eclair
+Edamame
+Eel
+Egg Bread
+Egg Custard
+Egg Custard Pie
+Egg custards
+Egg Mix
+Egg Roll (Chicken)
+Egg Roll (Pork)
+Egg Roll (Vegetable)
+Egg Roll Wrappers
+Egg Substitute (Liquid)
+Egg Substitute (Powder)
+Eggnog
+Eggplant
+Eggs
+Eggs (Brown)
+Eggs (Duck)
+Eggs (Emu)
+Eggs (Goose)
+Eggs (Ostrich)
+Eggs (Quail)
+Eggs (Turkey)
+Eggs (White)
+Elderberries
+Electrolyte Solution
+Elk
+Elk (Ground)
+Elk (Loin)
+Elk (Roast)
+Elk (Round)
+Elk (Tenderloin)
+Emu
+Emu (Fan Filet)
+Emu (Flat Fillet)
+Emu (Ground)
+Emu (Inside Drum)
+Emu (Outside Drum)
+Emu (Oyster)
+Emu (Top Loin)
+Endive
+Energy Bar
+Energy Bar (High Fiber)
+Energy Bar (Luna Bar)
+Energy Bar (Power Bar)
+Energy Drink
+Energy Drink (Amp)
+Energy Drink (Full Throttle)
+Energy Drink (Monster)
+Energy Drink (NOS Zero)
+Energy Drink (NOS)
+Energy Drink (Red Bull)
+Energy Drink (Rockstar)
+Energy Drink (Sugar Free Amp)
+Energy Drink (Sugar Free Red Bull)
+Energy Drink (Sugar Free Rockstar)
+Energy Drink (Vault Zero)
+Energy Drink (Vault)
+English Muffin
+English Muffin (with Cheese and Sausage)
+English Muffin (with Egg, Cheese, and Bacon)
+English Muffin (with Egg, Cheese, and Sausage)
+English Muffins
+English Muffins (Plain)
+English Muffins (Raisin)
+English Muffins (Wheat)
+English Muffins (Whole Grain)
+Epazote
+Eppaw
+Escarole
+Espresso
+Evaporated Milk
+Falafel
+Fast Break
+Fat (Beef)
+Fat (Chicken)
+Fat (Duck)
+Fat (Goose)
+Fat (Mutton)
+Fat (Turkey)
+Fat Free Potato Chips
+Fat Free Potato Chips (BBQ)
+Fat Free Potato Chips (Cheese)
+Fat Free Potato Chips (Lightly Salted)
+Fat Free Potato Chips (Salt and Pepper)
+Fat Free Potato Chips (Sour Cream and Onion)
+Fat Free Potato Chips (Vinegar)
+Fat Free Whipped Topping
+Fava Beans
+Feijoa
+Fennel
+Fennel Seed
+Fenugreek Seed
+Fiddlehead Ferns
+Fig Bar
+Figs
+Figs (Canned)
+Figs (Dried)
+Filberts
+Filtered Water
+Fireweed Leaves
+Firm Tofu
+Fish
+Fish (Alaska Pollock)
+Fish (Anchovies)
+Fish (Atlantic Mackerel)
+Fish (Atlantic Pollock)
+Fish (Atlantic Salmon)
+Fish (Bass)
+Fish (Blackfish)
+Fish (Bluefin Tuna)
+Fish (Bluefish)
+Fish (Brook Trout)
+Fish (Burbot)
+Fish (Butterfish)
+Fish (Canned Anchovies)
+Fish (Canned Cod)
+Fish (Canned Tuna)
+Fish (Carp)
+Fish (Catfish)
+Fish (Caviar)
+Fish (Chinook Salmon)
+Fish (Chum Salmon)
+Fish (Cisco)
+Fish (Cod)
+Fish (Coho Salmon)
+Fish (Croaker)
+Fish (Cusk)
+Fish (Devilfish)
+Fish (Drum)
+Fish (Eel)
+Fish (Fish Sticks)
+Fish (Flatfish)
+Fish (Gefiltefish)
+Fish (Grouper)
+Fish (Haddock)
+Fish (Halibut)
+Fish (Herring Eggs)
+Fish (Herring)
+Fish (Jack Mackerel)
+Fish (King Mackerel)
+Fish (King Salmon)
+Fish (Ling)
+Fish (Lingcod)
+Fish (Mackerel)
+Fish (Mahimahi)
+Fish (Milkfish)
+Fish (Monkfish)
+Fish (Mullet)
+Fish (Northern Pike)
+Fish (Ocean Perch)
+Fish (Orange Roughy)
+Fish (Pacific Mackerel)
+Fish (Perch)
+Fish (Pink Salmon)
+Fish (Pompano)
+Fish (Pout)
+Fish (Rainbow Trout)
+Fish (Red Salmon)
+Fish (Rockfish)
+Fish (Roe)
+Fish (Sablefish)
+Fish (Salmon)
+Fish (Sardine)
+Fish (Scup)
+Fish (Sea Bass)
+Fish (Seatrout)
+Fish (Shad)
+Fish (Shark)
+Fish (Sheefish)
+Fish (Sheepshead)
+Fish (Skipjack Tuna)
+Fish (Smelt)
+Fish (Smoked Tuna)
+Fish (Snapper)
+Fish (Sockeye Salmon)
+Fish (Spanish Mackerel)
+Fish (Spot)
+Fish (Sturgeon)
+Fish (Sucker)
+Fish (Sunfish)
+Fish (Surimi)
+Fish (Swordfish)
+Fish (Tilapia)
+Fish (Tilefish)
+Fish (Tipnuk Salmon)
+Fish (Tuna)
+Fish (Turbot)
+Fish (Walleye)
+Fish (Whitefish)
+Fish (Whiting)
+Fish (Wolffish)
+Fish (Yellowfin Tuna)
+Fish (Yellowtail)
+Fish broth
+Fish Oil
+Fish Oil (Cod Liver)
+Fish Oil (Herring)
+Fish Oil (Menhaden)
+Fish Oil (Salmon)
+Fish Oil (Sardine)
+Fish Sanwich
+Fish Sticks
+Flan
+Flatfish
+Flavored Water
+Flaxseed Oil
+Fluid Replacement Drink
+Focaccia
+Fondant
+Fortune Cookies
+Frankfurter
+Frankfurter (Beef)
+Frankfurter (Chicken)
+Frankfurter (Meatless)
+Frankfurter (Mixed)
+Frankfurter (Pork)
+Frankfurter (Turkey)
+Freeze Dried Leeks
+Freeze Dried Parsley
+Freeze-dried Shallots
+French Beans
+French Bread
+French Chocolate Ice Cream
+French Cruller
+French Fries
+French Fries (Cottage Cut)
+French Fries (Crinkle Cut)
+French Fries (Cross Cut)
+French Fries (Shoestring)
+French Fries (Steak Cut)
+French Fries (Steak Fries)
+French Fries (Wedge Cut)
+French Rolls
+French toast
+French Toast Sticks
+French Vanilla Ice Cream
+Fresh Pasta
+Fried Chicken
+Fried Chicken (Breast)
+Fried Chicken (Drumstick)
+Fried Chicken (Thigh)
+Fried Chicken (Wing)
+Fried Shrimp
+Fried Tofu
+Frog legs
+Frosted Animal Cookies
+Frosted Toaster Pastries
+Frosted Toaster Pastries (Apple)
+Frosted Toaster Pastries (Blueberry)
+Frosted Toaster Pastries (Brown Sugar and Cinnamon)
+Frosted Toaster Pastries (Cherry)
+Frosted Toaster Pastries (Chocolate Fudge)
+Frosted Toaster Pastries (Fruit)
+Frosted Toaster Pastries (Raspberry)
+Frosted Toaster Pastries (S'mores)
+Frosted Toaster Pastries (Strawberry)
+Frosted Toaster Pastries (Wild Berry)
+Frosting (Chocolate)
+Frosting (Colored)
+Frosting (Cononut)
+Frosting (Cream Cheese)
+Frosting (Glaze)
+Frosting (Vanilla)
+Frosting (White)
+Frozen Apples
+Frozen Apricots
+Frozen Artichokes
+Frozen Asparagus
+Frozen Biscuits
+Frozen Blackberries
+Frozen Blueberries
+Frozen Boysenberries
+Frozen Broccoli
+Frozen Broccoli Spears
+Frozen Brussels sprouts
+Frozen Burrito
+Frozen Carrots
+Frozen Cauliflower
+Frozen Cherries
+Frozen Collards
+Frozen Corn
+Frozen Cowpeas (Blackeyes)
+Frozen Cowpeas (Catjang)
+Frozen Cranberry Juice Cocktail
+Frozen French toast
+Frozen Green Beans
+Frozen Green Peas
+Frozen Hash Browns
+Frozen Kale
+Frozen Lemon Juice
+Frozen Lima beans
+Frozen Loganberries
+Frozen Meatballs
+Frozen Mixed Vegetables
+Frozen Mustard Greens
+Frozen Nance
+Frozen Okra
+Frozen Onion rings
+Frozen Onions
+Frozen Orange Juice
+Frozen Peaches
+Frozen Peas
+Frozen Peas and Carrots
+Frozen Peas and Onions
+Frozen Pineapple
+Frozen Pineapple Juice
+Frozen Pink Grapefruit Juice
+Frozen Raspberries
+Frozen Ravioli
+Frozen Rhubarb
+Frozen Sour Cherries
+Frozen Spinach
+Frozen Strawberries
+Frozen Succotash
+Frozen Sweet Cherries
+Frozen Sweet Potato
+Frozen Turnip Greens
+Frozen Waffles
+Frozen Waffles (Buttermilk)
+Frozen Waffles (Chocolate Chip)
+Frozen Waffles (Gluten-free)
+Frozen Waffles (Whole Wheat)
+Frozen White Corn
+Frozen White Grapefruit Juice 
+Frozen Yellow Snap Beans
+Frozen Yogurt
+Fruit Bar
+Fruit Cocktail
+Fruit Drink
+Fruit Drink (Concentrate)
+Fruit Flavored Syrup
+Fruit Ice Cream
+Fruit Juice Drink
+Fruit Juice Smoothie
+Fruit Pie
+Fruit Pieces
+Fruit Punch
+Fruit Punch (Concentrate)
+Fruit Roll
+Fruit Roll (Berry)
+Fruit Roll (Cherry)
+Fruit Roll (Strawberry)
+Fruit salad
+Fruit Snacks
+Fruit Squares
+Fruit syrup
+Fruitcake
+Frybread
+Fudge
+Fudge (Chocolate Marshmallow)
+Fudge (Peanut Butter)
+Fudge (Vanilla)
+Fudge (with Nuts)
+Fudgsicle
+Garbanzo Beans
+Garland
+Garlic
+Garlic Bread
+Garlic Powder
+Gatorade
+Gatorade G2
+Gefiltefish
+Gelatin Desserts
+Gelatin Powder
+German Chocolate Cake
+Gerolsteiner
+Gin
+Ginger
+Ginger Ale
+Ginger Root
+Gingerbread
+Gingersnaps
+Ginkgo Nuts
+Gluten-free Cookies
+Gluten-free Pasta
+Gluten-free Pretzels
+Gluten-free Rolls
+Goat
+Goat Milk
+Goji Berries
+Golden Almond Solitaires
+Goobers
+Goose
+Goose Liver
+Gooseberries
+Gourd
+Gourd (Calabash)
+Gourd (Dishcloth)
+Gourd (Towelgourd)
+Gourd (White-flowered)
+Graham Crackers
+Graham Crackers (Chocolate)
+Graham Crackers (Honey)
+Granola bar
+Granola Bar (Almond)
+Granola Bar (Chewy)
+Granola Bar (Chocolate and Peanut Butter)
+Granola Bar (Chocolate Chip)
+Granola Bar (Coated)
+Granola Bar (Crunchy)
+Granola Bar (Fruit)
+Granola Bar (Low Fat)
+Granola Bar (Nut and Raisin)
+Granola Bar (Peanut Butter)
+Granola Bar (Raisin)
+Granola Bar (Sweet and Salty)
+Granola Bar (with Coconut)
+Granola Bar (with Yogurt)
+Granola Bites
+Grape Drink
+Grape Juice
+Grape Leaves
+Grape Soda
+Grapefruit
+Grapes
+Grapes (Green)
+Grapes (Muscadine)
+Grapes (Red)
+Grapes (Seedless)
+Grapeseed Oil
+Grass Fed Beef
+Grass Fed Beef (Ground)
+Grated Parmesan
+Gravy
+Great Nothern Beans
+Greek Yogurt
+Green Beans
+Green Cauliflower
+Green Kiwi
+Green Olives
+Green Peas
+Green Pepper
+Green Plantains
+Green Tea
+Grenadine Syrup
+Griddle Cake Sandwich
+Griddle Cake Sandwich (with Egg, Cheese, and Bacon)
+Griddle Cake Sandwich (with Egg, Cheese, and Sausage)
+Griddle Cake Sandwich (with Sausage)
+Grilled Chicken Club Sandwich
+Grilled Chicken Sandwich
+Ground Chicken
+Ground turkey
+Groundcherries
+Grouper
+Guanabana nectar
+Guava nectar
+Guava Pastries
+Guava sauce
+Guavas
+Guinea Hen
+Gulten-free Crackers
+Gum Drops
+Haddock
+Halavah
+Half and Half
+Halibut
+Ham
+Ham (Boneless)
+Ham (Chipped)
+Ham (Chopped)
+Ham (Honey)
+Ham (Minced)
+Ham (Patties)
+Ham (Rump)
+Ham (Shank)
+Ham (Sliced)
+Ham (Smoked)
+Ham (Steak)
+Ham (Whole)
+Ham and Cheese Loaf
+Ham and Cheese Roll
+Ham and Cheese Spread
+Ham Salad Spread
+Hamburger
+Hard Candy
+Hard Cider
+Hard Lemonade
+Hard Pretzels
+Hard Rolls
+Hard Tofu
+Harvard Beets
+Hash Browns
+Hazelnut Oil
+Hazelnuts
+Headcheese
+Hearts of palm
+Heath Bites
+Herb Tea
+Herring
+Herring Eggs
+HFCS Syrup
+Hibiscus Tea
+Hickorynuts
+Hominy
+Honey
+Honey Combs
+Honey Graham Crackers
+Honey Ham
+Honey Roll Sausage
+Honeydew Melon
+Horchata
+Horned melon
+Horse
+Horseradish
+Hot Chile Pepper
+Hot Chili Pepper
+Hotdog
+Huckleberries
+Hummus
+Hungarian Pepper
+Hush Puppies
+Hyacinth Beans
+Ice Cream
+Ice Cream (Butter Pecan)
+Ice Cream (Chocolate Caramel)
+Ice Cream (Chocolate)
+Ice Cream (Coconut)
+Ice Cream (French Chocolate)
+Ice Cream (French Vanilla)
+Ice Cream (Fruit)
+Ice Cream (Italian)
+Ice Cream (Lime)
+Ice Cream (Mint Chocolate Chip)
+Ice Cream (Neapolitan)
+Ice Cream (Pineapple)
+Ice Cream (Soda)
+Ice Cream (Soft-serve)
+Ice Cream (Strawberry)
+Ice Cream (Sugar Free)
+Ice Cream (Sundae)
+Ice Cream (Vanila Fudge Twirl)
+Ice Cream (Vanilla)
+Ice Cream Bar
+Ice Cream Bar (Chocolate Covered)
+Ice Cream Bar (with Chocolate and Nuts)
+Ice Cream Bar (with Crunch Coating)
+Ice Cream Cone
+Ice Cream Cone (Sugar)
+Ice Cream Cone (Waffle)
+Ice Cream Cookie Sandwich
+Ice Cream Sandwich
+Ice Cream Sundae
+Ice Cream Sundae (Caramel)
+Ice Cream Sundae (Hot Fudge)
+Ice Cream Sundae (Strawberry)
+Iced Cookies
+Imitation Cheese
+Incaparina
+Infant Formula
+Instant Beef Gravy
+Instant Brown Gravy
+Instant Chicken Gravy
+Instant Country Style Gravy
+Instant Gravy
+Instant Grits
+Instant Grits (American Cheese)
+Instant Grits (Ham 'n' Cheese)
+Instant Grits (Redeye Gravy and Country Ham)
+Instant Mashed Potatoes
+Instant Oatmeal
+Instant Oatmeal (Apple Cinnamon)
+Instant Oatmeal (Banana Bread)
+Instant Oatmeal (Brown Sugar)
+Instant Oatmeal (Cinnamon-Spice)
+Instant Oatmeal (Raisin and Spice)
+Instant Pudding
+Instant Pudding (Banana)
+Instant Pudding (Chocolate)
+Instant Pudding (Coconut Cream)
+Instant Pudding (Lemon)
+Instant Pudding (Rice)
+Instant Pudding (Tapioca)
+Instant Pudding (Vanilla)
+Instant Turkey Gravy
+Instant White Gravy
+Irish Soda Bread
+Italian Bread
+Italian Ice Cream
+Italian Pork Sausage
+Italian Salami
+Italian Sausage
+Italian Turkey Sausage
+Jack Mackerel
+Jackfruit
+Jalapeno Pepper
+Jam 
+Jam (Apple Cinnamon)
+Jam (Apricot)
+Jam (Blackberry)
+Jam (Blueberry)
+Jam (Cherry)
+Jam (Strawberry)
+Japanese Cabbage
+Jasmine Tea
+Java-plum
+Jawbreaker
+Jello
+Jelly (Apricot)
+Jelly (Blackberry)
+Jelly (Blueberry)
+Jelly (Cherry)
+Jelly (Strawberry)
+Jelly Beans
+Jellyfish
+Jerusalem-artichokes
+Jew's ear
+Jicama
+Juice Bar
+Jujube
+Jute
+Kale
+Kanpyo
+Kefir
+Keikitos
+Ketchup
+Kidney Beans
+Kielbasa
+Kimchi
+King Mackerel
+King Salmon
+Kit Kat
+Kiwano
+Kiwi
+Kiwi Strawberry Drink
+Kiwi Strawberry Juice Drink
+Kiwifruit
+Klondike
+Klondike (Chocolate Cone)
+Klondike (Fudge Bar)
+Klondike (Vanilla Sandwich)
+Knackwurst
+Knockwurst
+Kohlrabi
+Kosher Dill Pickles
+Krackel
+Kumquats
+Ladyfingers
+Lamb
+Lamb (Breast)
+Lamb (Chump)
+Lamb (Flap)
+Lamb (Foreshank)
+Lamb (Ground)
+Lamb (Heart)
+Lamb (Hindshank)
+Lamb (Kidney)
+Lamb (Leg)
+Lamb (Liver)
+Lamb (Loin Chop)
+Lamb (Loin)
+Lamb (Lungs)
+Lamb (Pancreas)
+Lamb (Rack Roast)
+Lamb (Rack)
+Lamb (Rib Chop)
+Lamb (Shank Half)
+Lamb (Shoulder)
+Lamb (Sirloin Chops)
+Lamb (Sirloin Half)
+Lamb (Spleen)
+Lamb (Sweetbread)
+Lamb (Tenderloin)
+Lamb (Tongue)
+Lambsquarters
+Lard
+Large Lima beans
+Lasagna
+Lasagna (Cheese)
+Lasagna (Meat Sauce)
+Lasagna (Vegetable)
+Lebanon Bologna
+Leeks
+Lemon Drink
+Lemon Grass
+Lemon Juice
+Lemon Meringue Pie
+Lemon peel
+Lemon-Lime Soda
+Lemonade
+Lemonade (Concentrate
+Lemonade (Concentrate)
+Lemonade (Powder)
+Lemons
+Lentil Sprouts
+Lentils
+Lentils (Pink)
+Lentils (Red)
+Lettuce
+Lettuce (Butterhead)
+Lettuce (Cos)
+Lettuce (Green Leaf)
+Lettuce (Iceberg)
+Lettuce (Red Leaf)
+Lettuce (Romaine)
+Light Beer
+Light Butter
+Light Cranberry and Grape Juice
+Light Cranberry and Raspberry Juice
+Light Cranberry Juice
+Light Unsalted Butter
+Lima beans
+Lime Ice Cream
+Lime juice
+Limeade
+Limes
+Ling
+Lingcod
+Litchis
+Liver Cheese
+Liver Sausage
+Liverwurst Spread
+Lobster
+Loganberries
+Loganberries (Frozen)
+Longans
+Longans (Dried)
+Loquats
+Lotus Root
+Low Calorie Salad Dressing
+Low Calorie Salad Dressing (Bacon and Tomato)
+Low Calorie Salad Dressing (Blue Cheese)
+Low Calorie Salad Dressing (Buttermilk)
+Low Calorie Salad Dressing (Caesar)
+Low Calorie Salad Dressing (Coleslaw)
+Low Calorie Salad Dressing (Creamy)
+Low Calorie Salad Dressing (French)
+Low Calorie Salad Dressing (Green Goddess)
+Low Calorie Salad Dressing (Honey Mustard)
+Low Calorie Salad Dressing (Italian)
+Low Calorie Salad Dressing (Mayonnaise)
+Low Calorie Salad Dressing (Peppercorn)
+Low Calorie Salad Dressing (Poppyseed)
+Low Calorie Salad Dressing (Ranch)
+Low Calorie Salad Dressing (Roquefort Cheese)
+Low Calorie Salad Dressing (Russian)
+Low Calorie Salad Dressing (Sesame Seed)
+Low Calorie Salad Dressing (Sweet and Sour)
+Low Calorie Salad Dressing (Thousand Island)
+Low Calorie Salad Dressing (Vinegar and Oil)
+Low Carb Beer
+Low Fat Peanut Butter
+Low Fat Salad Dressing
+Low Fat Salad Dressing (Bacon and Tomato)
+Low Fat Salad Dressing (Blue Cheese)
+Low Fat Salad Dressing (Buttermilk)
+Low Fat Salad Dressing (Caesar)
+Low Fat Salad Dressing (Coleslaw)
+Low Fat Salad Dressing (Creamy)
+Low Fat Salad Dressing (French)
+Low Fat Salad Dressing (Green Goddess)
+Low Fat Salad Dressing (Honey Mustard)
+Low Fat Salad Dressing (Italian)
+Low Fat Salad Dressing (Mayonnaise)
+Low Fat Salad Dressing (Peppercorn)
+Low Fat Salad Dressing (Poppyseed)
+Low Fat Salad Dressing (Ranch)
+Low Fat Salad Dressing (Roquefort Cheese)
+Low Fat Salad Dressing (Russian)
+Low Fat Salad Dressing (Sesame Seed)
+Low Fat Salad Dressing (Sweet and Sour)
+Low Fat Salad Dressing (Thousand Island)
+Low Fat Salad Dressing (Vinegar and Oil)
+Lowfat Buttermilk
+Luna Bar
+Lupins
+Luxury Loaf
+Lychee
+M&M's
+M&M's (Almond)
+M&M's (Crispy)
+M&M's (Dark)
+M&M's (Minis)
+M&M's (Peanut Butter)
+M&M's (Peanut)
+Macadamia Nuts
+Macaroni
+Macaroni and Cheese
+Macaroon
+Mace
+Mackerel
+Magic Shell Topping
+Mahimahi
+Malabar Spinach
+Malt Beverage
+Malt Liquor
+Malt Syrup
+Malted Drink Mix
+Malted Drink Mix (Chocolate)
+Mamey
+Mammy-apple
+Mandarin Oranges
+Mango nectar
+Mangos
+Mangosteen
+Maple Syrup
+Maraschino Cherries
+Marble Cake
+Margarine
+Margarine (Stick)
+Margarine (Tub)
+Marie Biscuit
+Marjoram
+Marmalade (Apricot)
+Marmalade (Blackberry)
+Marmalade (Blueberry)
+Marmalade (Cherry)
+Marmalade (Orange)
+Marmalade (Strawberry)
+Mars Bar
+Marshmallow
+Marshmallow (Chocolate Covered)
+Marshmallow Cream Topping
+Marshmallows
+Mashed Potato
+Mashed Potatoes
+Mashed Sweet Potato
+Mashu Roots
+Matzo
+Matzo (Egg and Onion)
+Matzo (Egg)
+Matzo (Whole Wheat)
+Mayonnaise
+Mayonnaise (Low Fat)
+Meal Replacement
+Meal Replacement Drink
+Meal Replacement Shake
+Meal Supplement Drink
+Meatballs
+Meatless Bacon
+Meatless Bacon bits
+Meatless Chicken
+Meatless Frankfurter
+Meatless Fried Chicken
+Meatless Luncheon slices
+Meatless Meatballs
+Meatless Sandwich Spread
+Meatless Sausage
+Melba Toast
+Melba Toast (Rye)
+Melba Toast (Wheat)
+Melon
+Melon (Banana)
+Melon (Cantaloupe)
+Melon (Casaba)
+Melon (Honeydew)
+Melon Balls
+Microwave Popcorn
+Milk
+Milk (1%)
+Milk (2%)
+Milk (Almond)
+Milk (Chocolate)
+Milk (Condensed)
+Milk (Evaporated)
+Milk (Fat Free)
+Milk (Goat)
+Milk (Sheep)
+Milk (Soy)
+Milk (Whole)
+Milk and Cereal Bar
+Milk Chocolate
+Milk Chocolate (with Almonds)
+Milk Chocolate (with Peanuts)
+Milk Chocolate (with Puffed Rice)
+Milk Chocolate Bar
+Milk Crackers
+Milk Shake
+Milk Substitute
+Milkfish
+Milkshake
+Milkshake Mix
+Milky Way
+Milky Way (Bite Size)
+Milky Way Caramels
+Milky Way Caramels (Dark)
+Milky Way Midnight Bar
+Millet
+Millet Flour
+Mince Pie
+Minced Ham
+Mineral Water
+Mint Chocolate Chip Ice Cream
+Miso
+Mixed Fruit Juice
+Mixed Meat Bologna
+Mixed Nuts
+Mixed Vegetable and Fruit Juice
+Mixed Vegetable Juice
+Mixed Vegetables
+Molasses
+Monkfish
+Moose
+Mortadella
+Mothbeans
+Mother's Loaf
+Mounds
+Mountain Dew
+Mountain Yam
+Mouse nuts
+Mousse
+Mozzarella Sticks
+Mr. Goodbar
+Muffin
+Muffin mix
+Mulberries
+Mullet
+Multi Grain Snack
+Multi Grain Snack (Cheddar)
+Multi Grain Snack (Onion)
+Multigrain Crackers
+Mung Bean Sprouts
+Mung Beans
+Mungo Beans
+Mush
+Mushroom (Brown)
+Mushroom (Chanterelle)
+Mushroom (Enoki)
+Mushroom (Maitake)
+Mushroom (Morel)
+Mushroom (Oyster)
+Mushroom (Portabella)
+Mushroom (Shiitake)
+Mushroom (Straw)
+Mushroom (White)
+Mushroom Grazy
+Muskrat
+Musroom
+Mussel
+Mustard
+Mustard Cabbage
+Mustard Greens
+Mustard Oil
+Mustard Seed
+Mustard Spinach
+Mutton
+Naan
+Nachos
+Nachos (Cheese)
+Nachos (Salsa)
+Nachos (Supreme)
+Nance
+Napa Cabbage
+Naranjilla Lulo
+Naranjilla Pulp
+Natal-plum
+Natto
+Natural Cereal
+Navy Beans
+Neapolitan Ice Cream
+Nectarines
+Non-alcoholic Beer
+Noodles
+Noodles (Cellophane)
+Noodles (Chow Mein)
+Noodles (Egg)
+Noodles (Flat)
+Noodles (Long Rice)
+Noodles (Soba)
+Noodles (Somen)
+Noodles (Udon)
+Noodles (Vegetable)
+Nopales
+Northern Pike
+Nougat
+Noutat (with Almonds)
+Nut Squares
+Nutmeg
+Nutmeg Butter Oil
+Nutrageous
+Nutrition Bar
+Nutrition Bar (High Fiber)
+Nutrition Bar (Slim-Fast Optima)
+Nutrition Bar (South Beach Protein Bar)
+Nutrition Bar (Zone Perfect Crunch Bar)
+Nutritional Shake
+Nutty Bars
+O'Brien Potatoes
+Oat bran
+Oat Bran Bread
+Oat Bran Muffin
+Oat flour
+Oat Oil
+Oatmeal Bread
+Oatmeal Cookie Sandwich
+Oatmeal Cookies
+Oats
+Ocean Perch
+Ocean Spray (Cran-Cherry Juice)
+Ocean Spray (Cran-Energy Juice)
+Ocean Spray (Cran-Grape Juice)
+Ocean Spray (Cran-Lemonade Juice)
+Ocean Spray (Cran-Pomegranate Juice)
+Ocean Spray (Cran-Raspberry Juice)
+Ocean Spray (Cranberry-Apple Juice)
+Ocean Spray (Diet Cran-Cherry Juice)
+Ocean Spray (Diet Cranberry Juice)
+Ocean Spray (Light Cranberry and Grape Juice)
+Ocean Spray (Light Cranberry and Raspberry Juice)
+Ocean Spray (Light Cranberry Juice)
+Ocean Spray (Ruby Red Cranberry Juice)
+Ocean Spray (White Cranberry Peach Juice)
+Ocean Spray (White Cranberry Strawberry Juice)
+Octopus
+Oh Henry!
+Oheloberries
+Oil
+Oil (Almond Oil)
+Oil (Apricot Kernel)
+Oil (Avocado)
+Oil (Babassu)
+Oil (Bearded Seal)
+Oil (Canola)
+Oil (Cocoa Butter)
+Oil (Coconut)
+Oil (Cooking)
+Oil (Corn)
+Oil (Cottonseed)
+Oil (Cupu Assu)
+Oil (Flaxseed)
+Oil (Grapeseed)
+Oil (Hazelnut)
+Oil (Mustard)
+Oil (Nutmeg Butter)
+Oil (Oat)
+Oil (Olive)
+Oil (Palm)
+Oil (Peanut)
+Oil (Poppyseed)
+Oil (Safflower)
+Oil (Sesame)
+Oil (Sheanut)
+Oil (Soy)
+Oil (Sunflower)
+Oil (Teaseed)
+Oil (Tomatoseed)
+Oil (Uchuhuba Butter)
+Oil (Vegetable)
+Oil (Walnut)
+Oil (Walrus)
+Oil (Whale)
+Oil (Wheat Germ)
+Okara
+Okra
+Olive Loaf
+Olive Oil
+Onion Gravy
+Onion Powder
+Onion rings
+Onions
+Onions (Scallions)
+Onions (Spring)
+Onions (Sweet)
+Onions (Welsh)
+Onions (Yellow)
+Onions (Young Green)
+Oolong Tea
+Oopah
+Opossum
+Orange Drink
+Orange Juice
+Orange Juice (Concentrate)
+Orange Juice (No Pulp)
+Orange Juice (Pulp)
+Orange peel
+Orange Pineapple Juice Blend
+Orange Roughy
+Orange Soda
+Orange-grapefruit Juice
+Oranges
+Oranges (California)
+Oranges (Florida)
+Oranges (Navel)
+Oranges (Valencia)
+Oregano
+Oreos
+Oriental Mix
+Ostrich
+Ostrich (Ground)
+Ostrich (Inside Leg)
+Ostrich (Inside Strip)
+Ostrich (Outside Leg)
+Ostrich (Outside Strip)
+Ostrich (Oyster)
+Ostrich (Round)
+Ostrich (Tenderloin)
+Ostrich (Top Loin)
+Ovaltine
+Oven-roasted Chicken Breast Roll
+Owl
+Oyster
+Oyster (Eastern)
+Oyster (Pacific)
+Pacific Mackerel
+Pak Choi
+Palm Oil
+Pan dulce
+Pancake Mix
+Pancake Syrup
+Pancakes
+Pancakes (Blueberry)
+Pancakes (Buckwheat)
+Pancakes (Gluten-free)
+Pancakes (Plain)
+Pancakes (Whole Wheat)
+Papad
+Papaya Nectar
+Papayas
+Paprika
+Parsley
+Parsnips
+Pasilla Pepper
+Passion-fruit
+Passion-fruit Juice
+Passion-fruit Juice (Purple)
+Passion-fruit Juice (Yellow)
+Pasta
+Pasta (Fresh)
+Pasta (Gluten-free)
+Pasta (Vegetable)
+Pasta (Whole Grain)
+Pasta (Whole Wheat)
+Pasta Mix
+Pasta Mix (Beef)
+Pasta Mix (Cheeseburger Macaroni)
+Pasta Mix (Lasagna)
+Pastelitos de Guava
+Pastrami
+Pastrami (Beef)
+Pastrami (Turkey)
+Pate
+Pate (Chicken)
+Pate (Goose)
+Pate (Liver)
+Pate (Truffle)
+Pate de Foie Gras
+Payday Bar
+Peach
+Peach (Yellow)
+Peach Nectar
+Peach Pie
+Peanut Bar
+Peanut Brittle
+Peanut Butter
+Peanut Butter Cookie Dough
+Peanut Butter Cookie Sandwich
+Peanut Butter Cookies
+Peanut Butter Filling Cookies
+Peanut Butter Fudge
+Peanut Oil
+Peanuts
+Peanuts (Spanish)
+Peanuts (Valencia)
+Peanuts (Virginia)
+Pear Nectar
+Pears
+Pears (Asian)
+Pears (Bartlett)
+Pears (Bosc)
+Pears (Green Anjou)
+Pears (Red Anjou)
+Peas
+Pecan Pie
+Pecans
+Pectin
+Pepeao
+Peppered Loaf
+Peppermint
+Peppermint Pattie
+Pepperoni
+Peppers
+Peppers (Ancho)
+Peppers (Chili)
+Peppers (Green)
+Peppers (Hot Chile)
+Peppers (Hot Chili)
+Peppers (Hungarian)
+Peppers (Jalapeno)
+Peppers (Pasilla)
+Peppers (Red)
+Peppers (Serrano)
+Peppers (Yellow)
+Pepsi
+Pepsi (Caffeine Free)
+Perch
+Perrier
+Persimmons
+Pheasant
+Pheasant (Breast)
+Pheasant (Leg)
+Philly Steak and Cheese
+Phyllo Dough
+Pickle and Pimiento Loaf
+Pickle Relish
+Pickle Relish (Hamburger)
+Pickle Relish (Hot Dog)
+Pickle Relish (Sweet)
+Pickled Beets
+Pickled Eggplant
+Pickled Ginger Root
+Pickles
+Pickles (Bread)
+Pickles (Buttle)
+Pickles (Chowchow)
+Pickles (Dill)
+Pickles (Kosher Dill)
+Pickles (Sour)
+Pickles (Sweet)
+Picnic Loa Pickles
+Pie (Apple)
+Pie (Banana Cream)
+Pie (Blackberry)
+Pie (Blueberry)
+Pie (Cherry)
+Pie (Chocolate Creme)
+Pie (Chocolate Mousse)
+Pie (Coconut Cream)
+Pie (Coconut Custard)
+Pie (Dutch Apple)
+Pie (Egg Custard)
+Pie (Fruit)
+Pie (Lemon Meringue)
+Pie (Mince)
+Pie (Peach)
+Pie (Pecan)
+Pie (Pumpkin)
+Pie (Vanilla Cream)
+Pie Crust
+Pie Crust (Chocolate)
+Pie Crust (Cookie-type)
+Pie Crust (Deep Dish)
+Pie Crust (Graham Cracker)
+Pie Crust (Vanilla Wafer)
+Pie Filling
+Pie Filling (Apple)
+Pie Filling (Blueberry)
+Pie Filling (Cherry)
+Pigeon peas
+Piki Bread
+Pilinuts
+Pimento
+Pina Ccolada
+Pine Nuts
+Pineapple
+Pineapple Ice Cream
+Pineapple Juice
+Pineapple Topping
+Pineapple Upside-down Cake
+Pink Beans
+Pink Grapefruit
+Pink Grapefruit Juice
+Pink Lemonade
+Pink Salmon
+Pinon Nuts
+Pinto Beans
+Pistachio Nuts
+Pistachios
+Pita
+Pita Chips
+Pitanga
+Pizza
+Pizza (Cheese)
+Pizza (Four Cheese)
+Pizza (Pepperoni)
+Pizza (Regular Crust)
+Pizza (Sausage)
+Pizza (Seafood)
+Pizza (Stuffed Crust)
+Pizza (Supreme)
+Pizza (Thick Crust)
+Pizza (Thin Crust)
+Pizza Rolls
+Plantain Chips
+Plantains
+Plantains (Green)
+Plantains (Yellow)
+Plums
+Poha
+Poi
+Poke
+Pokeberry shoots
+Polar Bear Meat
+Polish Kielbasa
+Polish Sausage
+Pomegranate Juice
+Pomegranates
+Pompano
+Popcorn
+Popcorn (Butter)
+Popcorn (Caramel)
+Popcorn (Cheese)
+Popcorn (Microwave)
+Popcorn (Unsalted)
+Popcorn Cakes
+Popovers
+Poppy Seed
+Poppyseed Oil
+Popsicle
+Pork
+Pork (Backribs)
+Pork (Belly)
+Pork (Blade)
+Pork (Brain)
+Pork (Breakfast Strips)
+Pork (Center Loin)
+Pork (Center Rib)
+Pork (Chitterlings)
+Pork (Chops)
+Pork (Country-style Ribs)
+Pork (Ears)
+Pork (Feet)
+Pork (Ground)
+Pork (Heart)
+Pork (Jowl)
+Pork (Kidneys)
+Pork (Leg)
+Pork (Liver)
+Pork (Loin)
+Pork (Lungs)
+Pork (Oriental Style)
+Pork (Pancreas)
+Pork (Roast)
+Pork (Shoulder Breast)
+Pork (Shoulder)
+Pork (Sirloin)
+Pork (Spare Ribs)
+Pork (Spleen)
+Pork (Stomach)
+Pork (Tail)
+Pork (Tenderloin)
+Pork (Tongue)
+Pork (Top Loin)
+Pork Bologna
+Pork Gravy
+Pork Loin
+Pork Salami
+Pork Sausage
+Pork Sausage Rice Links
+Pork Skins
+Pork Skins (BBQ)
+Pot of Gold
+Potato Bread
+Potato Chips
+Potato Chips (BBQ)
+Potato Chips (Cheese)
+Potato Chips (Lightly Salted)
+Potato Chips (Salt and Pepper)
+Potato Chips (Sour Cream and Onion)
+Potato Chips (Vinegar)
+Potato Flour
+Potato Pancakes
+Potato Puffs
+Potato Salad
+Potato Soup
+Potatoes
+Potatoes (O'Brien)
+Potatoes (Red)
+Potatoes (Roasted)
+Potatoes (Russet)
+Potatoes (Scalloped)
+Potatoes (White)
+Potatoes (Yellow)
+Potatoes Au Gratin
+Potherb
+Potsticker
+Poultry Salad Sandwich Spread
+Poultry Seasoning
+Pound Cake
+Pout
+Power Bar
+Powerade
+Powerade Zero
+Prairie Turnips
+Praline
+Preserves (Apricot)
+Preserves (Blackberry)
+Preserves (Blueberry)
+Preserves (Cherry)
+Preserves (Strawberry)
+Pretzel Bites
+Pretzel Chocolate Candies
+Pretzel Sticks
+Pretzels
+Pretzels (Bite-sized)
+Pretzels (Bites)
+Pretzels (Chocolate Covered)
+Pretzels (Gluten-free)
+Pretzels (Hard)
+Pretzels (Soft)
+Pretzels (Sourdough)
+Pretzels (Sticks)
+Pretzels (Whole Wheat)
+Prickly Pears
+Protein Powder
+Protein Shake
+Protein Supplement
+Prune Juice
+Prune Puree
+Prunes
+Pudding
+Pudding (Banana)
+Pudding (Chocolate)
+Pudding (Coconut Cream)
+Pudding (Lemon)
+Pudding (Rice)
+Pudding (Tapioca)
+Pudding (Vanilla)
+Puff Pastry
+Puffed Wheat
+Pulled Pork
+Pummelo
+Pumpernickel
+Pumpernickel Rolls
+Pumpkin
+Pumpkin Flowers
+Pumpkin Leaves
+Pumpkin Pie
+Pumpkin Pie Mix
+Pumpkin Pie Spice
+Purslane
+Quail
+Quesadilla
+Quesadilla (Cheese)
+Quesadilla (Chicken)
+Quick Oats with Iron
+Quinces
+Quinoa
+Rabbit
+Raccoon
+Radicchio
+Radish Seeds
+Radishes
+Radishes (Hawaiian)
+Radishes (Oriental)
+Radishes (White Icicle)
+Rainbow Trout
+Raisin Bread
+Raisin Cookies
+Raisinets
+Raisins
+Raisins (Golden Seedless)
+Raisins (Seeded)
+Raisins (Seedless)
+Rambutan
+Raspberries
+Ravioli
+Ravioli (Canned)
+Ravioli (Cheese)
+Ravioli (Frozen)
+Ravioli (Meat)
+Ravioli (Vegetable)
+Red Berry Beverage
+Red Cabbage
+Red Currants
+Red Kidney Beans
+Red Pepper
+Red Potatoes
+Red Salmon
+Red Wine
 Red Wine (Barbera)
 Red Wine (Burgundy)
 Red Wine (Cabernet Franc)
@@ -35,577 +2615,731 @@ Red Wine (Mouvedre)
 Red Wine (Petite Sirah)
 Red Wine (Pinot Noir)
 Red Wine (Sangiovese)
-Red Wine (Sangiovese)
 Red Wine (Syrah)
 Red Wine (Zinfandel)
-White Wine (Chardonnay)
-White Wine (Chenin Blanc)
-White Wine (Fume Blanc)
-White Wine (Gewurztraminer)
-White Wine (late harvest)
-White Wine (Muller Thurgau)
-White Wine (Muscat)
-White Wine (Pinot Blanc)
-White Wine (Pinot Gris)
-White Wine (Pinot Grigio)
-White Wine (Riesling)
-White Wine (Sauvignon Blanc)
-White Wine (Semillon)
-Alfalfa seeds
-Amaranth grain
-Amaranth leaves
-American Cheese
-Animal fat
-Bacon Grease
-Apple juice
-Apple juice concentrate
-Canned Apples
-Dehydrated Apples
-Dried Apples
-Frozen Apples
-Apples (Fuji)
-Apples (Gala)
-Apples (Golden Delicious)
-Apples (Granny Smith)
-Apples (Red Delicious)
-Apples
-Applesauce
-Apricot nectar
-Canned Apricots
-Dehydrated Apricots
-Dried Apricots
-Frozen Apricots
-Apricots
-Arrowhead
-Arrowroot flour
-Arrowroot
-Artichokes
-Frozen Artichokes
-Muffin Mix
-Arugula
-Canned Asparagus
-Asparagus
-Frozen Asparagus
-Avocados
-Baby Food
-Baby Food (Apple Yogurt Dessert)
-Baby Food (Apples with Ham)
-Baby Food (Diced Apples)
-Baby Food (Rice Biscuits)
-Baby Food (Banana Apple Dessert)
-Baby Food (Banana)
-Baby Food (Banana with Mixed Berries)
-Baby Food (Carrots)
-Baby Food (Carrots and Beef)
-Baby Food (Barley Cereal)
-Baby Food (Brown Rice Cereal)
-Baby Food (Egg Yolks and Bacon)
-Baby Food (High Protein Cereal)
-Baby Food (High Protein with Apple, Orange)
-Baby Food (Mixed Cereal)
-Baby Food (Mixed Cereal with Applesauce)
-Baby Food (Mixed Cereal with Applesauce, Bananas)
-Baby Food (Mixed Cereal with Bananas)
-Baby Food (Mixed Cereal with Honey)
-Baby Food (Oatmeal)
-Baby Food (Oatmeal with Applesauce)
-Baby Food (Oatmeal with Applesauce, Bananas)
-Baby Food (Oatmeal with Bananas)
-Baby Food (Oatmeal with Honey)
-Baby Food (Rice)
-Baby Food (Rice with Pears)
-Baby Food (Rice with Pears, Apples)
-Baby Food (Rice with Applesauce, Bananas)
-Baby Food (Rice with Bananas)
-Baby Food (Rice with Honey)
-Baby Food (Cereal with Egg Yolks)
-Baby Food (Cereal with Eggs)
-Baby Food (Whole Wheat Cereal)
-Baby Food (Whole Grain Cereal)
-Baby Food (Cherry Cobbler)
-Baby Food (Fruit Cookies)
-Baby Food (Arrowroot Cookies)
-Baby Food (Cookies)
-Baby Food (Corn and Sweet Potatoes)
-Baby Food (Vegetable Crackers)
-Baby Food (Banana Pudding)
-Baby Food (Banana Yogurt)
-Baby Food (Blueberry Yogurt)
-Baby Food (Cherry Vanila Pudding)
-Baby Food (Custard Pudding)
-Baby Food (Dutch Apple)
-Baby Food (Fruit Dessert)
-Baby Food (Fruit Pudding)
-Baby Food (Peach Cobbler)
-Baby Food (Peach Melba)
-Baby Food (Peach Yogurt)
-Baby Food (Tropical Fruit)
-Baby Food (Apples and Chicken)
-Baby Food (Beef and Rice)
-Baby Food (Beef Lasagna)
-Baby Food (Beef Noodle)
-Baby Food (Beef Stew)
-Baby Food (Beef with Vegetables)
-Baby Food (Broccoli and Chicken)
-Baby Food (Chicken Noodle with Vegetables)
-Baby Food (Chicken and Rice)
-Baby Food (Chicken Noodle)
-Baby Food (Chicken Soup)
-Baby Food (Chicken Stew)
-Baby Food (Macaroni and Cheese)
-Baby Food (Macaroni and Tomato, Beef)
-Baby Food (Mixed Vegetables)
-Baby Food (Pasta)
-Baby Food (Pasta with Vegetables)
-Baby Food (Potatoes with Cheese, Ham)
-Baby Food (Spaghetti)
-Baby Food (Sweet Potatoes and Chicken)
-Baby Food (Turkey and Rice)
-Baby Food (Turkey, Rice, Vegetables)
-Baby Food (Vegetables and Bacon)
-Baby Food (Vegetables and Beef)
-Baby Food (Vegetables and Chicken)
-Baby Food (Vegetables and Dumplings)
-Baby Food (Vegetables and Ham)
-Baby Food (Vegetables and Lamb)
-Baby Food (Vegetables and Turkey)
-Baby Food (Vegetables and Noodles)
-Baby Food (Apple and Blueberry)
-Baby Food (Apple and Raspberry)
-Baby Food (Applesauce and Apricots)
-Baby Food (Applesauce and Cherries)
-Baby Food (Applesauce and Pineapple)
-Baby Food (Applesauce and Banana)
-Baby Food (Applesauce and Papaya)
-Baby Food (Applesauce)
-Baby Food (Apricot with Tapioca)
-Baby Food (Banana and Strawberry)
-Baby Food (Banana and Pineapple)
-Baby Food (Bananas with Apples, Pears)
-Baby Food (Bananas with Tapioca)
-Baby Food (Guava and Papaya)
-Baby Food (Fruit Supreme)
-Baby Food (Mango with Tapioca)
-Baby Food (Apple and Sweet Potato)
-Baby Food (Peaches)
-Baby Food (Pears)
-Baby Food (Pears and Pineapple)
-Baby Food (Plums with Tapioca)
-Baby Food (Prunes with Tapioca)
-Baby Food (Tutti Frutti)
-Baby Food (Banana with Orange)
-Baby Food (Apple, Carrot and Squash)
-Baby Food (Apple, Mango and Kiwi)
-Baby Food (Green Beans)
-Baby Food (Green Beans and Turkey)
-Baby Food (Beef)
-Baby Food (Beef with Vegetables)
-Baby Food (Chicken Sticks)
-Baby Food (Chicken)
-Baby Food (Mashed Cheddar Potatoes)
-Baby Food (Ham)
-Baby Food (Lamb)
-Baby Food (Meat Sticks)
-Baby Food (Pork)
-Baby Food (Turkey Sticks)
-Baby Food (Turkey)
-Baby Food (Veal)
-Baby Food (Finger Snacks Cereal)
-Baby Food (Peaches)
-Baby Food (Pears)
-Baby Food (Peas)
-Baby Food (Peas and Brown Rice)
-Baby Food (Plums)
-Baby Food (Oatmeal with Fruit)
-Baby Food (Potatoes)
-Baby Food (Pretzels)
-Baby Food (Prunes)
-Baby Food (Ravioli)
-Baby Food (Rice and Apples)
-Baby Food (Fruit Strips)
-Baby Food (Yogurt Melts)
-Baby Food (Lil Crunchies)
-Baby Food (Teething Biscuits)
-Baby Food (Tropical Fruit Medley)
-Baby Food (Vegetables and Brown Rice)
-Baby Food (Vegetables and )
-Baby Food (Vegetables and )
-Baby Food (Vegetables and )
-Baby Food (Vegetables and )
-Baby Food (Vegetables and )
-Baby Food (Butternut Squash and Corn)
-Baby Food (Green Beans and Potatoes)
-Baby Food (Beets)
-Baby Food (Carrots)
-Baby Food (Creamed Corn)
-Baby Food (Green Beans)
-Baby Food (Mixed Vegetables)
-Baby Food (Peas)
-Baby Food (Spinach)
-Baby Food (Squash)
-Baby Food (Sweet Potatoes)
-Baby Food (Cereal Bar)
-Baby Food (Yogurt)
-Baby Food (Yogurt with Fruit)
-Baby Food (Apple and Cinnamon Puffs)
-Baby Formula
-Infant Formula
-Toddler Formula
-Baby Food (Apple Juice)
-Baby Food (Apple-Banana Juice )
-Baby Food (Apple-Cranberry Juice)
-Baby Food (Apple-Cherry Juice)
-Baby Food (Apple-Grape Juice)
-Baby Food (Apple-Peach Juice)
-Baby Food (Apple-Plum Juice)
-Baby Food (Apple-Prune Juice)
-Baby Food (Apple-Sweet Potato Juice)
-Baby Food (Banana Juice)
-Baby Food (Fruit Juice)
-Baby Food (Grape Juice)
-Baby Food (Fruit Punch)
-Baby Food (Orange Juice)
-Baby Food (Pear Juice)
-Baby Food (Mixed Juice)
-Baby Food (Orange-Apple-Banana Juice)
-Baby Food (Orange-Apple Juice)
-Baby Food (Orange-Apricot Juice)
-Baby Food (Orange-Banana Juice)
-Baby Food (Orange-Pineapple Juice)
-Baby Food (Orange-Carrot Juice)
-Baby Food (Orange-Prune Juice)
-Bacon and beef sticks
-Meatless Bacon bits
-Meatless Bacon
-Bacon
-Turkey Bacon
-Bagels
-Bagels (Egg)
-Bagels (Cinnamon-Raisin)
-Bagels (Multigrain)
-Bagels (Oat Bran)
-Bagels (Wheat)
-Bagels (Whold Grain)
-Baking chocolate
-Unsweetend Baking chocolate
-Balsam-pear
-Bitter Gourd
-Canned Bamboo shoots
-Bamboo shoots
-Dehydrated Bananas
-Bananas
-Barbecue loaf
-Barley flour
-Barley meal
-Barley malt flour
-Barley
-Basil
-Azuki Beans
-Adzuki Beans
-Canned Baked Beans
-Baked Beans
-Baked Beans (with Beef)
-Baked Beans (with Franks)
-Baked Beans (with Pork)
-Black Turtle Beans
-Canned Black Turtle Beans
-Black Beans
-Canned Black Beans
-Chili Beans
-Canned Chili Beans
-Cranberry Beans
-Canned Cranberry Beans
-Fava Beans
-Canned Fava Beans
-French Beans
-Canned French Beans
-Great Nothern Beans
-Canned Great Nothern Beans
-Kidney Beans
-Canned Kidney Beans
-Red Kidney Beans
-Canned Red Kidney Beans
-Navy Beans
-Canned Navy Beans
-Mung Beans
-Canned Mung Beans
-Pink Beans
-Canned Pink Beans
-Pinto Beans
-Canned Pinto Beans
-Shellie Beans
-Canned Shellie Beans
-Small White Beans
-Canned Small White Beans
-Snap Beans
-Canned Snap Beans
-Green Beans
-Canned Green Beans
-Frozen Green Beans
-Yellow Snap Beans
-Canned Yellow Snap Beans
-Frozen Yellow Snap Beans
-White Beans
-Canned White Beans
-Yellow Beans
-Canned Yellow Beans
-Black Bear Meat
-Polar Bear Meat
-Beef Composite
-Beef Macaroni
-Beef Pot Pie
-Beef sausage
-Beef stew
-Beef
-Beef (Ground)
-Beef (Loin)
-Beef (Tenderloin)
-Beef (Boneless Tenderloin)
-Beef (Rib)
-Beef (Round)
-Beef (Seam Fat)
-Beef (External Fat)
-Bologna
-Beef (Bottom Sirloin)
-Beef (Brisket)
-Beef (Carcass)
-Beef (Chuck)
-Beef (Chuck Eye Ribs)
-Beef (Boneless Chuck Eye Ribs)
-Beef (Chuck Eye Roast)
-Beef (Boneless Chuck Eye Roast)
-Beef (Chuck Eye Steak)
-Beef (Boneless Chuck Eye Steak)
-Beef (Short Ribs)
-Beef (Boneless Short Ribs)
-Beef (Roast)
-Beef (Flank Steak)
-Beef (Grass Fed)
-Beef (Breakfast Strips)
-Beef (Dried)
-Corned Beef
-Pastrami
-Sausage
-Beef (Smoked)
-Beef (Top Loin)
-Beef (Boneless Top Loin)
-Beef (Top Sirloin)
-Beef (Boneless Top Sirloin)
-Grass Fed Beef
-Grass Fed Beef (Ground)
-Corned Beef Hash
-Beef (Rump)
-Beef (Sweetbread)
-Beef (Skirt Steak)
-Beef (Rib Eye Roast)
-Beef (Boneless Rib Eye Roast)
-Beef (Rib Eye Steak)
-Beef (Boneless Rib Eye Steak)
-Beef (Eye of Round)
-Beef (Top Round)
-Beef (Boneless Top Round)
-Beef (Bottom Round)
-Beef (Boneless Bottom Round)
-Beef (Porterhouse Steak)
-Beef (T-Bone Steak)
-Beef (Top Loin)
-Beef (Shoulder)
-Beef (Tip Round)
-Beef (Boneless Tip Round)
-Beef (Brain)
-Beef (Heart)
-Beef (Kidneys)
-Beef (Liver)
-Beef (Lungs)
-Beef (Mechanically Separated Beef)
-Beef (Pancreas)
-Beef (Spleen)
-Beef (Suet)
-Beef (Thymus)
-Beef (Tongue)
-Beef (Tripe)
-Beef (Medallions)
-Beerwurst
-Beet greens
-Canned Beets
-Beets
-Harvard Beets
-Pickled Beets
-Breakfast Drink
-Breakfast Drink (Chocolate)
-Protein Shake
-Protein Powder
-Milkshake
-Milkshake Mix
-Nutritional Shake
-Acai Berry Drink
-Almond Milk
-Almond Milk (Chocolate)
-Almond Milk (Vanilla)
-Aloe Vera Drink
-Hard Cider
-Apple Juice
-Arizona Tea
-Arizona Green Tea
-Club Soda
-Cola
-Cola (Caffeine Free)
-Ginger Ale
-Grape Soda
-Lemon-Lime Soda
-Limeade
-Dr. Pepper
-Orange Soda
-Sprite
-Root Beer
-Pepsi
-Pepsi (Caffeine Free)
-Mountain Dew
-Tonic Water
-Chocolate Drink
-Chocolate Drink (Powder)
-Chocolate Milk
-Chocolate Syrup
-Citrus Drink
-Citrus Juice Drink
-Clam Juice
-Tomato Juice
-Coca-Cola
-Coke
-Coca-Cola (Caffeine Free)
-Coke (Caffeine Free)
-Cocoa Mix
-Cocoa Powder
-Coconut Milk
-Coconut Water
-Coffee
-Coffee (Decaffeinated)
-Coffee (Mocha)
-Coffee (Espresso)
-Coffee (Instant)
-Coffee (Chicory)
-Coffee (with Milk)
-Coffee (with Vanilla)
-Espresso
-Cranberry Juice Ccocktail
-Cranberry Juice
-Cranberry-Apple Juice
-Cranberry-Apricot Juice
-Cranberry-Grape Juice
-Cranberry-Cherry Juice
-Cranberry-Lemonade Juice
-Cranberry-Pomegranate Juice
-Cranberry-Raspberry Juice
-Cranberry-Energy Juice
-Diet Cran-Cherry Juice
-Diet Cranberry Juice
-Light Cranberry and Raspberry Juice
-Light Cranberry and Grape Juice
-Light Cranberry Juice
-Ruby Red Cranberry Juice
-White Cranberry Peach Juice
-White Cranberry Strawberry Juice
-Ocean Spray (Cran-Cherry Juice)
-Ocean Spray (Cran-Grape Juice)
-Ocean Spray (Cran-Lemonade Juice)
-Ocean Spray (Cran-Pomegranate Juice)
-Ocean Spray (Cran-Raspberry Juice)
-Ocean Spray (Cran-Energy Juice)
-Ocean Spray (Cranberry-Apple Juice)
-Ocean Spray (Diet Cran-Cherry Juice)
-Ocean Spray (Diet Cranberry Juice)
-Ocean Spray (Light Cranberry and Raspberry Juice)
-Ocean Spray (Light Cranberry and Grape Juice)
-Ocean Spray (Light Cranberry Juice)
-Ocean Spray (Ruby Red Cranberry Juice)
-Ocean Spray (White Cranberry Peach Juice)
-Ocean Spray (White Cranberry Strawberry Juice)
-Eggnog
-Energy Drink
-Energy Drink (Amp)
-Energy Drink (Sugar Free Amp)
-Energy Drink (Full Throttle)
-Energy Drink (Monster)
-Energy Drink (Red Bull)
-Energy Drink (Sugar Free Red Bull)
-Energy Drink (Rockstar)
-Energy Drink (Sugar Free Rockstar)
-Energy Drink (Vault)
-Energy Drink (Vault Zero)
-Energy Drink (NOS)
-Energy Drink (NOS Zero)
-Fruit Drink
-Fruit Drink (Concentrate)
-Fruit Juice Drink
-Fruit Punch
-Fruit Punch (Concentrate)
-Tropical Punch
-Grape Drink
-Grape Juice
-Horchata
-Kiwi Strawberry Drink
-Kiwi Strawberry Juice Drink
-Lemonade
-Lemonade (Concentrate)
-Lemon Drink
-Malt Liquor
-Malted Drink Mix
-Malted Drink Mix (Chocolate)
-Powerade
-Powerade Zero
-Gatorade
-Gatorade G2
-Apple Juice
-Mixed Vegetable Juice
-Mixed Vegetable and Fruit Juice
-Mixed Fruit Juice
-Orange Drink
-Orange Juice
-Orange Juice (No Pulp)
-Orange Juice (Concentrate)
-Orange Juice (Pulp)
-Pineapple Juice
+Reduced Fat Potato Chips
+Reduced Fat Potato Chips (BBQ)
+Reduced Fat Potato Chips (Cheese)
+Reduced Fat Potato Chips (Lightly Salted)
+Reduced Fat Potato Chips (Salt and Pepper)
+Reduced Fat Potato Chips (Sour Cream and Onion)
+Reduced Fat Potato Chips (Vinegar)
+Reduced Sodium Soy Sauce
+Reese Sticks
+Reese's Bites
+Reese's Fast Break
+Reese's Peanut Butter Cups
+Reese's Pieces
+Refried Beans
+Regular Crust Pizza
+Regular Crust Pizza (Cheese)
+Regular Crust Pizza (Pepperoni)
+Regular Crust Pizza (Sausage)
+Regular Crust Pizza (Supreme)
+Rennin
+Rennin (Chocolate)
+Rennin (Vanilla)
+Rhubarb
+Rice
+Rice (Brown, Long-grain)
+Rice (Brown, Medium-grain)
+Rice (White, Glutinous)
+Rice (White, Long-grain)
+Rice (White, Medium-grain)
+Rice (White, Short-grain)
+Rice and Vermicelli Mix
+Rice and Vermicelli Mix (Beef)
+Rice and Vermicelli Mix (Chicken)
+Rice and Vermicelli Mix (Rice Pilaf)
+Rice and Wheat Cereal Bar
+Rice Bowl
+Rice Bran
+Rice Cake
+Rice Cakes
+Rice Cakes (Buckwheat)
+Rice Cakes (Corn)
+Rice Cakes (Multigrain)
+Rice Cakes (Rye)
+Rice Cakes (Sesame Seed)
+Rice Crackers
+Rice Crispies Squares
+Rice Flour
+Rice Flour (Brown)
+Rice Flour (White)
 Rice Milk
-Ovaltine
-Tea
-Tea (Black)
-Tea (Decaffeinated)
-Tea (Green)
-Tea (Oolong)
-Tea (Herb)
-Tea (Fruit)
-Tea (Sweet)
-Tea (Hibiscus)
-Tea (Jasmine)
-Tea (Barley)
-Tea (Corn)
-Tea (Wheat)
-Sweet Tea
-Green Tea
-Oolong Tea
-Herb Tea
-Hibiscus Tea
-Jasmine Tea
-Barley Tea
-Corn Tea
-Wheat Tea
-Black Tea (Apple)
-Black Tea (Peach)
-Black Tea (Milk)
-Black Tea (Lemon)
-Black Tea (Sweet)
-Black Tea (Decaffeinated)
-Gerolsteiner
-Perrier
-Mineral Water
+Rice Mix
+Rice Mix (Cheese Flavor)
+Rice Mix (White and Wild)
+Rice Noodles
+Rice Squares
+Roast Beef
+Roast Beef Sandwich
+Roast Beef Spread
+Roasted Potatoes
+Rockfish
+Roe
+Rolls
+Rolls (Dinner)
+Rolls (French)
+Rolls (Gluten-free)
+Rolls (Hard)
+Rolls (Pumpernickel)
+Rolls (Wheat-free)
+Rolo
+Root Beer
+Rose Hips
+Rose Wine
+Rose-apples
+Roselle
+Rosemary
+Roti
+Rowal
+Ruby Red Cranberry Juice
+Ruby Red Grapefruit Juice
+Ruffed Grouse
+Rum
+Rusk Toast
+Russet Potatoes
+Rutabagas
+Rye Bread
+Rye Crackers
+Rye Flour
+Rye Flour (Dark)
+Rye Flour (Light)
+Rye Flour (Medium)
+Rye Grain
+Sablefish
+Saboy Cabbage
+Safflower Oil
+Saffron
+Sage
+Sake
+Salad Dressing
+Salad Dressing (Bacon and Tomato)
+Salad Dressing (Blue Cheese)
+Salad Dressing (Buttermilk)
+Salad Dressing (Caesar)
+Salad Dressing (Coleslaw)
+Salad Dressing (Creamy)
+Salad Dressing (French)
+Salad Dressing (Green Goddess)
+Salad Dressing (Honey Mustard)
+Salad Dressing (Imitation Mayonnaise)
+Salad Dressing (Italian)
+Salad Dressing (Mayonnaise)
+Salad Dressing (Peppercorn)
+Salad Dressing (Poppyseed)
+Salad Dressing (Ranch)
+Salad Dressing (Roquefort Cheese)
+Salad Dressing (Russian)
+Salad Dressing (Sesame Seed)
+Salad Dressing (Sweet and Sour)
+Salad Dressing (Thousand Island)
+Salad Dressing (Vinegar and Oil)
+Salami
+Salami (Beef and Pork)
+Salami (Beef)
+Salami (Italian)
+Salami (Pork)
+Salami (Turkey)
+Salisbury Steak with Gravy
+Salmon
+Salmonberries
+Salsa
+Salsa con Queso
+Salsify
+Salt
+Saltines
+Sandwich Cookies
+Sandwich Spread
+Sandwich Spread (Meatless)
+Sandwich Spread (Pork)
+Sandwich Spread (with Chopped Pickle)
+Sapodilla
+Sapote
+Sardine
+Sauce (Alfredo)
+Sauce (Barbecue)
+Sauce (Cheese)
+Sauce (Chili)
+Sauce (Cocktail)
+Sauce (Duck)
+Sauce (Enchilada)
+Sauce (Fish)
+Sauce (Hoisin)
+Sauce (Horseradish)
+Sauce (Hot Chile)
+Sauce (Oyster)
+Sauce (Pasta)
+Sauce (Peanut)
+Sauce (Pesto)
+Sauce (Pizza)
+Sauce (Plum)
+Sauce (Salsa Verde)
+Sauce (Sofrito)
+Sauce (Sriracha)
+Sauce (Steak)
+Sauce (Sweet and Sour)
+Sauce (Tartar)
+Sauce (Teriyaki)
+Sauce (Tomato)
+Sauce (White)
+Sauce (Worcestershire)
+Sauerkraut
+Sauerkraut (Canned)
+Sausage
+Sausage (Beef)
+Sausage (Berliner)
+Sausage (Chicken)
+Sausage (Italian Pork)
+Sausage (Italian Turkey)
+Sausage (Italian)
+Sausage (Meatless)
+Sausage (Polish)
+Sausage (Pork Links)
+Sausage (Pork Patty)
+Sausage (Pork)
+Sausage (Summer)
+Sausage (Turkey)
+Sausage (Vienna)
+Sausage, Egg, and Cheese Biscuit
+Savory
+Scallop
+Scalloped Potatoes
+Scrambled Eggs
+Scrapple
+Scup
+Sea Bass
+Sea cucumber
+Sea Lion
+Seal
+Seasoning Mix (Chili)
+Seasoning Mix (Steak)
+Seasoning Mix (Taco)
+Seatrout
+Seaweed
+Seaweed (Agar)
+Seaweed (Canadian)
+Seaweed (Irishmoss)
+Seaweed (Kelp)
+Seaweed (Laver)
+Seaweed (Spirulina)
+Seaweed (Wakame)
+Seeds
+Seeds (Brednut Tree Seeds)
+Seeds (Chia Seeds)
+Seeds (Cottonseed)
+Seeds (Flaxseed)
+Seeds (Hemp)
+Seeds (Lotus)
+Seeds (Pumpkin)
+Seeds (Safflower)
+Seeds (Sesame)
+Seeds (Sisymbrium)
+Seeds (Squash)
+Seeds (Sunflower)
+Seeds (Watermelon)
+Semisweet Chocolate
+Semolina
+Serrano Pepper
+Sesame Butter
+Sesame Crunch
+Sesame Flour
+Sesame Oil
+Sesame Sticks
+Sesbania Flower
+Shad
+Shake
+Shallots
+Shark
+Sheanut Oil
+Sheefish
+Sheep Milk
+Sheepshead
+Shellie Beans
+Sherbet
+Sherbet (Berry)
+Sherbet (Lime)
+Sherbet (Orange)
+Sherbet (Rainbow)
+Shortbread
+Shortcake
+Shortening
+Shortening (Bread)
+Shortening (Cake)
+Shortening (Confectionery)
+Shortening (Frying)
+Shortening (Multipurpose)
+Shortening (Soybean)
+Shortening (Vegetable)
+Shredded Parmesan
+Shredded Parmesan Cheese
+Shredded Wheat
+Shrimp
+Shrimp (Canned)
+Shrimp (Fried)
+Shrimp (Imitation)
+Shrimp (Shelled)
+Shrimp Cracker
+Skipjack Tuna
+Skittles
+Skittles (Sours)
+Skittles (Tropical)
+Skittles (Wild Berry)
+Skor Toffee Bar
+Skunk Cabbage
+Sliced Cheese
+Sliced Ham
+Slim-Fast Optima
+Small White Beans
+Smelt
+Smoked Ham
+Smoked Link Sausage
+Smoked Link Sausage (Beef)
+Smoked Link Sausage (Pork and Beef)
+Smoked Link Sausage (Pork)
+Smoked Tuna
+Snack Bar
+Snack Cake
+Snack Mix
+Snail
+Snap Beans
+Snapper
+Snickers
+Snickers (Almond)
+Snickers (Bite Size)
+Snickers (Cruncher)
+Snickers (Munch)
+Snickers Marathon
+Snickers Marathon (Chewy Chocolate Peanut)
+Snickers Marathon (Double Chocolate)
+Snickers Marathon (Honey Nut)
+Snickers Marathon (Multigrain)
+Snickers Marathon (Protein)
+Sockeye Salmon
+Soda Ice Cream
+Soft Pretzels
+Soft Tofu
+Soft-serve Ice Cream
+Soft-serve Ice Cream (with Cookie Pieces)
+Soft-serve Ice Cream (with M&M's)
+Soft-serve Ice Cream (with Oreos)
+Sorghum Flour
+Sorghum Grain
+Sorghum Syrup
+Soup
+Soup (Bean and Bacon)
+Soup (Bean and Frankfurters)
+Soup (Bean and Ham)
+Soup (Bean and Pork)
+Soup (Beef and Mushroom)
+Soup (Beef and Vegetables)
+Soup (Beef Barley)
+Soup (Beef Bouillon)
+Soup (Beef Broth)
+Soup (Beef Consomme)
+Soup (Beef Noodle)
+Soup (Beef Ramen)
+Soup (Beef Stock)
+Soup (Beef Stroganoff)
+Soup (Black Bean)
+Soup (Broccoli Cheese)
+Soup (Cheese)
+Soup (Chichken Noodle)
+Soup (Chicken and Pasta)
+Soup (Chicken and Vegetable)
+Soup (Chicken Bouillon)
+Soup (Chicken Broth)
+Soup (Chicken Consomme)
+Soup (Chicken Corn Chowder)
+Soup (Chicken Gumbo)
+Soup (Chicken Mushroom Chowder)
+Soup (Chicken Mushroom)
+Soup (Chicken Ramen)
+Soup (Chicken Rice)
+Soup (Chicken Stock)
+Soup (Chicken)
+Soup (Chili Beef)
+Soup (Chunky Beef)
+Soup (Chunky Chicken Noodle)
+Soup (Chunky Ministrone)
+Soup (Chunky Vegetable)
+Soup (Clam Chowder)
+Soup (Cream of Asparagus)
+Soup (Cream of Celery)
+Soup (Cream of Chicken)
+Soup (Cream of Mushroom)
+Soup (Cream of Onion)
+Soup (Cream of Potato)
+Soup (Cream of Shrimp)
+Soup (Cream of Vegetable)
+Soup (Egg Drop)
+Soup (Fish Stock)
+Soup (Fish)
+Soup (Green Pea)
+Soup (Hot and Sour)
+Soup (Lentil with Ham)
+Soup (Lentil)
+Soup (Manhattan Clam Chowder)
+Soup (Ministrone)
+Soup (Miso Ramen)
+Soup (Mushroom Barley)
+Soup (Mushroom)
+Soup (New England Clam Chowder)
+Soup (Onion)
+Soup (Oyster)
+Soup (Pork Ramen)
+Soup (Potato Ham Chowder)
+Soup (Shark Fin)
+Soup (Sirloin Burger)
+Soup (Soy Sauce Ramen)
+Soup (Split Pea with Ham)
+Soup (Split Pea)
+Soup (Tomato Beef Noodle)
+Soup (Tomato Beef)
+Soup (Tomato Bisque)
+Soup (Tomato Rice)
+Soup (Tomato)
+Soup (Turkey Noodle)
+Soup (Turkey Vegetable)
+Soup (Turkey)
+Soup (Vegetable Beef)
+Soup (Vegetable Broth)
+Soup (Vegetable Chicken)
+Soup (Vegetable)
+Soup (Wonton)
+Sour Cherries
+Sour Cream
+Sour Cream (Fat Free)
+Sour Cream (Light)
+Sour Cream (Reduced Fat)
+Sour Pickles
+Sourdock
+Sourdough Bread
+Sourdough Pretzels
+Soursop
+South Beach Protein Bar
+Soy Chips
+Soy Flour
+Soy Meal
+Soy Milk
+Soy Oil
+Soy Sauce
+Soybeans
+Soyburgers
+Soymilk
+Soymilk (Chocolate)
+Soymilk (Vanilla)
+Spaghetti
+Spaghetti (Meat Sauce)
+Spaghetti (Tomato Sauce)
+Spaghetti (with Meatballs)
+Spanish Mackerel
+Spanish Rice Mix
 Sparkling Mineral Water
-Sparkling Mineral Water (Perrier)
 Sparkling Mineral Water (Gerolsteiner)
+Sparkling Mineral Water (Perrier)
+Spearmint
+Spelt
+Spiced Peaches
+Spilt Peas
+Spinach
+Spinach Souffle
+Spiny Lobster
+Sponge Cake
+Sports Drink
+Spot
 Spring Water
 Spring Water ()
-Water
-Bottled Water
-Vitamin Water
+Sprinkles
+Sprite
+Squab
+Squash
+Squash (Acorn)
+Squash (Baby Zucchini)
+Squash (Butternut)
+Squash (Crookneck)
+Squash (Hubbard)
+Squash (Indian)
+Squash (Scallop)
+Squash (Spaghetti)
+Squash (Strightneck)
+Squash (Summer)
+Squash (Winter)
+Squash (Zucchini)
+Squid
+Squirrel
+Starburst
+Starburst (Fruit and Creme)
+Starburst (Sour)
+Starburst (Tropical)
+Starfruit
+Steelhead Trout
+Stinging Nettles
+Strawberries
+Strawberry Ice Cream
+Strawberry Topping
+Stuffed Crust Pizza
+Stuffed Crust Pizza (Cheese)
+Stuffed Crust Pizza (Pepperoni)
+Stuffed Crust Pizza (Sausage)
+Stuffed Crust Pizza (Supreme)
+Stuffing
+Sturgeon
+Sub
+Submarine Sandwich
+Submarine Sandwich (BLT)
+Submarine Sandwich (Colt Cuts)
+Submarine Sandwich (Ham)
+Submarine Sandwich (Meatball Marinara)
+Submarine Sandwich (Roast Beef)
+Submarine Sandwich (Roasted Chicken)
+Submarine Sandwich (Steak and Cheese)
+Submarine Sandwich (Sweet Onion Chicken Teriyaki)
+Submarine Sandwich (Tuna)
+Submarine Sandwich (Turkey Breast)
+Submarine Sandwich (Turkey, Ham, and Roast Beef)
+Succotash
+Sucker
+Sugar
+Sugar (Brown)
+Sugar (Granulated)
+Sugar (Maple)
+Sugar (Powdered)
+Sugar Cookie Dough
+Sugar Cookies
+Sugar Free Ice Cream
+Sugar Free Syrup
+Sugar Wafer
+Sugar Wafer (Chocolate Covered)
+Sugar Wafer (with Creme Filling)
+Sugar-apples
+Sugar-coated Almonds
+Sugarless Chewing gum
+Summer Sausage
+Sun Chips
+Sun Chips (Cheddar)
+Sun Chips (Onion)
+Sunfish
+Sunflower Oil
+Sunflower Seed Butter
+Sunflower Seed Flour
+Supplements
+Surimi
+Swamp Cabbage
+Sweet Cherries
+Sweet Chocolate
+Sweet Chocolate Coated Fondant
+Sweet Pickles
+Sweet Potato
+Sweet Potato (Canned)
+Sweet Potato (Mashed)
+Sweet Potato Chips
+Sweet Potato French Fries
+Sweet Potato Leaves
+Sweet Potato Puffs
+Sweet Rolls
+Sweet Rolls (Cheese)
+Sweet Rolls (Cinnamon with Raisins)
+Sweet Rolls (Cinnamon)
+Sweet Tea
+Sweet Yeast Bread
+Sweetener
+Sweetener (Agave)
+Sweetener (Aspartame)
+Sweetener (Fructose)
+Sweetener (Saccharin)
+Sweetener (Stevia)
+Sweetener (Sucralose)
+Sweetener (Sugar and Sucralose)
+Sweetsop
+Swisswurst
+Swordfish
+Syrup
+Syrup (Cane)
+Syrup (Chocolate)
+Syrup (Corn)
+Syrup (Grenadine)
+Syrup (HFCS)
+Syrup (Malt)
+Syrup (Maple)
+Syrup (Pancake)
+Syrup (Sorghum)
+Syrup (Sugar Free)
+Taco Salad
+Taco Shells
+Tacos
+Tacos (Beef)
+Tacos (Chicken)
+Tacos (Fish)
+Taffy
+Tamales
+Tamales (Masa and Pork Filling)
+Tamarind
+Tamarind Nectar
+Tamarinds
+Tangerine Juice
+Tangerines
+Tannier
+Tapioca
+Taquitos
+Taquitos (Beef and Cheese)
+Taquitos (Chicken and Cheese)
+Taro
+Taro (Tahitian)
+Taro Chips
+Taro Leaves
+Taro Shoots
+Tarragon
+Tea
+Tea (Barley)
+Tea (Black)
+Tea (Corn)
+Tea (Decaffeinated)
+Tea (Fruit)
+Tea (Green)
+Tea (Herb)
+Tea (Hibiscus)
+Tea (Jasmine)
+Tea (Oolong)
+Tea (Sweet)
+Tea (Wheat)
+Tea Biscuits
+Teaseed Oil
+Teff
+Tempeh
+Tendergreen
+Tennis Bread
+Tequila
+Thick Crust Pizza
+Thick Crust Pizza (Cheese)
+Thick Crust Pizza (Pepperoni)
+Thick Crust Pizza (Sausage)
+Thick Crust Pizza (Supreme)
+Thin Crust Pizza
+Thin Crust Pizza (Cheese)
+Thin Crust Pizza (Pepperoni)
+Thin Crust Pizza (Sausage)
+Thin Crust Pizza (Supreme)
+Thumbprints
+Thuringer
+Thyme
+Tilapia
+Tilefish
+Tipnuk Salmon
+Toast Thins
+Toaster Pastries
+Toaster Pastries (Apple)
+Toaster Pastries (Blueberry)
+Toaster Pastries (Brown Sugar and Cinnamon)
+Toaster Pastries (Cherry)
+Toaster Pastries (Chocolate Fudge)
+Toaster Pastries (Fruit)
+Toaster Pastries (Raspberry)
+Toaster Pastries (Strawberry)
+Toblerone
+Toddler Formula
+Toffee
+Tofu
+Tofu (Dried)
+Tofu (Firm)
+Tofu (Fried)
+Tofu (Hard)
+Tofu (Soft)
+Tofu Yogurt
+Tomatillos
+Tomato Juice
+Tomato Powder
+Tomato Sauce
+Tomato Sauce (with Herbs)
+Tomato Sauce (with Mushrooms)
+Tomato Sauce (with Onions)
+Tomato Sauce (with Onions, Peppers, and Celery)
+Tomatoes
+Tomatoes (Crushed)
+Tomatoes (Green)
+Tomatoes (Orange)
+Tomatoes (Paste)
+Tomatoes (Puree)
+Tomatoes (Red)
+Tomatoes (Sun-dried)
+Tomatoes (Yellow)
+Tomatoseed Oil
+Tonic Water
+Tootsie Roll
+Topping (Butterscotch)
+Topping (Caramel)
+Topping (Magic Shell)
+Topping (Marshmallow Cream)
+Topping (Pineapple)
+Topping (Strawberry)
+Tortellini
+Tortilla
+Tortilla (Blue Corn)
+Tortilla (Corn)
+Tortilla (Flour)
+Tortilla (Whole Wheat)
+Tortilla Chips
+Tortilla Chips (Light)
+Tortilla Chips (Low Fat)
+Tortilla Chips (Nacho Cheese)
+Tortilla Chips (Plain)
+Tortilla Chips (Ranch)
+Tortilla Chips (Taco)
+Tostada Shells
+Trail Mix
+Trail Mix (Tropical)
+Trail Mix (with Chocolate Chips)
+Tree Fern
+Triticale
+Triticale Flour
+Trolley Cakes
+Tropical Punch
+Truffles
+Tuna
+Tuna Salad
+Tunicate
+Turbot
+Turkey
+Turkey (Back)
+Turkey (Breast)
+Turkey (Dark Meat)
+Turkey (Drumstick)
+Turkey (Gizzard)
+Turkey (Heart)
+Turkey (Leg)
+Turkey (Liver)
+Turkey (Rotisserie)
+Turkey (Thigh)
+Turkey (Wing)
+Turkey and Gravy
+Turkey Bacon
+Turkey Bologna
+Turkey Gravy
+Turkey Ham
+Turkey Pot Pie
+Turkey Roast
+Turkey Salami
+Turkey Sausage
+Turkey Sticks
+Turkey Thigh
+Turmeric
+Turnip Greens
+Turnover
+Turnover (Cheese)
+Turnover (Chicken)
+Turnover (Meat)
+Turnover (Turkey)
+Turnover (Vegetable)
+Turtle
+Twix
+Twix (Chocolate Fudge)
+Twix (Peanut Butter)
+Twizzlers
+Uchuhuba Butter Oil
+Unsalted Butter
+Unsweetend Baking chocolate
+Unsweetend Cocoa Powder
 V8 Splash
 V8 Splash (Berry Blend)
 V8 Splash (Diet Berry Blend)
@@ -627,2969 +3361,101 @@ V8 V-Fusion (Acai Berry)
 V8 V-Fusion (Peach Mango)
 V8 V-Fusion (Strawberry Banana)
 V8 V-Fusion (Tropical)
-Meal Supplement Drink
-Meal Replacement Drink
-Meal Replacement
-Meal Replacement Shake
-Biscuit Mix
-Frozen Biscuits
-Biscuits
-Biscuit Dough
-Bison
-Bison (ground)
-Canned Blackberries
-Frozen Blackberries
-Blackberries
-Blackberry juice
-Blood sausage
-Canned Blueberries
-Frozen Blueberries
-Dried Blueberries
-Blueberries
-Bockwurst
-Beef Bologna
-Pork Bologna
-Chicken Bologna
-Turkey Bologna
-Mixed Meat Bologna
-Borage
-Boysenberries
-Canned Boysenberries
-Frozen Boysenberries
-Dried Boysenberries
-Bratwurst (Beef and Pork)
-Bratwurst (Chicken)
-Bratwurst (Mixed)
-Bratwurst (Pork)
-Bratwurst (Veal)
-Braunschweiger
-Bread crumbs
-Bread sticks
-Bread stuffing
-Banana Bread
-Boston Brown Bread
-Chapati
-Roti
-Cheese Bread
-Cinnamon Bread
-Cornbread
-Cracked-wheat Bread
-Egg Bread
-French Bread
-Sourdough Bread
-Irish Soda Bread
-Italian Bread
-Naan
-Oatmeal Bread
-Oat Bran Bread
-Pan dulce
-Sweet Yeast Bread
-Pita
-Potato Bread
-Bread (White)
-Bread (Wheat)
-Bread (Whole Wheat)
-Bread (Rye)
-Bread (French)
-Bread (Italian)
-Bread (Oat Bran)
-Bread (Gluten Free)
-Bread (Multi-grain)
-Bread (Oatmeal)
-Bread (Raisin)
-Bread (Rice Bran)
-Bread (Wheat Bran)
-Oatmeal Bread
-Pumpernickel
-Raisin Bread
-Rye Bread
-Bread Roll
-Whole Wheat Bread
-Breadfruit
-Breakfast bar
-Breakfast tart
-Canned Broadbeans
-Broadbeans
-Broccoli raab
-Chinese Broccoli
-Broccoli
-Broccoli Flower
-Frozen Broccoli
-Broccoli Spears
-Frozen Broccoli Spears
-Broccoli Leaves
-Broccoli Stalks
-Brotwurst
-Brussels Sprouts
-Frozen Brussels sprouts
-Buckwheat flour
-Buckwheat groats
-Buckwheat
-Buffalo Steak
-Bulgur
-Burdock root
-Frozen Burrito
-Burrito
-Butter
-Butter oil
-Butter replacement
-Light Butter
-Light Unsalted Butter
-Unsalted Butter
-Butterbur
-Canne Butterbur
-Chinese Cabbage
-Pak Choi
-Bok Choy
-Kimchi
-Cabbage
-Cabbage (Japanese)
-Cabbage (Red)
-Cabbage (Saboy)
-Cabbage (Mustard)
-Cabbage (Napa)
-Japanese Cabbage
-Red Cabbage
-Saboy Cabbage
-Mustard Cabbage
-Napa Cabbage
-Angelfood
-Boston Cream Pie
-Cherry Fudge Cake
-Chocolate Cake
-Fruitcake
-Gingerbread
-Pineapple Upside-down Cake
-Pound Cake
-Carrot Cake
-German Chocolate Cake
-Marble Cake
-White Cake
-Yellow Cake
-Shortcake
-Snack Cake
-Sponge Cake
-Cupcake
-Canada Goose
-Canadian bacon
-Candied fruit
-5th Avenue
-Almond Joy
-Butterscotch
-Caramello
-Caramel
-Carob
-Chocolate Covered Caramel
-Chocolate Covered Coffee Beans
-Chocolate Covered Raisins
-Chocolate Covered Cherries
-Chocolate Covered Peanuts
-Milk Chocolate
-Milk Chocolate (with Almonds)
-Milk Chocolate (with Peanuts)
-Milk Chocolate (with Puffed Rice)
-Milk Chocolate Bar
-Chocolate
-Chocolate (Dark)
-Dark Chocolate
-Coconut Bar
-Divinity
-Fondant
-Fruit Snacks
-Fudge
-Fudge (Chocolate Marshmallow)
-Fudge (with Nuts)
-Fudge (Peanut Butter)
-Fudge (Vanilla)
-Chocolate Marshmallow Fudge
-Peanut Butter Fudge
-Vanilla Fudge
-Gum Drops
-Halavah
-Hard Candy
-Jawbreaker
-Honey Combs
-Jelly Beans
-Heath Bites
-Golden Almond Solitaires
-Pot of Gold
-Skor Toffee Bar
-Almond Joy Bites
-Kit Kat
-Reese Sticks
-Payday Bar
-Krackel
-3 Musketeers
-Pretzel Chocolate Candies
-Cocoavia
-Cocoavia (Blueberry and Almond)
-Cocoavia (Crispy)
-Cocoavia (Almonds)
-Dove Dark Chocolate
-Dove Milk Chocolate
-M&M's
-M&M's (Almond)
-M&M's (Peanut)
-M&M's (Peanut Butter)
-M&M's (Crispy)
-M&M's (Dark)
-M&M's (Minis)
-Mars Bar
-Milky Way
-Milky Way Caramels
-Milky Way Caramels (Dark)
-Milky Way Midnight Bar
-3 Musketeers (Bite Size)
-Milky Way (Bite Size)
-Snickers (Bite Size)
-Skittles
-Skittles (Sours)
-Skittles (Tropical)
-Skittles (Wild Berry)
-Snickers
-Snickers (Almond)
-Snickers (Cruncher)
-Snickers (Munch)
-Starburst
-Starburst (Fruit and Creme)
-Starburst (Tropical)
-Starburst (Sour)
-Twix
-Twix (Chocolate Fudge)
-Twix (Peanut Butter)
-Marshmallows
-Mounds
-Mr. Goodbar
-100 Grand
-After Eight Mints
-Baby Ruth
-Bit-O'-Honey
-Butterfinger Bar
-Butterfinger Crisp
-Chunky Bar
-Crunch Bar
-Goobers
-Oh Henry!
-Raisinets
-Nougat
-Noutat (with Almonds)
-Peanut Bar
-Peanut Brittle
-Praline
-Reese's Bites
-Reese's Fast Break
-Nutrageous
-Reese's Peanut Butter Cups
-Reese's Pieces
-Fast Break
-Rolo
-Semisweet Chocolate
-Sesame Crunch
-Fruit Squares
-Nut Squares
-Thumbprints
-Sugar-coated Almonds
-Sweet Chocolate Coated Fondant
-Sweet Chocolate
-Taffy
-Tamarind
-Toblerone
-Toffee
-Tootsie Roll
-Truffles
-Twizzlers
-Whatchamacallit
-White Chocolate
-York Bites
-Peppermint Pattie
-Cane Syrup
-Canned Capers
-Capers
-Starfruit
-Carambola
-Chocolate Flavored Soda
-Cream Soda
-Cardoon
-Caribou
-Carissa
-Natal-plum
-Carob flour
-Carrot Juice
-Canned Carrot Juice
-Dehydrated Carrots
-Baby Carrots
-Carrots
-Canned Carrots
-Frozen Carrots
-Cassava
-Catsup
-Ketchup
-Cattail
-Cauliflower
-Frozen Cauliflower
-Green Cauliflower
-Celeriac
-Celery flakes
-Celery
-Celtuce
-Chard
-Chayote
-Cheese (American)
-Cheese (American Cheddar)
-Cheese (Cheddar)
-Cheese (Mild Cheddar)
-Cheese (Sharp Cheddar)
-Cheese (Extra Sharp Cheddar)
-Cheese (Blue)
-Cheese (Brick)
-Cheese (Brie)
-Cheese (Mozzarella)
-Cheese (Camembert)
-Cheese (Caraway)
-Cheese (Cheshire)
-Cheese (Colby)
-Cheese (Cottage)
-Cheese ()
-Cottage Cheese
-Cottage Cheese (Lowfat)
-Cheese Puffs
-Cheese Twists
-Cheese Sauce
-Cheese Spread
-Cream Cheese
-Cream Cheese (Lowfat)
-Cheese (Dry White)
-Cheese (Queso Seco)
-Cheese (Edam)
-Cheese (Feta)
-Cheese (Fontina)
-Cheese (Fresh)
-Cheese (Queso Fresco)
-Cheese (Gjetost)
-Cheese (Goat)
-Cheese (Gouda)
-Cheese (Gruyere)
-Cheese (Limburger)
-Cheese (Mexican)
-Cheese (Queso Anejo)
-Cheese (Queso Asadero)
-Cheese (Queso Chihuahua)
-Cheese (Queso Cotija)
-Cheese (Monterey)
-Cheese (Mozzarella)
-Cheese (Muenster)
-Cheese (Neufchatel)
-Cheese (Parmesan)
-Grated Parmesan
-Shredded Parmesan
-Cheese (Pimento)
-Cheese (Swiss)
-Cheese (Port de Salut)
-Cheese (Provolone)
-Cheese (Ricotta)
-Cheese (Romano)
-Cheese (Roquefort)
-Cheese (Tilsit)
-Cheese (White)
-Cheese (Queso Blanco)
-Cheesecake
-Cheesefurter
-Cheese Sticks
-Mozzarella Sticks
-Cherimoya
-Canned Sour Cherries
-Frozen Sour Cherries
-Sour Cherries
-Canned Sweet Cherries
-Frozen Sweet Cherries
-Sweet Cherries
-Canned Cherries
-Frozen Cherries
-Cherries
-Sugarless Chewing gum
-Chewing gum
-Chicken
-Chicken Breast
-Chicken Thigh
-Chicken Leg
-Chicken Wings
-BBQ Chicken
-Chicken Tenders
-Chicken Patty
-Chicken Pot Pie
-Broiled Chicken
-Fried Chicken
-Chicken spread
-Chicken (Breast)
-Chicken (Skinless Breast)
-Chicken (Thigh)
-Chicken (Skinless Thigh)
-Chicken (Drumstick)
-Chicken (Skinless Drumstick)
-Chicken (Wing)
-Chicken (Skinless Wing)
-Chicken (Leg)
-Chicken (Skinless Leg)
-Chicken (Whole)
-Chicken (Skin)
-Chicken (Dark Meat)
-Chicken (Giblets)
-Chicken (Neck)
-Chicken (Canned)
-Chicken (Heart)
-Chicken (Liver)
-Chicken (BBQ)
-Chicken (Roast)
-Chicken (Stew)
-Cornish Game Hen
-Capon
-Chicken Feet
-Chicken Gizzard
-Ground Chicken
-Meatless Fried Chicken
-Meatless Chicken
-Chicken Nuggets
-Chicken Fingers
-Chickpea flour
-Garbanzo Beans
-Canned Garbanzo Beans
-Chickpeas
-Canned Chickpeas
-Chicory greens
-Chicory roots
-Chicory
-Chili con carne with Beans
-Chili with Beans
-Canned Chili with Beans
-Chili
-Canned Chili
-Chiton
-Chives
-Dried Chives
-Chocolate
-Dark Chocolate
-Chocolate-flavored Hazelnut Spread
-Chocolate Spread
-Chokecherries
-Chorizo
-Chrysanthemum Leaves
-Chrysanthemum
-Garland
-Cinnamon Buns
-Clementines
-Clif Z Bar
-Cloudberries
-Cockles
-Cocktail Mix
-Cocoa Mix
-Cocoa Powder
-Unsweetend Cocoa Powder
-Coffeecake
-Coffeecake (Cheese)
-Coffeecake (Cinnamon)
-Coffeecake (Creme-filled)
-Coffeecake (Fruit)
-Collards
-Frozen Collards
-Cookies
-Cookies (Butter)
-Cookies (Sugar)
-Cookies (Iced)
-Cookies (Chocolate)
-Cookies (Vanilla)
-Cookies (Peanut Butter)
-Cookies (Peanut Butter Filling)
-Cookies (Chocolate Filling)
-Cookies (Creme Filling)
-Cookies (Chocolate Chip)
-Cookies (Fortune)
-Cookies (Oatmeal)
-Cookies (Raisin)
-Cookies (Gluten-free)
-Butter Cookies
-Sugar Cookies
-Iced Cookies
-Chocolate Cookies
-Vanilla Cookies
-Peanut Butter Cookies
-Peanut Butter Filling Cookies
-Chocolate Filling Cookies
-Creme Filling Cookies
-Chocolate Chip Cookies
-Fortune Cookies
-Oatmeal Cookies
-Raisin Cookies
-Gluten-free Cookies
-Cookie Dough
-Cookie Dough (Chocolate Chip)
-Cookie Dough (Peanut Butter)
-Cookie Dough (Sugar)
-Cookie Dough (Butter)
-Cookie Dough (Chocolate)
-Cookie Dough (Vanilla)
-Chocolate Chip Cookie Dough
-Peanut Butter Cookie Dough
-Sugar Cookie Dough
-Butter Cookie Dough
-Chocolate Cookie Dough
-Vanilla Cookie Dough
-Animal Crackers
-Animal Cookies
-Animal Cookies (Frosted)
-Frosted Animal Cookies
-Tea Biscuits
-Arrowroot
-Brownies
-Brownie Mix
-Chocolate Chip Cookie Sandwich
-Chocolate Cookie Sandwich
-Chocolate Covered Biscuits
-Oreos
-Chocolate Wafers
-Coconut Macaroon
-Macaroon
-Fig Bar
-Fudge
-Trolley Cakes
-Gingersnaps
-Graham Crackers
-Graham Crackers (Honey)
-Graham Crackers (Chocolate)
-Honey Graham Crackers
-Chocolate Graham Crackers
-Ladyfingers
-Marie Biscuit
-Marshmallow
-Marshmallow (Chocolate Covered)
-Chocolate Covered Marshmallows
-Rice Squares
-Rice Crispies Squares
-Molasses
-Peanut Butter Cookie Sandwich
-Oatmeal Cookie Sandwich
-Shortbread
-Sugar Wafer
-Sugar Wafer (Chocolate Covered)
-Chocolate Covered Sugar Wafer
-Sugar Wafer (with Creme Filling)
-Vanilla Sandwich
-Vanilla Wafers
-Cilantro
-Coriander
-Corn Bran
-Corn Dogs
-Corn Flour
-Corn Flour (Blue)
-Corn Flour (White)
-Corn Flour (Yellow)
-Corn Flour (Masa)
-Corn Pudding
-Canned Corn
-Corn
-Dried Corn
-White Corn
-Canned White Corn
-Dried White Corn
-Canned Cream Corn
-Frozen Corn
-Frozen White Corn
-Corned Beef Loaf
-Cornmeal (Blue)
-Cornmeal (White)
-Cornmeal (Yellow)
-Cornsalad
-Cornstarch
-Couscous
-Cowpeas (Blackeyes)
-Frozen Cowpeas (Blackeyes)
-Cowpeas (Catjang)
-Frozen Cowpeas (Catjang)
-Cowpeas
-Crabapples
-Cracker meal
-Crackers
-Cheese Crackers
-Milk Crackers
-Multigrain Crackers
-Rye Crackers
-Gulten-free Crackers
-Crackers (Cheese)
-Crackers (Cream)
-Crackers (Multigrain)
-Crackers (Milk)
-Crackers (Rye)
-Crackers (Gluten-free)
-Crackers (Saltines)
-Crackers (with Peanut Butter)
-Crackers (with Cheese)
-Crackers (Whole Wheat)
-Crackers (Wheat)
-Crispbread
-Matzo (Egg)
-Matzo (Egg and Onion)
-Matzo (Whole Wheat)
-Matzo
-Melba Toast
-Melba Toast (Rye)
-Melba Toast (Wheat)
-Rusk Toast
-Saltines
-Toast Thins
-Water Biscuits
-Whole Wheat Crackers
-Wheat Crackers
-Dried Cranberries
-Cranberries
-Cranberry Juice
-Cranberry Juice Cocktail
-Frozen Cranberry Juice Cocktail
-Canned Cranberry Sauce
-Cranberry-orange relish
-Cream Puff Shell
-Cream Puff
-Eclair
-Cream Substitute (Liquid)
-Cream Substitute (Powdered)
-Cream
-Cream (Half and Half)
-Cream (Light)
-Cream (Heavy)
-Half and Half
-Sour Cream
-Whipped Cream
-Cress
-Croissants
-Croutons
-Crab (Alaska King)
-Crab (Blue)
-Crab (Dungeness)
-Crab (Queen)
-Crab Legs
-Crayfish
-Lobster
-Spiny Lobster
-Shrimp
-Shrimp (Canned)
-Shrimp (Imitation)
-Shrimp (Shelled)
-Cucumber
-Black Currants
-Red Currants
-Currants
-Custard-apple
-Dandelion Greens
-Danish (Cheese)
-Danish (Cinnamon)
-Danish (Fruit)
-Danish (Lemon)
-Danish (Nut)
-Danish (Raspberry)
-Date (Deglet Noor)
-Date (Medjool)
-Deer
-Venison
-Sprinkles
-Apple Crisp
-Egg Custard
-Flan
-Mousse
-Rennin (Chocolate)
-Rennin (Vanilla)
-Dill Weed
-Bean Dip
-Cheese Dip
-Salsa
-Salsa con Queso
-Dip (Bean)
-Dip (Cheese)
-Dip (Salsa)
-Dip (Salsa and Cheese)
-Dip (Salsa con Queso)
-Dock
-Doughnuts
-Doughnuts (Cake)
-Doughnuts (Chocolate)
-Doughnuts (French Cruller)
-Doughnuts (Glazed)
-Doughnuts (Creme Filled)
-Doughnuts (Jelly Filled)
-Doughnuts (Custard Filled)
-French Cruller
-Dove
-Drumstick Leaves
-Drumstick Pods
-Duck
-Duck (Liver)
-Duck (Breast)
-Duck (Wing)
-Duck (Leg)
-Dulce de Leche
-Dumpling
-Dumpling (Cheese)
-Dumpling (Potato)
-Durian
-Dutch Brand Loaf
-Edamame
-Egg custards
-Egg Mix
-Egg Roll (Chicken)
-Egg Roll (Pork)
-Egg Roll (Vegetable)
-Eggs
-Eggs (Duck)
-Eggs (Goose)
-Eggs (Quail)
-Eggs (Turkey)
-Eggs (Emu)
-Eggs (Ostrich)
-Eggs (White)
-Eggs (Brown)
-Egg Substitute (Liquid)
-Egg Substitute (Powder)
-Eggnog
-Pickled Eggplant
-Eggplant
-Scrambled Eggs
-Elderberries
-Elk
-Elk (Ground)
-Elk (Roast)
-Emu
-Emu (Fan Filet)
-Emu (Flat Fillet)
-Emu (Ground)
-Emu (Inside Drum)
-Emu (Outside Drum)
-Emu (Top Loin)
-Emu (Oyster)
-Endive
-English Muffins
-English Muffins (Plain)
-English Muffins (Raisin)
-English Muffins (Wheat)
-English Muffins (Whole Grain)
-Epazote
-Eppaw
-Escarole
-Falafel
-Pizza
-Pizza (Cheese)
-Pizza (Sausage)
-Pizza (Pepperoni)
-Pizza (Supreme)
-Pizza (Regular Crust)
-Pizza (Stuffed Crust)
-Pizza (Thick Crust)
-Pizza (Thin Crust)
-Regular Crust Pizza
-Stuffed Crust Pizza
-Thick Crust Pizza
-Thin Crust Pizza
-Regular Crust Pizza (Cheese)
-Stuffed Crust Pizza (Cheese)
-Thick Crust Pizza (Cheese)
-Thin Crust Pizza (Cheese)
-Regular Crust Pizza (Pepperoni)
-Stuffed Crust Pizza (Pepperoni)
-Thick Crust Pizza (Pepperoni)
-Thin Crust Pizza (Pepperoni)
-Regular Crust Pizza (Sausage)
-Stuffed Crust Pizza (Sausage)
-Thick Crust Pizza (Sausage)
-Thin Crust Pizza (Sausage)
-Regular Crust Pizza (Supreme)
-Stuffed Crust Pizza (Supreme)
-Thick Crust Pizza (Supreme)
-Thin Crust Pizza (Supreme)
-Breakfast Bagel
-Breakfast Bagel (Steak, Egg, Cheese)
-Breakfast Bagel (Sausage, Egg, Cheese)
-Biscuit
-Biscuit (with Egg)
-Biscuit (with Ham)
-Biscuit (with Sausage)
-Biscuit (with Egg and Cheese)
-Biscuit (with Egg and Ham)
-Biscuit (with Egg and Bacon)
-Biscuit (with Egg and Steak)
-Biscuit (with Egg and Sausage)
-Biscuit (with Egg, Cheese, and Bacon)
-Biscuit (with Chicken)
-Chicken and Biscuits
-Breadsticks
-Breakfast Burrito
-Burrito
-Burrito (Beans and Beef)
-Burrito (Beans and Cheese)
-Burrito (Beans, Cheese, and Beef)
-Burrito (Beans)
-Cheeseburger
-Double Cheeseburger
-Hamburger
-Double Hamburger
-Chicken Fillet Sandwich
-Chicken Sandwich
-Chicken Tenders
-Fried Chicken
-Coleslaw
-Chicken Wrap
-Chicken Club Sandwich
-Grilled Chicken Club Sandwich
-Club Sandwich
-Croissant
-Croissant (with Egg and Cheese)
-Croissant (with Egg, Cheese, and Sausage)
-Croissant (with Egg, Cheese, and Bacon)
-Croissant (with Egg, Cheese, and Ham)
-Scrambled Eggs
-English Muffin
-English Muffin (with Cheese and Sausage)
-English Muffin (with Egg, Cheese, and Sausage)
-English Muffin (with Egg, Cheese, and Bacon)
-Fish Sanwich
-French Toast Sticks
-French Toast
-Fried Chicken
-Fried Chicken (Breast)
-Fried Chicken (Drumstick)
-Fried Chicken (Thigh)
-Fried Chicken (Wing)
-Griddle Cake Sandwich
-Griddle Cake Sandwich (with Sausage)
-Griddle Cake Sandwich (with Egg, Cheese, and Sausage)
-Griddle Cake Sandwich (with Egg, Cheese, and Bacon)
-Grilled Chicken Sandwich
-Hotdog
-Chilidog
-Hush Puppies
-Cinnamon Rolls
-Nachos
-Nachos (Cheese)
-Nachos (Salsa)
-Nachos (Supreme)
-Onion Rings
-Mashed Potato
-Hash Browns
-Quesadilla
-Quesadilla (Cheese)
-Quesadilla (Chicken)
-Roast Beef Sandwich
-Shrimp (Fried)
-Fried Shrimp
-Sub
-Submarine Sandwich
-Submarine Sandwich (BLT)
-Submarine Sandwich (Colt Cuts)
-Submarine Sandwich (Meatball Marinara)
-Submarine Sandwich (Roasted Chicken)
-Submarine Sandwich (Roast Beef)
-Submarine Sandwich (Steak and Cheese)
-Submarine Sandwich (Tuna)
-Submarine Sandwich (Turkey, Ham, and Roast Beef)
-Submarine Sandwich (Turkey Breast)
-Submarine Sandwich (Ham)
-Submarine Sandwich (Sweet Onion Chicken Teriyaki)
-Philly Steak and Cheese
-Ice Cream Sundae
-Ice Cream Sundae (Caramel)
-Ice Cream Sundae (Hot Fudge)
-Ice Cream Sundae (Strawberry)
-Taco Salad
-Tacos
-Tacos (Beef)
-Tacos (Fish)
-Tacos (Chicken)
-Fat (Beef)
-Fat (Chicken)
-Fat (Duck)
-Fat (Goose)
-Fat (Mutton)
-Fat (Turkey)
-Feijoa
-Fennel
-Fiddlehead Ferns
-Figs (Canned)
-Figs (Dried)
-Figs
-Dried Figs
-Canned Figs
-Fireweed Leaves
-Fish broth
-Fish Oil
-Fish Oil (Cod Liver)
-Fish Oil (Herring)
-Fish Oil (Menhaden)
-Fish Oil (Salmon)
-Fish Oil (Sardine)
-Fish
-Fish (Anchovies)
-Fish (Canned Anchovies)
-Fish (Bass)
-Fish (Blackfish)
-Fish (Bluefish)
-Fish (Burbot)
-Fish (Butterfish)
-Fish (Carp)
-Fish (Catfish)
-Fish (Caviar)
-Fish (Cisco)
-Fish (Cod)
-Fish (Canned Cod)
-Fish (Croaker)
-Fish (Cusk)
-Fish (Devilfish)
-Fish (Drum)
-Fish (Eel)
-Fish (Fish Sticks)
-Fish (Flatfish)
-Fish (Gefiltefish)
-Fish (Grouper)
-Fish (Haddock)
-Fish (Halibut)
-Fish (Herring)
-Fish (Herring Eggs)
-Fish (Ling)
-Fish (Lingcod)
-Fish (Atlantic Mackerel)
-Fish (Pacific Mackerel)
-Fish (Jack Mackerel)
-Fish (King Mackerel)
-Fish (Spanish Mackerel)
-Fish (Mackerel)
-Fish (Mahimahi)
-Fish (Milkfish)
-Fish (Monkfish)
-Fish (Mullet)
-Fish (Ocean Perch)
-Fish (Perch)
-Fish (Northern Pike)
-Fish (Walleye)
-Fish (Alaska Pollock)
-Fish (Atlantic Pollock)
-Fish (Pompano)
-Fish (Pout)
-Fish (Rockfish)
-Fish (Roe)
-Fish (Orange Roughy)
-Fish (Sablefish)
-Fish (Salmon)
-Fish (Atlantic Salmon)
-Fish (Chinook Salmon)
-Fish (Chum Salmon)
-Fish (Coho Salmon)
-Fish (King Salmon)
-Fish (Pink Salmon)
-Fish (Red Salmon)
-Fish (Sockeye Salmon)
-Fish (Tipnuk Salmon)
-Fish (Sardine)
-Fish (Scup)
-Fish (Sea Bass)
-Fish (Seatrout)
-Fish (Shad)
-Fish (Shark)
-Fish (Sheefish)
-Fish (Sheepshead)
-Fish (Smelt)
-Fish (Snapper)
-Fish (Spot)
-Fish (Sturgeon)
-Fish (Sucker)
-Fish (Sunfish)
-Fish (Surimi)
-Fish (Swordfish)
-Fish (Tilapia)
-Fish (Tilefish)
-Fish (Brook Trout)
-Fish (Rainbow Trout)
-Fish (Tuna)
-Fish (Smoked Tuna)
-Fish (Canned Tuna)
-Fish (Bluefin Tuna)
-Fish (Skipjack Tuna)
-Fish (Yellowfin Tuna)
-Fish (Turbot)
-Fish (Whitefish)
-Fish (Whiting)
-Fish (Wolffish)
-Fish (Yellowtail)
-Anchovies
-Canned Anchovies
-Anchovies (Canned)
-Bass
-Blackfish
-Bluefish
-Burbot
-Butterfish
-Carp
-Catfish
-Caviar
-Cisco
-Cod
-Canned Cod
-Cod (Canned)
-Cod (Frozen)
-Croaker
-Cusk
-Devilfish
-Drum
-Eel
-Fish Sticks
-Flatfish
-Gefiltefish
-Grouper
-Haddock
-Halibut
-Herring
-Herring Eggs
-Ling
-Lingcod
-Atlantic Mackerel
-Pacific Mackerel
-Jack Mackerel
-King Mackerel
-Spanish Mackerel
-Mackerel
-Mahimahi
-Milkfish
-Monkfish
-Mullet
-Ocean Perch
-Perch
-Northern Pike
-Walleye
-Alaska Pollock
-Atlantic Pollock
-Pompano
-Pout
-Rockfish
-Roe
-Orange Roughy
-Sablefish
-Salmon
-Atlantic Salmon
-Chinook Salmon
-Chum Salmon
-Coho Salmon
-King Salmon
-Pink Salmon
-Red Salmon
-Sockeye Salmon
-Tipnuk Salmon
-Canned Sardine
-Sardine
-Scup
-Sea Bass
-Seatrout
-Shad
-Shark
-Sheefish
-Sheepshead
-Smelt
-Snapper
-Spot
-Sturgeon
-Sucker
-Sunfish
-Surimi
-Swordfish
-Tilapia
-Tilefish
-Brook Trout
-Rainbow Trout
-Tuna
-Smoked Tuna
-Canned Tuna
-Bluefin Tuna
-Skipjack Tuna
-Yellowfin Tuna
-Turbot
-Whitefish
-Whiting
-Wolffish
-Yellowtail
-Tuna Salad
-Flan
-Fluid Replacement Drink
-Electrolyte Solution
-Sports Drink
-Focaccia
-Energy Bar
-Energy Bar (High Fiber)
-Energy Bar (Luna Bar)
-Energy Bar (Power Bar)
-Luna Bar
-Snickers Marathon
-Snickers Marathon (Chewy Chocolate Peanut)
-Snickers Marathon (Double Chocolate)
-Snickers Marathon (Honey Nut)
-Snickers Marathon (Multigrain)
-Snickers Marathon (Protein)
-Power Bar
-Nutrition Bar
-Nutrition Bar (High Fiber)
-Nutrition Bar (Slim-Fast Optima)
-Nutrition Bar (South Beach Protein Bar)
-Nutrition Bar (Zone Perfect Crunch Bar)
-Slim-Fast Optima
-South Beach Protein Bar
-Zone Perfect Crunch Bar
-Frankfurter
-Frankfurter (Beef)
-Frankfurter (Chicken)
-Frankfurter (Mixed)
-Frankfurter (Meatless)
-Frankfurter (Pork)
-Frankfurter (Turkey)
-Meatless Frankfurter
-Frozen French toast
-French toast
-Refried Beans
-Frog legs
-Frosting (Chocolate)
-Frosting (Vanilla)
-Frosting (Glaze)
-Frosting (Cononut)
-Frosting (Cream Cheese)
-Frosting (White)
-Frosting (Colored)
-Juice Bar
-Fruit Bar
-Popsicle
-Creamsicle
-Fudgsicle
-Ice Cream
-Ice Cream (Vanilla)
-Ice Cream (Chocolate)
-Ice Cream (Strawberry)
-Ice Cream (Sundae)
-Ice Cream (Italian)
-Ice Cream (Lime)
-Ice Cream (Sugar Free)
-Ice Cream (Pineapple)
-Ice Cream (Coconut)
-Ice Cream (Fruit)
-Ice Cream (Soda)
-Ice Cream (Soft-serve)
-Ice Cream (French Chocolate)
-Ice Cream (French Vanilla)
-Ice Cream (Mint Chocolate Chip)
-Ice Cream (Butter Pecan)
-Ice Cream (Chocolate Caramel)
-Ice Cream (Vanila Fudge Twirl)
-Ice Cream (Neapolitan)
-Vanilla Ice Cream
-Chocolate Ice Cream
-Strawberry Ice Cream
-Ice Cream Sundae
-Italian Ice Cream
-Lime Ice Cream
-Sugar Free Ice Cream
-Pineapple Ice Cream
-Coconut Ice Cream
-Fruit Ice Cream
-Soda Ice Cream
-French Chocolate Ice Cream
-French Vanilla Ice Cream
-Mint Chocolate Chip Ice Cream
-Butter Pecan Ice Cream
-Chocolate Caramel Ice Cream
 Vanila Fudge Twirl Ice Cream
-Neapolitan Ice Cream
-Klondike
-Klondike (Chocolate Cone)
-Klondike (Fudge Bar)
-Klondike (Vanilla Sandwich)
-Ice Cream Sandwich
-Soft-serve Ice Cream
-Soft-serve Ice Cream (with Cookie Pieces)
-Soft-serve Ice Cream (with M&M's)
-Soft-serve Ice Cream (with Oreos)
-Frozen Yogurt
-Ice Cream Bar
-Ice Cream Bar (Chocolate Covered)
-Chocolate Covered Ice Cream Bar
-Ice Cream Bar (with Crunch Coating)
-Ice Cream Bar (with Chocolate and Nuts)
-Ice Cream Cone
-Ice Cream Cone (Sugar)
-Ice Cream Cone (Waffle)
-Ice Cream Cookie Sandwich
-Apple Butter
-Fruit Cocktail
-Canned Fruit Cocktail
-Fruit Juice Smoothie
-Fruit salad
-Fruit syrup
-Frybread
-Bison
-Bison (Ground)
-Bison (Chuck)
-Bison (Ribeye)
-Bison (Top Round)
-Bison (Top Sirloin)
-Antelope
-Bear
-Beaver
-Beefalo
-Boar
-Buffalo
-Caribou
-Deer
-Deer (Ground)
-Deer (Loin)
-Deer (Tenderloin)
-Deer (Top Round)
-Elk
-Elk (Ground)
-Elk (Loin)
-Elk (Round)
-Elk (Tenderloin)
-Goat
-Horse
-Moose
-Muskrat
-Opossum
-Rabbit
-Raccoon
-Squirrel
-Garlic Bread
-Garlic
-Gelatin Desserts
-Jello
-Gelatin Powder
-Pickled Ginger Root
-Ginger Root
-Goji Berries
-Wolfberries
-Goose
-Goose Liver
-Canned Gooseberries
-Gooseberries
-Gourd
-Gourd (Dishcloth)
-Gourd (Towelgourd)
-Gourd (White-flowered)
-Gourd (Calabash)
-Granola bar
-Grape Juice
-Grape Leaves
-Pink Grapefruit Juice
-White Grapefruit Juice
-Frozen Pink Grapefruit Juice
-Frozen White Grapefruit Juice 
-Grapefruit
-Pink Grapefruit
-White Grapefruit
-Canned Pink Grapefruit
-Canned White Grapefruit
-Grapes
-Grapes (Muscadine)
-Grapes (Red)
-Grapes (Green)
-Grapes (Seedless)
-Canned Grapes
-Gravy
-Au Jus
-Canned Au Jus
-Canned Gravy
-Instant Gravy
-Brown Gravy
-Instant Brown Gravy
-Beef Gravy
-Instant Beef Gravy
-Chicken Gravy
-Instant Chicken Gravy
-Turkey Gravy
-Instant Turkey Gravy
-Country Style Gravy
-Instant Country Style Gravy
-White Gravy
-Instant White Gravy
-Onion Gravy
-Mushroom Grazy
-Pork Gravy
-Ground turkey
-Groundcherries
-Cape-gooseberries
-Poha
-Guanabana nectar
-Guava nectar
-Guava sauce
-Guavas
-Guinea Hen
-Ham and Cheese Loaf
-Ham and Cheese Roll
-Ham and Cheese Spread
-Ham Salad Spread
-Ham
-Ham (Chopped)
-Ham (Honey)
-Ham (Minced)
-Ham (Sliced)
-Ham (Smoked)
-Ham (Chipped)
-Chopped Ham
-Honey Ham
-Minced Ham
-Sliced Ham
-Smoked Ham
-Chipped Ham
-Hazelnuts
-Headcheese
-Hearts of palm
-Hominy
-Honey Roll Sausage
-Honey
-Horned melon
-Kiwano
-Horseradish
-Huckleberries
-Hummus
-Hush puppies
-Hyacinth Beans
-Ice Cream
-Imitation Cheese
-Incaparina
-Instant Grits
-Instant Grits (Ham 'n' Cheese)
-Instant Grits (American Cheese)
-Instant Grits (Redeye Gravy and Country Ham)
-Instant Oatmeal
-Instant Oatmeal (Cinnamon-Spice)
-Instant Oatmeal (Banana Bread)
-Instant Oatmeal (Raisin and Spice)
-Instant Oatmeal (Brown Sugar)
-Instant Oatmeal (Apple Cinnamon)
-Instant Pudding
-Canned Jackfruit
-Jackfruit
-Jam 
-Jam (Strawberry)
-Jam (Cherry)
-Jam (Blueberry)
-Jam (Blackberry)
-Jam (Apricot)
-Jam (Apple Cinnamon)
-Marmalade (Strawberry)
-Marmalade (Cherry)
-Marmalade (Blueberry)
-Marmalade (Blackberry)
-Marmalade (Apricot)
-Marmalade (Orange)
-Preserves (Strawberry)
-Preserves (Cherry)
-Preserves (Blueberry)
-Preserves (Blackberry)
-Preserves (Apricot)
-Jelly (Strawberry)
-Jelly (Cherry)
-Jelly (Blueberry)
-Jelly (Blackberry)
-Jelly (Apricot)
-Java-plum
-Jellyfish
-Dried Jellyfish
-Jerusalem-artichokes
-Jew's ear
-Pepeao
-Dried Jujube
-Jujube
-Jute
-Potherb
-Kale
-Frozen Kale
-Kanpyo
-Dried Gourd Strips
-Kefir
-Keikitos
-Kielbasa
-Polish Kielbasa
-Kiwifruit
-Kiwi
-Green Kiwi
-Yellow Kiwi
-Knackwurst
-Knockwurst
-Kohlrabi
-Kumquats
-Lamb
-Lamb (Ground)
-Lamb (Foreshank)
-Lamb (Hindshank)
-Lamb (Shank Half)
-Lamb (Sirloin Chops)
-Lamb (Sirloin Half)
-Lamb (Leg)
-Lamb (Loin)
-Lamb (Loin Chop)
-Lamb (Rack)
-Lamb (Rib Chop)
-Lamb (Rack Roast)
-Lamb (Shoulder)
-Lamb (Tenderloin)
-Lamb (Breast)
-Lamb (Chump)
-Lamb (Flap)
-Lamb (Heart)
-Lamb (Kidney)
-Lamb (Liver)
-Lamb (Sweetbread)
-Lamb (Tongue)
-Lamb (Lungs)
-Lamb (Pancreas)
-Lamb (Spleen)
-Lambsquarters
-Lard
-Lasagna
-Lasagna (Meat Sauce)
-Lasagna (Cheese)
-Lasagna (Vegetable)
-Baking Powder
-Baking Soda
-Cream of Tartar
-Yeast
-Lebanon Bologna
-Leeks
-Freeze Dried Leeks
-Lemon Grass
-Citronella
-Frozen Lemon Juice
-Lemon Juice
-Lemon peel
-Lemonade
-Lemonade (Powder)
-Lemonade (Concentrate
-Pink Lemonade
-Lemons
-Lentils
-Lentils (Pink)
-Lentils (Red)
-Lentil Sprouts
-Lettuce
-Lettuce (Butterhead)
-Lettuce (Romaine)
-Lettuce (Cos)
-Lettuce (Green Leaf)
-Lettuce (Iceberg)
-Lettuce (Red Leaf)
-Canned Lima beans
-Lima beans
-Frozen Lima beans
-Large Lima beans
-Baby Lima beans
-Lime juice
-Limeade
-Limes
-Litchis
-Lychee
-Liver Cheese
-Liver Sausage
-Liverwurst Spread
-Loganberries
-Loganberries (Frozen)
-Frozen Loganberries
-Longans
-Longans (Dried)
-Dried Longans
-Loquats
-Lotus Root
-Meatless Luncheon slices
-Lupins
-Luxury Loaf
-Macaroni and Cheese
-Macaroni
-Vegetable Macaroni
-Mackerel
-Malabar Spinach
-Malt Beverage
-Non-alcoholic Beer
-Mammy-apple
-Mamey
-Mango nectar
-Dried Mango
-Mangos
-Mangosteen
-Maraschino Cherries
-Margarine
-Margarine (Stick)
-Margarine (Tub)
-Butter-Margarine Blend
-Mashu Roots
-Mayonnaise
-Mayonnaise (Low Fat)
-Nutty Bars
-Meatballs
-Frozen Meatballs
-Meatless Meatballs
-Melon Balls
-Melon
-Melon (Banana)
-Melon (Cantaloupe)
-Melon (Casaba)
-Melon (Honeydew)
-Banana Melon
-Cantaloupe
-Casaba Melon
-Honeydew Melon
-Milk
-Milk and Cereal Bar
-Milk Shake
-Buttermilk
-Lowfat Buttermilk
-Condensed Milk
-Evaporated Milk
-Milk (Condensed)
-Milk (Evaporated)
-Milk (2%)
-Milk (1%)
-Milk (Fat Free)
-Milk (Whole)
-Milk (Chocolate)
-Milk (Goat)
-Milk (Sheep)
-Milk (Soy)
-Milk (Almond)
-Chocolate Milk
-Goat Milk
-Sheep Milk
-Soy Milk
-Almond Milk
-Millet Flour
-Millet
-Miso
-Molasses
-Abalone
-Clam
-Conch
-Cuttlefish
-Mussel
-Octopus
-Oyster
-Oyster (Eastern)
-Oyster (Pacific)
-Scallop
-Squid
-Whelk
-Mortadella
-Mothbeans
-Mother's Loaf
-Mountain Yam
-Mouse nuts
-Muffin mix
-Muffin
-Blueberry Muffin
-Corn Muffin
-Oat Bran Muffin
-Wheat Bran Muffin
-Mulberries
-Mung Beans
-Mung Bean Sprouts
-Mungo Beans
-Mush
-Musroom
-Mushroom (White)
-Mushroom (Brown)
-Mushroom (Chanterelle)
-Mushroom (Enoki)
-Mushroom (Maitake)
-Mushroom (Morel)
-Mushroom (Oyster)
-Mushroom (Portabella)
-Mushroom (Shiitake)
-Mushroom (Straw)
-Mustard Greens
-Frozen Mustard Greens
-Mustard Spinach
-Tendergreen
-Mustard
-Mutton
-Nance
-Frozen Nance
-Natto
-Natural Cereal
-Nectarines
-Noodles
-Noodles (Cellophane)
-Noodles (Long Rice)
-Noodles (Chow Mein)
-Noodles (Egg)
-Noodles (Vegetable)
-Noodles (Flat)
-Noodles (Soba)
-Noodles (Somen)
-Noodles (Udon)
-Nopales
-Supplements
-Acorn Flour
-Dried Acorns
-Acorns
-Almond Butter
-Almond Paste
-Almonds
-Beechnuts
-Brazilnuts
-Butternuts
-Cashew Butter
-Cashew Nuts
-Cashews
-Chestnuts
-Chestnuts (Chinese)
-Chestnuts (European)
-Chestnuts (Japanese)
-Coconut Cream
-Coconut Meat
-Coconut Milk
-Ginkgo Nuts
-Hazelnuts
-Filberts
-Hickorynuts
-Macadamia Nuts
-Mixed Nuts
-Pecans
-Pilinuts
-Pine Nuts
-Pistachio Nuts
-Pistachios
-Walnuts
-Walnuts (Black)
-Walnuts (English)
-Walnuts (Glazed)
-Oat bran
-Oat flour
-Oats
-Octopus
-Oheloberries
-Oil
-Oil (Almond Oil)
-Oil (Apricot Kernel)
-Oil (Avocado)
-Oil (Babassu)
-Oil (Bearded Seal)
-Oil (Whale)
-Oil (Canola)
-Oil (Cocoa Butter)
-Oil (Coconut)
-Oil (Cooking)
-Oil (Corn)
-Oil (Canola)
-Oil (Peanut)
-Oil (Olive)
-Oil (Cottonseed)
-Oil (Cupu Assu)
-Oil (Flaxseed)
-Oil (Grapeseed)
-Oil (Hazelnut)
-Oil (Sunflower)
-Oil (Palm)
-Oil (Soy)
-Oil (Mustard)
-Oil (Nutmeg Butter)
-Oil (Oat)
-Oil (Poppyseed)
-Oil (Safflower)
-Oil (Sesame)
-Oil (Sheanut)
-Oil (Teaseed)
-Oil (Tomatoseed)
-Oil (Uchuhuba Butter)
-Oil (Vegetable)
-Oil (Walnut)
-Oil (Walrus)
-Oil (Wheat Germ)
-Almond Oil
-Apricot Kernel Oil
-Avocado Oil
-Babassu Oil
-Bearded Seal Oil
-Whale Oil
-Canola Oil
-Cocoa Butter Oil
-Coconut Oil
-Cooking Oil
-Corn Oil
-Canola Oil
-Peanut Oil
-Olive Oil
-Cottonseed Oil
-Cupu Assu Oil
-Flaxseed Oil
-Grapeseed Oil
-Hazelnut Oil
-Sunflower Oil
-Palm Oil
-Soy Oil
-Mustard Oil
-Nutmeg Butter Oil
-Oat Oil
-Poppyseed Oil
-Safflower Oil
-Sesame Oil
-Sheanut Oil
-Teaseed Oil
-Tomatoseed Oil
-Uchuhuba Butter Oil
-Vegetable Oil
-Walnut Oil
-Walrus Oil
-Wheat Germ Oil
-Okara
-Okra
-Frozen Okra
-Olive Loaf
-Green Olives
-Black Olives
-Canned Green Olives
-Canned Black Olives
-Onion rings
-Frozen Onion rings
-Onions
-Dehydrated Onion Flakes
-Frozen Onions
-Onions
-Onions (Spring)
-Onions (Scallions)
-Onions (Sweet)
-Onions (Welsh)
-Onions (Yellow)
-Onions (Young Green)
-Oopah
-Tunicate
-Orange Juice
-Frozen Orange Juice
-Orange peel
-Orange Pineapple Juice Blend
-Orange-grapefruit Juice
-Oranges
-Oranges (California)
-Oranges (Valencia)
-Oranges (Florida)
-Oranges (Navel)
-Ostrich
-Ostrich (Ground)
-Ostrich (Inside Leg)
-Ostrich (Inside Strip)
-Ostrich (Outside Leg)
-Ostrich (Outside Strip)
-Ostrich (Oyster)
-Ostrich (Round)
-Ostrich (Tenderloin)
-Ostrich (Top Loin)
-Oven-roasted Chicken Breast Roll
-Owl
-Pan Dulce
-Pancake Mix
-Pancakes
-Pancakes (Plain)
-Pancakes (Blueberry)
-Pancakes (Buckwheat)
-Pancakes (Gluten-free)
-Pancakes (Whole Wheat)
-Papad
-Papaya Nectar
-Canned Papaya
-Papayas
-Shredded Parmesan Cheese
-Freeze Dried Parsley
-Parsley
-Parsnips
-Passion-fruit Juice
-Passion-fruit Juice (Purple)
-Passion-fruit Juice (Yellow)
-Passion-fruit
-Pasta
-Pasta (Fresh)
-Pasta (Gluten-free)
-Pasta (Vegetable)
-Pasta (Whole Grain)
-Pasta (Whole Wheat)
-Fresh Pasta
-Vegetable Pasta
-Gluten-free Pasta
-Whole Grain Pasta
-Whole Wheat Pasta
-Pasta Mix
-Pasta Mix (Beef)
-Pasta Mix (Cheeseburger Macaroni)
-Pasta Mix (Lasagna)
-Pastrami
-Pastrami (Beef)
-Pastrami (Turkey)
-Pastelitos de Guava
-Guava Pastries
-Pate de Foie Gras
-Pate
-Pate (Chicken)
-Pate (Goose)
-Pate (Liver)
-Pate (Truffle)
-Peach Nectar
-Peach
-Peach (Yellow)
-Yellow Peach
-Canned Peaches
-Dehydrated Peaches
-Dried Peaches
-Frozen Peaches
-Spiced Peaches
-Peanut Butter
-Creamy Peanut Butter
-Chunky Peanut Butter
-Low Fat Peanut Butter
-Peanuts
-Peanuts (Spanish)
-Peanuts (Valencia)
-Peanuts (Virginia)
-Pear Nectar
-Canned Pears
-Dried Pears
-Pears
-Pears (Asian)
-Pears (Bartlett)
-Pears (Bosc)
-Pears (Green Anjou)
-Pears (Red Anjou)
-Frozen Peas and Carrots
-Canned Peas and Carrots
-Frozen Peas and Onions
-Canned Peas and Onions
-Peas
-Frozen Peas
-Canned Peas
-Green Peas
-Frozen Green Peas
-Canned Green Peas
-Spilt Peas
-Pectin
-Pepeao
-Peppered Loaf
-Peppermint
-Pepperoni
-Peppers
-Peppers (Ancho)
-Peppers (Chili)
-Peppers (Hot Chile)
-Peppers (Hot Chili)
-Peppers (Hungarian)
-Peppers (Jalapeno)
-Peppers (Pasilla)
-Peppers (Serrano)
-Peppers (Green)
-Peppers (Red)
-Peppers (Yellow)
-Ancho Pepper
-Chili Pepper
-Hot Chile Pepper
-Hot Chili Pepper
-Hungarian Pepper
-Jalapeno Pepper
-Pasilla Pepper
-Serrano Pepper
-Green Pepper
-Red Pepper
-Yellow Pepper
-Persimmons
-Dried Persimmons
-Pheasant
-Pheasant (Breast)
-Pheasant (Leg)
-Phyllo Dough
-Pickle and Pimiento Loaf
-Pickle Relish
-Pickle Relish (Sweet)
-Pickle Relish (Hamburger)
-Pickle Relish (Hot Dog)
-Pickles
-Pickles (Chowchow)
-Pickles (Dill)
-Pickles (Kosher Dill)
-Pickles (Sour)
-Pickles (Sweet)
-Pickles (Bread)
-Pickles (Buttle)
-Chowchow Pickles
-Dill Pickles
-Kosher Dill Pickles
-Sour Pickles
-Sweet Pickles
-Bread Pickles
-Buttle Pickles
-Picnic Loa Pickles
-Pie Crust
-Pie Crust (Chocolate)
-Pie Crust (Graham Cracker)
-Pie Crust (Deep Dish)
-Pie Crust (Cookie-type)
-Pie Crust (Vanilla Wafer)
-Pie Filling
-Pie Filling (Apple)
-Pie Filling (Blueberry)
-Pie Filling (Cherry)
-Apple Pie Filling
-Blueberry Pie Filling
-Cherry Pie Filling
-Pumpkin Pie Mix
-Pie (Apple)
-Pie (Banana Cream)
-Pie (Blueberry)
-Pie (Blackberry)
-Pie (Cherry)
-Pie (Chocolate Creme)
-Pie (Chocolate Mousse)
-Pie (Coconut Cream)
-Pie (Coconut Custard)
-Pie (Dutch Apple)
-Pie (Fruit)
-Pie (Egg Custard)
-Pie (Lemon Meringue)
-Pie (Mince)
-Pie (Peach)
-Pie (Pecan)
-Pie (Pumpkin)
-Pie (Vanilla Cream)
-Apple Pie
-Banana Cream Pie
-Blueberry Pie
-Blackberry Pie
-Cherry Pie
-Chocolate Creme Pie
-Chocolate Mousse Pie
-Coconut Cream Pie
-Coconut Custard Pie
-Dutch Apple Pie
-Fruit Pie
-Egg Custard Pie
-Lemon Meringue Pie
-Mince Pie
-Peach Pie
-Pecan Pie
-Pumpkin Pie
+Vanilla Cookie Dough
+Vanilla Cookies
 Vanilla Cream Pie
-Pigeon peas
-Piki Bread
-Pimento
-Pineapple Juice
-Frozen Pineapple Juice
-Pineapple
-Canned Pineapple
-Frozen Pineapple
-Pinon Nuts
-Pitanga
-Pizza Rolls
-Pizza
-Pizza (Cheese)
-Pizza (Four Cheese)
-Pizza (Pepperoni)
-Pizza (Supreme)
-Pizza (Seafood)
-Plantains
-Plantains (Green)
-Plantains (Yellow)
-Green Plantains
-Yellow Plantains
-Plums
-Canned Plums
-Dried Plums
-Prunes
-Poi
-Pokeberry shoots
-Poke
-Polish Sausage
-Pomegranate Juice
-Pomegranates
-Popcorn
-Popovers
-Pork Loin
-Pork Sausage Rice Links
-Pork Sausage
-Bacon
-Bacon (Pre-cooked)
-Bacon (Pre-sliced)
-Pork
-Cured Ham
-Boneless Cured Ham
-Ham
-Boneless Ham
-Ham (Rump)
-Ham (Shank)
-Ham (Sliced)
-Ham (Whole)
-Ham (Boneless)
-Ham (Patties)
-Ham (Rump)
-Ham (Steak)
-Pork (Backribs)
-Pork (Blade)
-Pork (Shoulder)
-Pork (Ground)
-Pork (Leg)
-Pork (Loin)
-Pork (Roast)
-Pork (Chops)
-Pork (Center Loin)
-Pork (Center Rib)
-Pork (Sirloin)
-Pork (Tenderloin)
-Pork (Top Loin)
-Pork (Spare Ribs)
-Pork (Brain)
-Pork (Chitterlings)
-Pork (Ears)
-Pork (Feet)
-Pork (Heart)
-Pork (Jowl)
-Pork (Kidneys)
-Pork (Liver)
-Pork (Lungs)
-Pork (Pancreas)
-Pork (Spleen)
-Pork (Stomach)
-Pork (Tail)
-Pork (Tongue)
-Pork (Belly)
-Pork (Country-style Ribs)
-Pork (Oriental Style)
-Pork (Shoulder Breast)
-Pork (Breakfast Strips)
-Potato chips
-Potato Flour
-Potato Pancakes
-Potato Puffs
-Potato Salad
-Potato Soup
-Potatoes
-Potatoes (O'Brien)
-Potatoes (Red)
-Potatoes (Russet)
-Potatoes (Scalloped)
-Potatoes (White)
-Potatoes (Yellow)
-Potatoes (Roasted)
-O'Brien Potatoes
-Red Potatoes
-Russet Potatoes
-Scalloped Potatoes
-White Potatoes
-Yellow Potatoes
-Roasted Potatoes
-Canned Potatoes
-Boiled Potatoes
-Baked Potatoes
-Potatoes Au Gratin
-French Fries
-French Fries (Cottage Cut)
-French Fries (Crinkle Cut)
-French Fries (Cross Cut)
-French Fries (Shoestring)
-French Fries (Steak Cut)
-French Fries (Steak Fries)
-French Fries (Wedge Cut)
-Hash Browns
-Frozen Hash Browns
-Dehydrated Potato Flakes
-Mashed Potatoes
-Instant Mashed Potatoes
-Potsticker
-Wonton
-Poultry Salad Sandwich Spread
-Prairie Turnips
-Soft Pretzels
-hard Pretzels
-Prickly Pears
-Protein Supplement
-Prune Juice
-Prune Puree
-Canned Prunes
-Dehydrated Prunes
-Pudding
-Pudding (Lemon)
-Pudding (Banana)
-Pudding (Chocolate)
-Pudding (Coconut Cream)
-Pudding (Rice)
-Pudding (Tapioca)
-Pudding (Vanilla)
-Instant Pudding
-Instant Pudding (Lemon)
-Instant Pudding (Banana)
-Instant Pudding (Chocolate)
-Instant Pudding (Coconut Cream)
-Instant Pudding (Rice)
-Instant Pudding (Tapioca)
-Instant Pudding (Vanilla)
-Puff Pastry
-Puffed Wheat
-Pulled Pork
-Pummelo
-Pumpkin Flowers
-Pumpkin Leaves
-Pumpkin
-Canned Pumpkin
-Pumpkin Flowers
-Purslane
-Quail
-Quick Oats with Iron
-Quinces
-Quinoa
-Radicchio
-Radish Seeds
-Radishes
-Radishes (Hawaiian)
-Radishes (Oriental)
-Radishes (White Icicle)
-Raisins
-Raisins (Golden Seedless)
-Raisins (Seedless)
-Raisins (Seeded)
-Rambutan
-Raspberries
-Canned Raspberries
-Frozen Raspberries
-Ravioli
-Ravioli (Cheese)
-Ravioli (Meat)
-Ravioli (Vegetable)
-Ravioli (Canned)
-Ravioli (Frozen)
-Canned Ravioli
-Frozen Ravioli
-Refried Beans
-Frozen Rhubarb
-Rhubarb
-Rice and Vermicelli Mix
-Rice and Vermicelli Mix (Beef)
-Rice and Vermicelli Mix (Chicken)
-Rice and Vermicelli Mix (Rice Pilaf)
-Rice and Wheat Cereal Bar
-Rice Bowl
-Rice Bran
-Rice Cake
-Rice Crackers
-Rice Flour
-Rice Flour (Brown)
-Rice Flour (White)
-Rice Mix
-Rice Mix (Cheese Flavor)
-Rice Mix (White and Wild)
-Rice Noodles
-Rice
-Rice (Brown, Long-grain)
-Rice (Brown, Medium-grain)
-Rice (White, Glutinous)
-Rice (White, Long-grain)
-Rice (White, Medium-grain)
-Rice (White, Short-grain)
-Rice (White, Glutinous)
-Roast Beef Spread
-Roast Beef
-Rolls
-Rolls (Dinner)
-Rolls (French)
-Rolls (Gluten-free)
-Rolls (Hard)
-Rolls (Pumpernickel)
-Rolls (Wheat-free)
-French Rolls
-Gluten-free Rolls
-Hard Rolls
-Pumpernickel Rolls
-Dinner Rolls
-Dinner Rolls (Egg)
-Dinner Rolls (Oat Bran)
-Dinner Rolls (Rye)
-Dinner Rolls (Sweet)
-Dinner Rolls (Wheat)
-Dinner Rolls (Whole Wheat)
-Buns
-Buns (Hamburger)
-Buns (Hot Dog)
-Rose Hips
-Rose-apples
-Roselle
-Rosemary
-Rowal
-Ruby Red Grapefruit Juice
-Ruffed Grouse
-Rutabagas
-Rye Flour
-Rye Flour (Light)
-Rye Flour (Medium)
-Rye Flour (Dark)
-Rye Grain
-Salad Dressing
-Salad Dressing (Bacon and Tomato)
-Salad Dressing (Blue Cheese)
-Salad Dressing (Roquefort Cheese)
-Salad Dressing (Buttermilk)
-Salad Dressing (Caesar)
-Salad Dressing (Coleslaw)
-Salad Dressing (French)
-Salad Dressing (Green Goddess)
-Salad Dressing (Honey Mustard)
-Salad Dressing (Italian)
-Salad Dressing (Vinegar and Oil)
-Salad Dressing (Mayonnaise)
-Salad Dressing (Peppercorn)
-Salad Dressing (Poppyseed)
-Salad Dressing (Ranch)
-Salad Dressing (Russian)
-Salad Dressing (Sesame Seed)
-Salad Dressing (Sweet and Sour)
-Salad Dressing (Thousand Island)
-Low Fat Salad Dressing
-Low Fat Salad Dressing (Bacon and Tomato)
-Low Fat Salad Dressing (Blue Cheese)
-Low Fat Salad Dressing (Roquefort Cheese)
-Low Fat Salad Dressing (Buttermilk)
-Low Fat Salad Dressing (Caesar)
-Low Fat Salad Dressing (Coleslaw)
-Low Fat Salad Dressing (French)
-Low Fat Salad Dressing (Green Goddess)
-Low Fat Salad Dressing (Honey Mustard)
-Low Fat Salad Dressing (Italian)
-Low Fat Salad Dressing (Vinegar and Oil)
-Low Fat Salad Dressing (Mayonnaise)
-Low Fat Salad Dressing (Peppercorn)
-Low Fat Salad Dressing (Poppyseed)
-Low Fat Salad Dressing (Ranch)
-Low Fat Salad Dressing (Russian)
-Low Fat Salad Dressing (Sesame Seed)
-Low Fat Salad Dressing (Sweet and Sour)
-Low Fat Salad Dressing (Thousand Island)
-Low Calorie Salad Dressing
-Low Calorie Salad Dressing (Bacon and Tomato)
-Low Calorie Salad Dressing (Blue Cheese)
-Low Calorie Salad Dressing (Roquefort Cheese)
-Low Calorie Salad Dressing (Buttermilk)
-Low Calorie Salad Dressing (Caesar)
-Low Calorie Salad Dressing (Coleslaw)
-Low Calorie Salad Dressing (French)
-Low Calorie Salad Dressing (Green Goddess)
-Low Calorie Salad Dressing (Honey Mustard)
-Low Calorie Salad Dressing (Italian)
-Low Calorie Salad Dressing (Vinegar and Oil)
-Low Calorie Salad Dressing (Mayonnaise)
-Low Calorie Salad Dressing (Peppercorn)
-Low Calorie Salad Dressing (Poppyseed)
-Low Calorie Salad Dressing (Ranch)
-Low Calorie Salad Dressing (Russian)
-Low Calorie Salad Dressing (Sesame Seed)
-Low Calorie Salad Dressing (Sweet and Sour)
-Low Calorie Salad Dressing (Thousand Island)
-Salami
-Salami (Beef)
-Salami (Beef and Pork)
-Salami (Turkey)
-Salami (Pork)
-Salami (Italian)
-Beef Salami
-Beef and Pork Salami
-Turkey Salami
-Pork Salami
-Italian Salami
-Salisbury Steak with Gravy
-Salmonberries
-Salsify
-Vegetable Oyster
-Salt
-Sandwich Spread
-Sandwich Spread (Meatless)
-Sandwich Spread (Pork)
-Sandwich Spread (with Chopped Pickle)
-Meatless Sandwich Spread
-Sapodilla
-Sapote
-Sauce (Alfredo)
-Sauce (Barbecue)
-Sauce (Cheese)
-Sauce (Chili)
-Sauce (Cocktail)
-Sauce (Duck)
-Sauce (Enchilada)
-Sauce (Fish)
-Sauce (Hoisin)
-Sauce (Horseradish)
-Sauce (Hot Chile)
-Sauce (Sriracha)
-Sauce (Oyster)
-Sauce (Pasta)
-Sauce (Peanut)
-Sauce (Pesto)
-Sauce (Pizza)
-Sauce (Plum)
-Sauce (Salsa Verde)
-Sauce (Sofrito)
-Sauce (Steak)
-Sauce (Sweet and Sour)
-Sauce (Tartar)
-Sauce (Teriyaki)
-Sauce (Tomato)
-Sauce (White)
-Sauce (Worcestershire)
-Sauerkraut
-Sauerkraut (Canned)
-Canned Sauerkraut
-Sausage
-Sausage (Pork Links)
-Sausage (Pork Patty)
-Sausage (Berliner)
-Sausage (Chicken)
-Sausage (Turkey)
-Sausage (Italian)
-Sausage (Italian Pork)
-Sausage (Italian Turkey)
-Sausage (Meatless)
-Sausage (Polish)
-Sausage (Pork)
-Sausage (Beef)
-Sausage (Summer)
-Sausage (Vienna)
-Berliner Sausage
-Chicken Sausage
-Turkey Sausage
-Italian Sausage
-Italian Pork Sausage
-Italian Turkey Sausage
-Meatless Sausage
-Polish Sausage
-Pork Sausage
-Beef Sausage
-Summer Sausage
-Vienna Sausage
-Sausage, Egg, and Cheese Biscuit
-Scallop
-Scrapple
-Sea cucumber
-Sea Lion
-Seal
-Seasoning Mix (Taco)
-Seasoning Mix (Steak)
-Seasoning Mix (Chili)
-Seaweed
-Seaweed (Agar)
-Seaweed (Canadian)
-Seaweed (Irishmoss)
-Seaweed (Kelp)
-Seaweed (Laver)
-Seaweed (Spirulina)
-Seaweed (Wakame)
-Breadfruit Seeds
-Seeds
-Seeds (Brednut Tree Seeds)
-Seeds (Chia Seeds)
-Seeds (Cottonseed)
-Seeds (Flaxseed)
-Seeds (Hemp)
-Seeds (Lotus)
-Seeds (Pumpkin)
-Seeds (Squash)
-Seeds (Safflower)
-Seeds (Sesame)
-Seeds (Sisymbrium)
-Seeds (Sunflower)
-Seeds (Watermelon)
-Dried Seeds
-Dried Seeds (Brednut Tree Seeds)
-Dried Seeds (Chia Seeds)
-Dried Seeds (Cottonseed)
-Dried Seeds (Flaxseed)
-Dried Seeds (Hemp)
-Dried Seeds (Lotus)
-Dried Seeds (Pumpkin)
-Dried Seeds (Squash)
-Dried Seeds (Safflower)
-Dried Seeds (Sesame)
-Dried Seeds (Sisymbrium)
-Dried Seeds (Sunflower)
-Dried Seeds (Watermelon)
-Sesame Butter
-Sesame Flour
-CottonSeed Flour
-Sunflower Seed Butter
-Sunflower Seed Flour
-Semolina
-Sesbania Flower
-Shake
-Shallots
-Freeze-dried Shallots
-Sherbet
-Sherbet (Orange)
-Sherbet (Lime)
-Sherbet (Rainbow)
-Sherbet (Berry)
-Shortening
-Shortening (Bread)
-Shortening (Cake)
-Shortening (Confectionery)
-Shortening (Frying)
-Shortening (Multipurpose)
-Shortening (Vegetable)
-Shortening (Soybean)
-Shredded Wheat
-Potato Salad
-Sliced Cheese
-Smoked Link Sausage
-Smoked Link Sausage (Pork)
-Smoked Link Sausage (Beef)
-Smoked Link Sausage (Pork and Beef)
-Bagel Chips
-Banana Chips
-Beef Jerky
-Beef Sticks
-Brown Rice Chips
-Corn Cakes
-Corn Snacks
-Corn Snacks (BBQ)
-Corn Snacks (Plain)
-Corn Snacks (Cheese)
-Corn Snacks (Onion)
-Corn Puffs
-Corn Puffs (BBQ)
-Corn Puffs (Cheese)
-Corn Nuts
-Crisped Rice Bar
-Crisped Rice Bar (Almond)
-Crisped Rice Bar (Chocolate Chip)
-Sun Chips
-Sun Chips (Cheddar)
-Sun Chips (Onion)
-Multi Grain Snack
-Multi Grain Snack (Cheddar)
-Multi Grain Snack (Onion)
-Granola Bar
-Granola Bar (Fruit)
-Granola Bar (Chewy)
-Granola Bar (Crunchy)
-Granola Bar (Sweet and Salty)
-Granola Bar (with Yogurt)
-Granola Bar (with Coconut)
-Granola Bar (Almond)
-Granola Bar (Chocolate Chip)
-Granola Bar (Peanut Butter)
-Granola Bar (Chocolate and Peanut Butter)
-Granola Bar (Nut and Raisin)
-Granola Bar (Raisin)
-Granola Bar (Coated)
-Granola Bar (Low Fat)
-Granola Bites
-Cereal Bar
-Cereal Bar (Fruit)
-Cereal Bar (Puffed Rice)
-Snack Mix
-Oriental Mix
-Wasabi Peas
-Pita Chips
-Plantain Chips
-Popcorn
-Popcorn (Unsalted)
-Popcorn (Butter)
-Popcorn (Caramel)
-Popcorn (Cheese)
-Popcorn (Microwave)
-Microwave Popcorn
-Popcorn Cakes
-Pork Skins
-Pork Skins (BBQ)
-Potato Chips
-Potato Chips (BBQ)
-Potato Chips (Cheese)
-Potato Chips (Lightly Salted)
-Potato Chips (Salt and Pepper)
-Potato Chips (Vinegar)
-Potato Chips (Sour Cream and Onion)
-Fat Free Potato Chips
-Fat Free Potato Chips (BBQ)
-Fat Free Potato Chips (Cheese)
-Fat Free Potato Chips (Lightly Salted)
-Fat Free Potato Chips (Salt and Pepper)
-Fat Free Potato Chips (Vinegar)
-Fat Free Potato Chips (Sour Cream and Onion)
-Reduced Fat Potato Chips
-Reduced Fat Potato Chips (BBQ)
-Reduced Fat Potato Chips (Cheese)
-Reduced Fat Potato Chips (Lightly Salted)
-Reduced Fat Potato Chips (Salt and Pepper)
-Reduced Fat Potato Chips (Vinegar)
-Reduced Fat Potato Chips (Sour Cream and Onion)
-Pretzels
-Pretzels (Soft)
-Pretzels (Hard)
-Pretzels (Bite-sized)
-Pretzels (Bites)
-Pretzels (Sourdough)
-Pretzels (Whole Wheat)
-Pretzels (Sticks)
-Pretzels (Chocolate Covered)
-Pretzels (Gluten-free)
-Soft Pretzels
-Hard Pretzels
-Bite-sized Pretzels
-Pretzel Bites
-Sourdough Pretzels
-Whole Wheat Pretzels
-Pretzel Sticks
-Chocolate Covered Pretzels
-Gluten-free Pretzels
-Rice Cakes
-Rice Cakes (Buckwheat)
-Rice Cakes (Corn)
-Rice Cakes (Multigrain)
-Rice Cakes (Rye)
-Rice Cakes (Sesame Seed)
-Sesame Sticks
-Shrimp Cracker
-Soy Chips
-Taro Chips
-Sweet Potato Chips
-Fruit Roll
-Fruit Roll (Berry)
-Fruit Roll (Cherry)
-Fruit Roll (Strawberry)
-Tortilla Chips
-Tortilla Chips (Low Fat)
-Tortilla Chips (Nacho Cheese)
-Tortilla Chips (Ranch)
-Tortilla Chips (Taco)
-Tortilla Chips (Light)
-Tortilla Chips (Plain)
-Trail Mix
-Trail Mix (with Chocolate Chips)
-Trail Mix (Tropical)
-Vegetable Chips
-Yucca Chips
-Cassava Chips
-Fruit Snacks
-Fruit Pieces
-Candy Bits
-Combos
-Snail
-Sorghum Flour
-Sorghum Grain
-Soup
-Soup (Bean and Ham)
-Soup (Bean and Bacon)
-Soup (Bean and Frankfurters)
-Soup (Bean and Pork)
-Soup (Beef and Mushroom)
-Soup (Beef and Vegetables)
-Soup (Beef Barley)
-Soup (Beef Bouillon)
-Soup (Beef Consomme)
-Soup (Beef Broth)
-Soup (Beef Noodle)
-Soup (Beef Stroganoff)
-Soup (Black Bean)
-Soup (Broccoli Cheese)
-Soup (Cheese)
-Soup (Chicken and Vegetable)
-Soup (Chicken Broth)
-Soup (Chicken Consomme)
-Soup (Chicken Bouillon)
-Soup (Chichken Noodle)
-Soup (Chicken Corn Chowder)
-Soup (Chicken Gumbo)
-Soup (Chicken Mushroom)
-Soup (Chicken Mushroom Chowder)
-Soup (Chicken Rice)
-Soup (Chicken and Pasta)
-Soup (Chicken)
-Soup (Chili Beef)
-Soup (Chunky Beef)
-Soup (Chunky Chicken Noodle)
-Soup (Chunky Vegetable)
-Soup (Clam Chowder)
-Soup (Manhattan Clam Chowder)
-Soup (New England Clam Chowder)
-Soup (Cream of Asparagus)
-Soup (Cream of Celery)
-Soup (Cream of Chicken)
-Soup (Cream of Mushroom)
-Soup (Cream of Onion)
-Soup (Cream of Potato)
-Soup (Cream of Shrimp)
-Soup (Cream of Vegetable)
-Soup (Egg Drop)
-Soup (Fish)
-Soup (Hot and Sour)
-Soup (Lentil)
-Soup (Lentil with Ham)
-Soup (Ministrone)
-Soup (Chunky Ministrone)
-Soup (Mushroom Barley)
-Soup (Mushroom)
-Soup (Onion)
-Soup (Oyster)
-Soup (Green Pea)
-Soup (Split Pea)
-Soup (Split Pea with Ham)
-Soup (Potato Ham Chowder)
-Soup (Beef Ramen)
-Soup (Miso Ramen)
-Soup (Pork Ramen)
-Soup (Chicken Ramen)
-Soup (Soy Sauce Ramen)
-Soup (Shark Fin)
-Soup (Sirloin Burger)
-Soup (Beef Stock)
-Soup (Fish Stock)
-Soup (Chicken Stock)
-Soup (Tomato Beef)
-Soup (Tomato Beef Noodle)
-Soup (Tomato Bisque)
-Soup (Tomato Rice)
-Soup (Tomato)
-Soup (Turkey Noodle)
-Soup (Turkey Vegetable)
-Soup (Turkey)
-Soup (Vegetable Beef)
-Soup (Vegetable Broth)
-Soup (Vegetable Chicken)
-Soup (Vegetable)
-Soup (Wonton)
-Sour Cream
-Sour Cream (Fat Free)
-Sour Cream (Light)
-Sour Cream (Reduced Fat)
-Sourdock
-Soursop
-Soy Flour
-Soy Meal
-Soy Sauce
-Reduced Sodium Soy Sauce
-Soybeans
-Soymilk
-Soymilk (Vanilla)
-Soymilk (Chocolate)
-Spaghetti
-Spaghetti (Tomato Sauce)
-Spaghetti (Meat Sauce)
-Spaghetti (with Meatballs)
-Spanish Rice Mix
-Spearmint
-Spelt
-Allspice
-Anise Seed
-Basil
-Bay Leaf
-Caraway Seed
-Cardamom
-Celery Seed
-Chervil
-Chili Powder
-Cinnamon
-Cloves
-Coriander Leaf
-Coriander Seed
-Cumin Seed
-Curry Powder
-Dill Seed
-Dill Weed
-Fennel Seed
-Fenugreek Seed
-Garlic Powder
-Ginger
-Mace
-Marjoram
-Mustard Seed
-Nutmeg
-Onion Powder
-Oregano
-Paprika
-Parsley
-Black Pepper
-Cayenne Pepper
-White Pepper
-Poppy Seed
-Poultry Seasoning
-Pumpkin Pie Spice
-Rosemary
-Saffron
-Sage
-Savory
-Tarragon
-Thyme
-Turmeric
-Spinach Souffle
-Spinach
-Canned Spinach
-Frozen Spinach
-Squab
-Zucchini
-Baby Zucchini
-Squash
-Squash (Indian)
-Squash (Summer)
-Squash (Strightneck)
-Squash (Crookneck)
-Squash (Scallop)
-Squash (Zucchini)
-Squash (Baby Zucchini)
-Squash (Winter)
-Squash (Acorn)
-Squash (Butternut)
-Squash (Hubbard)
-Squash (Spaghetti)
-Squirrel
-Steelhead Trout
-Stinging Nettles
-Strawberries
-Canned Strawberries
-Frozen Strawberries
-Apple Strudel
-Canne Succotash
-Succotash
-Frozen Succotash
-Sugar
-Sugar (Brown)
-Sugar (Granulated)
-Sugar (Maple)
-Sugar (Powdered)
-Sugar-apples
-Sweetsop
-Swamp Cabbage
-Skunk Cabbage
-Sweet Potato
-Sweet Potato Leaves
-Sweet Potato Puffs
-Sweet Potato (Canned)
-Sweet Potato (Mashed)
-Canned Sweet Potato
-Mashed Sweet Potato
-Frozen Sweet Potato
-Sweet Potato French Fries
-Sweet Rolls
-Sweet Rolls (Cheese)
-Sweet Rolls (Cinnamon)
-Sweet Rolls (Cinnamon with Raisins)
-Sweetener
-Sweetener (Agave)
-Sweetener (Stevia)
-Sweetener (Sugar and Sucralose)
-Sweetener (Aspartame)
-Sweetener (Fructose)
-Sweetener (Saccharin)
-Sweetener (Sucralose)
-Swisswurst
-Fruit Flavored Syrup
-Maple Syrup
-Chocolate Syrup
-Syrup
-Syrup (Chocolate)
-Syrup (Corn)
-Syrup (HFCS)
-Syrup (Grenadine)
-Syrup (Malt)
-Syrup (Maple)
-Syrup (Sorghum)
-Syrup (Cane)
-Syrup (Pancake)
-Syrup (Sugar Free)
-Chocolate Syrup
-Corn Syrup
-HFCS Syrup
-Grenadine Syrup
-Malt Syrup
-Maple Syrup
-Sorghum Syrup
-Cane Syrup
-Pancake Syrup
-Sugar Free Syrup
-Taco Shells
-Tamales
-Tamales (Masa and Pork Filling)
-Tamarind Nectar
-Tamarinds
-Tangerine Juice
-Tangerines
-Canned Tangerines
-Mandarin Oranges
-Canned Mandarin Oranges
-Tapioca
-Taquitos
-Taquitos (Beef and Cheese)
-Taquitos (Chicken and Cheese)
-Taro Leaves
-Taro Shoots
-Taro
-Taro (Tahitian)
-Teff
-Tempeh
-Tennis Bread
-Thuringer
-Cervelat
-Thyme
-Toaster Pastries
-Toaster Pastries (Brown Sugar and Cinnamon)
-Toaster Pastries (Fruit)
-Toaster Pastries (Apple)
-Toaster Pastries (Blueberry)
-Toaster Pastries (Cherry)
-Toaster Pastries (Strawberry)
-Toaster Pastries (Chocolate Fudge)
-Toaster Pastries (Raspberry)
-Frosted Toaster Pastries
-Frosted Toaster Pastries (Brown Sugar and Cinnamon)
-Frosted Toaster Pastries (Fruit)
-Frosted Toaster Pastries (Apple)
-Frosted Toaster Pastries (Blueberry)
-Frosted Toaster Pastries (Cherry)
-Frosted Toaster Pastries (Strawberry)
-Frosted Toaster Pastries (Chocolate Fudge)
-Frosted Toaster Pastries (Raspberry)
-Frosted Toaster Pastries (Wild Berry)
-Frosted Toaster Pastries (S'mores)
-Tofu Yogurt
-Tofu (Fried)
-Tofu (Soft)
-Tofu (Hard)
-Tofu (Firm)
-Tofu (Dried)
-Fried Tofu
-Tofu
-Soft Tofu
-Hard Tofu
-Firm Tofu
-Tomatillos
-Vegetable Juice
-Tomato Juice
-Tomato Powder
-Tomatoes
-Tomatoes (Paste)
-Tomatoes (Puree)
-Tomatoes (Green)
-Tomatoes (Orange)
-Tomatoes (Crushed)
-Tomatoes (Red)
-Tomatoes (Sun-dried)
-Tomatoes (Yellow)
-Tomato Sauce
-Tomato Sauce (with Mushrooms)
-Tomato Sauce (with Onions)
-Tomato Sauce (with Herbs)
-Tomato Sauce (with Onions, Peppers, and Celery)
-Topping (Butterscotch)
-Topping (Caramel)
-Topping (Marshmallow Cream)
-Topping (Pineapple)
-Topping (Strawberry)
-Topping (Magic Shell)
-Butterscotch Topping
-Caramel Topping
-Marshmallow Cream Topping
-Pineapple Topping
-Strawberry Topping
-Magic Shell Topping
-Tortellini
-Tortilla Chips
-Tortilla Chips (Low Fat)
-Tortilla
-Tortilla (Blue Corn)
-Tortilla (Corn)
-Tortilla (Flour)
-Tortilla (Whole Wheat)
-Tostada Shells
-Tree Fern
-Triticale Flour
-Triticale
-Turkey and Gravy
-Turkey Bacon
-Turkey Ham
-Turkey Pot Pie
-Turkey Roast
-Turkey Sticks
-Turkey Thigh
-Turkey
-Turkey (Back)
-Turkey (Breast)
-Turkey (Leg)
-Turkey (Dark Meat)
-Turkey (Wing)
-Turkey (Drumstick)
-Turkey (Gizzard)
-Turkey (Heart)
-Turkey (Liver)
-Turkey (Thigh)
-Turkey (Rotisserie)
-Stuffing
-Turnip Greens
-Canned Turnip Greens
-Frozen Turnip Greens
-Turnover
-Turnover (Cheese)
-Turnover (Chicken)
-Turnover (Meat)
-Turnover (Turkey)
-Turnover (Vegetable)
-Turtle
 Vanilla Extract
 Vanilla Extract (Imitation)
+Vanilla Fudge
+Vanilla Ice Cream
+Vanilla Sandwich
+Vanilla Sandwich Cookies
+Vanilla Wafers
 Veal
-Veal (Rib Roast)
-Veal (Shank)
-Veal (Plate Half)
-Veal (Point Half)
+Veal (Brain)
 Veal (Breast)
+Veal (Chops)
 Veal (Forshank)
 Veal (Ground)
-Veal (Leg)
-Veal (Top Round)
-Veal (Loin)
-Veal (Chops)
-Veal (Ribs)
-Veal (Shoulder)
-Veal (Sirloin)
-Veal (Brain)
 Veal (Heart)
 Veal (Kidneys)
+Veal (Leg)
 Veal (Liver)
+Veal (Loin)
 Veal (Lungs)
 Veal (Pancreas)
+Veal (Plate Half)
+Veal (Point Half)
+Veal (Rib Roast)
+Veal (Ribs)
+Veal (Shank)
+Veal (Shoulder)
+Veal (Sirloin)
 Veal (Spleen)
 Veal (Thymus)
 Veal (Tongue)
+Veal (Top Round)
+Vegetable Chips
+Vegetable Juice
 Vegetable Juice Cocktail
+Vegetable Macaroni
+Vegetable Oil
+Vegetable Oyster
+Vegetable Pasta
 Vegetable Smoothie
-Mixed Vegetables
-Canned Mixed Vegetables
-Frozen Mixed Vegetables
 Vegetarian Fillets
 Vegetarian Meatloaf
 Vegetarian Patties
 Veggie Burgers
-Soyburgers
+Venison
 Vermicelli
+Vienna Sausage
 Vinegar
 Vinegar (Balsamic)
 Vinegar (Cider)
 Vinegar (Distilled)
 Vinegar (Red Wine)
 Vinespinach
-Basella
 Vital Wheat Gluten
+Vitamin Water
+Vodka
 Waffles
 Waffles (Buttermilk)
 Waffles (Chocolate Chip)
 Waffles (Gluten-free)
 Waffles (Whole Wheat)
-Frozen Waffles
-Frozen Waffles (Buttermilk)
-Frozen Waffles (Chocolate Chip)
-Frozen Waffles (Gluten-free)
-Frozen Waffles (Whole Wheat)
+Walleye
+Walnut Oil
+Walnuts
+Walnuts (Black)
+Walnuts (English)
+Walnuts (Glazed)
 Walrus
+Walrus Oil
 Wasabi
+Wasabi Peas
 Water
-Bottled Water
-Filtered Water
-Flavored Water
+Water Biscuits
 Waterchestnuts
 Waterchestnuts (Chinese)
 Waterchestnuts (Matai)
 Watercress
 Waxgourd
-Chinese Preserving Melon
 Whale
+Whale Oil
+Whatchamacallit
+Wheat
+Wheat (Durum)
+Wheat (Hard Red Spring)
+Wheat (Hard Red Winter)
+Wheat (Hard White)
+Wheat (Kamut)
+Wheat (Soft Red Winter)
+Wheat (Soft White)
 Wheat Bran
+Wheat Bran Muffin
+Wheat Crackers
 Wheat Flour
 Wheat Flour (All-purpose)
 Wheat Flour (Bread)
@@ -3597,17 +3463,50 @@ Wheat Flour (Cake)
 Wheat Flour (Tortilla)
 Wheat Flour (Whole-grain)
 Wheat Germ
-Wheat
-Wheat (Durum)
-Wheat (Hard Red Spring)
-Wheat (Hard Red Winter)
-Wheat (Hard White)
-Wheat (Soft Red Winter)
-Wheat (Soft White)
-Wheat (Kamut)
+Wheat Germ Oil
+Wheat Tea
+Whelk
 Whey
+Whipped Cream
+Whipped Cream Substitute
+Whipped Topping
+Whipped Topping (Fat Free)
+Whiskey
+Whiskey Sour
 Whiskey Sour Mix
+White Beans
+White Cake
+White Chocolate
+White Corn
+White Cranberry Peach Juice
+White Cranberry Strawberry Juice
+White Grapefruit
+White Grapefruit Juice
+White Gravy
+White Pepper
+White Potatoes
+White Wine
+White Wine (Chardonnay)
+White Wine (Chenin Blanc)
+White Wine (Fume Blanc)
+White Wine (Gewurztraminer)
+White Wine (late harvest)
+White Wine (Muller Thurgau)
+White Wine (Muscat)
+White Wine (Pinot Blanc)
+White Wine (Pinot Grigio)
+White Wine (Pinot Gris)
+White Wine (Riesling)
+White Wine (Sauvignon Blanc)
+White Wine (Semillon)
+Whitefish
+Whiting
+Whole Grain Pasta
+Whole Wheat Bread
+Whole Wheat Crackers
 Whole Wheat Natural Cereal
+Whole Wheat Pasta
+Whole Wheat Pretzels
 Wild Rice
 Willow
 Winged Bean
@@ -3615,40 +3514,909 @@ Winged Bean (Leaves)
 Winged Bean (Tuber)
 Wocas
 Wocas (Tuber)
+Wolfberries
+Wolffish
+Wonton
 Wonton Wrappers
-Egg Roll Wrappers
 Yachtwurst
 Yam
 Yambean
-Jicama
 Yardlong Beans
 Yautia
-Tannier
+Yeast
 Yeast Extract Spread
+Yellow Beans
+Yellow Cake
+Yellow Kiwi
+Yellow Peach
+Yellow Pepper
+Yellow Plantains
+Yellow Potatoes
 Yellow Rice
-Yogurt Parfait
+Yellow Snap Beans
+Yellowfin Tuna
+Yellowtail
 Yogurt
 Yogurt (Frozen)
-Yogurt (with Fruit)
 Yogurt (Fruite Flavored)
-Greek Yogurt
+Yogurt (with Fruit)
+Yogurt Parfait
 Yokan
+York Bites
+Yucca Chips
+Zone Perfect Crunch Bar
+Zucchini
 Zwieback
-Snack Bar
-Whipped Cream Substitute
-Whipped Topping
-Vanilla Sandwich Cookies
-Sandwich Cookies
-Fat Free Whipped Topping
-Whipped Topping
-Whipped Topping (Fat Free)
-Rennin
-Rennin (Chocolate)
-Rennin (Vanilla)
-Naranjilla Lulo
-Naranjilla Pulp
-Milk Substitute
-Chilchen
-Red Berry Beverage
-Chocolate Eclair
-Salisbury Steak with Gravy
+Beef (Sirloin Steak)
+Sirloin Steak
+Crunchy Shrimp
+Popcorn Shrimp
+Mozzarella Sticks
+Roast Beef Sandwich
+Cookies (Lemon Jumble)
+Cookies (Caramel Dulce De Leche)
+Cookies (Chalet)
+Cookies (Do-si-dos)
+Cookies (Samoas)
+Cookies (Tagalongs)
+Cookies (Thank U Berry Munch)
+Cookies (Thin Mints)
+Cookies (Trefoils)
+Cookies (Double Chocolate)
+Cookies (Fruit & Nut)
+Cookies (Chocolate Chip Ice Box)
+Cookies (Coconut Macaroon)
+Cookies (Coconut)
+Cookies (Date Filled Oatmeal)
+Cookies (Dutch Cocoa)
+Cookies (Frosty Lemon)
+Cookies (Lemon Creme)
+Cookies (Iced Molasses)
+Cookies (Iced Oatmeal)
+Cookies (Molasses)
+Cookies (Oatmeal Raisin)
+Cookies (Oatmeal)
+Cookies (Old Fashioned Molasses)
+Cookies (Old Fashioned Windmill Cookies)
+Cookies (Peanut Butter)
+Cookies (Raspberry Filled)
+Cookies (Ginger Snaps)
+Cookies (Strawberry Filled)
+Cookies (Sugar Free Oatmeal)
+Cookies (Chocolate Chip Pecan)
+Chocolate Sandwich Creme Cookies
+Vanilla Sandwich Creme Cookies
+Vanilla Sugar Wafer
+Vanilla Wafer
+Cookies (Coconut Cocadas)
+Cookies (Iced Lemonade)
+Cookies (Macaroon)
+Cookies (Peanut Butter Gauchos)
+Double Fudge Creme Sandwich Cookies
+English Tea Sandwich Cookies
+Taffy Sandwich Cookies
+Caramel Dulce De Leche Cookies
+Lemon Jumble Cookies
+Chalet Cookies
+Do-si-dos Cookies
+Samoas Cookies
+Tagalongs Cookies
+Thank U Berry Munch Cookies
+Thin Mints Cookies
+Trefoils Cookies
+Chocolate Chip Ice Box Cookies
+Coconut Macaroon Cookies
+Coconut Cookies
+Date Filled Oatmeal Cookies
+Dutch Cocoa Cookies
+Frosty Lemon Cookies
+Lemon Creme Cookies
+Iced Molasses Cookies
+Iced Oatmeal Cookies
+Molasses Cookies
+Oatmeal Raisin Cookies
+Oatmeal Cookies
+Old Fashioned Molasses Cookies
+Old Fashioned Windmill Cookies Cookies
+Peanut Butter Cookies
+Raspberry Filled Cookies
+Ginger Snaps Cookies
+Strawberry Filled Cookies
+Sugar Free Oatmeal Cookies
+Double Chocolate Cookies
+Fruit & Nut Cookies
+Chocolate Chip Pecan Cookies
+Coconut Cocadas Cookies
+Iced Lemonade Cookies
+Macaroon Cookies
+Peanut Butter Gauchos Cookies
+Cheddar Cheese on Cheese Crackers
+Cheddar Cheese on Wafer Crackers
+Cheddar Cheese on Wheat Crackers
+Chocolatey Peanut Butter Crackers
+Grilled Cheese on Wafer Crackers
+PB & J Crackers
+Peanut Butter on Cheese Crackers
+Peanut Butter on Toasty Crackers
+Crackers (Cheddar Cheese on Cheese)
+Crackers (Cheddar Cheese on Wafer Crackers)
+Crackers (Cheddar Cheese on Wheat Crackers)
+Crackers (Chocolatey Peanut Butter Crackers)
+Crackers (Grilled Cheese on Wafer Crackers)
+Crackers (PB & J Crackers)
+Crackers (Peanut Butter on Cheese Crackers)
+Crackers (Peanut Butter on Toasty Crackers)
+Winter Mints
+Chicken Strips
+Hash Brown Rounds
+Hash Browns
+Onion Rings
+Fried Chicken Sandwich
+Grilled Chicken Sandwich
+Vanilla Shake
+Chocolate Shake
+Shake (Vanilla)
+Shake (Chocolate)
+Brown Sugar And Bacon Flavored Baked Beans
+Baked Beans
+Baked Beans (Brown Sugar And Bacon Flavor)
+Soup (Wedding)
+Soup (Chunky Beef)
+Soup (Chunky Chicken Noodle)
+Soup (Chunky Ministrone)
+Soup (Chunky Vegetable)
+Soup (Chunky Beef with Vegetables)
+Soup (Chunky Chicken and Dumplings)
+Soup (Chunky Grilled Chicken Gumbo)
+Soup (Chunky New England Clam Chowder)
+Soup (Chunky Sirloin Burger with Vegetables)
+Soup (Chunky Baked Potato with Cheddar, Bacon)
+Soup (Chunky Baked Potato with Steak, Cheese)
+Soup (Chunky Beef Rib Roast with Potatoes, Herbs)
+Soup (Chunky Beef with Rice)
+Soup (Chunky Chicken Broccoli Cheese)
+Soup (Chunky Chicken Corn Chowder)
+Soup (Chunky Fajita Chicken with Rice, Beans)
+Soup (Chunky Firehouse Chili)
+Soup (Chunky Sirloin Steak with Vegetables)
+Soup (Chunky Steak Chili with Beans)
+Soup (Chunky Bean and Ham)
+Soup (Chunky Beef Barley)
+Soup (Chunky Manhattan Clam Chowder)
+Soup (Chunky Potato Ham Chowder)
+Soup (Chunky Roadhouse Chili)
+Soup (Chunky Salisbury Steak with Mushrooms, Onions)
+Soup (Chunky Pot Roast)
+Soup (Chunky Beef with Mushrooms)
+Soup (Chunky Split Pea and Ham)
+Soup (Chunky Steak and Potato)
+Soup (Chunky Chicken and Sausage Gumbo)
+Soup (Healthy Chicken and Sausage Gumbo)
+Soup (Healthy New England Clam Choder)
+Soup (Healthy Vegetable)
+Soup (Healthy Chicken Noodle)
+Soup (Healthy Cream of Mushroom)
+Soup (Healthy Chicken with Rice)
+Soup (Healthy Cream of Chicken)
+Soup (Healthy Cream of Celery)
+Soup (Healthy Minestrone)
+Soup (Healthy Tomato)
+Soup (Homestyle Chicken with Rice)
+Soup (Homestyle Chicken Noodle)
+Soup (Homestyle Butternut Squash Bisque)
+Soup (Homestyle Tomato with Basil)
+Soup (Homestyle Wedding)
+Soup (Homestyle Chicken Tortilla)
+Soup (Homestyle Minestrone)
+Soup (Homestyle New England Clam Chowder)
+Soup (Homestyle Potato Broccoli Cheese)
+Soup (Homestyle Vegetable)
+Soup (Healthy Homestyle Chicken Tortilla)
+Soup (Healthy Homestyle Chicken Pasta)
+Soup (Healthy Homestyle Wedding)
+Soup (Cheddar Cheese)
+Soup (Chicken with Rice)
+Soup (Cream of Broccoli)
+Soup (Broccoli Cheese)
+Soup (Tripe)
+Soup (Black Bean Soup)
+Fat Free Soup (Cream of Chicken)
+Fat Free Soup (Cream of Mushroom)
+Fat Free Soup (Cream of Celery)
+Fat Free Soup (Cream of Broccoli)
+Fat Free Soup (Broccoli Cheese)
+Soup (French Lentil)
+Soup (Greek Minestrone)
+Soup (Bean Masala)
+Soup (Chick Pea)
+Soup (Corn Chowder)
+Soup (Coconut Curry)
+Soup (Carrot Lemongrass)
+Pork and Beans
+Tomato Juice
+Soup (Creamy Tomato)
+Soup (Bean with Bacon)
+Soup (Beef Noodle)
+Soup (Beef with Vegetables, Barley)
+Soup (Beefy Mushroom)
+Soup (Chicken Alphabet)
+Soup (Chicken and Dumplings)
+Soup (Chicken and Stars)
+Soup (Chicken Barley with Mushrooms)
+Soup (Chicken Gumbo)
+Soup (Chicken Noodle O's)
+Soup (Chicken Vegetable)
+Soup (Chicken Won Ton)
+Soup (Cream of Onion)
+Soup (Cream of Shrimp)
+Soup (Creamy Chicken Noodle)
+Soup (Double Noodle)
+Soup (Fiesta Nacho Cheese)
+Soup (French Onion)
+Soup (Golden Mushroom)
+Soup (Goldfish Pasta with Chicken)
+Soup (Green Pea)
+Soup (Lentil)
+Soup (Manhattan Clam Chowder)
+Soup (Mega Noodle in Chicken Broth)
+Soup (Minestrone)
+Soup (New England Clam Chowder)
+Soup (Old Fashioned Tomato Rice)
+Soup (Split Pea with Ham and Bacon)
+Soup (Tomato Bisque)
+Vegetable Juice (Spicy)
+Vegetable Juice (60%)
+Cheese Ravioli
+Chicken Parmesan
+Lasagne
+Spaghetti with Meat Sauce
+Spaghetti with Pomodoro Sauce
+Spaghetti (Meat Sauce)
+Spaghetti (Pomodoro Sauce)
+Almond Poppyseed Muffin Mix
+Chicken Tenderloin
+Coleslaw
+Country Fried Shrimp
+Country Fried Chicken
+Country Fried Steak
+Catfish Platter
+Multi-Grain Crisps
+Chicken Nuggets
+Chicken Strips
+Fish Fillet
+Golden Fried Shrimp
+Mozzarella Cheese Sticks
+Top Sirloin Steak
+Pizza (Deep Dish)
+Deep Dish Pizza
+Deep Dish Pizza (Cheese)
+Deep Dish Pizza (Pepperoni)
+Deep Dish Pizza (Sausage)
+Deep Dish Pizza (Supreme)
+Garden Burger
+Garden Burger (Black Bean Chipotle)
+Garden Burger (Flame Grilled)
+Garden Burger (Savory Portabella)
+Garden Burger (Sun-Dried Tomato Basil)
+Garden Burger (Veggie Medley)
+Black Bean Chipotle Garden Burger
+Flame Grilled Garden Burger
+Savory Portabella Garden Burger
+Sun-Dried Tomato Basil Garden Burger
+Veggie Medley Garden Burger
+Yellow Cake Mix
+Cake Mix (Yellow)
+Brownberry Sage and Onion Stuffing
+Brownberry Sage and Onion Stuffing Mix
+Thomas English Muffins
+Boneless Pork Loin
+Center Cut Pork Chops
+Pork Loin Filets
+Pork Tenderloin
+Canadian Bacon
+Turkey Pepperoni
+Hamburger Rolls
+Vanilla Wafers
+Black Bean Mango
+Italian Vegetable Medley Pasta
+Mayan Harvest Bake
+Mushroom & Asparagus Risotto
+Pesto Pasta Primavera
+Pizza (Margherita)
+Pizza (Mediterranean)
+Pizza (Vegetable)
+Pizza (Mushroom and Spinach)
+Pizza (Tzatziki)
+Pizza (Tikka Masala)
+Spinach Artichoke Pasta
+Three Cheese Penne
+Three Cheese Ravioli
+Enchilada
+Enchilada (Bean)
+Enchilada (Chicken)
+Spicy Black Bean Enchilada
+Chicken Enchilada
+Chicken Florentine
+Chicken Pasta Pomodoro
+Lemongrass Coconut Chicken
+Pilaf
+Red Curry Chicken
+Southwest Style Chicken
+Chicken Fettuccine
+Roasted Garlic Chicken Farfalle
+Sesame Chicken
+Sweet and Sour Chicken
+Pita Crisps
+Pita Crisps (Salt)
+Pita Crisps (Salsa)
+Crackers (Asiago)
+Crackers (Vegetable)
+Crackers (Honey Sesame)
+Crackers (Seven Grain)
+Tuscan Veggie Bake
+Almond Crescents Cookies
+Chocolate Lovers Cookies
+Chocolate Malt Chunk Cookies
+Coconut Cookies
+Dark Chocolate Chunk Cookies
+Mini Chocolate Chip Cookies
+Oatmeal Chocolate Cookies
+Peanut Butter Cup Cookies
+Rainbow Chocolate Chip Cookies
+Danish Wedding Cookies
+Cookies (Almond Crescents)
+Cookies (Chocolate Lovers)
+Cookies (Chocolate Malt Chunk)
+Cookies (Coconut)
+Cookies (Dark Chocolate Chunk)
+Cookies (Mini Chocolate Chip)
+Cookies (Oatmeal Chocolate)
+Cookies (Peanut Butter Cup)
+Cookies (Rainbow Chocolate Chip)
+Cookies (Danish Wedding)
+Cinnamon Toast Grahams
+Snack Sticks
+Snack Sticks (Honey)
+E.L. Fudge
+Cookies (Caramel Filled)
+Cookies (Coconut Dreams)
+Cookies (Graham)
+Cookies (Fudge Mint)
+Cookies (Fudge)
+Cookies (Peanut Butter Fudge)
+Cookies (Chocolate Graham)
+Cookies (Peanut Creme)
+Cookies (Triple Fudge)
+Caramel Filled Cookies
+Coconut Dreams Cookies
+Deluxe Grahams Cookies
+Fudge Mint Cookies
+Fudge Filled Cookies
+Fudge Filled Cookies (Peanut Butter)
+Chocolate Graham Cookies
+Peanut Creme Filled Cookies
+Triple Fudge Filled Cookies
+Gingerbread Man
+Cheesecake Middles
+Fudge Sticks
+Fudge Sticks (Peanut Butter)
+Jumbo Fudge Sticks
+Jumbo Fudge Sticks (Peanut Butter)
+Fudge Stripes
+Fudge Stripes (Dark Chocolate)
+Fudge Stripes (Mini)
+Fudge Stripes (Oatmeal)
+Fudge Stripes (Holiday)
+Fudge-Dipped Ice Cream Cups
+Mint Patties
+Grahams (Chocolate Chip)
+Grahams (Cinnamon)
+Chocolate Chip Grahams
+Cinnamon Grahams
+Holiday Jingles Cookies
+Sandies
+Sandies (Cashew Shortbread)
+Sandies (Pecan Shortbread)
+Sandies (Chocolate Chip and Pecan)
+Sandies (Dark Chocolate Almond)
+Cookies (Cashew Shortbread)
+Cookies (Pecan Shortbread)
+Cookies (Chocolate Chip & Pecan Shortbread)
+Cookies (Dark Chocolate Almond Shortbread)
+Cashew Shortbread Cookies
+Pecan Shortbread Cookies
+Chocolate Chip & Pecan Shortbread Cookies
+Dark Chocolate Almond Shortbread Cookies
+Sweet Cremes Cookies
+Crackers (Onion)
+Crackers (Sesame)
+Crackers (Wheat)
+Crackers (Buttercrisps)
+Crackers (Assorted)
+Crackers (Multigrain)
+Crackers (Garlic Herb)
+Flatbread Crisps
+Pretzel Crackers
+Pretzel Crackers (Cheese)
+Pretzel Crackers (Garlic Herb)
+Vanilla Wafers
+Vanilla Wafers (Rainbow)
+Vienna Fingers
+Waffle Bowls
+Waffle Cones
+Honey Wheat Crackers
+Crackers (Honey Wheat)
+Crackers (Roasted Almond)
+Crackers (Toasted Pecan)
+Three Bean Chips
+Chips (Three Bean)
+Pancakes (Cinnabon)
+Pancakes (Caramel Cinnabon)
+Eggo Waffles
+Eggo Waffles (Buttermilk)
+Eggo Waffles (Pumpkin Spice)
+Eggo Waffles (Mini)
+French Toast Sticks
+French Toast Sticks (Cinnamon)
+Fruit Pizza
+Fruit Pizza (Mixed Berry)
+Fruit Pizza (Strawberry)
+Pancakes
+Pancakes (Blueberry)
+Pancakes (Chocolate Chip)
+Waffles
+Waffles (Blueberry)
+Waffles (Buttermilk)
+Waffles (Chocolate Chip)
+Waffles (Cinnamon Toast)
+Waffles (French Toast)
+Waffles (Homestyle)
+Waffles (Strawberry)
+Waffles (Brown Sugar)
+Waffles (Honey Oat)
+Frosted Toaster Pastries (Chocolate Chip Cookie Dough)
+Frosted Toaster Pastries (Apple Strudel)
+Frosted Toaster Pastries (Blueberry Muffin)
+Frosted Toaster Pastries (Cinnamon Roll)
+Frosted Toaster Pastries (Confetti Cake)
+Frosted Toaster Pastries (Cookies and Creme)
+Frosted Toaster Pastries (Orange Cream)
+Frosted Toaster Pastries (Pumpkin Pie)
+Frosted Toaster Pastries (Spring Berry)
+Frosted Toaster Pastries (Sugar Cookie)
+Frosted Toaster Pastries (Waffle Cone)
+Frosted Toaster Pastries (Wild Fruit Fusion)
+Frosted Toaster Pastries (Wild Grap)
+Frosted Toaster Pastries (Wild Strawberry)
+Frosted Toaster Pastries (Gingerbread)
+Frosted Toaster Pastries (Vanilla Milkshake)
+Pop-Tarts
+Pop-Tarts (Apple)
+Pop-Tarts (Blueberry)
+Pop-Tarts (Brown Sugar and Cinnamon)
+Pop-Tarts (Cherry)
+Pop-Tarts (Chocolate Fudge)
+Pop-Tarts (Fruit)
+Pop-Tarts (Raspberry)
+Pop-Tarts (S'mores)
+Pop-Tarts (Strawberry)
+Pop-Tarts (Wild Berry)
+Pop-Tarts (Chocolate Chip Cookie Dough)
+Pop-Tarts (Apple Strudel)
+Pop-Tarts (Blueberry Muffin)
+Pop-Tarts (Cinnamon Roll)
+Pop-Tarts (Confetti Cake)
+Pop-Tarts (Cookies and Creme)
+Pop-Tarts (Orange Cream)
+Pop-Tarts (Pumpkin Pie)
+Pop-Tarts (Spring Berry)
+Pop-Tarts (Sugar Cookie)
+Pop-Tarts (Waffle Cone)
+Pop-Tarts (Wild Fruit Fusion)
+Pop-Tarts (Wild Grap)
+Pop-Tarts (Wild Strawberry)
+Pop-Tarts (Gingerbread)
+Pop-Tarts (Vanilla Milkshake)
+Pop-Tarts Mini Crisps (Cinnamon Brown Sugar)
+Pop-Tarts Mini Crisps (Chocolate Baked Bites)
+Pop-Tarts Mini Crisps (Strawberry Baked Bites)
+Pop-Tarts Ice Cream Shoppe (Hot Fudge Sundae)
+Pop-Tarts Ice Cream Shoppe (Ice Creme Sandwich)
+Pop-Tarts Ice Cream Shoppe (Rainbow Chip)
+Pop-Tarts Ice Cream Shoppe (Strawberry Milkshake)
+Pop-Tarts Ice Cream Shoppe (Vanilla Milkshake)
+Cracker Chips
+Cracker Chips (Cheddar)
+Cracker Chips (Sea Salt)
+Cracker Chips (Sour Cream and Onion)
+Cracker Chips (Southwest Ranch)
+Multigrain Crackers
+Herb Crackers
+Cereal Bar
+Cereal Bar (Mixed Berry)
+Pancakes (Buttermilk)
+Chicken Strips
+Fried Chicken (Breast)
+Fried Chicken (Drumstick)
+Fried Chicken (Skin and Breading)
+Fried Chicken (Thigh)
+Fried Chicken (Wing)
+Popcorn Chicken
+Sour Cream
+Sour Cream (Fat Free)
+Sour Cream (Reduced Fat)
+Fat Free Sour Cream
+Reduced Fat Sour Cream
+Shake 'N' Bake
+Velveeta Cheese
+Stove Top Stuffing
+Big Franks
+Buttermilk Biscuit
+Buttermilk Biscuit Mix
+Chewy Fudge Brownie
+Chewy Fudge Brownie Mix
+Salad
+Salad (Caesar)
+Salad (Chef)
+Salad (Bacon Ranch)
+Salad (Chicken)
+Salad (Potato)
+Salad (Maccaronni)
+Caesar Salad
+Chef Salad
+Bacon Ranch Salad
+Chicken Salad
+Potato Salad
+Maccaronni Salad
+Baked Apple Pie
+Parfait
+Parfait (Fruit)
+Parfait (Yogurt)
+Parfait (Fruit and Yogurt)
+Sundae (Caramel)
+Sundae (Fudge)
+Sundae (Strawberry)
+Caramel Sundae
+Fudge Sundae
+Strawberry Sundae
+Hotcakes
+Dressing (Cobb)
+Dressing (Creamy Caesar)
+Dressing (Balsamic Vinaigrette)
+Dressing (Ranch)
+Ranch Snack Wrap
+Ranch Snack Wrap (Crispy)
+Ranch Snack Wrap (Grilled)
+Chicken Biscuit
+Spicy Buffalo Sauce
+Sweet 'N Sour Sauce
+Tangy Honey Mustard Sauce
+Sauce (Spicy Buffalo)
+Sauce (Hot Mustard)
+Sauce (Caramel)
+Sauce (Sweet 'N Sour)
+Sauce (Honey Mustard)
+Graham Crackers
+Ritz Crackers
+Devil's Food Cookie Cakes
+Chocolate Creme Sandwich Cookies
+Chocolatey Chip Thins Cookies
+Duplex Creme Sandwich Cookies
+Fudge Dipped Grahams
+Fudge Dipped Mint Cookies
+Fudge Dipped Wafers
+Cheese Ravioli
+Ravioli (Cheese)
+Enchilada (Cheese)
+Quesadilla (Cheese)
+Mexican Rice
+Bologna
+Braunschweiger
+Liver Sausage
+Honey Glazed Chicken Breast
+Ham
+Salami
+Wieners
+Beef Franks
+Salsa (Chipotle Chunky)
+Salsa (Cilantro Chunky)
+Salsa (Lime & Garlic Chunky)
+Salsa (Tequila Lime)
+Salsa (Thick & Chunky)
+Salsa (Triple Pepper)
+Salsa (Verde)
+Sauce (Enchilada)
+Sauce (Green Taco)
+Sauce (Organic Picante)
+Sauce (Picante)
+Sauce (Red Taco)
+Diced Green Chilies
+Taco Seasoning Mix
+Enchilada Sauce
+Green Taco Sauce
+Organic Picante Sauce
+Picante Sauce
+Pico De Gallo
+Red Taco Sauce
+Salsa Verde
+Refried Beans
+Refried Beans (Spicy Jalapeno)
+Refried Beans (Salsa)
+Hamburger Buns
+Hamburger Buns (Whole Wheat)
+Hamburger Buns (with Sesame)
+Cinnamon Swirl Bread
+Deli Swirl Bread
+Whole Wheat Bread
+Oatmeal Bread
+Sourdough Bread
+Bread (Oatmeal)
+Bread (Sourdough)
+Bread (Jewish Rye)
+Bread (Pumpernickel)
+Goldfish Crackers
+Goldfish Crackers (Cheddar)
+Goldfish Crackers (Pizza)
+Goldfish Crackers (Parmesan)
+Jewish Rye Bread
+Pumpernickel Bread
+Raisin Cinnamon Swirl Bread
+Hoagie Roll
+Buttermilk Biscuits
+Buttermilk Biscuits (Dough)
+Chocolate Chip Cookie Dough
+Cinnamon Rolls (Dough)
+French Loaf
+French Loaf (Dough)
+Fudge Brownie Mix
+Breadsticks
+Spicy Chicken Strips
+Spicy Chicken Fingers
+Tomato Sauce (Chunky Garden Combination)
+Tomato Sauce (Chunky Garden Mushroom and Green Pepper)
+Tomato Sauce (Chunky Garden Mushroom Supreme)
+Tomato Sauce (Chunky Garden Tomato, Onion and Garlic)
+Tomato Sauce (Diced Onion and Garlic)
+Tomato Sauce (Fresh Mushroom)
+Tomato Sauce (Garlic Supreme)
+Tomato Sauce (Italian Sausage and Garlic)
+Tomato Sauce (Mini Meatball)
+Tomato Sauce (Mushroom and Garlic)
+Tomato Sauce (Mushroom and Parmesan)
+Tomato Sauce (Organic Mushroom)
+Tomato Sauce (Organic Tomato and Basil)
+Tomato Sauce (Roasted Garlic Parmesan)
+Tomato Sauce (Tomato, Basil and Garlic)
+Tomato Sauce (Zesty Mushroom)
+Tomato Sauce (Ricotta Parmesan)
+Tomato Sauce (Roasted Red Pepper and Garlic)
+Tomato Sauce (Roasted Garlic and Herb)
+Chinese
+Chinese (Beef and Vegetables)
+Chinese (Chicken and Vegetables)
+Chinese (Chicken Chow Mein)
+Chinese (Egg Rolls)
+Chinese (Fried Rice)
+Chinese (General Tso's Chicken)
+Chinese (Kung Pao Chicken)
+Chinese (Lemon Chicken)
+Chinese (Orange Chicken)
+Chinese (Sesame Chicken)
+Chinese (Shrimp and Vegetables)
+Chinese (Sweet and Sour Chicken)
+Chinese (Sweet and Sour Pork)
+Chinese (Vegetable Chow Mein)
+Chinese (Vegetable Lo Mein)
+Chinese (Lo Mein)
+Chinese (Chow Mein)
+Beef and Vegetables
+Chicken and Vegetables
+Chicken Chow Mein
+Egg Rolls
+Fried Rice
+General Tso's Chicken
+Kung Pao Chicken
+Lemon Chicken
+Orange Chicken
+Sesame Chicken
+Shrimp and Vegetables
+Sweet and Sour Chicken
+Sweet and Sour Pork
+Vegetable Chow Mein
+Vegetable Lo Mein
+Lo Mein
+Chow Mein
+Chicken Fingers
+Chicken Tenders
+Fish Fillet
+Fried Mozzarella Sticks
+Hash Browns
+Sirloin Steak
+Cheese Ravioli
+Chicken Parmesan
+Lasagna
+Arepa
+Cornmeal Bread
+Arroz con Frijoles Negros
+Rice and Black Beans
+Arroz con Grandules
+Rice and Pigeonpeas
+Arroz con Habichuelas Colorados
+Rice And Red Beans
+Arroz con Leche
+Rice Pudding
+Black Bean Soup
+Bunuelos
+Chicken and Rice
+Empanadas
+Pupusas
+Pupusas (Bean)
+Pupusas (Cheese)
+Pupusas (Pork)
+Tamale
+Tamale (Corn)
+Tamale (Pork)
+Enchilada
+Quesadilla
+Tamales
+Cheese Enchilada
+Cheese Quesadilla
+Cheese Tamales
+Refried Beans
+Spanish Rice
+Soy Yogurt
+Soy Yogurt (Banana-Strawberry)
+Soy Yogurt (Black Cherry)
+Soy Yogurt (Blueberry)
+Soy Yogurt (Key Lime)
+Soy Yogurt (Peach)
+Soy Yogurt (Raspberry)
+Soy Yogurt (Strawberry)
+Soy Yogurt (Vanilla)
+Soy Milk
+Soy Milk (Chai)
+Soy Milk (Chocolate)
+Soy Milk (Coffee)
+Soy Milk (Light Chocolate)
+Soy Milk (Light)
+Soy Milk (Light Vanilla)
+Soy Milk (Mocha)
+Soy Milk (Nog)
+Soy Milk (Plus Fiber)
+Soy Milk (Plus)
+Soy Milk (Unsweetened)
+Soy Milk (Vanilla)
+Soy Creamer
+Soy Creamer (French Vanilla)
+Soy Creamer (Hazelnut)
+Beef Ravioli
+SpaghettiOs
+SpaghettiOs (with Meatballs)
+SpaghettiOs (A to Z's)
+SpaghettiOs (A to Z's with Meatballs)
+SpaghettiOs (Meat Sauce)
+SpaghettiOs (with Sliced Franks)
+RavioliOs
+Subway
+Subway (BLT)
+Subway (Colt Cuts)
+Subway (Ham)
+Subway (Meatball Marinara)
+Subway (Roast Beef)
+Subway (Roasted Chicken)
+Subway (Steak and Cheese)
+Subway (Sweet Onion Chicken Teriyaki)
+Subway (Tuna)
+Subway (Turkey Breast)
+Subway (Turkey, Ham, and Roast Beef)
+Subway (Club)
+Subway (Black Forest Ham)
+Cheez-IT
+Cheez-IT (Asiago)
+Cheez-IT (Baby Swiss)
+Cheez-IT (Cheddar Jack)
+Cheez-IT (Big)
+Cheez-IT (Colby)
+Cheez-IT (Hot and Spicy)
+Cheez-IT (Italian Four Cheese)
+Cheez-IT (Mozzarella)
+Cheez-IT (Parmesan Garlic)
+Cheez-IT (Pepper Jack)
+Cheez-IT (Scrabble)
+Cheez-IT (White Cheddar)
+Cheez-IT (Snack Mix)
+Cheez-IT (Reduced Fat)
+Cheez-IT (Whole Grain)
+Cheez-IT (100 Calorie)
+Cheez-IT (Sharp Cheddar Parmesan)
+Cheez-IT (Smoked Cheddar Monterey Jack)
+Crackers (Cheese)
+Crackers (Pizza)
+Oyster Crackers
+Soup Crackers
+Cheesy Chicken with Pasta
+Garlic Chicken with Pasta
+Herb Chicken with Rice
+Lemon Chicken with Herb Rice
+Pork Chops with Stuffing
+Southwestern-Style Chicken with Rice
+Roast Chicken with Stuffing
+Chicken A La King
+Chicken and Dumplings
+Burrito
+Burrito (Bean)
+Burrito (Beef)
+Burrito (Chicken)
+Burrito (Steak)
+Burrito (Pork)
+Bean Burrito
+Beef Burrito
+Chicken Burrito
+Steak Burrito
+Pork Burrito
+Nachos Supreme
+Nachos
+Tacos
+Soft Taco
+Soft Taco (Beef)
+Soft Taco (Chicken)
+Soft Taco (Steak)
+Taco Salad
+Extra Firm Tofu
+Firm Tofu
+Silken Tofu
+Lite Silken Tofu
+Soft Tofu
+Soy Milk
+Frosty
+Chicken Fillet Sandwich
+Dinner Roast
+FriChik
+FriPats
+Meatless Chicken Roll
+Meatless Corned Beef Roll
+Multigrain Cutlets
+Prime Stakes
+Prosage Links
+Prosage Roll
+Saucettes
+Smoked Turkey Roll
+Stakelets
+Stripples
+Super Links
+Vegetable Skallops
+Vegetable Steaks
+Vegetarian Burger
+Veja-Links
+Wham
+Gluten-free Cookies
+Gluten-free Cookies (Chocolate Vanilla Creme)
+Gluten-free Cookies (Vanilla Creme)
+Gluten-free Wafers
+Gluten-free Wafers (Lemon)
+Gluten-free Wafers (Milk)
+Gluten-free Crackers
+Gluten-free Rolls
+Gluten-free Bread
+Gluten-free Whole Grain Bread
+Gluten-free Pancakes
+Gluten-free Waffles
+Chicken Sandwich (Fried)
+Chicken Sandwich (Grilled)
+Chicken Club Sandwich (Fried)
+Chicken Club Sandwich (Grilled)
+Chicken Ranch BLT (Fried)
+Chicken Ranch BLT (Grilled)
+Southern Style Chicken Biscuit
+Pizza Rolls
+Pizza Bites
+Hot Pockets
+Hot Pockets (Ham and Cheese)
+Hot Pockets (Meatballs and Mozzarella)
+Hot Pockets (Chicken, Broccoli, and Cheddar)
+Lean Pockets (Ham and Cheese)
+Lean Pockets (Meatballs and Mozzarella)
+Cheez Whiz
+Cheez Whiz (Light)
+McFLURRY (Oreo)
+McFLURRY (M&M's)
