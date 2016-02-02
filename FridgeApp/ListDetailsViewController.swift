@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListDetailsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ListDetailsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var listTableView: UITableView!
     @IBOutlet weak var addExistingButton: UIButton!
@@ -44,7 +44,9 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
 //        }
 //
 //        }
-        
+
+        self.subscribeToKeyboardNotifications()
+
         print(listDetails)
         
     }
@@ -54,11 +56,26 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         // Dispose of any resources that can be recreated.
     }
     
+//    override func viewWillAppear() {
+//        
+//        let loadSingleton = PersistenceHandler()
+//        print(loadSingleton.load("Lists"))
+//        
+//        mainList = PersistManager.sharedManager.ShoppingLists
+//        
+//        
+//    }
+    
     /*
     // MARK: - TableView
     */
     
     @IBAction func addNew() {
+        
+        //Disable buttons when inputting text so things don't get wonky.
+        addNewButton.enabled = false
+        addExistingButton.enabled = false
+        finishedShopping.enabled = false
         
         newIngredientAdded = true
         
@@ -71,6 +88,79 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
                 
     }
     
+    func subscribeToKeyboardNotifications() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        self.view.frame.origin.y -= getKeyboardHeight(notification)
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        self.view.frame.origin.y += getKeyboardHeight(notification)
+    }
+    
+    func getKeyboardHeight(notification: NSNotification) -> CGFloat {
+        let userInfo = notification.userInfo
+        let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue // of CGRect
+        return keyboardSize.CGRectValue().height
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        
+        let indexPath = NSIndexPath(forRow: listDetails.count - 1, inSection: 0)
+        listTableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Middle, animated: true)
+        
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        newIngredientAdded = false
+        
+        return true
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        
+        print("entered?")
+        
+        let indexPath = NSIndexPath(forRow: listDetails.count - 1, inSection: 0)
+        let cell = listTableView.dequeueReusableCellWithIdentifier("ListDetailsTableViewCell", forIndexPath: indexPath) as! ListDetailsTableViewCell
+        
+        cell.listItemName.text = textField.text!.capitalizedString
+        
+        // We have our actual List name now so rename the lists and remove the temporary list.
+        let toRemoveIndex = listDetails.indexOf("To Name")
+        listDetails.removeAtIndex(toRemoveIndex!)
+        
+        listDetails.append(textField.text!.capitalizedString)
+        
+        print(listDetails)
+        
+        // We only needed the textField so write the label name. Now let's hide the field.
+        textField.hidden = true
+        textField.text = nil
+        textField.alpha = 0.0
+        
+        // We just added a new list so let's save.
+        PersistManager.sharedManager.ShoppingLists.lists[listName!] = listDetails
+        
+        let saveList = PersistenceHandler()
+        saveList.save()
+        
+        // Apparently this is ran AFTER the cancel button. Check for blanks here too.
+        checkForBlankCells()
+        
+        addNewButton.enabled = true
+        addExistingButton.enabled = true
+        finishedShopping.enabled = true
+        
+        listTableView.reloadData()
+        
+    }
+
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
         return 1
@@ -139,8 +229,18 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         cell.listItemNumber.text = String(rowNumber)
         print(listIngredient)
         
-        if listIngredient == "To Name" {
-            print("Do stuff")
+        cell.addToListText.hidden = true
+        cell.addToListText.alpha = 0.0
+        
+        //if listDetails[indexPath.row] == "To Name" {
+        if newIngredientAdded {
+            print("Adding a new ingredient to the list")
+            cell.listItemName.text = ""
+            cell.addToListText.hidden = false
+            cell.addToListText.alpha = 1.0
+            cell.addToListText.returnKeyType = UIReturnKeyType.Default
+            cell.addToListText.delegate = self
+            cell.addToListText.performSelector("becomeFirstResponder", withObject: nil, afterDelay: 0)
         } else {
             cell.listItemName.text = listIngredient            
         }
@@ -175,7 +275,28 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     */
 
     @IBAction func cancelAction(sender: AnyObject) {
+        
+        checkForBlankCells()
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func checkForBlankCells() {
+        
+        print("chcek for blanks")
+        print(listDetails)
+        
+        if let index = listDetails.indexOf("") {
+            print("There's a blank cell")
+            listDetails.removeAtIndex(index)
+            
+            // Save the edited list.
+            PersistManager.sharedManager.ShoppingLists.lists[listName!] = listDetails
+            
+            let saveList = PersistenceHandler()
+            saveList.save()
+            
+        }
+        
     }
         
     @IBAction func unwindToListDetails(sender: UIStoryboardSegue) {

@@ -488,7 +488,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FridgeApp/ListDetailsViewController.swift"
-            timestampString = "475557796.143538"
+            timestampString = "476077229.391956"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "13"
@@ -613,11 +613,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FridgeApp/ListViewController.swift"
-            timestampString = "475990835.623947"
+            timestampString = "475991530.386814"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "275"
-            endingLineNumber = "275"
+            startingLineNumber = "282"
+            endingLineNumber = "282"
             landmarkName = "ListViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -741,11 +741,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FridgeApp/ListViewController.swift"
-            timestampString = "475990835.623947"
+            timestampString = "475991530.386814"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "206"
-            endingLineNumber = "206"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
             landmarkName = "textFieldDidEndEditing(_:)"
             landmarkType = "5">
          </BreakpointContent>

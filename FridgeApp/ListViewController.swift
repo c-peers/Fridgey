@@ -118,7 +118,7 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func subscribeToKeyboardNotifications() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
-        //NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
     }
     
     func keyboardWillShow(notification: NSNotification) {
@@ -180,6 +180,13 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         print("goinghere?")
         //self.performSegueWithIdentifier("EditList", sender: self)
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        
+        let indexPath = NSIndexPath(forRow: list.count - 1, inSection: 0)
+        collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.CenteredHorizontally, animated: true)
+        
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
