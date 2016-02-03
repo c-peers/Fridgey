@@ -146,9 +146,7 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         
         // We just added a new list so let's save.
         PersistManager.sharedManager.ShoppingLists.lists[listName!] = listDetails
-        
-        let saveList = PersistenceHandler()
-        saveList.save()
+        save()
         
         // Apparently this is ran AFTER the cancel button. Check for blanks here too.
         checkForBlankCells()
@@ -204,8 +202,7 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
             PersistManager.sharedManager.ShoppingLists.lists[listName!] = listDetails
 
             // Save lists
-            let saveList = PersistenceHandler()
-            saveList.save()
+            save()
             
             // Remove visually
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
@@ -291,9 +288,7 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
             
             // Save the edited list.
             PersistManager.sharedManager.ShoppingLists.lists[listName!] = listDetails
-            
-            let saveList = PersistenceHandler()
-            saveList.save()
+            save()
             
         }
         
@@ -329,8 +324,7 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
             PersistManager.sharedManager.ShoppingLists.lists[listName!] = listDetails
             
             // Save lists
-            let saveList = PersistenceHandler()
-            saveList.save()
+            save()
             
             listTableView.reloadData()
         
@@ -365,9 +359,7 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
             }
             
             PersistManager.sharedManager.Ingredients = ingredients
-            
-            let saveIngredients = PersistenceHandler()
-            saveIngredients.save()
+            save()
             
             print("Dismiss")
             dismissViewControllerAnimated(true, completion: nil)
@@ -422,4 +414,12 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         self.presentViewController(activityVC, animated: true, completion: nil)
         
     }
+    
+    func save() {
+        
+        let saveList = PersistenceHandler()
+        saveList.save()
+        
+    }
+    
 }

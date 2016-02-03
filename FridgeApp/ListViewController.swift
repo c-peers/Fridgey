@@ -54,21 +54,7 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    
-        //let FTBC = self.tabBarController as! FridgeTabBarController
-        //mainList = FTBC.ShoppingLists
-        
-//        if let savedLists = PersistManager.sharedManager.loadList() {
-//            
-//            mainList = savedLists
-//            
-//        } else {
-//            
-//            // Load the sample data.
-//            sampleIngredients()
-//            
-//        }
-        
+            
         let loadSingleton = PersistenceHandler()
         print(loadSingleton.load("Lists"))
 
@@ -151,6 +137,7 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ListCollectionViewCell", forIndexPath: indexPath) as! ListCollectionViewCell
         
         cell.nameNewListText.hidden = true
+        cell.deleteButton.hidden = false
         
         cell.contentView.layer.cornerRadius = 2.0
         
@@ -183,9 +170,6 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        
-        let indexPath = NSIndexPath(forRow: list.count - 1, inSection: 0)
-        collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.CenteredHorizontally, animated: true)
         
     }
     
@@ -220,13 +204,36 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         textField.alpha = 0.0
         
         // We just added a new list so let's save.
-        let saveList = PersistenceHandler()
-        saveList.save()
+        PersistManager.sharedManager.ShoppingLists.addList(textField.text!, listDetail: [])
+        save()
         
         collectionView.reloadData()
         
     }
+    
+    @IBAction func deleteTapped(sender: AnyObject) {
+        
+        let button = sender as! UIButton
+        let cell = button.superview?.superview as! ListCollectionViewCell
+        let sectionAndRow = collectionView.indexPathForCell(cell)
+        let row = sectionAndRow?.row
+        
+        
+        print(list[row!])
+        print(list)
+        
+        
+        let toRemoveIndex = mainList.lists.indexForKey(list[row!])
+        mainList.lists.removeAtIndex(toRemoveIndex!)
+        list.removeAtIndex(row!)
+        
+        // We just deleted a list so let's save.
+        PersistManager.sharedManager.ShoppingLists.lists = mainList.lists
+        save()
 
+        collectionView.reloadData()
+                
+    }
 
     @IBAction func addNewList() {
         
@@ -238,7 +245,10 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         let indexPath = NSIndexPath(forRow: list.count - 1, inSection: 0)
         collectionView.insertItemsAtIndexPaths([indexPath])
+        
         collectionView.reloadData()
+        
+        self.collectionView?.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.Bottom, animated: true)
         
     }
     
@@ -280,27 +290,12 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         
     }
     
+    func save() {
     
+    let saveList = PersistenceHandler()
+    saveList.save()
     
-    // MARK: NSCoding
-    func saveList() {
-        
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(mainList, toFile: Lists.ArchiveURL.path!)
-        
-        let FTBC = self.tabBarController as! FridgeTabBarController
-        FTBC.ShoppingLists = mainList
-        
-        if !isSuccessfulSave {
-            print("Couldn't save")
-        }
-        
     }
     
-    func loadList() -> Lists? {
-        
-        return NSKeyedUnarchiver.unarchiveObjectWithFile(Lists.ArchiveURL.path!) as? Lists
-        
-    }
-
 
 }

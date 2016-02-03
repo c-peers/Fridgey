@@ -762,6 +762,18 @@ does your refridgerator have?</string>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LzR-hn-Il9">
+                                                    <rect key="frame" x="169" y="0.0" width="37" height="32"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <state key="normal">
+                                                        <string key="title">⊗
+CIRCLED TIMES
+Unicode: U+2297, UTF-8: E2 8A 97</string>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="deleteTapped:" destination="oDo-XM-Lye" eventType="touchUpInside" id="18g-ys-MY5"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -776,6 +788,7 @@ does your refridgerator have?</string>
                                             <constraint firstItem="n5d-Tu-GXl" firstAttribute="centerY" secondItem="dgO-Hz-iQ9" secondAttribute="centerY" id="vUB-PR-n8S"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="deleteButton" destination="LzR-hn-Il9" id="hCZ-B2-uGQ"/>
                                             <outlet property="listName" destination="dgO-Hz-iQ9" id="62g-tL-K2L"/>
                                             <outlet property="nameNewListText" destination="n5d-Tu-GXl" id="Kji-Sp-7li"/>
                                             <segue destination="DP0-yO-Zwj" kind="show" identifier="EditList" id="Nig-TY-LJm"/>
