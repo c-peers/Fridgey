@@ -574,7 +574,7 @@ does your refridgerator have?</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="thE-sK-zOw">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="thE-sK-zOw">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -675,6 +675,11 @@ does your refridgerator have?</string>
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="AJA-CJ-qRq">
+                                        <barButtonItem key="leftBarButtonItem" title="Edit" id="q55-SQ-n0L">
+                                            <connections>
+                                                <action selector="editTapped:" destination="aye-NY-bks" id="ZHG-h3-3cP"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ETh-Ai-huM">
                                             <connections>
                                                 <segue destination="8rJ-Kc-sve" kind="show" identifier="AddIngredient" id="eUA-dd-AMQ"/>
@@ -701,6 +706,7 @@ does your refridgerator have?</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ingredients" image="Carrot" id="Xeg-X9-vok"/>
                     <connections>
+                        <outlet property="editButton" destination="q55-SQ-n0L" id="wg0-OB-x9g"/>
                         <outlet property="listAddedText" destination="ye0-DC-T3W" id="E8d-Sx-3CT"/>
                         <outlet property="listAddedView" destination="Nd8-sr-C4j" id="fEV-ap-MFe"/>
                         <outlet property="tableView" destination="thE-sK-zOw" id="KiN-uA-zb4"/>
@@ -1456,8 +1462,8 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
         <image name="Unselected" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pQA-vO-Nhw"/>
+        <segue reference="xUh-LB-vRU"/>
         <segue reference="eUA-dd-AMQ"/>
-        <segue reference="vI4-Gk-9fo"/>
+        <segue reference="Nig-TY-LJm"/>
     </inferredMetricsTieBreakers>
 </document>

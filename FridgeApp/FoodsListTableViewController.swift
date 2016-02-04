@@ -11,6 +11,7 @@ import UIKit
 class FoodsListTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, TabBarDelegate, MGSwipeTableCellDelegate {
         
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var editButton: UIBarButtonItem!
     @IBOutlet weak var listAddedText: UILabel!
     @IBOutlet weak var listAddedView: UIView!
 
@@ -155,6 +156,9 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
                 
         //self.tableView.contentOffset = CGPointMake(0,  (self.searchDisplayController?.searchBar.frame.size.height)! - self.tableView.contentOffset.y)
         
+        //self.tableView.allowsMultipleSelectionDuringEditing = true
+        //self.tableView.allowsSelectionDuringEditing = true
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList:",name:"load", object: nil)
         
     }
@@ -249,6 +253,17 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         
         
         
+    }
+    
+    @IBAction func editTapped(sender: UIBarButtonItem) {
+        self.tableView.editing = !self.tableView.editing
+        
+        if self.tableView.editing == true {
+            print("coming here?")
+            self.editButton.title = "Done"
+        } else {
+            self.editButton.title = "Edit"
+        }
     }
     
     // MARK: MGSwipe
@@ -368,7 +383,6 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         return true
     }
     
-
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "FoodsListTableViewCell"
@@ -416,14 +430,27 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             cell.FoodAmount?.text = String(ingredient.amount)
         }
         
-        cell.leftButtons = [MGSwipeButton(title: "Add to List", icon: UIImage(named:"check.png"), backgroundColor: UIColor.blueColor())]
+        cell.leftButtons = [MGSwipeButton(title: "Add to List", icon: UIImage(named:"Add"), backgroundColor: UIColor.blueColor())]
         cell.leftSwipeSettings.transition = MGSwipeTransition.Border
         
         //configure right buttons
-        cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor())]
+        cell.rightButtons = [MGSwipeButton(title: "Delete", icon: UIImage(named:"Trash"), backgroundColor: UIColor.redColor())]
+        //cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor())]
         //cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor())
         //    ,MGSwipeButton(title: "Add To List",backgroundColor: UIColor.blueColor())]
         cell.rightSwipeSettings.transition = MGSwipeTransition.ClipCenter
+        
+        cell.leftExpansion.buttonIndex = 2
+        cell.leftExpansion.fillOnTrigger = true
+        cell.leftExpansion.buttonIndex = 0
+        cell.leftExpansion.expansionColor = UIColor.blueColor()
+        
+        cell.rightExpansion.buttonIndex = 2
+        cell.rightExpansion.fillOnTrigger = true
+        cell.rightExpansion.buttonIndex = 0
+        cell.rightExpansion.expansionColor = UIColor.redColor()
+        
+        
         
         cell.delegate = self
         
@@ -447,14 +474,18 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         
     }
     
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
+        
+        print("how about here?")
+        
+        if (!self.tableView.editing) {
+            print("called??")
+            return .Delete
+        } else {
+            return .None
+        }
+        
     }
-    */
-
     
     // Override to support editing the table view.
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -478,22 +509,30 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     }
     
 
-    /*
+    
     // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
 
+        let moveThisItem = ingredients[fromIndexPath.section][fromIndexPath.row]
+        ingredients[fromIndexPath.section].removeAtIndex(fromIndexPath.row)
+        ingredients[toIndexPath.section].append(moveThisItem)
+        
+        // Save after removing row
+        //PersistManager.sharedManager.saveIngredients()
+        PersistManager.sharedManager.Ingredients = ingredients
+        
+        let saveSingleton = PersistenceHandler()
+        saveSingleton.save()
+        
     }
-    */
+    
 
-    /*
+    
     // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
-    */
-    
-    
 
     // MARK: Search
     
@@ -547,6 +586,14 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "EditIngredient" && self.tableView.editing {
+            return false
+        }
+        
+        return true
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
         let ingredientDetailViewController = segue.destinationViewController as! NewIngredientViewController

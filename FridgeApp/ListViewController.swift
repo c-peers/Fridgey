@@ -81,7 +81,7 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         collectionView.backgroundColor = UIColor.whiteColor()
         
-        self.subscribeToKeyboardNotifications()
+        //self.subscribeToKeyboardNotifications()
         
     }
     
@@ -170,12 +170,12 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        
+        animateViewMoving(true, moveValue: 220)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        
+        animateViewMoving(false, moveValue: 220)
         return true
     }
     
@@ -209,6 +209,16 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         collectionView.reloadData()
         
+    }
+    
+    func animateViewMoving (up:Bool, moveValue :CGFloat){
+        let movementDuration:NSTimeInterval = 0.3
+        let movement:CGFloat = ( up ? -moveValue : moveValue)
+        UIView.beginAnimations( "animateView", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(movementDuration )
+        self.view.frame = CGRectOffset(self.view.frame, 0,  movement)
+        UIView.commitAnimations()
     }
     
     @IBAction func deleteTapped(sender: AnyObject) {
@@ -248,7 +258,7 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         collectionView.reloadData()
         
-        self.collectionView?.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.Bottom, animated: true)
+        self.collectionView?.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.Top, animated: true)
         
     }
     

@@ -110,7 +110,7 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     func textFieldDidBeginEditing(textField: UITextField) {
         
         let indexPath = NSIndexPath(forRow: listDetails.count - 1, inSection: 0)
-        listTableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Middle, animated: true)
+        //listTableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Middle, animated: true)
         
     }
     
