@@ -237,7 +237,7 @@ does your refridgerator have?</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yMB-bu-LKm">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yMB-bu-LKm">
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Az-j4-q2c">
@@ -378,7 +378,7 @@ does your refridgerator have?</string>
                                     <constraint firstItem="uuu-0C-MTX" firstAttribute="top" secondItem="oWl-VM-3Ed" secondAttribute="bottom" constant="80" id="yA3-M4-Xtu"/>
                                 </constraints>
                             </scrollView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gG-EH-xZq">
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1gG-EH-xZq">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="sdG-ie-BE3">
@@ -429,7 +429,7 @@ does your refridgerator have?</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
                 <exit id="eHk-To-sLt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1724" y="-88"/>
+            <point key="canvasLocation" x="2536" y="-88"/>
         </scene>
         <!--Add To List From Ingredient Details View Controller-->
         <scene sceneID="BwF-iL-iO2">
@@ -560,12 +560,12 @@ does your refridgerator have?</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="axM-YX-b5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="UOh-jl-qdZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2462" y="-88"/>
+            <point key="canvasLocation" x="3274" y="-88"/>
         </scene>
-        <!--Ingredients-->
+        <!--Foods List Table View Controller-->
         <scene sceneID="F4g-Y0-IEK">
             <objects>
-                <viewController id="aye-NY-bks" customClass="FoodsListTableViewController" customModule="FridgeApp" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="aye-NY-bks" customClass="FoodsListTableViewController" customModule="FridgeApp" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LWZ-Fw-VQm"/>
                         <viewControllerLayoutGuide type="bottom" id="b3G-94-eR7"/>
@@ -574,7 +574,7 @@ does your refridgerator have?</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="thE-sK-zOw">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="thE-sK-zOw">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -671,42 +671,37 @@ does your refridgerator have?</string>
                                     </mask>
                                 </variation>
                             </view>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XXG-cT-FBh">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="AJA-CJ-qRq">
-                                        <barButtonItem key="leftBarButtonItem" title="Edit" id="q55-SQ-n0L">
-                                            <connections>
-                                                <action selector="editTapped:" destination="aye-NY-bks" id="ZHG-h3-3cP"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ETh-Ai-huM">
-                                            <connections>
-                                                <segue destination="8rJ-Kc-sve" kind="show" identifier="AddIngredient" id="eUA-dd-AMQ"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="thE-sK-zOw" firstAttribute="centerX" secondItem="Nd8-sr-C4j" secondAttribute="centerX" id="5ZM-u6-hcU"/>
+                            <constraint firstItem="thE-sK-zOw" firstAttribute="leading" secondItem="H9N-d4-3zT" secondAttribute="leading" id="MX7-Ek-9Qb"/>
                             <constraint firstItem="Nd8-sr-C4j" firstAttribute="leading" secondItem="H9N-d4-3zT" secondAttribute="leadingMargin" constant="60" id="NCa-hW-NnK"/>
-                            <constraint firstAttribute="trailing" secondItem="XXG-cT-FBh" secondAttribute="trailing" id="PUw-fi-fYI"/>
                             <constraint firstItem="thE-sK-zOw" firstAttribute="bottom" secondItem="b3G-94-eR7" secondAttribute="top" id="QyZ-T7-P4W"/>
-                            <constraint firstItem="XXG-cT-FBh" firstAttribute="leading" secondItem="H9N-d4-3zT" secondAttribute="leading" id="UIE-Ow-4BZ"/>
-                            <constraint firstItem="thE-sK-zOw" firstAttribute="trailing" secondItem="XXG-cT-FBh" secondAttribute="trailing" id="czT-uW-1zo"/>
-                            <constraint firstItem="thE-sK-zOw" firstAttribute="top" secondItem="XXG-cT-FBh" secondAttribute="bottom" id="d5D-XB-XA0"/>
-                            <constraint firstItem="Nd8-sr-C4j" firstAttribute="top" secondItem="LWZ-Fw-VQm" secondAttribute="bottom" constant="125" id="dz2-VH-g7U"/>
-                            <constraint firstItem="thE-sK-zOw" firstAttribute="leading" secondItem="XXG-cT-FBh" secondAttribute="leading" id="f5M-nz-fzN"/>
-                            <constraint firstItem="XXG-cT-FBh" firstAttribute="top" secondItem="H9N-d4-3zT" secondAttribute="top" constant="20" id="oGc-cE-7Sl"/>
+                            <constraint firstItem="Nd8-sr-C4j" firstAttribute="top" secondItem="LWZ-Fw-VQm" secondAttribute="bottom" constant="81" id="dz2-VH-g7U"/>
+                            <constraint firstItem="thE-sK-zOw" firstAttribute="top" secondItem="LWZ-Fw-VQm" secondAttribute="bottom" id="f8v-zX-0Xh"/>
+                            <constraint firstItem="thE-sK-zOw" firstAttribute="leading" secondItem="H9N-d4-3zT" secondAttribute="leading" id="jnU-1e-50O"/>
                             <constraint firstItem="b3G-94-eR7" firstAttribute="top" secondItem="Nd8-sr-C4j" secondAttribute="bottom" constant="125" id="ued-QA-EqE"/>
+                            <constraint firstItem="thE-sK-zOw" firstAttribute="bottom" secondItem="b3G-94-eR7" secondAttribute="top" id="vJU-lv-3vC"/>
+                            <constraint firstItem="thE-sK-zOw" firstAttribute="top" secondItem="LWZ-Fw-VQm" secondAttribute="bottom" id="xU1-8O-W29"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nd8-sr-C4j" secondAttribute="trailing" constant="60" id="xlG-zV-SPy"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MX7-Ek-9Qb"/>
+                                <exclude reference="QyZ-T7-P4W"/>
+                                <exclude reference="f8v-zX-0Xh"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ingredients" image="Carrot" id="Xeg-X9-vok"/>
+                    <navigationItem key="navigationItem" id="CRf-FN-8eZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ETh-Ai-huM">
+                            <connections>
+                                <segue destination="8rJ-Kc-sve" kind="show" identifier="AddIngredient" id="eUA-dd-AMQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="editButton" destination="q55-SQ-n0L" id="wg0-OB-x9g"/>
                         <outlet property="listAddedText" destination="ye0-DC-T3W" id="E8d-Sx-3CT"/>
                         <outlet property="listAddedView" destination="Nd8-sr-C4j" id="fEV-ap-MFe"/>
                         <outlet property="tableView" destination="thE-sK-zOw" id="KiN-uA-zb4"/>
@@ -715,7 +710,7 @@ does your refridgerator have?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIw-xt-kCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="880" y="-88"/>
+            <point key="canvasLocation" x="1692" y="-88"/>
         </scene>
         <!--Shopping List-->
         <scene sceneID="K12-Lr-bFw">
@@ -1067,7 +1062,7 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                     </tabBar>
                     <connections>
                         <segue destination="8JA-Gi-6le" kind="relationship" relationship="viewControllers" id="Qu9-da-37G"/>
-                        <segue destination="aye-NY-bks" kind="relationship" relationship="viewControllers" id="KKA-Kp-3UJ"/>
+                        <segue destination="v1Z-ts-kHU" kind="relationship" relationship="viewControllers" id="KKA-Kp-3UJ"/>
                         <segue destination="oDo-XM-Lye" kind="relationship" relationship="viewControllers" id="BKM-ga-Uxw"/>
                         <segue destination="0UJ-Db-tXM" kind="relationship" relationship="viewControllers" id="aPg-D5-Vh9"/>
                     </connections>
@@ -1452,6 +1447,25 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                 <exit id="Q2h-1Q-xXs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2252" y="1338"/>
+        </scene>
+        <!--Ingredients-->
+        <scene sceneID="1kv-Ce-omu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v1Z-ts-kHU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Ingredients" image="Carrot" id="Xeg-X9-vok"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W4h-rS-FMf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aye-NY-bks" kind="relationship" relationship="rootViewController" id="Bk6-yx-TfY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0bN-On-Ujc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="880" y="-88"/>
         </scene>
     </scenes>
     <resources>

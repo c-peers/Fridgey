@@ -11,7 +11,7 @@ import UIKit
 class FoodsListTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, TabBarDelegate, MGSwipeTableCellDelegate {
         
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var editButton: UIBarButtonItem!
+    //@IBOutlet weak var editButton: UIBarButtonItem!
     @IBOutlet weak var listAddedText: UILabel!
     @IBOutlet weak var listAddedView: UIView!
 
@@ -159,6 +159,8 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         //self.tableView.allowsMultipleSelectionDuringEditing = true
         //self.tableView.allowsSelectionDuringEditing = true
         
+        navigationItem.leftBarButtonItem = editButtonItem()
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList:",name:"load", object: nil)
         
     }
@@ -255,17 +257,18 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         
     }
     
-    @IBAction func editTapped(sender: UIBarButtonItem) {
-        self.tableView.editing = !self.tableView.editing
-        
-        if self.tableView.editing == true {
-            print("coming here?")
-            self.editButton.title = "Done"
-        } else {
-            self.editButton.title = "Edit"
-        }
-    }
-    
+//    @IBAction func editTapped(sender: UIBarButtonItem) {
+//        //self.tableView.editing = !self.tableView.editing
+//        tableView.editing = !tableView.editing
+//
+//        if self.tableView.editing == true {
+//            print("coming here?")
+//            self.editButton.title = "Done"
+//        } else {
+//            self.editButton.title = "Edit"
+//        }
+//    }
+//    
     // MARK: MGSwipe
     
     func swipeTableCell(cell: MGSwipeTableCell!, canSwipe direction: MGSwipeDirection) -> Bool {
@@ -720,6 +723,18 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         
     }
 
+    //MARK:- Editing toggle
+    
+    @IBAction func startEditing(sender: UIBarButtonItem) {
+        tableView.editing = !tableView.editing
+    }
+    
+    override func setEditing(editing: Bool, animated: Bool) {
+        tableView.editing = editing
+        super.setEditing(editing, animated: true)
+    }
+
+    
 }
 
 //extension FoodsListTableViewController: UISearchBarDelegate {
