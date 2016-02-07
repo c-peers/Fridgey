@@ -14,6 +14,11 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     //@IBOutlet weak var editButton: UIBarButtonItem!
     @IBOutlet weak var listAddedText: UILabel!
     @IBOutlet weak var listAddedView: UIView!
+    @IBOutlet var editButton: UIBarButtonItem!
+    @IBOutlet var cancelButton: UIBarButtonItem!
+    @IBOutlet var deleteButton: UIBarButtonItem!
+    @IBOutlet var addButton: UIBarButtonItem!
+
 
     // MARK: Properties
     
@@ -112,7 +117,8 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         
         for x in 0...ingredients.count - 1 {
             
-            for y in 0...ingredients[x].count - 1 {
+            if ingredients[x].count != 0 {
+                for y in 0...ingredients[x].count - 1 {
                 
                 if y == 0 {
                     ingredientNames.append([ingredients[x][y].name])
@@ -121,7 +127,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
                 }
                 
             }
-         
+            }
         }
         
         print(ingredientNames)
@@ -152,14 +158,16 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         
         //self.tableView.registerClass(FoodsListTableViewCell.classForCoder(), forCellReuseIdentifier: "FoodsListTableViewCell")
         
-        self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), atScrollPosition: UITableViewScrollPosition.Top, animated: false)
+        //self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), atScrollPosition: UITableViewScrollPosition.Top, animated: false)
                 
         //self.tableView.contentOffset = CGPointMake(0,  (self.searchDisplayController?.searchBar.frame.size.height)! - self.tableView.contentOffset.y)
         
         //self.tableView.allowsMultipleSelectionDuringEditing = true
         //self.tableView.allowsSelectionDuringEditing = true
         
-        navigationItem.leftBarButtonItem = editButtonItem()
+        //navigationItem.leftBarButtonItem = editButtonItem()
+        
+        self.updateButtonsToMatchTableState()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList:",name:"load", object: nil)
         
@@ -725,6 +733,16 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
 
     //MARK:- Editing toggle
     
+    @IBAction func editAction(sender: AnyObject) {
+        self.tableView.setEditing(true, animated: true)
+        self.updateButtonsToMatchTableState()
+    }
+    
+    @IBAction func cancelAction(sender: AnyObject) {
+        self.tableView.setEditing(false, animated: true)
+        self.updateButtonsToMatchTableState()
+    }
+    
     @IBAction func startEditing(sender: UIBarButtonItem) {
         tableView.editing = !tableView.editing
     }
@@ -734,6 +752,113 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         super.setEditing(editing, animated: true)
     }
 
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        // Update the delete button's title based on how many items are selected.
+        self.updateDeleteButtonTitle()
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // Update the delete button's title based on how many items are selected.
+        print("did select")
+        print(tableView.editing)
+        
+        // Only keep a row selected in editing mode. It looks stupid when a row is selected after returning to the list after editing an ingredient.
+        if tableView.editing {
+            self.updateButtonsToMatchTableState()
+        } else {
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
+    }
+    
+    @IBAction func deleteAction(sender: AnyObject) {
+        // Open a dialog with just an OK button.
+        var actionTitle: String
+        if (self.tableView.indexPathsForSelectedRows!.count == 1) {
+            actionTitle = "Are you sure you want to remove this item?"
+        }
+        else {
+            actionTitle = "Are you sure you want to remove these items?"
+        }
+        var cancelTitle = "Cancel"
+        var okTitle = "OK"
+        let alertController = UIAlertController(title: "Delete?", message: actionTitle, preferredStyle: .Alert)
+        alertController.addAction(UIAlertAction(title: "No Thanks", style: UIAlertActionStyle.Cancel,handler: {(alert: UIAlertAction!) in print("Cancel");
+            return
+        }))
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in print("Delete");
+            
+            var selectedRows = self.tableView.indexPathsForSelectedRows!
+            var indicesOfItemsToDelete = [NSIndexPath]()
+            for selectionIndex: NSIndexPath in selectedRows {
+                indicesOfItemsToDelete.append(selectionIndex)
+            }
+            // Delete the objects from our data model.
+            for x in 0...indicesOfItemsToDelete.count - 1 {
+                let index = indicesOfItemsToDelete[x]
+                self.ingredients[index.section].removeAtIndex(index.row)
+            }
+            
+            // Save after removing
+            PersistManager.sharedManager.Ingredients = self.ingredients
+            
+            let saveSingleton = PersistenceHandler()
+            saveSingleton.save()
+            
+            // Remove visually
+            self.tableView.deleteRowsAtIndexPaths(indicesOfItemsToDelete, withRowAnimation: .Fade)
+            
+        }))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
+    }
+    
+    
+    func updateButtonsToMatchTableState() {
+        if self.tableView.editing {
+            // Show the option to cancel the edit.
+            self.navigationItem.rightBarButtonItem = self.cancelButton
+            self.updateDeleteButtonTitle()
+            // Show the delete button.
+            self.navigationItem.leftBarButtonItem = self.deleteButton
+        }
+        else {
+            // Not in editing mode.
+            self.navigationItem.leftBarButtonItem = self.addButton
+            // Show the edit button, but disable the edit button if there's nothing to edit.
+            if ingredients.count > 0 {
+                self.editButton.enabled = true
+            }
+            else {
+                self.editButton.enabled = false
+            }
+            self.navigationItem.rightBarButtonItem = self.editButton
+        }
+    }
+    
+    func updateDeleteButtonTitle() {
+        // Update the delete button's title, based on how many items are selected
+        let selectedRows = tableView.indexPathsForSelectedRows
+        let rowCount: Int
+        if selectedRows == nil {
+            rowCount = 0
+        } else {
+            rowCount = (selectedRows?.count)!
+        }
+        
+        
+        let allItemsAreSelected: Bool = rowCount == ingredients.count
+        let noItemsAreSelected: Bool = rowCount == 0
+        if allItemsAreSelected || noItemsAreSelected {
+            self.deleteButton.title = "Delete All"
+        }
+        else {
+            //var titleFormatString: String = NSLocalizedString("Delete (%d)", "Title for delete button with placeholder for number")
+            self.deleteButton.title = "Delete \(selectedRows!.count)"
+        }
+    }
+
+    
     
 }
 

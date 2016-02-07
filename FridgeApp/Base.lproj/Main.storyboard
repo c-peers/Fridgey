@@ -574,11 +574,11 @@ does your refridgerator have?</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="thE-sK-zOw">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="thE-sK-zOw">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FoodsListTableViewCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="FoodsListTableViewCell" rowHeight="70" id="NEx-2m-NLl" userLabel="FoodsListTableViewCell" customClass="FoodsListTableViewCell" customModule="FridgeApp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FoodsListTableViewCell" selectionStyle="blue" indentationWidth="10" reuseIdentifier="FoodsListTableViewCell" rowHeight="70" id="NEx-2m-NLl" userLabel="FoodsListTableViewCell" customClass="FoodsListTableViewCell" customModule="FridgeApp">
                                         <rect key="frame" x="0.0" y="28" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NEx-2m-NLl" id="6C5-fH-XOo">
@@ -702,6 +702,10 @@ does your refridgerator have?</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="fE3-sL-Osq" id="V93-cL-FZs"/>
+                        <outlet property="cancelButton" destination="N1k-fX-YCt" id="Vp1-Ad-1lT"/>
+                        <outlet property="deleteButton" destination="vrG-nt-hKv" id="f08-Co-czY"/>
+                        <outlet property="editButton" destination="HcG-bf-CpD" id="pvq-Mq-bYy"/>
                         <outlet property="listAddedText" destination="ye0-DC-T3W" id="E8d-Sx-3CT"/>
                         <outlet property="listAddedView" destination="Nd8-sr-C4j" id="fEV-ap-MFe"/>
                         <outlet property="tableView" destination="thE-sK-zOw" id="KiN-uA-zb4"/>
@@ -709,6 +713,23 @@ does your refridgerator have?</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIw-xt-kCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <barButtonItem systemItem="edit" id="HcG-bf-CpD">
+                    <connections>
+                        <action selector="editAction:" destination="aye-NY-bks" id="q5O-Gp-YQP"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem title="Delete" id="vrG-nt-hKv">
+                    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="deleteAction:" destination="aye-NY-bks" id="qbf-Mg-q6f"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem title="Cancel" id="N1k-fX-YCt">
+                    <connections>
+                        <action selector="cancelAction:" destination="aye-NY-bks" id="ZJE-Fo-lId"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem systemItem="add" id="fE3-sL-Osq"/>
             </objects>
             <point key="canvasLocation" x="1692" y="-88"/>
         </scene>
