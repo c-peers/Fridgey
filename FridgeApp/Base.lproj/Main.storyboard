@@ -237,7 +237,7 @@ does your refridgerator have?</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yMB-bu-LKm">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yMB-bu-LKm">
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Az-j4-q2c">
@@ -378,7 +378,7 @@ does your refridgerator have?</string>
                                     <constraint firstItem="uuu-0C-MTX" firstAttribute="top" secondItem="oWl-VM-3Ed" secondAttribute="bottom" constant="80" id="yA3-M4-Xtu"/>
                                 </constraints>
                             </scrollView>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1gG-EH-xZq">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gG-EH-xZq">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="sdG-ie-BE3">
@@ -562,10 +562,10 @@ does your refridgerator have?</string>
             </objects>
             <point key="canvasLocation" x="3274" y="-88"/>
         </scene>
-        <!--Foods List Table View Controller-->
+        <!--Item-->
         <scene sceneID="F4g-Y0-IEK">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="aye-NY-bks" customClass="FoodsListTableViewController" customModule="FridgeApp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IngredientsList" automaticallyAdjustsScrollViewInsets="NO" id="aye-NY-bks" customClass="FoodsListTableViewController" customModule="FridgeApp" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LWZ-Fw-VQm"/>
                         <viewControllerLayoutGuide type="bottom" id="b3G-94-eR7"/>
@@ -678,12 +678,12 @@ does your refridgerator have?</string>
                             <constraint firstItem="thE-sK-zOw" firstAttribute="leading" secondItem="H9N-d4-3zT" secondAttribute="leading" id="MX7-Ek-9Qb"/>
                             <constraint firstItem="Nd8-sr-C4j" firstAttribute="leading" secondItem="H9N-d4-3zT" secondAttribute="leadingMargin" constant="60" id="NCa-hW-NnK"/>
                             <constraint firstItem="thE-sK-zOw" firstAttribute="bottom" secondItem="b3G-94-eR7" secondAttribute="top" id="QyZ-T7-P4W"/>
-                            <constraint firstItem="Nd8-sr-C4j" firstAttribute="top" secondItem="LWZ-Fw-VQm" secondAttribute="bottom" constant="81" id="dz2-VH-g7U"/>
+                            <constraint firstItem="Nd8-sr-C4j" firstAttribute="top" secondItem="LWZ-Fw-VQm" secondAttribute="bottom" constant="125" id="dz2-VH-g7U"/>
                             <constraint firstItem="thE-sK-zOw" firstAttribute="top" secondItem="LWZ-Fw-VQm" secondAttribute="bottom" id="f8v-zX-0Xh"/>
                             <constraint firstItem="thE-sK-zOw" firstAttribute="leading" secondItem="H9N-d4-3zT" secondAttribute="leading" id="jnU-1e-50O"/>
                             <constraint firstItem="b3G-94-eR7" firstAttribute="top" secondItem="Nd8-sr-C4j" secondAttribute="bottom" constant="125" id="ued-QA-EqE"/>
                             <constraint firstItem="thE-sK-zOw" firstAttribute="bottom" secondItem="b3G-94-eR7" secondAttribute="top" id="vJU-lv-3vC"/>
-                            <constraint firstItem="thE-sK-zOw" firstAttribute="top" secondItem="LWZ-Fw-VQm" secondAttribute="bottom" id="xU1-8O-W29"/>
+                            <constraint firstItem="thE-sK-zOw" firstAttribute="top" secondItem="LWZ-Fw-VQm" secondAttribute="bottom" constant="44" id="xU1-8O-W29"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nd8-sr-C4j" secondAttribute="trailing" constant="60" id="xlG-zV-SPy"/>
                         </constraints>
                         <variation key="default">
@@ -694,6 +694,7 @@ does your refridgerator have?</string>
                             </mask>
                         </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="YmQ-mD-LLI"/>
                     <navigationItem key="navigationItem" id="CRf-FN-8eZ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ETh-Ai-huM">
                             <connections>
@@ -713,9 +714,9 @@ does your refridgerator have?</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIw-xt-kCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <barButtonItem systemItem="edit" id="HcG-bf-CpD">
+                <barButtonItem title="Cancel" id="N1k-fX-YCt">
                     <connections>
-                        <action selector="editAction:" destination="aye-NY-bks" id="q5O-Gp-YQP"/>
+                        <action selector="cancelAction:" destination="aye-NY-bks" id="ZJE-Fo-lId"/>
                     </connections>
                 </barButtonItem>
                 <barButtonItem title="Delete" id="vrG-nt-hKv">
@@ -724,12 +725,16 @@ does your refridgerator have?</string>
                         <action selector="deleteAction:" destination="aye-NY-bks" id="qbf-Mg-q6f"/>
                     </connections>
                 </barButtonItem>
-                <barButtonItem title="Cancel" id="N1k-fX-YCt">
+                <barButtonItem systemItem="edit" id="HcG-bf-CpD">
                     <connections>
-                        <action selector="cancelAction:" destination="aye-NY-bks" id="ZJE-Fo-lId"/>
+                        <action selector="editAction:" destination="aye-NY-bks" id="q5O-Gp-YQP"/>
                     </connections>
                 </barButtonItem>
-                <barButtonItem systemItem="add" id="fE3-sL-Osq"/>
+                <barButtonItem systemItem="add" id="fE3-sL-Osq">
+                    <connections>
+                        <action selector="addAction:" destination="aye-NY-bks" id="fSt-LQ-JiX"/>
+                    </connections>
+                </barButtonItem>
             </objects>
             <point key="canvasLocation" x="1692" y="-88"/>
         </scene>
@@ -1083,9 +1088,9 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                     </tabBar>
                     <connections>
                         <segue destination="8JA-Gi-6le" kind="relationship" relationship="viewControllers" id="Qu9-da-37G"/>
-                        <segue destination="v1Z-ts-kHU" kind="relationship" relationship="viewControllers" id="KKA-Kp-3UJ"/>
                         <segue destination="oDo-XM-Lye" kind="relationship" relationship="viewControllers" id="BKM-ga-Uxw"/>
                         <segue destination="0UJ-Db-tXM" kind="relationship" relationship="viewControllers" id="aPg-D5-Vh9"/>
+                        <segue destination="aye-NY-bks" kind="relationship" relationship="viewControllers" id="YR7-Ar-r0b"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -1469,36 +1474,16 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
             </objects>
             <point key="canvasLocation" x="2252" y="1338"/>
         </scene>
-        <!--Ingredients-->
-        <scene sceneID="1kv-Ce-omu">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v1Z-ts-kHU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Ingredients" image="Carrot" id="Xeg-X9-vok"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W4h-rS-FMf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="aye-NY-bks" kind="relationship" relationship="rootViewController" id="Bk6-yx-TfY"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0bN-On-Ujc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="880" y="-88"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="Carrot" width="25" height="25"/>
         <image name="Cart" width="25" height="25"/>
         <image name="Fridge" width="25" height="25"/>
         <image name="Present" width="25" height="25"/>
         <image name="Unselected" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xUh-LB-vRU"/>
         <segue reference="eUA-dd-AMQ"/>
         <segue reference="Nig-TY-LJm"/>
+        <segue reference="xUh-LB-vRU"/>
     </inferredMetricsTieBreakers>
 </document>

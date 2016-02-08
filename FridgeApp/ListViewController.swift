@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate {
+class ListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate, TabBarDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -101,6 +101,12 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         print(mainList.lists)
     }
+    
+    func didSelectTab(tabBarController: FridgeTabBarController) {
+        print("Actually reload??")
+        
+    }
+
     
     func subscribeToKeyboardNotifications() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)

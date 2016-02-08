@@ -33,6 +33,13 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     let searchController = UISearchController(searchResultsController: nil)
     var filteredData = [""]
     
+    // I have to set the Navigation bar this way.
+    // For some reason if I use the IB nav bar I can't add buttons 
+    // anyway except through the IB... not very useful.
+    
+    var navBar = UINavigationBar(frame: CGRect(x: 0, y: 20, width: 0, height: 44))
+    let navItem = UINavigationItem(title: "SomeTitle")
+    
     // Temporary Sample
     func sampleIngredients() {
         
@@ -59,12 +66,22 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navBar.frame = CGRectMake(0, 20, view.frame.width, 44)
+        self.view.addSubview(navBar)
+        
+        
+        //let navBar = UINavigationBar(frame: CGRect(x: 0, y: 20, width: view.frame.width, height: 44))
+        //let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: nil, action: "selector")
+        //navItem.rightBarButtonItem = doneItem;
+        //let navItem = UINavigationItem(title: "SomeTitle")
+        navBar.setItems([navItem], animated: false)
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         // Load any saved Ingredients, otherwise load sample data.
+        
         
         listAddedView.alpha = 0.0
         
@@ -733,6 +750,11 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
 
     //MARK:- Editing toggle
     
+    @IBAction func addAction(sender: AnyObject) {
+        performSegueWithIdentifier("AddIngredient", sender: self)
+        
+    }
+    
     @IBAction func editAction(sender: AnyObject) {
         self.tableView.setEditing(true, animated: true)
         self.updateButtonsToMatchTableState()
@@ -741,10 +763,6 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     @IBAction func cancelAction(sender: AnyObject) {
         self.tableView.setEditing(false, animated: true)
         self.updateButtonsToMatchTableState()
-    }
-    
-    @IBAction func startEditing(sender: UIBarButtonItem) {
-        tableView.editing = !tableView.editing
     }
     
     override func setEditing(editing: Bool, animated: Bool) {
@@ -773,7 +791,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     @IBAction func deleteAction(sender: AnyObject) {
         // Open a dialog with just an OK button.
         var actionTitle: String
-        if (self.tableView.indexPathsForSelectedRows!.count == 1) {
+        if (self.tableView.indexPathsForSelectedRows?.count == 1) {
             actionTitle = "Are you sure you want to remove this item?"
         }
         else {
@@ -817,14 +835,19 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     func updateButtonsToMatchTableState() {
         if self.tableView.editing {
             // Show the option to cancel the edit.
-            self.navigationItem.rightBarButtonItem = self.cancelButton
+            //self.navigationItem.rightBarButtonItem = self.cancelButton
+            navItem.rightBarButtonItem = self.cancelButton
+            
             self.updateDeleteButtonTitle()
             // Show the delete button.
             self.navigationItem.leftBarButtonItem = self.deleteButton
+            navItem.leftBarButtonItem = self.deleteButton
         }
         else {
             // Not in editing mode.
             self.navigationItem.leftBarButtonItem = self.addButton
+            navItem.rightBarButtonItem = self.addButton
+            
             // Show the edit button, but disable the edit button if there's nothing to edit.
             if ingredients.count > 0 {
                 self.editButton.enabled = true
@@ -833,6 +856,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
                 self.editButton.enabled = false
             }
             self.navigationItem.rightBarButtonItem = self.editButton
+            navItem.leftBarButtonItem = self.editButton
         }
     }
     
