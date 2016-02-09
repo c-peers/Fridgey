@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource, TabBarDelegate {
 
     @IBOutlet weak var expiryTableView: UITableView!
     @IBOutlet weak var navbarTitleText: UILabel!
@@ -20,6 +20,7 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     var filteredIngredients = [[Ingredient]]()
     var expiredIngredients = [[Ingredient]]()
     var myFridge = FridgeInfo()
+    var lists = Lists()
     var withinExpiryTime: Int = 14
     var expirationPickerData = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
     var expirationPicker = UIPickerView()
@@ -44,17 +45,9 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         navbarTitleText.text = "Expiring within \(withinExpiryTime) days"
         
-        // Load global variables
-        let FTBC = self.tabBarController as! FridgeTabBarController
-        
-        ingredients = FTBC.Ingredients
-        myFridge = FTBC.MyFridge
-        
-        if let savedIngredients = loadIngredients() {
-            
-            ingredients += savedIngredients
-            
-        }
+        ingredients = PersistManager.sharedManager.Ingredients
+        myFridge = PersistManager.sharedManager.MyFridge
+        lists = PersistManager.sharedManager.ShoppingLists
         
         expiredIngredients = ingredients
         
@@ -139,7 +132,7 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         //self.tableView.registerClass(FoodsListTableViewCell.classForCoder(), forCellReuseIdentifier: "FoodsListTableViewCell")
         
-        self.expiryTableView.scrollToRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), atScrollPosition: UITableViewScrollPosition.Top, animated: false)
+        //self.expiryTableView.scrollToRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), atScrollPosition: UITableViewScrollPosition.Top, animated: false)
         
         //self.tableView.contentOffset = CGPointMake(0,  (self.searchDisplayController?.searchBar.frame.size.height)! - self.tableView.contentOffset.y)
         
@@ -159,7 +152,38 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         calculateExpired()
         
     }
+    
+    func viewDidAppear() {
+        ingredients = PersistManager.sharedManager.Ingredients
+        myFridge = PersistManager.sharedManager.MyFridge
+        lists = PersistManager.sharedManager.ShoppingLists
         
+        print("Did appear??")
+        self.expiryTableView.reloadData()
+        expiryTableView.reloadData()
+        expiryTableView.reloadInputViews()
+        self.expiryTableView.reloadInputViews()
+
+    }
+    
+    func didSelectTab(tabBarController: FridgeTabBarController) {
+        ingredients = PersistManager.sharedManager.Ingredients
+        myFridge = PersistManager.sharedManager.MyFridge
+        lists = PersistManager.sharedManager.ShoppingLists
+        
+        calculateExpired()
+        
+        print("Actually reload??")
+        self.expiryTableView.reloadData()
+        expiryTableView.reloadData()
+        expiryTableView.reloadInputViews()
+        self.expiryTableView.reloadInputViews()
+        
+        
+        
+    }
+
+    
     // MARK: Picker
     @IBAction func navbarTitleWasTapped(recognizer:UITapGestureRecognizer) {
         print("tap!")
@@ -250,13 +274,6 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     // MARK: - (Re)Calculate expiration array
     func calculateExpired() {
         
-        // Restart the array
-        if let savedIngredients = loadIngredients() {
-            
-            ingredients = savedIngredients
-            
-        }
-        
         expiredIngredients = ingredients
         
         // We will only show dates in the range set in the view controller.
@@ -297,7 +314,12 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
                 //diffDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: cellExpiryDate, toDate: currentDate, options: NSCalendarOptions.init(rawValue: 0))
                 
                 // Only remove if the expiration date is greater than the current date + offset
-                if cellExpiryDate.laterDate(currentDatePlusExpiryWindow!) == cellExpiryDate {
+                
+                let inExpiryWindow = cellExpiryDate.laterDate(currentDatePlusExpiryWindow!)
+                let compareDates = inExpiryWindow.compare(cellExpiryDate)
+                
+                if inExpiryWindow == cellExpiryDate {
+                //if compareDates == NSComparisonResult.OrderedAscending {
                     
                     //let appendIngredientToExpiryArr = ingredients[x][arrayYValue]
                     
@@ -454,10 +476,14 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     //        return true
     //    }
     
-    func loadIngredients() -> [[Ingredient]]? {
-        
-        return NSKeyedUnarchiver.unarchiveObjectWithFile(Ingredient.ArchiveURL.path!) as? [[Ingredient]]
+    @IBAction func reloadTapped(sender: AnyObject) {
+        self.expiryTableView.reloadInputViews()
+        expiryTableView.reloadInputViews()
+        self.expiryTableView.reloadData()
+        expiryTableView.reloadData()
         
     }
+    
+    
     
 }

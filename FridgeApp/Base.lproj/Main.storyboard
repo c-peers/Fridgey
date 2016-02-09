@@ -429,7 +429,7 @@ does your refridgerator have?</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
                 <exit id="eHk-To-sLt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2536" y="-88"/>
+            <point key="canvasLocation" x="1850" y="-48"/>
         </scene>
         <!--Add To List From Ingredient Details View Controller-->
         <scene sceneID="BwF-iL-iO2">
@@ -560,9 +560,9 @@ does your refridgerator have?</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="axM-YX-b5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="UOh-jl-qdZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3274" y="-88"/>
+            <point key="canvasLocation" x="2588" y="-48"/>
         </scene>
-        <!--Item-->
+        <!--Ingredients-->
         <scene sceneID="F4g-Y0-IEK">
             <objects>
                 <viewController storyboardIdentifier="IngredientsList" automaticallyAdjustsScrollViewInsets="NO" id="aye-NY-bks" customClass="FoodsListTableViewController" customModule="FridgeApp" sceneMemberID="viewController">
@@ -694,7 +694,7 @@ does your refridgerator have?</string>
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="YmQ-mD-LLI"/>
+                    <tabBarItem key="tabBarItem" title="Ingredients" image="Carrot" id="YmQ-mD-LLI"/>
                     <navigationItem key="navigationItem" id="CRf-FN-8eZ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ETh-Ai-huM">
                             <connections>
@@ -736,7 +736,7 @@ does your refridgerator have?</string>
                     </connections>
                 </barButtonItem>
             </objects>
-            <point key="canvasLocation" x="1692" y="-88"/>
+            <point key="canvasLocation" x="1006" y="-48"/>
         </scene>
         <!--Shopping List-->
         <scene sceneID="K12-Lr-bFw">
@@ -1025,21 +1025,38 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                                     <action selector="hiddenTextDidBeginEditing:" destination="0UJ-Db-tXM" eventType="editingDidBegin" id="aAK-fT-OdA"/>
                                 </connections>
                             </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0e-QY-hFe">
+                                <rect key="frame" x="20" y="80" width="560" height="128"/>
+                                <color key="backgroundColor" red="0.31401931709999997" green="1" blue="0.49722852690000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oew-Im-9X4">
+                                <rect key="frame" x="277" y="129" width="47" height="30"/>
+                                <state key="normal" title="Reload"/>
+                                <connections>
+                                    <action selector="reloadTapped:" destination="0UJ-Db-tXM" eventType="touchUpInside" id="AP8-vQ-yFz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Oew-Im-9X4" firstAttribute="centerX" secondItem="dHw-9w-7Rx" secondAttribute="centerX" id="BEw-c3-fvd"/>
                             <constraint firstItem="dHw-9w-7Rx" firstAttribute="centerY" secondItem="BGT-yA-F3f" secondAttribute="centerY" id="ELo-qp-Ox4"/>
                             <constraint firstItem="jpt-c8-Pmq" firstAttribute="leading" secondItem="BGT-yA-F3f" secondAttribute="leading" id="FMx-oc-w1Q"/>
                             <constraint firstItem="hNf-wF-Gae" firstAttribute="centerX" secondItem="dHw-9w-7Rx" secondAttribute="centerX" id="Imu-NO-nki"/>
                             <constraint firstItem="dHw-9w-7Rx" firstAttribute="top" secondItem="TJP-1e-J49" secondAttribute="bottom" constant="11" id="LfZ-RB-bFf"/>
                             <constraint firstItem="jpt-c8-Pmq" firstAttribute="centerX" secondItem="BGT-yA-F3f" secondAttribute="centerX" id="Xsh-HF-Ooy"/>
                             <constraint firstItem="BGT-yA-F3f" firstAttribute="leading" secondItem="REw-FF-qOU" secondAttribute="leadingMargin" constant="-20" id="YLG-IF-9zN"/>
+                            <constraint firstItem="m0e-QY-hFe" firstAttribute="top" secondItem="BGT-yA-F3f" secondAttribute="bottom" constant="16" id="ZZY-I0-pEp"/>
+                            <constraint firstItem="m0e-QY-hFe" firstAttribute="leading" secondItem="REw-FF-qOU" secondAttribute="leadingMargin" id="dEp-BZ-E9j"/>
                             <constraint firstItem="QUH-qB-qiY" firstAttribute="top" secondItem="jpt-c8-Pmq" secondAttribute="bottom" constant="61" id="hCG-bG-F9X"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BGT-yA-F3f" secondAttribute="trailing" constant="-20" id="mn4-aI-unl"/>
                             <constraint firstItem="BGT-yA-F3f" firstAttribute="top" secondItem="TJP-1e-J49" secondAttribute="bottom" id="nir-NY-d1K"/>
+                            <constraint firstItem="jpt-c8-Pmq" firstAttribute="top" secondItem="m0e-QY-hFe" secondAttribute="bottom" constant="8" symbolic="YES" id="oXw-mh-jRD"/>
+                            <constraint firstItem="Oew-Im-9X4" firstAttribute="centerY" secondItem="m0e-QY-hFe" secondAttribute="centerY" id="suJ-gI-YkS"/>
                             <constraint firstAttribute="centerX" secondItem="BGT-yA-F3f" secondAttribute="centerX" id="xaU-WO-Jg3"/>
                             <constraint firstItem="hNf-wF-Gae" firstAttribute="baseline" secondItem="dHw-9w-7Rx" secondAttribute="firstBaseline" id="xsE-XD-KLi"/>
                             <constraint firstItem="dHw-9w-7Rx" firstAttribute="centerX" secondItem="BGT-yA-F3f" secondAttribute="centerX" id="yYs-61-Z3Z"/>
+                            <constraint firstItem="m0e-QY-hFe" firstAttribute="centerX" secondItem="dHw-9w-7Rx" secondAttribute="centerX" id="zfJ-ln-qMT"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Use Soon" image="Present" id="JpQ-2z-ept"/>
@@ -1088,9 +1105,9 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                     </tabBar>
                     <connections>
                         <segue destination="8JA-Gi-6le" kind="relationship" relationship="viewControllers" id="Qu9-da-37G"/>
+                        <segue destination="aye-NY-bks" kind="relationship" relationship="viewControllers" id="YR7-Ar-r0b"/>
                         <segue destination="oDo-XM-Lye" kind="relationship" relationship="viewControllers" id="BKM-ga-Uxw"/>
                         <segue destination="0UJ-Db-tXM" kind="relationship" relationship="viewControllers" id="aPg-D5-Vh9"/>
-                        <segue destination="aye-NY-bks" kind="relationship" relationship="viewControllers" id="YR7-Ar-r0b"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -1476,14 +1493,15 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
         </scene>
     </scenes>
     <resources>
+        <image name="Carrot" width="25" height="25"/>
         <image name="Cart" width="25" height="25"/>
         <image name="Fridge" width="25" height="25"/>
         <image name="Present" width="25" height="25"/>
         <image name="Unselected" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eUA-dd-AMQ"/>
+        <segue reference="EUW-uB-UZa"/>
         <segue reference="Nig-TY-LJm"/>
-        <segue reference="xUh-LB-vRU"/>
+        <segue reference="pQA-vO-Nhw"/>
     </inferredMetricsTieBreakers>
 </document>
