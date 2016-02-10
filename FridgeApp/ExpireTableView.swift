@@ -13,17 +13,29 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     @IBOutlet weak var expiryTableView: UITableView!
     @IBOutlet weak var navbarTitleText: UILabel!
     @IBOutlet weak var hiddenTextField: UITextField!
+    @IBOutlet weak var changeViewButton: UIButton!
     
     // MARK: Properties
     
+    // Ingredients
     var ingredients = [[Ingredient]]()
     var filteredIngredients = [[Ingredient]]()
     var expiredIngredients = [[Ingredient]]()
+    var expiredByDate = [[Ingredient]]()
+    
+    // Other globals
     var myFridge = FridgeInfo()
     var lists = Lists()
-    var withinExpiryTime: Int = 14
+    
+    // Picker
     var expirationPickerData = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
     var expirationPicker = UIPickerView()
+    
+    // Expired related
+    var expiryDates: [String] = []
+    var withinExpiryTime: Int = 14
+    var isDateSeparatedTable = true
+    
     //let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
@@ -35,6 +47,8 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         // Load any saved Ingredients, otherwise load sample data.
+        
+        changeViewButton.setTitle("Date View", forState: .Normal)
         
         expiryTableView.delegate = self
         expiryTableView.dataSource = self
@@ -55,65 +69,11 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         expirationPicker.delegate = self
         expirationPicker.dataSource = self
         
-//        // We will only show dates in the range set in the view controller.
-//        let date = NSDate()
-//        let dateFormatter = NSDateFormatter()
-//        
-//        var dateAsString: String
-//        
-//        dateFormatter.dateFormat = "YYYY-MM-dd"
-//        dateAsString = "2015-12-19"
-//        let cellExpiryDate = dateFormatter.dateFromString(dateAsString)!
-//        dateAsString = dateFormatter.stringFromDate(date)
-//        let currentDate = dateFormatter.dateFromString(dateAsString)!
-//        let currentDatePlusExpiryWindow = NSCalendar.currentCalendar().dateByAddingUnit(NSCalendarUnit.Day, value: withinExpiryTime, toDate: currentDate, options: NSCalendarOptions.init(rawValue: 0))
-//        
-//        var calculatedDate = NSCalendar.currentCalendar().dateByAddingUnit(NSCalendarUnit.Day, value: 20, toDate: cellExpiryDate, options: NSCalendarOptions.init(rawValue: 0))
-//        
-//        var diffDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: cellExpiryDate, toDate: currentDate, options: NSCalendarOptions.init(rawValue: 0))
-//        
-//        //Go through the original ingredient array and the copy. Remove all ingredients that aren't close to the set expiration date.
-//        for x in 0...ingredients.count - 1 {
-//            
-//            var arrayYValue = 0
-//            
-//            print("x")
-//            print(x)
-//            
-//            for y in 0...ingredients[x].count - 1 {
-//                
-//                print("y")
-//                print(y)
-//                
-//                print("Ingredient.expiration")
-//                print(ingredients[x][y].expiry)
-//                
-//                dateAsString = ingredients[x][y].expiry
-//                let cellExpiryDate = dateFormatter.dateFromString(dateAsString)!
-//                diffDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: cellExpiryDate, toDate: currentDate, options: NSCalendarOptions.init(rawValue: 0))
-//                
-//                // Only remove if the expiration date is greater than the current date + offset
-//                if cellExpiryDate.laterDate(currentDatePlusExpiryWindow!) == cellExpiryDate {
-//                    
-//                    //let appendIngredientToExpiryArr = ingredients[x][arrayYValue]
-//                    
-//                    print("exp ingred")
-//                    print(expiredIngredients)
-//                    
-//                    //Use arrayYValue because the indexes will change after removing a value.
-//                    expiredIngredients[x].removeAtIndex(arrayYValue)
-//                    
-//                } else {
-//                    // This index is fine so increment the counter
-//                    print("no match")
-//                    arrayYValue += 1
-//                }
-//                
-//            }
-//            
-//        }
         
         calculateExpired()
+        
+        calculateExpiredByDate()
+
         
         // Initializing with searchResultsController set to nil means that
         // searchController will use this view controller to display the search results
@@ -151,19 +111,8 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         calculateExpired()
         
-    }
-    
-    func viewDidAppear() {
-        ingredients = PersistManager.sharedManager.Ingredients
-        myFridge = PersistManager.sharedManager.MyFridge
-        lists = PersistManager.sharedManager.ShoppingLists
+        calculateExpiredByDate()
         
-        print("Did appear??")
-        self.expiryTableView.reloadData()
-        expiryTableView.reloadData()
-        expiryTableView.reloadInputViews()
-        self.expiryTableView.reloadInputViews()
-
     }
     
     func didSelectTab(tabBarController: FridgeTabBarController) {
@@ -175,11 +124,6 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         print("Actually reload??")
         self.expiryTableView.reloadData()
-        expiryTableView.reloadData()
-        expiryTableView.reloadInputViews()
-        self.expiryTableView.reloadInputViews()
-        
-        
         
     }
 
@@ -308,6 +252,7 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
                 
                 print("Ingredient.expiration")
                 print(ingredients[x][y].expiry)
+                print(ingredients[x][y].name)
                 
                 dateAsString = ingredients[x][y].expiry
                  let cellExpiryDate = dateFormatter.dateFromString(dateAsString)!
@@ -323,8 +268,8 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
                     
                     //let appendIngredientToExpiryArr = ingredients[x][arrayYValue]
                     
-                    print("exp ingred")
-                    print(expiredIngredients)
+                    //print("exp ingred")
+                    //print(expiredIngredients)
                     
                     //Use arrayYValue because the indexes will change after removing a value.
                     expiredIngredients[x].removeAtIndex(arrayYValue)
@@ -339,6 +284,49 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
             
         }
 
+        print("exp ingred")
+        print(expiredIngredients)
+        
+        print("ingred")
+        print(ingredients)
+        
+        
+    }
+    
+    func calculateExpiredByDate() {
+        
+        
+        let flatIngredients = expiredIngredients.flatMap { $0 }
+        
+        var dateCounter = 0
+        for inExpired in 0...flatIngredients.count - 1 {
+            if dateCounter == 0 {
+                expiredByDate.append([flatIngredients[inExpired]])
+                
+            } else {
+                if expiredByDate[dateCounter][0].expiry == flatIngredients[inExpired].expiry {
+                    expiredByDate[dateCounter].append(flatIngredients[inExpired])
+                } else {
+                    expiredByDate.append([flatIngredients[inExpired]])
+                    dateCounter += 1
+                }
+                
+            }
+            
+        }
+        
+        print("Expired by date")
+        print(expiredByDate)
+        
+        print("Flattened")
+        print(flatIngredients)
+        
+        // Fill the expiration Dates array
+        for inExpired in 0...flatIngredients.count - 1 {
+            expiryDates += [flatIngredients[inExpired].expiry]
+        }
+        
+        expiryDates = expiryDates.sort()
         
     }
     
@@ -368,21 +356,33 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     // MARK: - Table view data source
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        
-        if myFridge.doorNames.count > 1 {
-            return myFridge.doorNames.count
+
+        if changeViewButton.titleLabel!.text == "Date View" {
+
+            if myFridge.doorNames.count > 1 {
+                return myFridge.doorNames.count
+            } else {
+                return 1
+            }
         } else {
-            return 1
+            return expiryDates.count
+            
         }
         
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        if  myFridge.doorNames.count > 1 {
-            return myFridge.doorNames[section]
+        if changeViewButton.titleLabel!.text == "Date View" {
+
+            if  myFridge.doorNames.count > 1 {
+                return myFridge.doorNames[section]
+            } else {
+                return nil
+            }
+            
         } else {
-            return nil
+            return expiryDates[section]
         }
         
     }
@@ -397,12 +397,17 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         //return self.ingredients.count
         
-        if self.ingredients[section].count != 0 {
-            return self.expiredIngredients[section].count
+        if changeViewButton.titleLabel!.text == "Date View" {
+
+            if self.ingredients[section].count != 0 {
+                return self.expiredIngredients[section].count
+            } else {
+                return 0
+            }
+
         } else {
-            return 0
+            return expiredByDate[section].count
         }
-        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -476,11 +481,31 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     //        return true
     //    }
     
-    @IBAction func reloadTapped(sender: AnyObject) {
-        self.expiryTableView.reloadInputViews()
-        expiryTableView.reloadInputViews()
+    @IBAction func changeTableTapped(sender: AnyObject) {
+
+        print("tapped")
+        if changeViewButton.titleLabel!.text == "Date View" {
+            changeViewButton.setTitle("Area View", forState: .Normal)
+        } else {
+            changeViewButton.setTitle("Date View", forState: .Normal)
+        }
+
         self.expiryTableView.reloadData()
-        expiryTableView.reloadData()
+        self.expiryTableView.reloadSectionIndexTitles()
+        self.expiryTableView.reloadInputViews()
+        self.view.setNeedsDisplay()
+        self.expiryTableView.setNeedsDisplay()
+        expiryTableView.setNeedsDisplay()
+        
+        
+        dispatch_async(dispatch_get_main_queue(),{
+            self.expiryTableView.reloadData()
+            self.expiryTableView.reloadSectionIndexTitles()
+            self.expiryTableView.reloadInputViews()
+            self.view.setNeedsDisplay()
+            self.expiryTableView.setNeedsDisplay()
+            
+        })
         
     }
     

@@ -57,11 +57,11 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
 //        
 //        pageViewController.setViewControllers(viewControllers as! [UIViewController], direction: .Forward, animated: true, completion: nil)
         
-        PersistManager.sharedManager.initialLoading()
+        //PersistManager.sharedManager.initialLoading()
         
-        print(PersistManager.sharedManager.MyFridge.doorNames)
+        //print(PersistManager.sharedManager.MyFridge.doorNames)
         
-        MyFridge = PersistManager.sharedManager.MyFridge
+        //MyFridge = PersistManager.sharedManager.MyFridge
         
         //if let savedFridge = PersistManager.sharedManager.loadFridge() {
 //        if let savedFridge = PersistManager.sharedManager.decode() {

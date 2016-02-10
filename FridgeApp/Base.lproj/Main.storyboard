@@ -1030,10 +1030,10 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                                 <color key="backgroundColor" red="0.31401931709999997" green="1" blue="0.49722852690000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oew-Im-9X4">
-                                <rect key="frame" x="277" y="129" width="47" height="30"/>
-                                <state key="normal" title="Reload"/>
+                                <rect key="frame" x="255" y="129" width="91" height="30"/>
+                                <state key="normal" title="Change View"/>
                                 <connections>
-                                    <action selector="reloadTapped:" destination="0UJ-Db-tXM" eventType="touchUpInside" id="AP8-vQ-yFz"/>
+                                    <action selector="changeTableTapped:" destination="0UJ-Db-tXM" eventType="touchUpInside" id="EbY-4m-AaW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1061,6 +1061,7 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="Use Soon" image="Present" id="JpQ-2z-ept"/>
                     <connections>
+                        <outlet property="changeViewButton" destination="Oew-Im-9X4" id="0JB-NU-fcv"/>
                         <outlet property="expiryTableView" destination="jpt-c8-Pmq" id="di8-MC-EEf"/>
                         <outlet property="hiddenTextField" destination="hNf-wF-Gae" id="v5Y-hI-lUV"/>
                         <outlet property="navbarTitleText" destination="dHw-9w-7Rx" id="yZD-JJ-e70"/>

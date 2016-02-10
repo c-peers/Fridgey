@@ -40,29 +40,6 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     var navBar = UINavigationBar(frame: CGRect(x: 0, y: 20, width: 0, height: 44))
     let navItem = UINavigationItem(title: "SomeTitle")
     
-    // Temporary Sample
-    func sampleIngredients() {
-        
-        //let photo1 = UIImage(named: "meal1")!
-        let ingredient1 = [Ingredient(name: "Carrot", image: UIImage(named: "blank"), expiry: "2015-10-4", amount: 400.0, location: "Area 1 Door")!]
-        ingredients.append(ingredient1)
-        
-        //let photo2 = UIImage(named: "meal2")!
-        let ingredient2 = [Ingredient(name: "Eggs", image: UIImage(named: "blank"), expiry: "2015-10-2", amount: 6.0, location: "Area 2 Door")!]
-        ingredients.append(ingredient2)
-        
-        //let photo3 = UIImage(named: "meal3")!
-        let ingredient3 = [Ingredient(name: "Ice Cream", image: UIImage(named: "blank"), expiry: "2016-4-29", amount: 10.0, location: "Area 3 Door")!]
-        ingredients.append(ingredient3)
-
-        //let photo3 = UIImage(named: "meal3")!
-        let ingredient4 = [Ingredient(name: "Potato", image: UIImage(named: "blank"), expiry: "2015-10-8", amount: 850.0, location: "Area 4 Door")!]
-        ingredients.append(ingredient4)
-
-        // ingredients += [ingredient1, ingredient2, ingredient3, ingredient4]
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -97,35 +74,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         
         print("d00r")
         print(myFridge.doorNames)
-        
-//        if let savedFridge = PersistManager.sharedManager.loadFridge() {
-//            
-//            myFridge = savedFridge
-//            //saveToFTBC.MyFridge = savedFridge
-//            
-//            print("Saved Fridge")
-//            print(myFridge.numOfDoors)
-//            print(myFridge.doorNames)
-//            print(myFridge.fridgeName)
-//            
-//        }
-        
-//        if let savedIngredients = PersistManager.sharedManager.loadIngredients() {
-//
-//            ingredients += savedIngredients
-//            
-//        } else {
-//
-            // Load the sample data.
-            //sampleIngredients()
-
-        //}
-        
-        if let savedLists = PersistManager.sharedManager.loadList() {
-            print("lists loaded")
-            mainList = savedLists
-            
-        }
+                
         
         // I'm having trouble with searching through my ingredients so I made a 2d array with just the ingredient names.
         
