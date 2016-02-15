@@ -14,6 +14,7 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     @IBOutlet weak var navbarTitleText: UILabel!
     @IBOutlet weak var hiddenTextField: UITextField!
     @IBOutlet weak var changeViewButton: UIButton!
+    @IBOutlet weak var addToListButton: UIBarButtonItem!
     
     // MARK: Properties
     
@@ -36,8 +37,11 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     var withinExpiryTime: Int = 14
     var isDateSeparatedTable = false
     
+    var selectedIngredients: [String] = []
+    
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Change to Date View")
         refreshControl.addTarget(self, action: "changeTable:", forControlEvents: UIControlEvents.ValueChanged)
         
         return refreshControl
@@ -55,9 +59,11 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         // Load any saved Ingredients, otherwise load sample data.
         
+        addToListButton.tag = 1
+        
         self.expiryTableView.addSubview(self.refreshControl)
         
-        changeViewButton.setTitle("Date View", forState: .Normal)
+        changeViewButton.setTitle("Change View", forState: .Normal)
         
         expiryTableView.delegate = self
         expiryTableView.dataSource = self
@@ -66,7 +72,7 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         hiddenTextField.hidden = true
         hiddenTextField.inputView = expirationPicker
         
-        navbarTitleText.text = "Expiring within \(withinExpiryTime) days"
+        navbarTitleText.text = "Expiring in \(withinExpiryTime) days"
         
         ingredients = PersistManager.sharedManager.Ingredients
         myFridge = PersistManager.sharedManager.MyFridge
@@ -455,8 +461,27 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
             ingredient = expiredByDate[indexPath.section][indexPath.row]
         }
         
+        let emptyCircle = UIImage(named: "Unselected")
+        let filledCircle = UIImage(named: "Selected")
+        
+        cell.selectedButton.setImage(emptyCircle, forState: .Normal)
+        cell.selectedButton.setImage(filledCircle, forState: .Selected)
+        cell.selectedButton.setImage(filledCircle, forState: [.Highlighted,.Selected])
+        
+        cell.selectedButton.adjustsImageWhenHighlighted = false
+        
+        //if addToListButton.title == "Add to List" {
+        if addToListButton.tag == 1 {
+            cell.selectedButton.hidden = true
+        } else {
+            cell.selectedButton.hidden = false
+            cell.selectedButton.selected = false
+        }
+
+        
+        cell.backgroundColor = UIColor.whiteColor()
         cell.expireFoodName?.text = ingredient.name
-        cell.expireFoodAmount?.text = String(ingredient.amount)
+        //cell.expireFoodAmount?.text = String(ingredient.amount)
         cell.expireFoodDate?.text = ingredient.expiry
         cell.expireFoodImage?.image = ingredient.image
         
@@ -515,43 +540,136 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     //    }
     
     func changeTable(refreshControl: UIRefreshControl) {
-        isDateSeparatedTable = !isDateSeparatedTable
         
+        isDateSeparatedTable = !isDateSeparatedTable
+
         self.expiryTableView.reloadData()
         self.expiryTableView.reloadSectionIndexTitles()
         self.expiryTableView.reloadInputViews()
         
         refreshControl.endRefreshing()
+        
+        if !isDateSeparatedTable {
+            refreshControl.attributedTitle = NSAttributedString(string: "Change to Date View")
+        } else {
+            refreshControl.attributedTitle = NSAttributedString(string: "Change to Area View")
+        }
+        
+
     }
     
     @IBAction func changeTableTapped(sender: AnyObject) {
 
-        print("tapped")
-        if changeViewButton.titleLabel!.text == "Date View" {
-            changeViewButton.setTitle("Area View", forState: .Normal)
+        changeTable(refreshControl)
+        
+//        print("tapped")
+//        if changeViewButton.titleLabel!.text == "Date View" {
+//            changeViewButton.setTitle("Area View", forState: .Normal)
+//        } else {
+//            changeViewButton.setTitle("Date View", forState: .Normal)
+//        }
+//
+//        self.expiryTableView.reloadData()
+//        self.expiryTableView.reloadSectionIndexTitles()
+//        self.expiryTableView.reloadInputViews()
+//        self.view.setNeedsDisplay()
+//        self.expiryTableView.setNeedsDisplay()
+//        expiryTableView.setNeedsDisplay()
+//        
+//        
+//        dispatch_async(dispatch_get_main_queue(),{
+//            self.expiryTableView.reloadData()
+//            self.expiryTableView.reloadSectionIndexTitles()
+//            self.expiryTableView.reloadInputViews()
+//            self.view.setNeedsDisplay()
+//            self.expiryTableView.setNeedsDisplay()
+//            
+//        })
+//        
+    }
+    
+    @IBAction func addToListTapped(sender: AnyObject) {
+        
+        
+        if addToListButton.tag == 1 {
+                addToListButton.title = "Add Selected"
+            addToListButton.tag = 2
+            changeViewButton.enabled = false
+            selectedIngredients.removeAll()
+            expiryTableView.reloadData()
         } else {
-            changeViewButton.setTitle("Date View", forState: .Normal)
-        }
-
-        self.expiryTableView.reloadData()
-        self.expiryTableView.reloadSectionIndexTitles()
-        self.expiryTableView.reloadInputViews()
-        self.view.setNeedsDisplay()
-        self.expiryTableView.setNeedsDisplay()
-        expiryTableView.setNeedsDisplay()
-        
-        
-        dispatch_async(dispatch_get_main_queue(),{
-            self.expiryTableView.reloadData()
-            self.expiryTableView.reloadSectionIndexTitles()
-            self.expiryTableView.reloadInputViews()
-            self.view.setNeedsDisplay()
-            self.expiryTableView.setNeedsDisplay()
             
-        })
+            changeViewButton.enabled = true
+            addToListButton.tag = 1
+            addToListButton.title = "Add to List"
+            
+            guard selectedIngredients.count > 0 else {
+                print("guarded")
+                expiryTableView.reloadData()
+                return
+            }
+            
+            var lists = PersistManager.sharedManager.ShoppingLists.lists
+            let listName = "Super 1 List"
+            var toAddToList = lists[listName]
+            
+            for ingredient in 0...selectedIngredients.count - 1 {
+                let willAdd = selectedIngredients[ingredient]
+                toAddToList?.append(willAdd)
+            }
+            
+            if toAddToList!.count > 0 {
+                lists[listName] = toAddToList
+            }
+            
+            PersistManager.sharedManager.ShoppingLists.lists[listName] = lists[listName]
+            let saveList = PersistenceHandler()
+            saveList.save()
+            
+            expiryTableView.reloadData()
+            
+        }
         
     }
     
-    
+    @IBAction func wasSelected(sender: AnyObject) {
+        
+        //if selectedIngredients.count < 1 {
+        //    addSelected.enabled = false
+        //} else {
+        //    addSelected.enabled = true
+        //}
+        
+        let button = sender as! UIButton
+        let cell = button.superview?.superview as! ExpireTableViewCell
+        let sectionAndRow = expiryTableView.indexPathForCell(cell)
+        let row = sectionAndRow?.row
+        let section = sectionAndRow?.section
+        
+        print(row)
+        print(button.selected)
+        
+        let name: String
+        
+        if !isDateSeparatedTable {
+            name = expiredIngredients[section!][row!].name
+        } else {
+            name = expiredByDate[section!][row!].name
+        }
+        
+        if button.selected == true {
+            button.selected = false
+            if selectedIngredients.contains(name) == true {
+                let index = selectedIngredients.indexOf(name)
+                selectedIngredients.removeAtIndex(index!)
+            }
+            print(selectedIngredients)
+        } else {
+            button.selected = true
+            selectedIngredients.append(name)
+            print(selectedIngredients)
+        }
+        
+    }
     
 }
