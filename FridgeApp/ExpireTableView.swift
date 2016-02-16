@@ -609,6 +609,16 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
                 return
             }
             
+            let controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddToListFromExpiryTab") as! AddToListFromExpiryViewController
+            //controller.previousVC = "FoodsListTableViewController"
+            //controller.selectedIngredient = ingredient.name
+            controller.modalTransitionStyle = .CrossDissolve
+            controller.modalPresentationStyle = .OverCurrentContext
+            self.presentViewController(controller, animated: true, completion: nil)
+            
+            
+            
+            
             var lists = PersistManager.sharedManager.ShoppingLists.lists
             let listName = "Super 1 List"
             var toAddToList = lists[listName]
@@ -671,5 +681,25 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         }
         
     }
+    
+    @IBAction func unwindToExpiry (sender: UIStoryboardSegue) {
+        
+            //let selectedList = AddToListFromExpiryViewController.selectedList
+        
+            //print("unwind ingredient added")
+            //print(selectedLists)
+            
+            //listAddedText.text = nameTextField.text! + " added to " + selectedList
+            //print(listAddedText.text)
+            
+            //dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) { () -> Void in
+            //    self.fadeInOut()
+            //}
+            
+        
+        //}
+        
+    }
+
     
 }

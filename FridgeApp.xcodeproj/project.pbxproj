@@ -40,6 +40,8 @@
 		C49FB9051C2A501000231C8E /* AddToListFromIngredientsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49FB9041C2A501000231C8E /* AddToListFromIngredientsCollectionViewCell.swift */; };
 		C4CA4D4E1C1F073C005F6236 /* ExpireTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA4D4D1C1F073C005F6236 /* ExpireTableViewCell.swift */; };
 		C4CA4D501C1F08C6005F6236 /* ExpireTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA4D4F1C1F08C6005F6236 /* ExpireTableView.swift */; };
+		C4E3A6D41C72CE0400015AB4 /* AddToListFromExpiry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3A6D31C72CE0400015AB4 /* AddToListFromExpiry.swift */; };
+		C4E3A6D61C72CE1500015AB4 /* AddToListFromExpiryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E3A6D51C72CE1500015AB4 /* AddToListFromExpiryCell.swift */; };
 		C4E458F81C2777A6005B28E3 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E458F71C2777A6005B28E3 /* ListCollectionViewCell.swift */; };
 		C4F1739F1BB69319002D9DA1 /* FoodsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F1739E1BB69319002D9DA1 /* FoodsListTableViewCell.swift */; };
 		C4F173A21BB698B5002D9DA1 /* FoodsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F173A01BB698B5002D9DA1 /* FoodsListTableViewController.swift */; };
@@ -117,6 +119,8 @@
 		C49FB9041C2A501000231C8E /* AddToListFromIngredientsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToListFromIngredientsCollectionViewCell.swift; sourceTree = "<group>"; };
 		C4CA4D4D1C1F073C005F6236 /* ExpireTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpireTableViewCell.swift; sourceTree = "<group>"; };
 		C4CA4D4F1C1F08C6005F6236 /* ExpireTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpireTableView.swift; sourceTree = "<group>"; };
+		C4E3A6D31C72CE0400015AB4 /* AddToListFromExpiry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToListFromExpiry.swift; sourceTree = "<group>"; };
+		C4E3A6D51C72CE1500015AB4 /* AddToListFromExpiryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToListFromExpiryCell.swift; sourceTree = "<group>"; };
 		C4E458F71C2777A6005B28E3 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		C4F1739E1BB69319002D9DA1 /* FoodsListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsListTableViewCell.swift; sourceTree = "<group>"; };
 		C4F173A01BB698B5002D9DA1 /* FoodsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsListTableViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 			children = (
 				C4CA4D4F1C1F08C6005F6236 /* ExpireTableView.swift */,
 				C4CA4D4D1C1F073C005F6236 /* ExpireTableViewCell.swift */,
+				C4E3A6D31C72CE0400015AB4 /* AddToListFromExpiry.swift */,
+				C4E3A6D51C72CE1500015AB4 /* AddToListFromExpiryCell.swift */,
 			);
 			name = "Expiring Tab";
 			sourceTree = "<group>";
@@ -440,7 +446,9 @@
 				C4937B911C019C07008505B9 /* FridgeTabBarController.swift in Sources */,
 				C46F4E621BCF80B00020F682 /* NewIngredientViewController.swift in Sources */,
 				C47B681A1C5DE672009B7F75 /* ListViewCollectionTextFieldDelegate.swift in Sources */,
+				C4E3A6D41C72CE0400015AB4 /* AddToListFromExpiry.swift in Sources */,
 				C4CA4D4E1C1F073C005F6236 /* ExpireTableViewCell.swift in Sources */,
+				C4E3A6D61C72CE1500015AB4 /* AddToListFromExpiryCell.swift in Sources */,
 				C442CC291C0ADB2000BDC38C /* IngredientsByLocation.swift in Sources */,
 				C45F3CBF1B9AC4E40010FEF0 /* SecondViewController.swift in Sources */,
 				C4F1739F1BB69319002D9DA1 /* FoodsListTableViewCell.swift in Sources */,

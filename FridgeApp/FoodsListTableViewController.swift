@@ -285,6 +285,8 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             let controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddToListFromIngredientTab") as! AddToListFromIngredientDetailsViewController
             controller.previousVC = "FoodsListTableViewController"
             controller.selectedIngredient = ingredient.name
+            controller.modalTransitionStyle = .CrossDissolve
+            controller.modalPresentationStyle = .OverCurrentContext
             self.presentViewController(controller, animated: true, completion: nil)
             
         }
