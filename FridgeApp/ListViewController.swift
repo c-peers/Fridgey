@@ -74,8 +74,6 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         print("saved key list")
         print(list)
         
-        //list = ["test1", "test2", "test3", "test4", "test5", "test6", "test7", "test8", "test9"]
-    
         collectionView.dataSource = self
         collectionView.delegate = self
         
@@ -104,6 +102,12 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func didSelectTab(tabBarController: FridgeTabBarController) {
         print("Actually reload??")
+        
+        mainList = PersistManager.sharedManager.ShoppingLists
+        
+        collectionView.reloadData()
+        collectionView.reloadInputViews()
+        //collectionView.reloadSections(NSIndexSet(index: 0))
         
     }
 

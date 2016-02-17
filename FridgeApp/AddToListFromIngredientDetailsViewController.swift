@@ -8,10 +8,13 @@
 
 import UIKit
 
-class AddToListFromIngredientDetailsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class AddToListFromIngredientDetailsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var newListButton: UIButton!
+    @IBOutlet weak var newListButtonBGView: UIView!
+    @IBOutlet weak var newListText: UITextField!
     
     var list: [String] = []
     var mainList = Lists()
@@ -22,14 +25,8 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //list = ["test1", "test2", "test3", "test4", "test5", "test6", "test7", "test8", "test9"]
         
         mainList = PersistManager.sharedManager.ShoppingLists
-        
-        //if let savedLists = PersistManager.sharedManager.loadList() {
-        //    mainList = savedLists
-        //}
         
         // Dictionary not sorted by key
         list = Array(mainList.lists.keys).sort(<)
@@ -40,18 +37,24 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
             list.removeAtIndex(index!)
         }
         
+        print("selectedIngredient")
         print(selectedIngredient)
         print(mainList.lists)
         print(list)
         
+        // Hook Up Colection View
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        
+        // Make it look like the view is on top of the previous view
         collectionView.backgroundColor = UIColor.whiteColor()
         
         self.view.backgroundColor = UIColor(white: 0, alpha: 0.4)
         
+        // Round corners and shadows
         backgroundView.layer.cornerRadius = 8
+
         backgroundView.layer.masksToBounds = true
         
         backgroundView.layer.borderColor = UIColor.grayColor().CGColor
@@ -64,7 +67,14 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         backgroundView.layer.masksToBounds = false
         backgroundView.clipsToBounds = false
         
-        // Do any additional setup after loading the view.
+        newListButtonBGView.layer.cornerRadius = 8
+        newListButtonBGView.layer.masksToBounds = true
+        
+        newListText.hidden = true
+        newListText.delegate = self
+        
+        newListButton.hidden = false
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,17 +82,49 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func textFieldDidBeginEditing(textField: UITextField) {
+        
     }
-    */
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        
+        print("entered?")
+        
+        // We have our actual List name now so rename the lists and remove the temporary list.
+        selectedList = textField.text!
+        list[list.count - 1] = selectedList
+        mainList.addList(selectedList, listDetail: [])
+        
+        mainList.lists[selectedList]!.append(selectedIngredient)
+        
+        print(mainList.lists)
+        
+        // We only needed the textField so write the label name. Now let's hide the field.
+        textField.hidden = true
+        textField.text = nil
+        textField.alpha = 0.0
+        
+        // Set button with list name text.
+        newListButton.setTitle(textField.text, forState: [.Normal, .Disabled])
+        newListButton.enabled = false
+        newListButton.hidden = false
+        
+        // We just added a new list so let's save.
+        PersistManager.sharedManager.ShoppingLists.lists[selectedList] = mainList.lists[selectedList]
+        print(PersistManager.sharedManager.ShoppingLists.lists[textField.text!])
+        save()
+        
+        
+        
+        dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
         
@@ -124,8 +166,7 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         PersistManager.sharedManager.ShoppingLists.lists[selectedList] = mainList.lists[selectedList]
         
         // Save lists
-        let saveList = PersistenceHandler()
-        saveList.save()
+        save()
         
         print(PersistManager.sharedManager.ShoppingLists.lists)
         
@@ -153,4 +194,24 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         dismissViewControllerAnimated(true, completion: nil)
     }
 
+    @IBAction func newListTapped(sender: AnyObject) {
+        
+        newListButton.hidden = true
+        
+        newListText.text = ""
+        newListText.hidden = false
+        newListText.returnKeyType = .Done
+        newListText.becomeFirstResponder()
+        
+        //newListText.performSelector("becomeFirstResponder", withObject: nil, afterDelay: 0)
+        
+    
+    }
+
+    func save() {
+        
+        let saveList = PersistenceHandler()
+        saveList.save()
+        
+    }
 }

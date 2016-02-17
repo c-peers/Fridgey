@@ -454,7 +454,7 @@ does your refridgerator have?</string>
                                         </connections>
                                     </button>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mdS-bi-GIo">
-                                        <rect key="frame" x="36" y="137" width="450" height="363"/>
+                                        <rect key="frame" x="36" y="138" width="450" height="362"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="50" minimumInteritemSpacing="40" id="uue-tR-18R">
                                             <size key="itemSize" width="200" height="50"/>
                                             <size key="headerReferenceSize" width="0.0" height="20"/>
@@ -500,23 +500,38 @@ does your refridgerator have?</string>
                                         </collectionReusableView>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZg-ZA-06E">
-                                        <rect key="frame" x="60" y="72" width="400" height="45"/>
+                                        <rect key="frame" x="160" y="69" width="200" height="50"/>
                                         <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kl4-v4-1Lh">
+                                                <rect key="frame" x="35" y="8" width="130" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIi-o2-2LX">
-                                                <rect key="frame" x="35" y="7" width="330" height="30"/>
-                                                <state key="normal" title="New List"/>
+                                                <rect key="frame" x="35" y="8" width="130" height="30"/>
+                                                <state key="normal" title="New List">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="newListTapped:" destination="E77-v0-SKt" eventType="touchUpInside" id="GBd-V5-GCE"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.31401931709999997" green="1" blue="0.49722852690000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="kl4-v4-1Lh" firstAttribute="top" secondItem="wIi-o2-2LX" secondAttribute="top" id="2pg-JA-ofn"/>
                                             <constraint firstItem="wIi-o2-2LX" firstAttribute="leading" secondItem="xZg-ZA-06E" secondAttribute="leading" constant="35" id="Kpu-9D-NRv"/>
                                             <constraint firstItem="wIi-o2-2LX" firstAttribute="leading" secondItem="xZg-ZA-06E" secondAttribute="leading" constant="35" id="LNn-Qx-N6K"/>
-                                            <constraint firstAttribute="trailing" secondItem="wIi-o2-2LX" secondAttribute="trailing" constant="35" id="Rpa-iM-x3A"/>
                                             <constraint firstItem="wIi-o2-2LX" firstAttribute="centerX" secondItem="xZg-ZA-06E" secondAttribute="centerX" id="Z1d-uv-ABw"/>
-                                            <constraint firstAttribute="bottom" secondItem="wIi-o2-2LX" secondAttribute="bottom" constant="8" id="bVJ-Uc-8Bm"/>
-                                            <constraint firstItem="wIi-o2-2LX" firstAttribute="top" secondItem="xZg-ZA-06E" secondAttribute="top" constant="7" id="hd1-BS-ine"/>
+                                            <constraint firstItem="wIi-o2-2LX" firstAttribute="centerX" secondItem="xZg-ZA-06E" secondAttribute="centerX" id="bE4-5F-Lae"/>
+                                            <constraint firstAttribute="bottom" secondItem="wIi-o2-2LX" secondAttribute="bottom" constant="12" id="bVJ-Uc-8Bm"/>
+                                            <constraint firstItem="wIi-o2-2LX" firstAttribute="top" secondItem="xZg-ZA-06E" secondAttribute="top" constant="8" id="hd1-BS-ine"/>
                                             <constraint firstItem="wIi-o2-2LX" firstAttribute="centerY" secondItem="xZg-ZA-06E" secondAttribute="centerY" id="jHA-dq-7uv"/>
+                                            <constraint firstItem="kl4-v4-1Lh" firstAttribute="leading" secondItem="wIi-o2-2LX" secondAttribute="leading" id="rhr-EZ-Wtt"/>
+                                            <constraint firstItem="kl4-v4-1Lh" firstAttribute="trailing" secondItem="wIi-o2-2LX" secondAttribute="trailing" id="uaU-pH-7mT"/>
+                                            <constraint firstAttribute="width" constant="200" id="vZZ-zL-ZH9"/>
                                             <constraint firstItem="wIi-o2-2LX" firstAttribute="bottom" secondItem="xZg-ZA-06E" secondAttribute="bottomMargin" id="ye3-Fi-lD7"/>
+                                            <constraint firstAttribute="height" constant="50" id="ynA-Pa-5j1"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -531,11 +546,10 @@ does your refridgerator have?</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="yj1-ok-aPy" firstAttribute="leading" secondItem="cUh-Mu-jYv" secondAttribute="leadingMargin" id="2ao-F0-UGH"/>
-                                    <constraint firstItem="mdS-bi-GIo" firstAttribute="top" secondItem="xZg-ZA-06E" secondAttribute="bottom" constant="20" id="4ek-W4-hva"/>
-                                    <constraint firstItem="xZg-ZA-06E" firstAttribute="leading" secondItem="cUh-Mu-jYv" secondAttribute="leading" constant="60" id="EPr-NR-IHC"/>
-                                    <constraint firstItem="xZg-ZA-06E" firstAttribute="top" secondItem="cUh-Mu-jYv" secondAttribute="top" constant="72" id="XCg-zn-WvE"/>
+                                    <constraint firstItem="mdS-bi-GIo" firstAttribute="top" secondItem="xZg-ZA-06E" secondAttribute="bottom" constant="19" id="4ek-W4-hva"/>
+                                    <constraint firstItem="xZg-ZA-06E" firstAttribute="centerX" secondItem="cUh-Mu-jYv" secondAttribute="centerX" id="Lsk-kN-biO"/>
+                                    <constraint firstItem="xZg-ZA-06E" firstAttribute="top" secondItem="cUh-Mu-jYv" secondAttribute="top" constant="69" id="SNV-E8-Krd"/>
                                     <constraint firstAttribute="bottom" secondItem="mdS-bi-GIo" secondAttribute="bottom" constant="10" id="ZMR-Xx-3YH"/>
-                                    <constraint firstAttribute="trailing" secondItem="xZg-ZA-06E" secondAttribute="trailing" constant="60" id="ddQ-b2-IIM"/>
                                     <constraint firstItem="yj1-ok-aPy" firstAttribute="top" secondItem="cUh-Mu-jYv" secondAttribute="topMargin" id="h4l-VE-lnR"/>
                                     <constraint firstItem="mdS-bi-GIo" firstAttribute="leading" secondItem="cUh-Mu-jYv" secondAttribute="leading" constant="36" id="tx8-Vz-dyl"/>
                                     <constraint firstAttribute="trailing" secondItem="mdS-bi-GIo" secondAttribute="trailing" constant="34" id="yRC-LJ-M41"/>
@@ -553,6 +567,9 @@ does your refridgerator have?</string>
                     <connections>
                         <outlet property="backgroundView" destination="cUh-Mu-jYv" id="KdU-uL-iem"/>
                         <outlet property="collectionView" destination="mdS-bi-GIo" id="FR3-Ae-PIA"/>
+                        <outlet property="newListButton" destination="wIi-o2-2LX" id="02S-lq-pfm"/>
+                        <outlet property="newListButtonBGView" destination="xZg-ZA-06E" id="uTr-am-UWY"/>
+                        <outlet property="newListText" destination="kl4-v4-1Lh" id="tYY-pm-JoX"/>
                         <segue destination="UOh-jl-qdZ" kind="unwind" identifier="addToListSelected" unwindAction="unwindToNewIngredient:" id="y9i-8h-hHB"/>
                         <segue destination="UOh-jl-qdZ" kind="unwind" identifier="addToFullList" unwindAction="unwindToIngredientList:" id="KaE-ME-nRU"/>
                     </connections>
