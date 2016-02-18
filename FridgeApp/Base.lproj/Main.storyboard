@@ -509,6 +509,10 @@ does your refridgerator have?</string>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIi-o2-2LX">
                                                 <rect key="frame" x="35" y="8" width="130" height="30"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                 <state key="normal" title="New List">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -931,18 +935,6 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGT-yA-F3f">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <items>
-                                    <navigationItem id="S3g-I0-fJG">
-                                        <barButtonItem key="rightBarButtonItem" title="Add to List" id="4Tx-6G-MIm">
-                                            <connections>
-                                                <action selector="addToListTapped:" destination="0UJ-Db-tXM" id="nus-bC-ZQc"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jpt-c8-Pmq">
                                 <rect key="frame" x="0.0" y="216" width="600" height="335"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1015,31 +1007,6 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                                     <outlet property="delegate" destination="0UJ-Db-tXM" id="1Lw-Ns-dfN"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHw-9w-7Rx">
-                                <rect key="frame" x="200" y="31" width="200" height="21"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="UCR-h3-crF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="gww-eN-bDv" appends="YES" id="rBg-th-Gaw"/>
-                                </connections>
-                            </label>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hNf-wF-Gae">
-                                <rect key="frame" x="252" y="28" width="97" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="OgA-XA-K2N"/>
-                                </constraints>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="hiddenTextDidBeginEditing:" destination="0UJ-Db-tXM" eventType="editingDidBegin" id="aAK-fT-OdA"/>
-                                </connections>
-                            </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0e-QY-hFe">
                                 <rect key="frame" x="20" y="80" width="560" height="128"/>
                                 <color key="backgroundColor" red="0.31401931709999997" green="1" blue="0.49722852690000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1051,28 +1018,33 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                                     <action selector="changeTableTapped:" destination="0UJ-Db-tXM" eventType="touchUpInside" id="EbY-4m-AaW"/>
                                 </connections>
                             </button>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hNf-wF-Gae">
+                                <rect key="frame" x="252" y="91" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="OgA-XA-K2N"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="hiddenTextDidBeginEditing:" destination="0UJ-Db-tXM" eventType="editingDidBegin" id="aAK-fT-OdA"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jpt-c8-Pmq" firstAttribute="bottom" secondItem="QUH-qB-qiY" secondAttribute="top" id="6La-ix-Shh"/>
-                            <constraint firstItem="jpt-c8-Pmq" firstAttribute="trailing" secondItem="BGT-yA-F3f" secondAttribute="trailing" id="8MC-KY-wrm"/>
-                            <constraint firstItem="Oew-Im-9X4" firstAttribute="centerX" secondItem="dHw-9w-7Rx" secondAttribute="centerX" id="BEw-c3-fvd"/>
-                            <constraint firstItem="dHw-9w-7Rx" firstAttribute="centerY" secondItem="BGT-yA-F3f" secondAttribute="centerY" id="ELo-qp-Ox4"/>
-                            <constraint firstItem="jpt-c8-Pmq" firstAttribute="leading" secondItem="BGT-yA-F3f" secondAttribute="leading" id="FMx-oc-w1Q"/>
-                            <constraint firstItem="hNf-wF-Gae" firstAttribute="centerX" secondItem="dHw-9w-7Rx" secondAttribute="centerX" id="Imu-NO-nki"/>
-                            <constraint firstItem="dHw-9w-7Rx" firstAttribute="top" secondItem="TJP-1e-J49" secondAttribute="bottom" constant="11" id="LfZ-RB-bFf"/>
+                            <constraint firstItem="Oew-Im-9X4" firstAttribute="centerX" secondItem="m0e-QY-hFe" secondAttribute="centerX" id="8nF-t1-gs1"/>
+                            <constraint firstAttribute="trailing" secondItem="jpt-c8-Pmq" secondAttribute="trailing" id="Cqw-ZX-LIR"/>
+                            <constraint firstItem="m0e-QY-hFe" firstAttribute="top" secondItem="hNf-wF-Gae" secondAttribute="bottom" constant="-41" id="HDk-mg-usb"/>
                             <constraint firstItem="jpt-c8-Pmq" firstAttribute="top" secondItem="Oew-Im-9X4" secondAttribute="bottom" constant="57" id="Rxt-KV-mDp"/>
-                            <constraint firstItem="BGT-yA-F3f" firstAttribute="leading" secondItem="REw-FF-qOU" secondAttribute="leadingMargin" constant="-20" id="YLG-IF-9zN"/>
-                            <constraint firstItem="m0e-QY-hFe" firstAttribute="top" secondItem="BGT-yA-F3f" secondAttribute="bottom" constant="16" id="ZZY-I0-pEp"/>
+                            <constraint firstItem="hNf-wF-Gae" firstAttribute="centerX" secondItem="Oew-Im-9X4" secondAttribute="centerX" id="Vsj-Tu-TD6"/>
                             <constraint firstItem="m0e-QY-hFe" firstAttribute="leading" secondItem="REw-FF-qOU" secondAttribute="leadingMargin" id="dEp-BZ-E9j"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BGT-yA-F3f" secondAttribute="trailing" constant="-20" id="mn4-aI-unl"/>
-                            <constraint firstItem="BGT-yA-F3f" firstAttribute="top" secondItem="TJP-1e-J49" secondAttribute="bottom" id="nir-NY-d1K"/>
+                            <constraint firstItem="jpt-c8-Pmq" firstAttribute="leading" secondItem="REw-FF-qOU" secondAttribute="leading" id="hsR-FK-UkV"/>
+                            <constraint firstItem="hNf-wF-Gae" firstAttribute="top" secondItem="TJP-1e-J49" secondAttribute="bottom" constant="71" id="jOl-sE-mpo"/>
                             <constraint firstItem="jpt-c8-Pmq" firstAttribute="top" secondItem="m0e-QY-hFe" secondAttribute="bottom" constant="8" symbolic="YES" id="oXw-mh-jRD"/>
+                            <constraint firstItem="Oew-Im-9X4" firstAttribute="centerX" secondItem="jpt-c8-Pmq" secondAttribute="centerX" id="rhI-ix-mFA"/>
                             <constraint firstItem="Oew-Im-9X4" firstAttribute="centerY" secondItem="m0e-QY-hFe" secondAttribute="centerY" id="suJ-gI-YkS"/>
-                            <constraint firstAttribute="centerX" secondItem="BGT-yA-F3f" secondAttribute="centerX" id="xaU-WO-Jg3"/>
-                            <constraint firstItem="hNf-wF-Gae" firstAttribute="baseline" secondItem="dHw-9w-7Rx" secondAttribute="firstBaseline" id="xsE-XD-KLi"/>
-                            <constraint firstItem="dHw-9w-7Rx" firstAttribute="centerX" secondItem="BGT-yA-F3f" secondAttribute="centerX" id="yYs-61-Z3Z"/>
-                            <constraint firstItem="m0e-QY-hFe" firstAttribute="centerX" secondItem="dHw-9w-7Rx" secondAttribute="centerX" id="zfJ-ln-qMT"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Use Soon" image="Present" id="JpQ-2z-ept"/>
@@ -1080,17 +1052,22 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                         <outlet property="addToListButton" destination="4Tx-6G-MIm" id="EQt-dH-Zng"/>
                         <outlet property="changeViewButton" destination="Oew-Im-9X4" id="0JB-NU-fcv"/>
                         <outlet property="expiryTableView" destination="jpt-c8-Pmq" id="di8-MC-EEf"/>
-                        <outlet property="hiddenTextField" destination="hNf-wF-Gae" id="v5Y-hI-lUV"/>
-                        <outlet property="navbarTitleText" destination="dHw-9w-7Rx" id="yZD-JJ-e70"/>
-                        <segue destination="TGZ-5y-3EC" kind="presentation" identifier="addToListFromExpirySegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="56D-eC-BvC"/>
+                        <outlet property="trashButton" destination="31U-Ro-axm" id="ZgF-U0-NfC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DyJ-SZ-Oyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <barButtonItem title="Item" id="dFa-wt-G3R"/>
+                <barButtonItem systemItem="edit" id="31U-Ro-axm"/>
                 <tapGestureRecognizer id="gww-eN-bDv">
                     <connections>
                         <action selector="navbarTitleWasTapped:" destination="0UJ-Db-tXM" id="Z2a-QG-rkA"/>
                     </connections>
                 </tapGestureRecognizer>
+                <barButtonItem title="Add to List" id="4Tx-6G-MIm">
+                    <connections>
+                        <action selector="addToListTapped:" destination="0UJ-Db-tXM" id="nus-bC-ZQc"/>
+                    </connections>
+                </barButtonItem>
             </objects>
             <point key="canvasLocation" x="882" y="2090"/>
         </scene>

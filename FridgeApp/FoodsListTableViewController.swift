@@ -46,13 +46,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         navBar.frame = CGRectMake(0, 20, view.frame.width, 44)
         self.view.addSubview(navBar)
         
-        
-        //let navBar = UINavigationBar(frame: CGRect(x: 0, y: 20, width: view.frame.width, height: 44))
-        //let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: nil, action: "selector")
-        //navItem.rightBarButtonItem = doneItem;
-        //let navItem = UINavigationItem(title: "SomeTitle")
         navBar.setItems([navItem], animated: false)
-        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -786,17 +780,14 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     func updateButtonsToMatchTableState() {
         if self.tableView.editing {
             // Show the option to cancel the edit.
-            //self.navigationItem.rightBarButtonItem = self.cancelButton
             navItem.rightBarButtonItem = self.cancelButton
             
             self.updateDeleteButtonTitle()
             // Show the delete button.
-            self.navigationItem.leftBarButtonItem = self.deleteButton
             navItem.leftBarButtonItem = self.deleteButton
         }
         else {
             // Not in editing mode.
-            self.navigationItem.leftBarButtonItem = self.addButton
             navItem.rightBarButtonItem = self.addButton
             
             // Show the edit button, but disable the edit button if there's nothing to edit.
@@ -806,7 +797,6 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             else {
                 self.editButton.enabled = false
             }
-            self.navigationItem.rightBarButtonItem = self.editButton
             navItem.leftBarButtonItem = self.editButton
         }
     }

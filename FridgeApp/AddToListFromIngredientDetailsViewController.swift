@@ -19,6 +19,7 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
     var list: [String] = []
     var mainList = Lists()
     var selectedIngredient = String()
+    var selectedIngredients: [String] = []
     var selectedList: String = ""
     
     var previousVC = ""
@@ -97,32 +98,43 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         
         // We have our actual List name now so rename the lists and remove the temporary list.
         selectedList = textField.text!
+        
+        newListButton.setTitle(selectedList, forState: .Normal)
+        
         list[list.count - 1] = selectedList
         mainList.addList(selectedList, listDetail: [])
         
-        mainList.lists[selectedList]!.append(selectedIngredient)
-        
+        if selectedIngredient.isEmpty == false {
+            mainList.lists[selectedList]!.append(selectedIngredient)
+        } else {
+            mainList.lists[selectedList]! += selectedIngredients
+        }
         print(mainList.lists)
         
         // We only needed the textField so write the label name. Now let's hide the field.
         textField.hidden = true
         textField.text = nil
         textField.alpha = 0.0
+        newListText.hidden = true
+        newListText.alpha = 0.0
         
         // Set button with list name text.
-        newListButton.setTitle(textField.text, forState: [.Normal, .Disabled])
-        newListButton.enabled = false
+        newListButton.enabled = true
         newListButton.hidden = false
+        
+        print(newListButton.titleLabel)
         
         // We just added a new list so let's save.
         PersistManager.sharedManager.ShoppingLists.lists[selectedList] = mainList.lists[selectedList]
         print(PersistManager.sharedManager.ShoppingLists.lists[textField.text!])
         save()
         
+        performSelector("dismissViewController", withObject: self, afterDelay: 1.5)
         
-        
+    }
+    
+    func dismissViewController() {
         dismissViewControllerAnimated(true, completion: nil)
-        
     }
 
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -202,6 +214,8 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         newListText.hidden = false
         newListText.returnKeyType = .Done
         newListText.becomeFirstResponder()
+        
+        newListButton.setTitle("", forState: .Normal)
         
         //newListText.performSelector("becomeFirstResponder", withObject: nil, afterDelay: 0)
         
