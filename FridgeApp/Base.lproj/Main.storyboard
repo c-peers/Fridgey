@@ -1030,21 +1030,36 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                                     <action selector="hiddenTextDidBeginEditing:" destination="0UJ-Db-tXM" eventType="editingDidBegin" id="aAK-fT-OdA"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHu-Tq-11d">
+                                <rect key="frame" x="200" y="167" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="vGt-GO-uiL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gww-eN-bDv" appends="YES" id="XM0-L2-Hl3"/>
+                                </connections>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jpt-c8-Pmq" firstAttribute="bottom" secondItem="QUH-qB-qiY" secondAttribute="top" id="6La-ix-Shh"/>
                             <constraint firstItem="Oew-Im-9X4" firstAttribute="centerX" secondItem="m0e-QY-hFe" secondAttribute="centerX" id="8nF-t1-gs1"/>
+                            <constraint firstItem="NHu-Tq-11d" firstAttribute="top" secondItem="Oew-Im-9X4" secondAttribute="bottom" constant="8" symbolic="YES" id="CRD-l4-cKn"/>
                             <constraint firstAttribute="trailing" secondItem="jpt-c8-Pmq" secondAttribute="trailing" id="Cqw-ZX-LIR"/>
                             <constraint firstItem="m0e-QY-hFe" firstAttribute="top" secondItem="hNf-wF-Gae" secondAttribute="bottom" constant="-41" id="HDk-mg-usb"/>
                             <constraint firstItem="jpt-c8-Pmq" firstAttribute="top" secondItem="Oew-Im-9X4" secondAttribute="bottom" constant="57" id="Rxt-KV-mDp"/>
                             <constraint firstItem="hNf-wF-Gae" firstAttribute="centerX" secondItem="Oew-Im-9X4" secondAttribute="centerX" id="Vsj-Tu-TD6"/>
+                            <constraint firstItem="NHu-Tq-11d" firstAttribute="centerX" secondItem="Oew-Im-9X4" secondAttribute="centerX" id="ZEn-1l-I5Y"/>
                             <constraint firstItem="m0e-QY-hFe" firstAttribute="leading" secondItem="REw-FF-qOU" secondAttribute="leadingMargin" id="dEp-BZ-E9j"/>
                             <constraint firstItem="jpt-c8-Pmq" firstAttribute="leading" secondItem="REw-FF-qOU" secondAttribute="leading" id="hsR-FK-UkV"/>
                             <constraint firstItem="hNf-wF-Gae" firstAttribute="top" secondItem="TJP-1e-J49" secondAttribute="bottom" constant="71" id="jOl-sE-mpo"/>
                             <constraint firstItem="jpt-c8-Pmq" firstAttribute="top" secondItem="m0e-QY-hFe" secondAttribute="bottom" constant="8" symbolic="YES" id="oXw-mh-jRD"/>
                             <constraint firstItem="Oew-Im-9X4" firstAttribute="centerX" secondItem="jpt-c8-Pmq" secondAttribute="centerX" id="rhI-ix-mFA"/>
                             <constraint firstItem="Oew-Im-9X4" firstAttribute="centerY" secondItem="m0e-QY-hFe" secondAttribute="centerY" id="suJ-gI-YkS"/>
+                            <constraint firstItem="jpt-c8-Pmq" firstAttribute="top" secondItem="NHu-Tq-11d" secondAttribute="bottom" constant="19" id="vYd-gB-CHw"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Use Soon" image="Present" id="JpQ-2z-ept"/>
@@ -1052,6 +1067,8 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                         <outlet property="addToListButton" destination="4Tx-6G-MIm" id="EQt-dH-Zng"/>
                         <outlet property="changeViewButton" destination="Oew-Im-9X4" id="0JB-NU-fcv"/>
                         <outlet property="expiryTableView" destination="jpt-c8-Pmq" id="di8-MC-EEf"/>
+                        <outlet property="hiddenTextField" destination="hNf-wF-Gae" id="Qpa-Km-7Xq"/>
+                        <outlet property="navbarTitleText" destination="NHu-Tq-11d" id="Dek-Ue-uWR"/>
                         <outlet property="trashButton" destination="31U-Ro-axm" id="ZgF-U0-NfC"/>
                     </connections>
                 </viewController>

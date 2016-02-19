@@ -12,8 +12,8 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
 
     @IBOutlet weak var expiryTableView: UITableView!
     @IBOutlet weak var navbarTitleText: UILabel!
-    //@IBOutlet weak var hiddenTextField: UITextField!
     @IBOutlet weak var changeViewButton: UIButton!
+    @IBOutlet weak var hiddenTextField: UITextField!
     @IBOutlet weak var addToListButton: UIBarButtonItem!
     @IBOutlet weak var trashButton: UIBarButtonItem!
     
@@ -51,7 +51,7 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     var navBar = UINavigationBar(frame: CGRect(x: 0, y: 20, width: 0, height: 44))
     var navItem = UINavigationItem(title: "")
     
-    let hiddenTextField = UITextField(frame: CGRectMake(100, 100, 200, 30))
+    //let hiddenTextField = UITextField(frame: CGRectMake(100, 100, 200, 30))
 
     //let searchController = UISearchController(searchResultsController: nil)
     
@@ -68,24 +68,35 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         // Hacky hidden text field so we can tap the nav title to change the expiration window
         hiddenTextField.hidden = true
         hiddenTextField.inputView = expirationPicker
-        let tapHiddenText = UITapGestureRecognizer(target: hiddenTextField, action: Selector("navbarTitleWasTapped:"))
-        hiddenTextField.addGestureRecognizer(tapHiddenText)
-        hiddenTextField.backgroundColor = UIColor.whiteColor()
+        //let tapHiddenText = UITapGestureRecognizer(target: navItem.title, action: Selector("navbarTitleWasTapped:"))
+        //hiddenTextField.addGestureRecognizer(tapHiddenText)
+        //hiddenTextField.backgroundColor = UIColor.whiteColor()
         
-        self.view.addSubview(hiddenTextField)
+        //self.view.addSubview(hiddenTextField)
         
         navItem = UINavigationItem(title: "Expiring in \(withinExpiryTime) days")
-        //navbarTitleText.text = "Expiring in \(withinExpiryTime) days"
+        navItem = UINavigationItem(title: "")
+        navbarTitleText.text = "Expiring in \(withinExpiryTime) days"
         navItem.leftBarButtonItem = self.editButtonItem()
         navItem.rightBarButtonItem = self.addToListButton
         
         navBar.frame = CGRectMake(0, 20, view.frame.width, 44)
         self.view.addSubview(navBar)
         
+        //let firstLabel = UILabel()
+        //firstLabel.frame = CGRectMake(navBar.frame.width/2, 0, 100, 30)
+        //firstLabel.text = "First"
+        //let tapText = UITapGestureRecognizer(target: firstLabel, action: Selector("navbarTitleWasTapped:"))
+        //firstLabel.addGestureRecognizer(tapText)
+        //navBar.addSubview(firstLabel)
+        
+        //navBar.addSubview(navbarTitleText)
+        
         navBar.setItems([navItem], animated: false)
         
         self.navBar.sendSubviewToBack(self.view)
-        self.hiddenTextField.bringSubviewToFront(self.view)
+        navbarTitleText.bringSubviewToFront(self.view)
+        //self.hiddenTextField.bringSubviewToFront(self.view)
         
         // Load any saved Ingredients, otherwise load sample data.
         ingredients = PersistManager.sharedManager.Ingredients
@@ -188,11 +199,11 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     func donePicker() {
         
         withinExpiryTime = expirationPickerData[expirationPicker.selectedRowInComponent(0)]
-        //navbarTitleText.text = "Expiring within \(withinExpiryTime) days"
-        navItem = UINavigationItem(title: "Expiring in \(withinExpiryTime) days")
+        navbarTitleText.text = "Expiring within \(withinExpiryTime) days"
+        //navItem = UINavigationItem(title: "Expiring in \(withinExpiryTime) days")
         calculateExpired()
         calculateExpiredByDate()
-        self.hiddenTextField.resignFirstResponder()
+        hiddenTextField.resignFirstResponder()
         self.expiryTableView.reloadInputViews()
         self.expiryTableView.reloadData()
 
@@ -208,7 +219,7 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         print("This one?")
         
         
-        self.hiddenTextField.tintColor = UIColor.clearColor()
+        hiddenTextField.tintColor = UIColor.clearColor()
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.Default
         toolBar.translucent = true
