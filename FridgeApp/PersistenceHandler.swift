@@ -158,6 +158,8 @@ class PersistenceHandler {
     // Temporary Sample
     func sampleIngredients() {
         
+        PersistManager.sharedManager.Ingredients.removeAll()
+        
         let ingredient1 = [Ingredient(name: "Carrot", image: UIImage(named: "blank"), expiry: "2015-10-4", amount: 400.0, location: "Area 1 Door")!]
         PersistManager.sharedManager.Ingredients.append(ingredient1)
         
@@ -175,6 +177,8 @@ class PersistenceHandler {
     
     // Temporary Sample
     func sampleLists() {
+        
+        PersistManager.sharedManager.ShoppingLists.lists.removeAll()
         
         //let list1Dic = ["Super1 List" : [1:"Carrots", 2:"Brocolli"]]
         let list1Dic = ["Carrots", "Brocolli"]

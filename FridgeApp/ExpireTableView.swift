@@ -9,13 +9,13 @@
 import UIKit
 
 class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource, TabBarDelegate {
-
+    
     @IBOutlet weak var expiryTableView: UITableView!
     @IBOutlet weak var navbarTitleText: UILabel!
-    @IBOutlet weak var changeViewButton: UIButton!
     @IBOutlet weak var hiddenTextField: UITextField!
-    @IBOutlet weak var addToListButton: UIBarButtonItem!
+    @IBOutlet weak var changeViewButton: UIButton!
     @IBOutlet weak var trashButton: UIBarButtonItem!
+    @IBOutlet weak var addToListButton: UIBarButtonItem!
     
     // MARK: Properties
     
@@ -51,12 +51,28 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     var navBar = UINavigationBar(frame: CGRect(x: 0, y: 20, width: 0, height: 44))
     var navItem = UINavigationItem(title: "")
     
-    //let hiddenTextField = UITextField(frame: CGRectMake(100, 100, 200, 30))
-
     //let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set the nav bar details
+        //navItem = UINavigationItem(title: "Expiring in \(withinExpiryTime) days")
+        navItem = UINavigationItem(title: "")
+        navbarTitleText.text = "Expiring in \(withinExpiryTime) days"
+        navItem.leftBarButtonItem = self.editButtonItem()
+        navItem.rightBarButtonItem = self.addToListButton
+        
+        navBar.frame = CGRectMake(0, 20, view.frame.width, 44)
+        self.view.addSubview(navBar)
+        
+        navBar.addSubview(navbarTitleText)
+        
+        navBar.setItems([navItem], animated: false)
+        
+        self.navBar.sendSubviewToBack(self.view)
+        navbarTitleText.bringSubviewToFront(self.view)
+
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -68,37 +84,7 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         // Hacky hidden text field so we can tap the nav title to change the expiration window
         hiddenTextField.hidden = true
         hiddenTextField.inputView = expirationPicker
-        //let tapHiddenText = UITapGestureRecognizer(target: navItem.title, action: Selector("navbarTitleWasTapped:"))
-        //hiddenTextField.addGestureRecognizer(tapHiddenText)
-        //hiddenTextField.backgroundColor = UIColor.whiteColor()
         
-        //self.view.addSubview(hiddenTextField)
-        
-        navItem = UINavigationItem(title: "Expiring in \(withinExpiryTime) days")
-        navItem = UINavigationItem(title: "")
-        navbarTitleText.text = "Expiring in \(withinExpiryTime) days"
-        navItem.leftBarButtonItem = self.editButtonItem()
-        navItem.rightBarButtonItem = self.addToListButton
-        
-        navBar.frame = CGRectMake(0, 20, view.frame.width, 44)
-        self.view.addSubview(navBar)
-        
-        //let firstLabel = UILabel()
-        //firstLabel.frame = CGRectMake(navBar.frame.width/2, 0, 100, 30)
-        //firstLabel.text = "First"
-        //let tapText = UITapGestureRecognizer(target: firstLabel, action: Selector("navbarTitleWasTapped:"))
-        //firstLabel.addGestureRecognizer(tapText)
-        //navBar.addSubview(firstLabel)
-        
-        //navBar.addSubview(navbarTitleText)
-        
-        navBar.setItems([navItem], animated: false)
-        
-        self.navBar.sendSubviewToBack(self.view)
-        navbarTitleText.bringSubviewToFront(self.view)
-        //self.hiddenTextField.bringSubviewToFront(self.view)
-        
-        // Load any saved Ingredients, otherwise load sample data.
         ingredients = PersistManager.sharedManager.Ingredients
         myFridge = PersistManager.sharedManager.MyFridge
         lists = PersistManager.sharedManager.ShoppingLists
@@ -108,16 +94,15 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         addToListButton.tag = 1
         
         // Connect data:
-        expirationPicker.delegate = self
-        expirationPicker.dataSource = self
         expiryTableView.delegate = self
         expiryTableView.dataSource = self
+        expirationPicker.delegate = self
+        expirationPicker.dataSource = self
         
         
-        calculateExpired()
+        //calculateExpired()
+        //calculateExpiredByDate()
         
-        calculateExpiredByDate()
-
         
         // Initializing with searchResultsController set to nil means that
         // searchController will use this view controller to display the search results
@@ -141,14 +126,14 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         //self.tableView.contentOffset = CGPointMake(0,  (self.searchDisplayController?.searchBar.frame.size.height)! - self.tableView.contentOffset.y)
         
         //NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList:",name:"load", object: nil)
-
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func didSelectTab(tabBarController: FridgeTabBarController) {
         ingredients = PersistManager.sharedManager.Ingredients
         myFridge = PersistManager.sharedManager.MyFridge
@@ -157,17 +142,17 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         calculateExpired()
         
         calculateExpiredByDate()
-
+        
         print("Actually reload??")
         self.expiryTableView.reloadData()
         
     }
-
+    
     
     // MARK: Picker
     @IBAction func navbarTitleWasTapped(recognizer:UITapGestureRecognizer) {
         print("tap!")
-    
+        
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.Default
         toolBar.translucent = true
@@ -186,11 +171,11 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         // Set picker to the location set in the ingredient location value... If it exists.
         
-            let setrow = expirationPickerData.indexOf(withinExpiryTime)
-            print("setrow")
-            print(setrow)
+        let setrow = expirationPickerData.indexOf(withinExpiryTime)
+        print("setrow")
+        print(setrow)
         
-            self.expirationPicker.selectRow(setrow!, inComponent: 0, animated: true)
+        self.expirationPicker.selectRow(setrow!, inComponent: 0, animated: true)
         
         hiddenTextField.becomeFirstResponder()
         
@@ -200,18 +185,17 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         withinExpiryTime = expirationPickerData[expirationPicker.selectedRowInComponent(0)]
         navbarTitleText.text = "Expiring within \(withinExpiryTime) days"
-        //navItem = UINavigationItem(title: "Expiring in \(withinExpiryTime) days")
         calculateExpired()
         calculateExpiredByDate()
         hiddenTextField.resignFirstResponder()
         self.expiryTableView.reloadInputViews()
         self.expiryTableView.reloadData()
-
+        
     }
     
     func cancelPicker() {
         
-        self.hiddenTextField.resignFirstResponder()
+        hiddenTextField.resignFirstResponder()
         
     }
     
@@ -248,14 +232,15 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         self.view.endEditing(true)
         return false
     }
-        
+    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-            return 1
+        return 1
     }
     
     // MARK: - (Re)Calculate expiration array
     func calculateExpired() {
         
+        expiredIngredients.removeAll()
         expiredIngredients = ingredients
         
         // We will only show dates in the range set in the view controller.
@@ -285,15 +270,15 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
             
             for y in 0...ingredients[x].count - 1 {
                 
-//                print("y")
-//                print(y)
-//                
-//                print("Ingredient.expiration")
-//                print(ingredients[x][y].expiry)
-//                print(ingredients[x][y].name)
+                //                print("y")
+                //                print(y)
+                //
+                //                print("Ingredient.expiration")
+                //                print(ingredients[x][y].expiry)
+                //                print(ingredients[x][y].name)
                 
                 dateAsString = ingredients[x][y].expiry
-                 let cellExpiryDate = dateFormatter.dateFromString(dateAsString)!
+                let cellExpiryDate = dateFormatter.dateFromString(dateAsString)!
                 //diffDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: cellExpiryDate, toDate: currentDate, options: NSCalendarOptions.init(rawValue: 0))
                 
                 // Only remove if the expiration date is greater than the current date + offset
@@ -302,7 +287,7 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
                 let compareDates = inExpiryWindow.compare(cellExpiryDate)
                 
                 if inExpiryWindow == cellExpiryDate {
-                //if compareDates == NSComparisonResult.OrderedAscending {
+                    //if compareDates == NSComparisonResult.OrderedAscending {
                     
                     //let appendIngredientToExpiryArr = ingredients[x][arrayYValue]
                     
@@ -321,12 +306,12 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
             }
             
         }
-
-//        print("exp ingred")
-//        print(expiredIngredients)
-//        
-//        print("ingred")
-//        print(ingredients)
+        
+        //        print("exp ingred")
+        //        print(expiredIngredients)
+        //
+        //        print("ingred")
+        //        print(ingredients)
         
         
     }
@@ -376,23 +361,22 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         print("expiryDates")
         print(expiryDates.count)
         print(expiryDates[0])
-
+        
         
         expiryDates = expiryDates.sort()
         
         
     }
     
-    
     // MARK: - PickerView
     // The number of rows of data
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-            return expirationPickerData.count
+        return expirationPickerData.count
     }
     
     // The data to return for the row and component (column) that's being passed in
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            return String(expirationPickerData[row])
+        return String(expirationPickerData[row])
     }
     
     // MARK: - Search
@@ -409,10 +393,10 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     // MARK: - Table view data source
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-
+        
         //if changeViewButton.titleLabel!.text == "Date View" {
         if !isDateSeparatedTable {
-
+            
             if myFridge.doorNames.count > 1 {
                 return myFridge.doorNames.count
             } else {
@@ -460,7 +444,7 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
             } else {
                 return 0
             }
-
+            
         } else {
             return expiredByDate[section].count
         }
@@ -474,6 +458,9 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         let ingredient: Ingredient
         
+        let emptyCircle = UIImage(named: "Unselected")
+        let filledCircle = UIImage(named: "Selected")
+        
         // Fetches the appropriate meal for the data source layout.
         if !isDateSeparatedTable {
             ingredient = expiredIngredients[indexPath.section][indexPath.row]
@@ -481,34 +468,27 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
             ingredient = expiredByDate[indexPath.section][indexPath.row]
         }
         
-        let emptyCircle = UIImage(named: "Unselected")
-        let filledCircle = UIImage(named: "Selected")
-        
         cell.selectedButton.setImage(emptyCircle, forState: .Normal)
         cell.selectedButton.setImage(filledCircle, forState: .Selected)
         cell.selectedButton.setImage(filledCircle, forState: [.Highlighted,.Selected])
         
         cell.selectedButton.adjustsImageWhenHighlighted = false
-        
-        //if addToListButton.title == "Add to List" {
+
         if addToListButton.tag == 1 {
             cell.selectedButton.hidden = true
         } else {
             cell.selectedButton.hidden = false
             cell.selectedButton.selected = false
         }
-
         
-        cell.backgroundColor = UIColor.whiteColor()
         cell.expireFoodName?.text = ingredient.name
-        //cell.expireFoodAmount?.text = String(ingredient.amount)
         cell.expireFoodDate?.text = ingredient.expiry
         cell.expireFoodImage?.image = ingredient.image
         
         return cell
         
     }
-
+    
     
     // MARK: Search
     
@@ -562,7 +542,7 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     func changeTable(refreshControl: UIRefreshControl) {
         
         isDateSeparatedTable = !isDateSeparatedTable
-
+        
         self.expiryTableView.reloadData()
         self.expiryTableView.reloadSectionIndexTitles()
         self.expiryTableView.reloadInputViews()
@@ -578,39 +558,40 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
     
     @IBAction func changeTableTapped(sender: AnyObject) {
-
+        
         changeTable(refreshControl)
         
-//        print("tapped")
-//        if changeViewButton.titleLabel!.text == "Date View" {
-//            changeViewButton.setTitle("Area View", forState: .Normal)
-//        } else {
-//            changeViewButton.setTitle("Date View", forState: .Normal)
-//        }
-//
-//        self.expiryTableView.reloadData()
-//        self.expiryTableView.reloadSectionIndexTitles()
-//        self.expiryTableView.reloadInputViews()
-//        self.view.setNeedsDisplay()
-//        self.expiryTableView.setNeedsDisplay()
-//        expiryTableView.setNeedsDisplay()
-//        
-//        
-//        dispatch_async(dispatch_get_main_queue(),{
-//            self.expiryTableView.reloadData()
-//            self.expiryTableView.reloadSectionIndexTitles()
-//            self.expiryTableView.reloadInputViews()
-//            self.view.setNeedsDisplay()
-//            self.expiryTableView.setNeedsDisplay()
-//            
-//        })
-//        
+        //        print("tapped")
+        //        if changeViewButton.titleLabel!.text == "Date View" {
+        //            changeViewButton.setTitle("Area View", forState: .Normal)
+        //        } else {
+        //            changeViewButton.setTitle("Date View", forState: .Normal)
+        //        }
+        //
+        //        self.expiryTableView.reloadData()
+        //        self.expiryTableView.reloadSectionIndexTitles()
+        //        self.expiryTableView.reloadInputViews()
+        //        self.view.setNeedsDisplay()
+        //        self.expiryTableView.setNeedsDisplay()
+        //        expiryTableView.setNeedsDisplay()
+        //
+        //
+        //        dispatch_async(dispatch_get_main_queue(),{
+        //            self.expiryTableView.reloadData()
+        //            self.expiryTableView.reloadSectionIndexTitles()
+        //            self.expiryTableView.reloadInputViews()
+        //            self.view.setNeedsDisplay()
+        //            self.expiryTableView.setNeedsDisplay()
+        //
+        //        })
+        //
+        
     }
     
     @IBAction func addToListTapped(sender: AnyObject) {
         
         if addToListButton.tag == 1 {
-                addToListButton.title = "Add Selected"
+            addToListButton.title = "Add Selected"
             addToListButton.tag = 2
             changeViewButton.enabled = false
             selectedIngredients.removeAll()
@@ -636,22 +617,22 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
             self.presentViewController(controller, animated: true, completion: nil)
             
             
-//            var lists = PersistManager.sharedManager.ShoppingLists.lists
-//            let listName = "Super 1 List"
-//            var toAddToList = lists[listName]
-//            
-//            for ingredient in 0...selectedIngredients.count - 1 {
-//                let willAdd = selectedIngredients[ingredient]
-//                toAddToList?.append(willAdd)
-//            }
-//            
-//            if toAddToList!.count > 0 {
-//                lists[listName] = toAddToList
-//            }
-//            
-//            PersistManager.sharedManager.ShoppingLists.lists[listName] = lists[listName]
-//            let saveList = PersistenceHandler()
-//            saveList.save()
+            //            var lists = PersistManager.sharedManager.ShoppingLists.lists
+            //            let listName = "Super 1 List"
+            //            var toAddToList = lists[listName]
+            //
+            //            for ingredient in 0...selectedIngredients.count - 1 {
+            //                let willAdd = selectedIngredients[ingredient]
+            //                toAddToList?.append(willAdd)
+            //            }
+            //
+            //            if toAddToList!.count > 0 {
+            //                lists[listName] = toAddToList
+            //            }
+            //
+            //            PersistManager.sharedManager.ShoppingLists.lists[listName] = lists[listName]
+            //            let saveList = PersistenceHandler()
+            //            saveList.save()
             
             expiryTableView.reloadData()
             

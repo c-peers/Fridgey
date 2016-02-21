@@ -74,6 +74,8 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         print("saved key list")
         print(list)
         
+        //list = ["test1", "test2", "test3", "test4", "test5", "test6", "test7", "test8", "test9"]
+    
         collectionView.dataSource = self
         collectionView.delegate = self
         
@@ -93,12 +95,6 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         //self.unsubscribeFromKeyboardNotifications()
     }
     
-    func viewWillAppear() {
-        print("vwa")
-        mainList = PersistManager.sharedManager.ShoppingLists
-        
-        print(mainList.lists)
-    }
     
     func didSelectTab(tabBarController: FridgeTabBarController) {
         print("Actually reload??")
@@ -107,8 +103,9 @@ class ListViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         collectionView.reloadData()
         collectionView.reloadInputViews()
-        //collectionView.reloadSections(NSIndexSet(index: 0))
         
+        print(mainList.lists)
+
     }
 
     

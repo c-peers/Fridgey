@@ -9,13 +9,13 @@
 import UIKit
 
 class AddToListFromIngredientDetailsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var backgroundView: UIView!
-    @IBOutlet weak var newListButton: UIButton!
     @IBOutlet weak var newListButtonBGView: UIView!
     @IBOutlet weak var newListText: UITextField!
-    
+    @IBOutlet weak var newListButton: UIButton!
+
     var list: [String] = []
     var mainList = Lists()
     var selectedIngredient = String()
@@ -55,7 +55,7 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         
         // Round corners and shadows
         backgroundView.layer.cornerRadius = 8
-
+        
         backgroundView.layer.masksToBounds = true
         
         backgroundView.layer.borderColor = UIColor.grayColor().CGColor
@@ -77,7 +77,7 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         newListButton.hidden = false
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -136,7 +136,7 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
     func dismissViewController() {
         dismissViewControllerAnimated(true, completion: nil)
     }
-
+    
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
         
@@ -166,7 +166,7 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
     
     //func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-
+        
         print("selected?")
         selectedList = list[indexPath.row]
         let selectedListCount = mainList.lists[selectedList]?.count
@@ -174,7 +174,7 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         mainList.lists[selectedList]!.append(selectedIngredient)
         
         print(mainList.lists[selectedList])
-
+        
         PersistManager.sharedManager.ShoppingLists.lists[selectedList] = mainList.lists[selectedList]
         
         // Save lists
@@ -193,19 +193,19 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
             //self.unwindForSegue(unwindToIngredientList, towardsViewController: preVC)
             
         } else {
-
+            
             print("manual unwind to new/edit ingredient")
             self.performSegueWithIdentifier("addToListSelected", sender: self)
             
         }
-
         
-        }
+        
+    }
     
     @IBAction func cancelAddToList(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-
+    
     @IBAction func newListTapped(sender: AnyObject) {
         
         newListButton.hidden = true
@@ -219,9 +219,9 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         
         //newListText.performSelector("becomeFirstResponder", withObject: nil, afterDelay: 0)
         
-    
+        
     }
-
+    
     func save() {
         
         let saveList = PersistenceHandler()
