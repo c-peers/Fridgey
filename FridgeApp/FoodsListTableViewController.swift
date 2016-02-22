@@ -736,15 +736,13 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         else {
             actionTitle = "Are you sure you want to remove these items?"
         }
-        var cancelTitle = "Cancel"
-        var okTitle = "OK"
         let alertController = UIAlertController(title: "Delete?", message: actionTitle, preferredStyle: .Alert)
         alertController.addAction(UIAlertAction(title: "No Thanks", style: UIAlertActionStyle.Cancel,handler: {(alert: UIAlertAction!) in print("Cancel");
             return
         }))
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in print("Delete");
             
-            var selectedRows = self.tableView.indexPathsForSelectedRows!
+            let selectedRows = self.tableView.indexPathsForSelectedRows!
             var indicesOfItemsToDelete = [NSIndexPath]()
             for selectionIndex: NSIndexPath in selectedRows {
                 indicesOfItemsToDelete.append(selectionIndex)

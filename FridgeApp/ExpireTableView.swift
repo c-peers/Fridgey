@@ -14,8 +14,10 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     @IBOutlet weak var navbarTitleText: UILabel!
     @IBOutlet weak var hiddenTextField: UITextField!
     @IBOutlet weak var changeViewButton: UIButton!
-    @IBOutlet weak var trashButton: UIBarButtonItem!
     @IBOutlet weak var addToListButton: UIBarButtonItem!
+    @IBOutlet weak var trashButton: UIBarButtonItem!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    @IBOutlet weak var editButton: UIBarButtonItem!
     
     // MARK: Properties
     
@@ -60,7 +62,7 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         //navItem = UINavigationItem(title: "Expiring in \(withinExpiryTime) days")
         navItem = UINavigationItem(title: "")
         navbarTitleText.text = "Expiring in \(withinExpiryTime) days"
-        navItem.leftBarButtonItem = self.editButtonItem()
+        navItem.leftBarButtonItem = self.editButton
         navItem.rightBarButtonItem = self.addToListButton
         
         navBar.frame = CGRectMake(0, 20, view.frame.width, 44)
@@ -679,6 +681,128 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         }
         
     }
+    
+    //MARK:- Nav Bar Buttons
+    
+    @IBAction func editAction(sender: AnyObject) {
+        self.expiryTableView.setEditing(true, animated: true)
+        self.updateButtonsToMatchTableState()
+    }
+    
+    @IBAction func cancelAction(sender: AnyObject) {
+        self.expiryTableView.setEditing(false, animated: true)
+        self.updateButtonsToMatchTableState()
+    }
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        // Update the delete button's title based on how many items are selected.
+        self.updateDeleteButtonTitle()
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // Update the delete button's title based on how many items are selected.
+        print("did select")
+        print(expiryTableView.editing)
+        
+        // Only keep a row selected in editing mode. It looks stupid when a row is selected after returning to the list after editing an ingredient.
+        if expiryTableView.editing {
+            self.updateButtonsToMatchTableState()
+        } else {
+            expiryTableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
+    }
+    
+    @IBAction func deleteAction(sender: AnyObject) {
+        
+        // Open an alert controller.
+        var actionTitle: String
+        if (self.expiryTableView.indexPathsForSelectedRows?.count == 1) {
+            actionTitle = "Are you sure you want to get rid of this item?"
+        }
+        else {
+            actionTitle = "Are you sure you want to get rid of these items?"
+        }
+        let alertController = UIAlertController(title: "Trash?", message: actionTitle, preferredStyle: .Alert)
+        alertController.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.Cancel,handler: {(alert: UIAlertAction!) in print("Cancel");
+            return
+        }))
+        alertController.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in print("Trash");
+            
+            let selectedRows = self.expiryTableView.indexPathsForSelectedRows!
+            var indicesOfItemsToDelete = [NSIndexPath]()
+            for selectionIndex: NSIndexPath in selectedRows {
+                indicesOfItemsToDelete.append(selectionIndex)
+            }
+            // Delete the objects from our data model.
+            for x in 0...indicesOfItemsToDelete.count - 1 {
+                let index = indicesOfItemsToDelete[x]
+                self.ingredients[index.section].removeAtIndex(index.row)
+            }
+            
+            // Save after removing
+            PersistManager.sharedManager.Ingredients = self.ingredients
+            
+            let saveSingleton = PersistenceHandler()
+            saveSingleton.save()
+            
+            // Remove visually
+            self.expiryTableView.deleteRowsAtIndexPaths(indicesOfItemsToDelete, withRowAnimation: .Fade)
+            
+        }))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
+    }
+    
+    
+    func updateButtonsToMatchTableState() {
+        if self.expiryTableView.editing {
+            // Show the option to cancel the edit.
+            //self.navigationItem.rightBarButtonItem = self.cancelButton
+            navItem.rightBarButtonItem = self.cancelButton
+            
+            self.updateDeleteButtonTitle()
+            // Show the delete button.
+            navItem.leftBarButtonItem = self.trashButton
+        }
+        else {
+            // Not in editing mode.
+            navItem.rightBarButtonItem = self.addToListButton
+            
+            // Show the edit button, but disable the edit button if there's nothing to edit.
+            if ingredients.count > 0 {
+                self.editButton.enabled = true
+            }
+            else {
+                self.editButton.enabled = false
+            }
+            navItem.leftBarButtonItem = self.editButton
+        }
+    }
+    
+    func updateDeleteButtonTitle() {
+        // Update the delete button's title, based on how many items are selected
+        let selectedRows = expiryTableView.indexPathsForSelectedRows
+        let rowCount: Int
+        if selectedRows == nil {
+            rowCount = 0
+        } else {
+            rowCount = (selectedRows?.count)!
+        }
+        
+        
+        let allItemsAreSelected: Bool = rowCount == ingredients.count
+        let noItemsAreSelected: Bool = rowCount == 0
+        if allItemsAreSelected || noItemsAreSelected {
+            self.trashButton.title = "Trash All"
+        }
+        else {
+            //var titleFormatString: String = NSLocalizedString("Delete (%d)", "Title for delete button with placeholder for number")
+            self.trashButton.title = "Trash \(selectedRows!.count)"
+        }
+    }
+
+    
     
     
 }

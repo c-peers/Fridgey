@@ -931,7 +931,7 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jpt-c8-Pmq">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jpt-c8-Pmq">
                                 <rect key="frame" x="0.0" y="216" width="600" height="274"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -1063,10 +1063,13 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                     <tabBarItem key="tabBarItem" title="Use Soon" image="Present" id="JpQ-2z-ept"/>
                     <connections>
                         <outlet property="addToListButton" destination="dLa-8Z-Eit" id="Tx9-Wd-u15"/>
+                        <outlet property="cancelButton" destination="Jex-ud-9c2" id="0Xe-bV-ZY9"/>
                         <outlet property="changeViewButton" destination="Oew-Im-9X4" id="0JB-NU-fcv"/>
+                        <outlet property="editButton" destination="ioT-aq-CvE" id="YqQ-0Y-KHe"/>
                         <outlet property="expiryTableView" destination="jpt-c8-Pmq" id="di8-MC-EEf"/>
                         <outlet property="hiddenTextField" destination="hNf-wF-Gae" id="v5Y-hI-lUV"/>
                         <outlet property="navbarTitleText" destination="dHw-9w-7Rx" id="yZD-JJ-e70"/>
+                        <outlet property="trashButton" destination="ebt-vC-8PD" id="nYm-qI-DTh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DyJ-SZ-Oyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1075,6 +1078,22 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                         <action selector="navbarTitleWasTapped:" destination="0UJ-Db-tXM" id="Z2a-QG-rkA"/>
                     </connections>
                 </tapGestureRecognizer>
+                <barButtonItem title="Cancel" id="Jex-ud-9c2">
+                    <connections>
+                        <action selector="cancelAction:" destination="0UJ-Db-tXM" id="B0P-NT-Upc"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem title="Trash" id="ebt-vC-8PD">
+                    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="deleteAction:" destination="0UJ-Db-tXM" id="etn-Nc-ig9"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem title="Trash" id="ioT-aq-CvE">
+                    <connections>
+                        <action selector="editAction:" destination="0UJ-Db-tXM" id="AsJ-FC-VAY"/>
+                    </connections>
+                </barButtonItem>
                 <barButtonItem title="Add To List" id="dLa-8Z-Eit">
                     <connections>
                         <action selector="addToListTapped:" destination="0UJ-Db-tXM" id="q9f-Go-j7c"/>
@@ -1509,7 +1528,7 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="EUW-uB-UZa"/>
+        <segue reference="xUh-LB-vRU"/>
         <segue reference="Nig-TY-LJm"/>
-        <segue reference="pQA-vO-Nhw"/>
     </inferredMetricsTieBreakers>
 </document>
