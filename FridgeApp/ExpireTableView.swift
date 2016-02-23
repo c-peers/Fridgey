@@ -74,7 +74,7 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         self.navBar.sendSubviewToBack(self.view)
         navbarTitleText.bringSubviewToFront(self.view)
-
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -269,42 +269,43 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
             
             print("x")
             print(x)
-            
-            for y in 0...ingredients[x].count - 1 {
-                
-                //                print("y")
-                //                print(y)
-                //
-                //                print("Ingredient.expiration")
-                //                print(ingredients[x][y].expiry)
-                //                print(ingredients[x][y].name)
-                
-                dateAsString = ingredients[x][y].expiry
-                let cellExpiryDate = dateFormatter.dateFromString(dateAsString)!
-                //diffDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: cellExpiryDate, toDate: currentDate, options: NSCalendarOptions.init(rawValue: 0))
-                
-                // Only remove if the expiration date is greater than the current date + offset
-                
-                let inExpiryWindow = cellExpiryDate.laterDate(currentDatePlusExpiryWindow!)
-                let compareDates = inExpiryWindow.compare(cellExpiryDate)
-                
-                if inExpiryWindow == cellExpiryDate {
-                    //if compareDates == NSComparisonResult.OrderedAscending {
+            if ingredients[x].count > 0 {
+                for y in 0...ingredients[x].count - 1 {
                     
-                    //let appendIngredientToExpiryArr = ingredients[x][arrayYValue]
+                    //                print("y")
+                    //                print(y)
+                    //
+                    //                print("Ingredient.expiration")
+                    //                print(ingredients[x][y].expiry)
+                    //                print(ingredients[x][y].name)
                     
-                    //print("exp ingred")
-                    //print(expiredIngredients)
+                    dateAsString = ingredients[x][y].expiry
+                    let cellExpiryDate = dateFormatter.dateFromString(dateAsString)!
+                    //diffDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: cellExpiryDate, toDate: currentDate, options: NSCalendarOptions.init(rawValue: 0))
                     
-                    //Use arrayYValue because the indexes will change after removing a value.
-                    expiredIngredients[x].removeAtIndex(arrayYValue)
+                    // Only remove if the expiration date is greater than the current date + offset
                     
-                } else {
-                    // This index is fine so increment the counter
-                    print("no match")
-                    arrayYValue += 1
+                    let inExpiryWindow = cellExpiryDate.laterDate(currentDatePlusExpiryWindow!)
+                    let compareDates = inExpiryWindow.compare(cellExpiryDate)
+                    
+                    if inExpiryWindow == cellExpiryDate {
+                        //if compareDates == NSComparisonResult.OrderedAscending {
+                        
+                        //let appendIngredientToExpiryArr = ingredients[x][arrayYValue]
+                        
+                        //print("exp ingred")
+                        //print(expiredIngredients)
+                        
+                        //Use arrayYValue because the indexes will change after removing a value.
+                        expiredIngredients[x].removeAtIndex(arrayYValue)
+                        
+                    } else {
+                        // This index is fine so increment the counter
+                        print("no match")
+                        arrayYValue += 1
+                    }
+                    
                 }
-                
             }
             
         }
@@ -325,29 +326,28 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         let flatIngredients = expiredIngredients.flatMap { $0 }
         
         var dateCounter = 0
-        for inExpired in 0...flatIngredients.count - 1 {
-            if dateCounter == 0 {
-                expiredByDate.append([flatIngredients[inExpired]])
-                
-            } else {
-                if expiredByDate[dateCounter][0].expiry == flatIngredients[inExpired].expiry {
-                    expiredByDate[dateCounter].append(flatIngredients[inExpired])
-                } else {
+        if flatIngredients.count > 0 {
+            for inExpired in 0...flatIngredients.count - 1 {
+                if dateCounter == 0 {
                     expiredByDate.append([flatIngredients[inExpired]])
-                    dateCounter += 1
+                    
+                } else {
+                    if expiredByDate[dateCounter][0].expiry == flatIngredients[inExpired].expiry {
+                        expiredByDate[dateCounter].append(flatIngredients[inExpired])
+                    } else {
+                        expiredByDate.append([flatIngredients[inExpired]])
+                        dateCounter += 1
+                    }
+                    
                 }
                 
             }
-            
         }
         
         expiredByDate = expiredByDate.sort({ $0[0].expiry < $1[0].expiry })
         
         print("Expired by date")
         print(expiredByDate)
-        print(expiredByDate[0][0].expiry)
-        print(expiredByDate[1][0].expiry)
-        print(expiredByDate[2][0].expiry)
         
         
         print("Flattened")
@@ -356,13 +356,14 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         expiryDates.removeAll()
         
         // Fill the expiration Dates array
-        for inExpired in 0...flatIngredients.count - 1 {
-            expiryDates += [flatIngredients[inExpired].expiry]
+        if flatIngredients.count > 0 {
+            for inExpired in 0...flatIngredients.count - 1 {
+                expiryDates += [flatIngredients[inExpired].expiry]
+            }
         }
         
         print("expiryDates")
         print(expiryDates.count)
-        print(expiryDates[0])
         
         
         expiryDates = expiryDates.sort()
@@ -437,17 +438,29 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         //} else {
         
         //return self.ingredients.count
+    
         
-        //if changeViewButton.titleLabel!.text == "Date View" {
         if !isDateSeparatedTable {
+    
+            // Check for sections without anything in them
+            if section >= self.expiredIngredients.count {
+                
+                // If the section doesn't exist in the array, create it
+                while section > self.expiredIngredients.count - 1 {
+                    
+                    print("Section doesn't exist")
+                    self.expiredIngredients.append([])
+                }
+            }
             
-            if self.ingredients[section].count != 0 {
+            if self.expiredIngredients[section].count != 0 {
                 return self.expiredIngredients[section].count
             } else {
                 return 0
             }
             
         } else {
+            
             return expiredByDate[section].count
         }
     }
@@ -475,7 +488,7 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         cell.selectedButton.setImage(filledCircle, forState: [.Highlighted,.Selected])
         
         cell.selectedButton.adjustsImageWhenHighlighted = false
-
+        
         if addToListButton.tag == 1 {
             cell.selectedButton.hidden = true
         } else {
@@ -489,6 +502,59 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         return cell
         
+    }
+    
+    // MARK: Table Editing
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // the cells you would like the actions to appear needs to be editable
+        return true
+    }
+    
+    // Override to support editing the table view.
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if editingStyle == .Delete {
+            
+            print("is this run?")
+            
+            //Find out location in the ingredients variable
+            var ingredientToDelete: Ingredient
+            var removeIndex: Int = 0
+            
+            if !isDateSeparatedTable {
+                ingredientToDelete = expiredIngredients[indexPath.section][indexPath.row]
+                removeIndex = ingredients[indexPath.section].indexOf(ingredientToDelete)!
+            } else {
+                ingredientToDelete = expiredByDate[indexPath.section][indexPath.row]
+                
+                // The expiredByDate array is completely different. Find the index with a loop
+                for row in 0...ingredients.count - 1 {
+                    let indexCheck = ingredients[row].indexOf(ingredientToDelete)!
+                    
+                    if indexCheck != 0 {
+                        removeIndex = indexCheck
+                        break
+                    }
+                    
+                }
+            }
+            
+            // Delete the row from the data source
+            ingredients[indexPath.section].removeAtIndex(removeIndex)
+            
+            // Save after removing row
+            //PersistManager.sharedManager.saveIngredients()
+            PersistManager.sharedManager.Ingredients = ingredients
+            
+            let saveSingleton = PersistenceHandler()
+            saveSingleton.save()
+            
+            // Remove visually
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        } else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
     }
     
     
@@ -748,6 +814,10 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
             // Remove visually
             self.expiryTableView.deleteRowsAtIndexPaths(indicesOfItemsToDelete, withRowAnimation: .Fade)
             
+            self.calculateExpired()
+            
+            self.calculateExpiredByDate()
+            
         }))
         
         self.presentViewController(alertController, animated: true, completion: nil)
@@ -801,7 +871,7 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
             self.trashButton.title = "Trash \(selectedRows!.count)"
         }
     }
-
+    
     
     
     

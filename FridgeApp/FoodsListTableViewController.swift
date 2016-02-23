@@ -9,7 +9,7 @@
 import UIKit
 
 class FoodsListTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, TabBarDelegate, MGSwipeTableCellDelegate {
-        
+    
     @IBOutlet weak var tableView: UITableView!
     //@IBOutlet weak var editButton: UIBarButtonItem!
     @IBOutlet weak var listAddedText: UILabel!
@@ -18,8 +18,8 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     @IBOutlet var cancelButton: UIBarButtonItem!
     @IBOutlet var deleteButton: UIBarButtonItem!
     @IBOutlet var addButton: UIBarButtonItem!
-
-
+    
+    
     // MARK: Properties
     
     var ingredients = [[Ingredient]]()
@@ -34,7 +34,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     var filteredData = [""]
     
     // I have to set the Navigation bar this way.
-    // For some reason if I use the IB nav bar I can't add buttons 
+    // For some reason if I use the IB nav bar I can't add buttons
     // anyway except through the IB... not very useful.
     
     var navBar = UINavigationBar(frame: CGRect(x: 0, y: 20, width: 0, height: 44))
@@ -42,7 +42,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         navBar.frame = CGRectMake(0, 20, view.frame.width, 44)
         self.view.addSubview(navBar)
         
@@ -56,7 +56,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Load any saved Ingredients, otherwise load sample data.
         
         
@@ -64,7 +64,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         
         tableView.delegate = self
         tableView.dataSource = self
-
+        
         let loadSingleton = PersistenceHandler()
         loadSingleton.load("Ingredients")
         
@@ -74,7 +74,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         
         print("d00r")
         print(myFridge.doorNames)
-                
+        
         
         // I'm having trouble with searching through my ingredients so I made a 2d array with just the ingredient names.
         
@@ -85,14 +85,14 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             
             if ingredients[x].count != 0 {
                 for y in 0...ingredients[x].count - 1 {
-                
-                if y == 0 {
-                    ingredientNames.append([ingredients[x][y].name])
-                } else {
-                    ingredientNames[x].append(ingredients[x][y].name)
+                    
+                    if y == 0 {
+                        ingredientNames.append([ingredients[x][y].name])
+                    } else {
+                        ingredientNames[x].append(ingredients[x][y].name)
+                    }
+                    
                 }
-                
-            }
             }
         }
         
@@ -115,17 +115,17 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         // dimming it out wouldn't make sense.  Should set probably only set
         // this to yes if using another controller to display the search results.
         //searchController.dimsBackgroundDuringPresentation = false
-
+        
         //searchController.searchBar.sizeToFit()
         //tableView.tableHeaderView = searchController.searchBar
-
+        
         // Sets this view controller as presenting view controller for the search interface
         //definesPresentationContext = true
         
         //self.tableView.registerClass(FoodsListTableViewCell.classForCoder(), forCellReuseIdentifier: "FoodsListTableViewCell")
         
         //self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), atScrollPosition: UITableViewScrollPosition.Top, animated: false)
-                
+        
         //self.tableView.contentOffset = CGPointMake(0,  (self.searchDisplayController?.searchBar.frame.size.height)! - self.tableView.contentOffset.y)
         
         //self.tableView.allowsMultipleSelectionDuringEditing = true
@@ -149,7 +149,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func viewDidAppear() {
         
         print("didappear")
@@ -171,41 +171,41 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     
     // MARK: - Search
     
-//    func filterContentForSearchText(searchText: String, scope: String = "All") {
-//  filteredCandies = candies.filter { candy in
-//    return candy.name.lowercaseString.containsString(searchText.lowercaseString)
-//  }
-// 
-//  tableView.reloadData()
-//}
-   
+    //    func filterContentForSearchText(searchText: String, scope: String = "All") {
+    //  filteredCandies = candies.filter { candy in
+    //    return candy.name.lowercaseString.containsString(searchText.lowercaseString)
+    //  }
+    //
+    //  tableView.reloadData()
+    //}
+    
     func updateSearchResultsForSearchController(searchController: UISearchController) {
-     
+        
         //if searchController.searchBar.text?.characters.count > 0 {
-            
-            filteredData.removeAll(keepCapacity: false)
-            //filteredData = ingredientNames.flatten().filter({$0 == searchController.searchBar.text!})
-//            filteredData = ingredients.filter({ ingredient in
-//                return ingredient.name.lowercaseString.containsString(searchController.searchBar.text!)
-//            })
-//            for section in 0...ingredients.count - 1 {
-//                filteredData = ingredients[section].filter({ ingredient in
-//                    return ingredient.name.lowercaseString.containsString(searchController.searchBar.text!) })
-//            }
-//            self.tableView.reloadData()
-//            
-//            filteredCandies = candies.filter { candy in
-//                return candy.name.lowercaseString.containsString(searchText.lowercaseString)
-//            }
-//            
-//            print(filteredData)
-//
-//        } else {
-//            
-//            filteredData.removeAll(keepCapacity: false)
-//            filteredData = Array(ingredientNames.flatten())
-//            tableView.reloadData()
-//        }
+        
+        filteredData.removeAll(keepCapacity: false)
+        //filteredData = ingredientNames.flatten().filter({$0 == searchController.searchBar.text!})
+        //            filteredData = ingredients.filter({ ingredient in
+        //                return ingredient.name.lowercaseString.containsString(searchController.searchBar.text!)
+        //            })
+        //            for section in 0...ingredients.count - 1 {
+        //                filteredData = ingredients[section].filter({ ingredient in
+        //                    return ingredient.name.lowercaseString.containsString(searchController.searchBar.text!) })
+        //            }
+        //            self.tableView.reloadData()
+        //
+        //            filteredCandies = candies.filter { candy in
+        //                return candy.name.lowercaseString.containsString(searchText.lowercaseString)
+        //            }
+        //
+        //            print(filteredData)
+        //
+        //        } else {
+        //
+        //            filteredData.removeAll(keepCapacity: false)
+        //            filteredData = Array(ingredientNames.flatten())
+        //            tableView.reloadData()
+        //        }
         
         //let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
         
@@ -219,18 +219,18 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         
     }
     
-//    @IBAction func editTapped(sender: UIBarButtonItem) {
-//        //self.tableView.editing = !self.tableView.editing
-//        tableView.editing = !tableView.editing
-//
-//        if self.tableView.editing == true {
-//            print("coming here?")
-//            self.editButton.title = "Done"
-//        } else {
-//            self.editButton.title = "Edit"
-//        }
-//    }
-//    
+    //    @IBAction func editTapped(sender: UIBarButtonItem) {
+    //        //self.tableView.editing = !self.tableView.editing
+    //        tableView.editing = !tableView.editing
+    //
+    //        if self.tableView.editing == true {
+    //            print("coming here?")
+    //            self.editButton.title = "Done"
+    //        } else {
+    //            self.editButton.title = "Edit"
+    //        }
+    //    }
+    //
     // MARK: MGSwipe
     
     func swipeTableCell(cell: MGSwipeTableCell!, canSwipe direction: MGSwipeDirection) -> Bool {
@@ -284,66 +284,88 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     // MARK: - Table view data source
-
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
         if myFridge.doorNames.count > 1 {
-           return myFridge.doorNames.count
+            return myFridge.doorNames.count
         } else {
             return 1
         }
-
+        
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-
+        
         if  myFridge.doorNames.count > 1 {
             return myFridge.doorNames[section]
         } else {
             return nil
         }
-
+        
     }
-
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         //if tableView == self.searchDisplayController!.searchResultsTableView {
-
+        
         //    return self.filteredIngredients.count
-
+        
         //} else {
+        
+        //return self.ingredients.count
+        
+        // Check for sections without anything in them
+        if section >= self.ingredients.count {
             
-            //return self.ingredients.count
-
-        if self.ingredients[section].count != 0 {
-                return self.ingredients[section].count
-            } else {
-                return 0
+            var existingRows = self.ingredients.count
+            print(existingRows)
+            
+            // If the section doesn't exist in the array, create it
+            while section > self.ingredients.count - 1 {
+            
+                print("Section doesn't exist")
+                self.ingredients.append([])
+//                let appendRow = Array(count:1, repeatedValue:Ingredient())
+//                self.ingredients.append(appendRow)
+//                self.ingredients[existingRows].removeFirst()
+//                existingRows = self.ingredients.count
+//                print(existingRows)
+                
             }
             
+        }
+        
+        
+        if self.ingredients[section].count > 0 {
+            return self.ingredients[section].count
+        } else {
+            return 0
+        }
+        
         //}
-
-//
-//        }
+        
+        //
+        //        }
         
         // return ingredients.count
     }
     
-//    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-//        
-//        let delete = UITableViewRowAction(style: .Normal, title: "Delete") { action, index in print("button was tapped")
-//        }
-//        
-//        delete.backgroundColor = UIColor.redColor()
-//        
-//        let addToList = UITableViewRowAction(style: .Normal, title: "Add to List") { action, index in print("add to list button")
-//        }
-//        //let addToList = UITableViewRowAction(style: .Normal, title: "Add to List", handler: <#T##(UITableViewRowAction, NSIndexPath) -> Void#>)
-//        
-//        addToList.backgroundColor = UIColor.blueColor()
-//        
-//        return [delete, addToList]
-//    }
+    //    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+    //
+    //        let delete = UITableViewRowAction(style: .Normal, title: "Delete") { action, index in print("button was tapped")
+    //        }
+    //
+    //        delete.backgroundColor = UIColor.redColor()
+    //
+    //        let addToList = UITableViewRowAction(style: .Normal, title: "Add to List") { action, index in print("add to list button")
+    //        }
+    //        //let addToList = UITableViewRowAction(style: .Normal, title: "Add to List", handler: <#T##(UITableViewRowAction, NSIndexPath) -> Void#>)
+    //
+    //        addToList.backgroundColor = UIColor.blueColor()
+    //
+    //        return [delete, addToList]
+    //    }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // the cells you would like the actions to appear needs to be editable
@@ -362,35 +384,35 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         //}
         
         // Fetches the appropriate meal for the data source layout.
-            //let ingredient = ingredients[indexPath.row]
+        //let ingredient = ingredients[indexPath.row]
         
         let ingredient : Ingredient
-
+        
         //if searchController.active {
         //    cell.textLabel?.text = filteredData[indexPath.row]
         //}
         //else {
         
-//            if tableView == self.searchDisplayController!.searchResultsTableView {
-//                print(indexPath.section)
-//                print(indexPath.row)
-//                ingredient = filteredIngredients[indexPath.section][indexPath.row]
-//            } else {
-
-//            if tableView == self.searchDisplayController!.searchResultsTableView {
-//                ingredient = filteredIngredients[indexPath.row]
-//            } else {
-//                ingredient = ingredients[indexPath.row]
-//            }
-//
-
-            ingredient = ingredients[indexPath.section][indexPath.row]
-
-            
+        //            if tableView == self.searchDisplayController!.searchResultsTableView {
+        //                print(indexPath.section)
+        //                print(indexPath.row)
+        //                ingredient = filteredIngredients[indexPath.section][indexPath.row]
+        //            } else {
+        
+        //            if tableView == self.searchDisplayController!.searchResultsTableView {
+        //                ingredient = filteredIngredients[indexPath.row]
+        //            } else {
+        //                ingredient = ingredients[indexPath.row]
+        //            }
+        //
+        
+        ingredient = ingredients[indexPath.section][indexPath.row]
+        
+        
         cell.FoodName?.text = ingredient.name
         cell.FoodExpiry?.text = ingredient.expiry
         cell.FoodImageView?.image = ingredient.image
-
+        
         if ingredient.amount == 0.0 {
             cell.FoodAmount?.text = ""
         } else {
@@ -421,22 +443,22 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         
         cell.delegate = self
         
-//        let deleteButton = MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor(), callback: {( sender: MGSwipeTableCell!) -> Void in
-//            self.ingredients[indexPath.section].removeAtIndex(indexPath.row)
-//            
-//            // Save after removing row
-//            //PersistManager.sharedManager.saveIngredients()
-//            PersistManager.sharedManager.Ingredients = self.ingredients
-//            
-//            let saveSingleton = PersistenceHandler()
-//            saveSingleton.save()
-//            
-//            // Remove visually
-//            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-//            })
+        //        let deleteButton = MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor(), callback: {( sender: MGSwipeTableCell!) -> Void in
+        //            self.ingredients[indexPath.section].removeAtIndex(indexPath.row)
+        //
+        //            // Save after removing row
+        //            //PersistManager.sharedManager.saveIngredients()
+        //            PersistManager.sharedManager.Ingredients = self.ingredients
+        //
+        //            let saveSingleton = PersistenceHandler()
+        //            saveSingleton.save()
+        //
+        //            // Remove visually
+        //            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        //            })
         
         //}
-            
+        
         return cell
         
     }
@@ -472,14 +494,14 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     
-
+    
     
     // Override to support rearranging the table view.
     func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
+        
         let moveThisItem = ingredients[fromIndexPath.section][fromIndexPath.row]
         ingredients[fromIndexPath.section].removeAtIndex(fromIndexPath.row)
         ingredients[toIndexPath.section].append(moveThisItem)
@@ -493,65 +515,65 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         
     }
     
-
+    
     
     // Override to support conditional rearranging of the table view.
     func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
-
+    
     // MARK: Search
     
-//    func filterContentForSearchText(searchText: String) {
-//        //var ingredient : Ingredient
-//        
-//        // Filter the array using the filter method
-//        self.filteredIngredients = self.ingredients.filter({( ingredient : [Ingredient]) -> Bool in
-//            print("Searching")
-//            for x in 0...ingredient.count - 1 {
-//                // let categoryMatch = (scope == "All") || (ingredient.category == scope)
-//                let stringMatch = ingredient[x].name.rangeOfString(searchText)
-//                // return categoryMatch && (stringMatch != nil)
-//                return (stringMatch != nil)
-//            }
-//            
-//            return false
-//        
-//        })
-//        
-//    }
+    //    func filterContentForSearchText(searchText: String) {
+    //        //var ingredient : Ingredient
+    //
+    //        // Filter the array using the filter method
+    //        self.filteredIngredients = self.ingredients.filter({( ingredient : [Ingredient]) -> Bool in
+    //            print("Searching")
+    //            for x in 0...ingredient.count - 1 {
+    //                // let categoryMatch = (scope == "All") || (ingredient.category == scope)
+    //                let stringMatch = ingredient[x].name.rangeOfString(searchText)
+    //                // return categoryMatch && (stringMatch != nil)
+    //                return (stringMatch != nil)
+    //            }
+    //
+    //            return false
+    //
+    //        })
+    //
+    //    }
     
-//    func updateSearchResultsForSearchController(searchController: UISearchController) {
-//        let searchText = searchController.searchBar.text
-//
-//        filteredData = searchText.isEmpty ? ingredient : ingredient.filter({(ingredientString: String) -> Bool in
-//            return ingredientString.rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
-//        })
-//
-//        tableView.reloadData()
-//    }
-//
-//    func filterContentForSearchText(searchText: String, scope: String = "All") {
-//  filteredIngredients = ingredients.filter { ingredient in
-//    return ingredient.name.lowercaseString.containsString(searchText.lowercaseString)
-//  }
-// 
-//  tableView.reloadData()
-//}
+    //    func updateSearchResultsForSearchController(searchController: UISearchController) {
+    //        let searchText = searchController.searchBar.text
+    //
+    //        filteredData = searchText.isEmpty ? ingredient : ingredient.filter({(ingredientString: String) -> Bool in
+    //            return ingredientString.rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
+    //        })
+    //
+    //        tableView.reloadData()
+    //    }
+    //
+    //    func filterContentForSearchText(searchText: String, scope: String = "All") {
+    //  filteredIngredients = ingredients.filter { ingredient in
+    //    return ingredient.name.lowercaseString.containsString(searchText.lowercaseString)
+    //  }
+    //
+    //  tableView.reloadData()
+    //}
     
-//    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
-//        self.filterContentForSearchText(searchString)
-//        return true
-//    }
-//    
-//    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
-//        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text!)
-//        return true
-//    }
+    //    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
+    //        self.filterContentForSearchText(searchString)
+    //        return true
+    //    }
+    //
+    //    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
+    //        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text!)
+    //        return true
+    //    }
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "EditIngredient" && self.tableView.editing {
@@ -562,45 +584,45 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-
+        
         let ingredientDetailViewController = segue.destinationViewController as! NewIngredientViewController
         
         ingredientDetailViewController.locationPickerData = myFridge.doorNames
-
+        
         if segue.identifier == "EditIngredient" {
             //let ingredientDetailViewController = segue.destinationViewController as! NewIngredientViewController
             
             // Is search the sender?
-//            if self.searchDisplayController!.active {
-//                print("Will show ingredient from search")
-//                let indexPath = self.searchDisplayController!.searchResultsTableView.indexPathForSelectedRow!
-//                let selectedIngredient = self.filteredIngredients[indexPath.section][indexPath.row]
-//                ingredientDetailViewController.ingredient = selectedIngredient
-//                print("From Search")
-//
-//            } else {
+            //            if self.searchDisplayController!.active {
+            //                print("Will show ingredient from search")
+            //                let indexPath = self.searchDisplayController!.searchResultsTableView.indexPathForSelectedRow!
+            //                let selectedIngredient = self.filteredIngredients[indexPath.section][indexPath.row]
+            //                ingredientDetailViewController.ingredient = selectedIngredient
+            //                print("From Search")
+            //
+            //            } else {
             
-                // Which cell is the sender?
-                if let selectedIngredientCell = sender as? FoodsListTableViewCell {
+            // Which cell is the sender?
+            if let selectedIngredientCell = sender as? FoodsListTableViewCell {
                 let indexPath = tableView.indexPathForCell(selectedIngredientCell)!
                 let sectionPath = tableView.indexPathForSelectedRow
                 sectionPath?.section
                 
                 
-                    
+                
                 let selectedIngredient = ingredients[indexPath.section][indexPath.row]
                 ingredientDetailViewController.ingredient = selectedIngredient
                 ingredientDetailViewController.mainList = mainList
                 print("Edit ingredient")
-                    
+                
                 ingredientDetailViewController.locationPickerData = myFridge.doorNames
-                    
-                }
+                
+            }
             //}
-        
+            
         }
         else if segue.identifier == "AddIngredient" {
-                print("Add ingredient")
+            print("Add ingredient")
             
         }
         
@@ -609,7 +631,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     @IBAction func unwindToIngredientList(sender: UIStoryboardSegue) {
         
         if let sourceViewController = sender.sourceViewController as? NewIngredientViewController, ingredient = sourceViewController.ingredient {
-        
+            
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 
                 //let ingredientholder: Ingredient
@@ -634,7 +656,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
                 }
                 
             } else {
-
+                
                 // Add a new ingredient.
                 let section = myFridge.doorNames.indexOf(ingredient.location)
                 print("section")
@@ -653,17 +675,17 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             // Save ingredients
             //PersistManager.sharedManager.saveIngredients()
             PersistManager.sharedManager.Ingredients = ingredients
-
+            
             let saveSingleton = PersistenceHandler()
             saveSingleton.save()
-
+            
             
         }
-    
+        
         if let addToListFromIngredientDetailsViewController = sender.sourceViewController as? AddToListFromIngredientDetailsViewController {
             
             let selectedList = addToListFromIngredientDetailsViewController.selectedList
-
+            
             print("unwind ingredient added")
             print(selectedList)
             
@@ -686,7 +708,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         UIView.animateWithDuration(NSTimeInterval(2.0), delay: 1.0, options: UIViewAnimationOptions.CurveLinear, animations: { self.listAddedView.alpha = 0.0; print("Fade Out") }, completion: nil)
         
     }
-
+    
     //MARK:- Editing toggle
     
     @IBAction func addAction(sender: AnyObject) {
@@ -708,7 +730,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         tableView.editing = editing
         super.setEditing(editing, animated: true)
     }
-
+    
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         // Update the delete button's title based on how many items are selected.
         self.updateDeleteButtonTitle()
@@ -818,7 +840,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             self.deleteButton.title = "Delete \(selectedRows!.count)"
         }
     }
-
+    
     
     
 }
