@@ -318,7 +318,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         // Check for sections without anything in them
         if section >= self.ingredients.count {
             
-            var existingRows = self.ingredients.count
+            let existingRows = self.ingredients.count
             print(existingRows)
             
             // If the section doesn't exist in the array, create it
@@ -670,6 +670,8 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
                 ingredients[section!].append(ingredient)
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
                 
+                addNotification(ingredient)
+                
             }
             
             // Save ingredients
@@ -699,6 +701,35 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             }
             
         }
+        
+    }
+    
+    func addNotification(addedItem: Ingredient) {
+        
+        let notification = UILocalNotification()
+        notification.alertBody = "Hurry Up! Your \(addedItem.name) Expires in Two Days" // text that will be displayed in the notification
+        notification.alertAction = "Open" // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd"
+        dateFormatter.timeZone = NSTimeZone(abbreviation: "JST")
+        
+        let expiryDateAsString = addedItem.expiry
+        let cellExpiryDate = dateFormatter.dateFromString(expiryDateAsString)!
+        
+        let twoDaysBeforeExpiry = NSDateComponents()
+        twoDaysBeforeExpiry.day = -2
+        twoDaysBeforeExpiry.timeZone = NSTimeZone(abbreviation: "JST")
+        
+        let notificationDate = NSCalendar.currentCalendar().dateByAddingComponents(twoDaysBeforeExpiry, toDate: cellExpiryDate, options: [])
+        
+        print(notificationDate)
+        
+        notification.fireDate = notificationDate // todo item due date (when notification will be fired)
+        notification.soundName = UILocalNotificationDefaultSoundName // play default sound
+        notification.userInfo = ["Name": addedItem.name, "Location": addedItem.location, "Expiry": addedItem.expiry] // assign a unique identifier to the notification so that we can retrieve it later
+        notification.category = "Two Day Expiration"
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
         
     }
     
