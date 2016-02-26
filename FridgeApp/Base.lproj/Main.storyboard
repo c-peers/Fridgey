@@ -626,7 +626,7 @@ does your refridgerator have?</string>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esP-A8-9B2">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esP-A8-9B2">
                                                     <rect key="frame" x="417" y="35" width="175" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="175" id="TRk-tQ-Kv5"/>
@@ -1131,6 +1131,7 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <outlet property="fridgeTabBar" destination="W28-zg-YXA" id="uzl-iP-sx5"/>
                         <segue destination="8JA-Gi-6le" kind="relationship" relationship="viewControllers" id="Qu9-da-37G"/>
                         <segue destination="aye-NY-bks" kind="relationship" relationship="viewControllers" id="YR7-Ar-r0b"/>
                         <segue destination="oDo-XM-Lye" kind="relationship" relationship="viewControllers" id="BKM-ga-Uxw"/>
@@ -1527,8 +1528,8 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
         <image name="Unselected" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EUW-uB-UZa"/>
-        <segue reference="xUh-LB-vRU"/>
         <segue reference="Nig-TY-LJm"/>
+        <segue reference="xUh-LB-vRU"/>
+        <segue reference="EUW-uB-UZa"/>
     </inferredMetricsTieBreakers>
 </document>

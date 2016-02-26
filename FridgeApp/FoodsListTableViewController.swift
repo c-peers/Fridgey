@@ -270,16 +270,26 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             print("add to list from ingredients table")
             selectedIngredient = ingredient.name
             
-            let controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddToListFromIngredientTab") as! AddToListFromIngredientDetailsViewController
-            controller.previousVC = "FoodsListTableViewController"
-            controller.selectedIngredient = ingredient.name
-            controller.modalTransitionStyle = .CrossDissolve
-            controller.modalPresentationStyle = .OverCurrentContext
-            self.presentViewController(controller, animated: true, completion: nil)
+            showAddListView([selectedIngredient])
             
         }
         
         return true
+        
+    }
+    
+    func showAddListView(ingredientsToAdd: [String]) {
+        
+        let controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddToListFromIngredientTab") as! AddToListFromIngredientDetailsViewController
+        controller.previousVC = "FoodsListTableViewController"
+        if ingredientsToAdd.count == 1 {
+            controller.selectedIngredient = ingredientsToAdd[0]
+        } else {
+            controller.selectedIngredients = ingredientsToAdd
+        }
+        controller.modalTransitionStyle = .CrossDissolve
+        controller.modalPresentationStyle = .OverCurrentContext
+        self.presentViewController(controller, animated: true, completion: nil)
         
     }
     
@@ -686,6 +696,10 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         
         if let addToListFromIngredientDetailsViewController = sender.sourceViewController as? AddToListFromIngredientDetailsViewController {
             
+            self.tableView.setEditing(false, animated: true)
+            self.updateButtonsToMatchTableState()
+            self.tabBarController!.tabBar.hidden = false
+            
             let selectedList = addToListFromIngredientDetailsViewController.selectedList
             
             print("unwind ingredient added")
@@ -707,12 +721,13 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     func addNotification(addedItem: Ingredient) {
         
         let notification = UILocalNotification()
-        notification.alertBody = "Hurry Up! Your \(addedItem.name) Expires in Two Days" // text that will be displayed in the notification
+        notification.alertBody = "Watch Out! Your \(addedItem.name) Expires in Two Days" // text that will be displayed in the notification
         notification.alertAction = "Open" // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd"
         dateFormatter.timeZone = NSTimeZone(abbreviation: "JST")
+        
         
         let expiryDateAsString = addedItem.expiry
         let cellExpiryDate = dateFormatter.dateFromString(expiryDateAsString)!
@@ -725,6 +740,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         
         print(notificationDate)
         
+        //notification.fireDate = NSDate(timeIntervalSinceNow: 10)
         notification.fireDate = notificationDate // todo item due date (when notification will be fired)
         notification.soundName = UILocalNotificationDefaultSoundName // play default sound
         notification.userInfo = ["Name": addedItem.name, "Location": addedItem.location, "Expiry": addedItem.expiry] // assign a unique identifier to the notification so that we can retrieve it later
@@ -750,17 +766,59 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     @IBAction func editAction(sender: AnyObject) {
         self.tableView.setEditing(true, animated: true)
         self.updateButtonsToMatchTableState()
+        
+        self.tabBarController!.tabBar.hidden = true
+        showToolbar()
+        self.tableView.frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 44)
+        
+        print("table height")
+        print(self.tableView.frame.height)
     }
     
     @IBAction func cancelAction(sender: AnyObject) {
         self.tableView.setEditing(false, animated: true)
         self.updateButtonsToMatchTableState()
+        self.tabBarController!.tabBar.hidden = false
+        
     }
     
-    override func setEditing(editing: Bool, animated: Bool) {
-        tableView.editing = editing
-        super.setEditing(editing, animated: true)
+    func showToolbar() {
+        
+        let toolbar = UIToolbar()
+        toolbar.frame = CGRectMake(0, self.view.frame.size.height - 44, self.view.frame.size.width, 44)
+        toolbar.sizeToFit()
+        toolbar.translucent = false
+        self.view.addSubview(toolbar)
+        
+        let addToListButton = UIBarButtonItem(title: "Add to List", style: .Plain, target: self, action: "addToListBarButtonPressed:")
+        
+        //toolbar.setItems(toolbarButtons, animated: true)
+        toolbar.backgroundColor = UIColor.redColor()
+        
+        toolbar.items = [addToListButton]
+        
     }
+    
+    func addToListBarButtonPressed(sender: UIBarButtonItem) {
+        
+        let selectedIndexes = self.tableView.indexPathsForSelectedRows
+        var selectedIngredients: [String] = []
+
+        var indicesOfItemsToAdd = [NSIndexPath]()
+        for selectionIndex: NSIndexPath in selectedIndexes! {
+            indicesOfItemsToAdd.append(selectionIndex)
+        }
+        // Delete the objects from our data model.
+        for x in 0...indicesOfItemsToAdd.count - 1 {
+            let index = indicesOfItemsToAdd[x]
+            selectedIngredients.append(self.ingredients[index.section].removeAtIndex(index.row).name)
+        }
+        
+        showAddListView(selectedIngredients)
+        
+        
+    }
+
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         // Update the delete button's title based on how many items are selected.

@@ -8,19 +8,17 @@
 
 import UIKit
 
-//@objc protocol RootTabBarControllerProtocol{
-//    func didSelectTab(tabBarController: FridgeTabBarController)
-//}
-
 class FridgeTabBarController: UITabBarController, UITabBarControllerDelegate {
 
+    @IBOutlet weak var fridgeTabBar: UITabBar!
+    
     //These classes are now viewable by all tabs
     var MyFridge = FridgeInfo()
     
     var Ingredients = [[Ingredient]]()
     
     var ShoppingLists = Lists()
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -43,6 +41,16 @@ class FridgeTabBarController: UITabBarController, UITabBarControllerDelegate {
             let v = viewController as! TabBarDelegate
             v.didSelectTab(self)
         }
+        
+        if viewController.editing {
+            print("is run?")
+            fridgeTabBar.hidden = true
+            self.tabBar.hidden = true
+        } else {
+            fridgeTabBar.hidden = false
+            self.tabBar.hidden = false
+        }
+        
     }
     
 }
