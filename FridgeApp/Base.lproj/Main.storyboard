@@ -726,6 +726,7 @@ does your refridgerator have?</string>
                         <outlet property="editButton" destination="HcG-bf-CpD" id="pvq-Mq-bYy"/>
                         <outlet property="listAddedText" destination="ye0-DC-T3W" id="E8d-Sx-3CT"/>
                         <outlet property="listAddedView" destination="Nd8-sr-C4j" id="fEV-ap-MFe"/>
+                        <outlet property="tableBottomConstraint" destination="vJU-lv-3vC" id="HjS-Ki-D2t"/>
                         <outlet property="tableView" destination="thE-sK-zOw" id="KiN-uA-zb4"/>
                         <segue destination="E77-v0-SKt" kind="presentation" identifier="AddToList" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="xUh-LB-vRU"/>
                     </connections>
@@ -1148,7 +1149,7 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                 <pageViewController storyboardIdentifier="FridgePageView" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="UJi-mS-DuW" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERs-lJ-0xh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1190" y="-1561"/>
+            <point key="canvasLocation" x="1508" y="-2217"/>
         </scene>
         <!--Fridge Page Content View Controller-->
         <scene sceneID="3nQ-PR-0B5">
@@ -1192,7 +1193,7 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HSj-yB-gs3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1826" y="-1561"/>
+            <point key="canvasLocation" x="1508" y="-1537"/>
         </scene>
         <!--List Details Add New Ingredient-->
         <scene sceneID="s8h-ss-zN7">

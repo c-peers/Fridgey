@@ -19,6 +19,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     @IBOutlet var deleteButton: UIBarButtonItem!
     @IBOutlet var addButton: UIBarButtonItem!
     
+    @IBOutlet weak var tableBottomConstraint: NSLayoutConstraint!
     
     // MARK: Properties
     
@@ -39,6 +40,8 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     
     var navBar = UINavigationBar(frame: CGRect(x: 0, y: 20, width: 0, height: 44))
     let navItem = UINavigationItem(title: "SomeTitle")
+    
+    let toolbar = UIToolbar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -769,7 +772,16 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         
         self.tabBarController!.tabBar.hidden = true
         showToolbar()
-        self.tableView.frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 44)
+//        tableBottomConstraint.constant = 44
+//        tableBottomConstraint = NSLayoutConstraint(item: tableView,
+//            attribute: .Bottom,
+//            relatedBy: .Equal,
+//            toItem: toolbar,
+//            attribute: .Top,
+//            multiplier: 1.0,
+//            constant: 0.0)
+//        self.view.layoutIfNeeded()
+        //self.tableView.frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 44)
         
         print("table height")
         print(self.tableView.frame.height)
@@ -779,12 +791,24 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         self.tableView.setEditing(false, animated: true)
         self.updateButtonsToMatchTableState()
         self.tabBarController!.tabBar.hidden = false
-        
+        //tableBottomConstraint.constant = 0
+//        tableBottomConstraint = NSLayoutConstraint(item: tableView,
+//            attribute: .Bottom,
+//            relatedBy: .Equal,
+//            toItem: self.tabBarController?.tabBar,
+//            attribute: .Top,
+//            multiplier: 1.0,
+//            constant: 0.0)
+//        self.view.layoutIfNeeded()
+//        
+//        print("table height")
+//        print(self.tableView.frame.height)
+
     }
     
     func showToolbar() {
         
-        let toolbar = UIToolbar()
+        //let toolbar = UIToolbar()
         toolbar.frame = CGRectMake(0, self.view.frame.size.height - 44, self.view.frame.size.width, 44)
         toolbar.sizeToFit()
         toolbar.translucent = false
