@@ -1069,7 +1069,7 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
         <!--Page View Controller-->
         <scene sceneID="ORR-cG-4nq">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="4np-1l-UTo" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" modalPresentationStyle="currentContext" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="none" id="4np-1l-UTo" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8k-kh-mep" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2252" y="-2217"/>

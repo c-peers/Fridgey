@@ -94,33 +94,47 @@ class ChooseAFridgeViewController: UIViewController, UIPageViewControllerDataSou
         
         let vc = viewController as! FridgePageContentViewController
         var index = vc.pageIndex as Int
+        let previousIndex = index - 1
         
-        if (index == 0) || (index == NSNotFound) {
-            
+        guard previousIndex >= 0 else {
+            return self.viewControllerAtIndex(self.fridgeImages.count - 1)
+        }
+        
+        guard self.fridgeImages.count > previousIndex else {
             return nil
         }
         
-        index--
+        //if (index == 0) || (index == NSNotFound) {
+        //    return nil
+        //}
         
-        return self.viewControllerAtIndex(index)
+        
+        return self.viewControllerAtIndex(previousIndex)
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
         let vc = viewController as! FridgePageContentViewController
         var index = vc.pageIndex as Int
+        let nextIndex = index + 1
         
-        if (index == NSNotFound) {
+        guard self.fridgeImages.count != nextIndex else {
+            return self.viewControllerAtIndex(022)
+        }
+        
+        guard self.fridgeImages.count > nextIndex else {
             return nil
         }
         
-        index++
+//        if (index == NSNotFound) {
+//            return nil
+//        }
+//        
+//        if (index == self.fridgeImages.count) {
+//            return nil
+//        }
         
-        if (index == self.fridgeImages.count) {
-            return nil
-        }
-        
-        return self.viewControllerAtIndex(index)
+        return self.viewControllerAtIndex(nextIndex)
         
     }
     
