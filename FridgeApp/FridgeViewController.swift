@@ -20,66 +20,6 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-//        if (MyFridge != nil) {
-//            
-//            // self.fridgeTitles = NSArray(objects: "A", "B")
-//            // self.fridgeImages = NSArray(objects: "1", "2")
-//            self.fridgeTitles = NSArray(object: (MyFridge?.fridgeName)!)
-//            self.fridgeImages = NSArray(objects: "1")
-//
-//        } else {
-//            
-//            self.fridgeTitles = NSArray(object: "Add a Fridge")
-//            self.fridgeImages = NSArray(object: "Blank")
-//            
-//        }
-//        
-//        self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("FridgePageView") as! UIPageViewController
-//        
-//        self.pageViewController.dataSource = self
-//        
-//        var startVC = self.viewControllerAtIndex(0) as FridgePageContentViewController
-//        viewControllers = NSArray(object: startVC)
-//        
-//        self.pageViewController.setViewControllers(viewControllers as! [UIViewController], direction: .Forward, animated: true, completion: nil)
-//        
-//        self.pageViewController.view.frame = CGRectMake(30, 30, self.view.frame.width - 60, self.view.frame.height - 100)
-//        
-//        self.addChildViewController(self.pageViewController)
-//        self.view.addSubview(self.pageViewController.view)
-//        self.pageViewController.didMoveToParentViewController(self)
-//        
-//        if let pageViewController = parentViewController as? UIPageViewController {
-//            pageViewController.setViewControllers(viewControllers as! [UIViewController], direction: .Forward, animated: true, completion: nil)
-//        }
-//        
-//        pageViewController.setViewControllers(viewControllers as! [UIViewController], direction: .Forward, animated: true, completion: nil)
-        
-        //PersistManager.sharedManager.initialLoading()
-        
-        //print(PersistManager.sharedManager.MyFridge.doorNames)
-        
-        //MyFridge = PersistManager.sharedManager.MyFridge
-        
-        //if let savedFridge = PersistManager.sharedManager.loadFridge() {
-//        if let savedFridge = PersistManager.sharedManager.decode() {
-//        
-//            MyFridge = savedFridge
-//            print(savedFridge)
-//            //saveToFTBC.MyFridge = savedFridge
-//            
-//            print("Saved Fridge")
-//            print(MyFridge?.numOfDoors)
-//            print(MyFridge?.doorNames)
-//            print(MyFridge?.fridgeName)
-//            
-//        } else {
-//            
-//            // No fridge, set defaults... for now.
-//            MyFridge = FridgeInfo(fridgeName: "Fridge", numOfDoors: 2, doorNames: ["1", "2"])!
-//        }
         
         let loadSingleton = PersistenceHandler()
         loadSingleton.load("Fridge")
@@ -121,8 +61,6 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
         }
         
         pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
-
-        
         
     }
 

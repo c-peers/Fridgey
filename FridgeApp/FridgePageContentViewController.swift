@@ -13,7 +13,6 @@ class FridgePageContentViewController: UIViewController {
     @IBOutlet weak var fridgeImageView: UIImageView!
     @IBOutlet weak var fridgeTitle: UILabel!
     
-    
     var dataObject: AnyObject?
     
     var pageIndex: Int!

@@ -34,6 +34,43 @@
             </objects>
             <point key="canvasLocation" x="1508" y="-868"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="FgS-l0-9yO">
+            <objects>
+                <viewController id="Z43-KX-Vj8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vCQ-YC-ywO"/>
+                        <viewControllerLayoutGuide type="bottom" id="pW8-6b-uLg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="55Z-w7-AHw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1cA-46-YcI">
+                                <rect key="frame" x="180" y="150" width="240" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="f2c-FQ-1wc"/>
+                                    <constraint firstAttribute="width" constant="240" id="nRR-UW-6za"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="f2c-FQ-1wc"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1cA-46-YcI" firstAttribute="centerX" secondItem="55Z-w7-AHw" secondAttribute="centerX" id="AoG-r8-VgK"/>
+                            <constraint firstItem="1cA-46-YcI" firstAttribute="centerY" secondItem="55Z-w7-AHw" secondAttribute="centerY" id="Wpj-uM-x5g"/>
+                            <constraint firstItem="1cA-46-YcI" firstAttribute="top" secondItem="vCQ-YC-ywO" secondAttribute="bottom" constant="130" id="w5F-7y-deO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kgy-YT-xZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2252" y="-1537"/>
+        </scene>
         <!--Choose Your Fridge-->
         <scene sceneID="0kF-P2-KCX">
             <objects>
@@ -46,13 +83,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdb-b9-edV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Choose your Fridge" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdb-b9-edV">
                                 <rect key="frame" x="70" y="122" width="460" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="Z4Q-JY-VqL"/>
                                 </constraints>
-                                <string key="text">How many compartments
-does your refridgerator have?</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -63,35 +98,8 @@ does your refridgerator have?</string>
                                     <navigationItem title="Title" id="pQj-jU-Br5"/>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJE-SM-R9d">
-                                <rect key="frame" x="180" y="183" width="240" height="150"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chv-zn-F3b">
-                                        <rect key="frame" x="25" y="61" width="64" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="lix-a6-I3l">
-                                        <rect key="frame" x="126" y="61" width="94" height="29"/>
-                                        <connections>
-                                            <action selector="changeFridgeDoorNum:" destination="Ztw-iK-lUn" eventType="valueChanged" id="GL6-Ed-L59"/>
-                                        </connections>
-                                    </stepper>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="chv-zn-F3b" firstAttribute="centerY" secondItem="QJE-SM-R9d" secondAttribute="centerY" id="GNW-uP-kKm"/>
-                                    <constraint firstItem="chv-zn-F3b" firstAttribute="leading" secondItem="QJE-SM-R9d" secondAttribute="leading" constant="25" id="HYY-Cl-tIt"/>
-                                    <constraint firstItem="chv-zn-F3b" firstAttribute="top" secondItem="lix-a6-I3l" secondAttribute="top" id="HsP-uD-TrV"/>
-                                    <constraint firstAttribute="height" constant="150" id="S6g-iL-Jot"/>
-                                    <constraint firstItem="lix-a6-I3l" firstAttribute="leading" secondItem="chv-zn-F3b" secondAttribute="trailing" constant="37" id="ljL-nx-SON"/>
-                                    <constraint firstAttribute="trailing" secondItem="lix-a6-I3l" secondAttribute="trailing" constant="20" id="mHQ-iv-ZKs"/>
-                                    <constraint firstItem="lix-a6-I3l" firstAttribute="bottom" secondItem="chv-zn-F3b" secondAttribute="bottom" id="o9M-hD-frJ"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6p-Qu-yzo">
-                                <rect key="frame" x="273" y="368" width="55" height="30"/>
+                                <rect key="frame" x="273" y="481" width="55" height="30"/>
                                 <state key="normal" title="Confirm"/>
                                 <connections>
                                     <action selector="confirmRefridgeratorButton:" destination="Ztw-iK-lUn" eventType="touchUpInside" id="xQ9-2H-ynZ"/>
@@ -104,109 +112,16 @@ does your refridgerator have?</string>
                             <constraint firstItem="OhN-wk-sc9" firstAttribute="leading" secondItem="Dic-tB-mWp" secondAttribute="leading" id="6tl-O8-ZaY"/>
                             <constraint firstItem="gdb-b9-edV" firstAttribute="leading" secondItem="Dic-tB-mWp" secondAttribute="leadingMargin" constant="50" id="7Sd-2G-US5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gdb-b9-edV" secondAttribute="trailing" constant="50" id="Ay3-7B-dxt"/>
-                            <constraint firstItem="QJE-SM-R9d" firstAttribute="centerX" secondItem="gdb-b9-edV" secondAttribute="centerX" id="R3J-8D-Cfw"/>
-                            <constraint firstItem="QJE-SM-R9d" firstAttribute="centerX" secondItem="Dic-tB-mWp" secondAttribute="centerX" id="RFD-gH-cwz"/>
                             <constraint firstItem="OhN-wk-sc9" firstAttribute="centerX" secondItem="gdb-b9-edV" secondAttribute="centerX" id="aXs-D8-vFu"/>
                             <constraint firstItem="gdb-b9-edV" firstAttribute="top" secondItem="nFN-Gm-HVD" secondAttribute="bottom" multiplier="0.35" constant="100" id="bt7-9x-GzS"/>
-                            <constraint firstItem="QJE-SM-R9d" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Dic-tB-mWp" secondAttribute="leading" constant="180" id="ce4-eY-PI8"/>
-                            <constraint firstItem="j6p-Qu-yzo" firstAttribute="top" secondItem="QJE-SM-R9d" secondAttribute="bottom" constant="35" id="k1l-XJ-b6S"/>
-                            <constraint firstItem="j6p-Qu-yzo" firstAttribute="centerX" secondItem="Dic-tB-mWp" secondAttribute="centerX" id="s18-fd-3F0"/>
-                            <constraint firstItem="QJE-SM-R9d" firstAttribute="top" secondItem="gdb-b9-edV" secondAttribute="bottom" constant="20" id="sTd-Mn-hpq"/>
-                            <constraint firstItem="QJE-SM-R9d" firstAttribute="centerX" secondItem="OhN-wk-sc9" secondAttribute="centerX" id="zzU-YO-x9J"/>
+                            <constraint firstItem="iBz-G3-noY" firstAttribute="top" secondItem="j6p-Qu-yzo" secondAttribute="bottom" constant="40" id="eYV-mp-9Hh"/>
+                            <constraint firstItem="j6p-Qu-yzo" firstAttribute="centerX" secondItem="gdb-b9-edV" secondAttribute="centerX" id="snO-5M-gze"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="zzU-YO-x9J"/>
-                            </mask>
-                        </variation>
                     </view>
-                    <connections>
-                        <outlet property="refridgeratorCompartments" destination="chv-zn-F3b" id="Ihx-Eq-d1q"/>
-                        <outlet property="stepper" destination="lix-a6-I3l" id="T13-jZ-Opi"/>
-                        <segue destination="tvf-Bd-vgH" kind="show" identifier="confirmFridgeSegue" id="DvO-ee-ccF"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ra-ne-Hnv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2252" y="-868"/>
-        </scene>
-        <!--Confirmation-->
-        <scene sceneID="oAc-Gx-9Ok">
-            <objects>
-                <viewController title="Confirmation" id="tvf-Bd-vgH" customClass="ConfirmFridgeViewController" customModule="FridgeApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HyA-6B-17T"/>
-                        <viewControllerLayoutGuide type="bottom" id="8ll-W5-whX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CCT-1g-zny">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Is this your fridge?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZF5-l3-5ak">
-                                <rect key="frame" x="150" y="179" width="300" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="v69-YS-0Ff"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcL-aQ-uMh">
-                                <rect key="frame" x="150" y="240" width="300" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="06x-iO-7NH">
-                                <rect key="frame" x="180" y="440" width="240" height="100"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9Z-gt-p9x">
-                                        <rect key="frame" x="53" y="35" width="30" height="30"/>
-                                        <state key="normal" title="No"/>
-                                        <connections>
-                                            <action selector="wrongFridgeType:" destination="tvf-Bd-vgH" eventType="touchUpInside" id="KMq-un-Q0i"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEp-LM-obY">
-                                        <rect key="frame" x="155" y="35" width="30" height="30"/>
-                                        <state key="normal" title="Yes"/>
-                                        <connections>
-                                            <segue destination="886-eD-VPD" kind="unwind" unwindAction="unwindToMyFridge:" id="CSZ-DR-CrX"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="XEp-LM-obY" firstAttribute="baseline" secondItem="o9Z-gt-p9x" secondAttribute="baseline" id="HSL-2d-ApK"/>
-                                    <constraint firstAttribute="height" constant="100" id="P7g-cy-SrK"/>
-                                    <constraint firstItem="XEp-LM-obY" firstAttribute="centerY" secondItem="06x-iO-7NH" secondAttribute="centerY" id="VRj-fP-Gcd"/>
-                                    <constraint firstAttribute="trailing" secondItem="XEp-LM-obY" secondAttribute="trailing" constant="55" id="hm5-wl-lEA"/>
-                                    <constraint firstItem="o9Z-gt-p9x" firstAttribute="leading" secondItem="06x-iO-7NH" secondAttribute="leading" constant="53" id="sYA-Me-hDD"/>
-                                    <constraint firstAttribute="width" constant="240" id="uCd-RG-EHf"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="LcL-aQ-uMh" firstAttribute="centerX" secondItem="CCT-1g-zny" secondAttribute="centerX" id="9NU-hZ-mPD"/>
-                            <constraint firstItem="06x-iO-7NH" firstAttribute="centerX" secondItem="CCT-1g-zny" secondAttribute="centerX" id="P23-6u-AcJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="06x-iO-7NH" secondAttribute="trailing" priority="750" constant="150" id="TsX-Od-Z0n"/>
-                            <constraint firstItem="LcL-aQ-uMh" firstAttribute="top" secondItem="ZF5-l3-5ak" secondAttribute="bottom" constant="40" id="VG5-OC-1Lk"/>
-                            <constraint firstItem="8ll-W5-whX" firstAttribute="top" secondItem="06x-iO-7NH" secondAttribute="bottom" constant="60" id="Vu1-WA-i9f"/>
-                            <constraint firstItem="LcL-aQ-uMh" firstAttribute="leading" secondItem="ZF5-l3-5ak" secondAttribute="leading" id="Zhz-Bq-fWb"/>
-                            <constraint firstItem="ZF5-l3-5ak" firstAttribute="top" secondItem="HyA-6B-17T" secondAttribute="bottom" constant="159" id="aAg-Y7-8ac"/>
-                            <constraint firstItem="ZF5-l3-5ak" firstAttribute="width" secondItem="LcL-aQ-uMh" secondAttribute="width" id="bZH-h6-qNI"/>
-                            <constraint firstItem="06x-iO-7NH" firstAttribute="leading" secondItem="CCT-1g-zny" secondAttribute="leading" priority="750" constant="150" id="yLQ-h9-Lbh"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="fridgeConfirmationText" destination="LcL-aQ-uMh" id="rF4-HH-VkF"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SdF-aw-mq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="886-eD-VPD" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="3052" y="-868"/>
         </scene>
         <!--My Fridge-->
         <scene sceneID="0kq-bu-aoA">
@@ -1151,6 +1066,14 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
             </objects>
             <point key="canvasLocation" x="1508" y="-2217"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="ORR-cG-4nq">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="4np-1l-UTo" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G8k-kh-mep" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2252" y="-2217"/>
+        </scene>
         <!--Fridge Page Content View Controller-->
         <scene sceneID="3nQ-PR-0B5">
             <objects>
@@ -1164,7 +1087,7 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b4r-Qo-7Rh">
-                                <rect key="frame" x="180" y="155" width="240" height="291"/>
+                                <rect key="frame" x="180" y="155" width="240" height="290"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wa-hf-qUI">
                                 <rect key="frame" x="180" y="108" width="240" height="21"/>
