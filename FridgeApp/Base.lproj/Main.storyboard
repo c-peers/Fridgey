@@ -34,10 +34,10 @@
             </objects>
             <point key="canvasLocation" x="1508" y="-868"/>
         </scene>
-        <!--View Controller-->
+        <!--ChooseA Fridge Page Content View Controller-->
         <scene sceneID="FgS-l0-9yO">
             <objects>
-                <viewController id="Z43-KX-Vj8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChooseAFridgePageContentViewController" id="Z43-KX-Vj8" customClass="ChooseAFridgePageContentViewController" customModule="FridgeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vCQ-YC-ywO"/>
                         <viewControllerLayoutGuide type="bottom" id="pW8-6b-uLg"/>
@@ -46,11 +46,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1cA-46-YcI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1cA-46-YcI">
                                 <rect key="frame" x="180" y="150" width="240" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="f2c-FQ-1wc"/>
-                                    <constraint firstAttribute="width" constant="240" id="nRR-UW-6za"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -59,13 +58,16 @@
                                 </variation>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1cA-46-YcI" firstAttribute="centerX" secondItem="55Z-w7-AHw" secondAttribute="centerX" id="AoG-r8-VgK"/>
                             <constraint firstItem="1cA-46-YcI" firstAttribute="centerY" secondItem="55Z-w7-AHw" secondAttribute="centerY" id="Wpj-uM-x5g"/>
                             <constraint firstItem="1cA-46-YcI" firstAttribute="top" secondItem="vCQ-YC-ywO" secondAttribute="bottom" constant="130" id="w5F-7y-deO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fridgeImageView" destination="1cA-46-YcI" id="0Oe-Vm-jAU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kgy-YT-xZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,15 +105,26 @@
                                 <state key="normal" title="Confirm"/>
                                 <connections>
                                     <action selector="confirmRefridgeratorButton:" destination="Ztw-iK-lUn" eventType="touchUpInside" id="xQ9-2H-ynZ"/>
+                                    <segue destination="yD9-k1-wzs" kind="unwind" identifier="fridgeChosen" unwindAction="unwindToMyFridge:" id="WRU-EU-YST"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phf-n0-bPq">
+                                <rect key="frame" x="70" y="171" width="460" height="302"/>
+                                <connections>
+                                    <segue destination="4np-1l-UTo" kind="embed" identifier="chooseAFridgeEmbedPVC" id="Bbh-nP-S1t"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="OhN-wk-sc9" firstAttribute="bottom" secondItem="nFN-Gm-HVD" secondAttribute="bottom" id="0ZB-js-xtv"/>
+                            <constraint firstItem="j6p-Qu-yzo" firstAttribute="top" secondItem="phf-n0-bPq" secondAttribute="bottom" constant="8" symbolic="YES" id="0tO-qh-gC0"/>
                             <constraint firstItem="OhN-wk-sc9" firstAttribute="leading" secondItem="Dic-tB-mWp" secondAttribute="leading" id="6tl-O8-ZaY"/>
                             <constraint firstItem="gdb-b9-edV" firstAttribute="leading" secondItem="Dic-tB-mWp" secondAttribute="leadingMargin" constant="50" id="7Sd-2G-US5"/>
+                            <constraint firstItem="phf-n0-bPq" firstAttribute="top" secondItem="gdb-b9-edV" secondAttribute="bottom" constant="8" symbolic="YES" id="7s7-hK-msZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gdb-b9-edV" secondAttribute="trailing" constant="50" id="Ay3-7B-dxt"/>
+                            <constraint firstItem="phf-n0-bPq" firstAttribute="leading" secondItem="gdb-b9-edV" secondAttribute="leading" id="BwR-o2-lbV"/>
+                            <constraint firstItem="phf-n0-bPq" firstAttribute="trailing" secondItem="gdb-b9-edV" secondAttribute="trailing" id="Kx3-UY-oyg"/>
                             <constraint firstItem="OhN-wk-sc9" firstAttribute="centerX" secondItem="gdb-b9-edV" secondAttribute="centerX" id="aXs-D8-vFu"/>
                             <constraint firstItem="gdb-b9-edV" firstAttribute="top" secondItem="nFN-Gm-HVD" secondAttribute="bottom" multiplier="0.35" constant="100" id="bt7-9x-GzS"/>
                             <constraint firstItem="iBz-G3-noY" firstAttribute="top" secondItem="j6p-Qu-yzo" secondAttribute="bottom" constant="40" id="eYV-mp-9Hh"/>
@@ -120,6 +133,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ra-ne-Hnv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="yD9-k1-wzs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2252" y="-868"/>
         </scene>
@@ -1069,7 +1083,7 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
         <!--Page View Controller-->
         <scene sceneID="ORR-cG-4nq">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" modalPresentationStyle="currentContext" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="none" id="4np-1l-UTo" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="ChooseAFridgePageView" autoresizesArchivedViewToFullSize="NO" modalPresentationStyle="overCurrentContext" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="mid" doubleSided="YES" id="4np-1l-UTo" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8k-kh-mep" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2252" y="-2217"/>
@@ -1442,6 +1456,23 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                 <exit id="Q2h-1Q-xXs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2252" y="1338"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zWo-51-sHi">
+            <objects>
+                <viewController id="Lfl-Cr-Jy3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0G5-hI-dsT"/>
+                        <viewControllerLayoutGuide type="bottom" id="gtV-Ez-ztP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SWd-rj-5a6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4pj-yP-aXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

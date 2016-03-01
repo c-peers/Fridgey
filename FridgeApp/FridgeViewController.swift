@@ -16,7 +16,7 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
     var viewControllers: NSArray!
     var fridgeTitles: NSArray!
     var fridgeImages: NSArray!
-    
+    var myFridgeImage: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,15 +39,26 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
         // Dispose of any resources that can be recreated.
     }
     
+    func checkFridgeImage() {
+        if let _ = myFridgeImage {
+            print("It's ok")
+        } else {
+            myFridgeImage = "Blank"
+        }
+        
+    }
+    
     func viewWillAppear() {
         
         if (MyFridge?.numOfDoors != 0) && (MyFridge != nil) {
 
+            checkFridgeImage()
+            
             print("not nil!")
             // self.fridgeTitles = NSArray(objects: "A", "B")
             // self.fridgeImages = NSArray(objects: "1", "2")
             self.fridgeTitles = NSArray(object: (MyFridge?.fridgeName)!)
-            self.fridgeImages = NSArray(objects: "Fridge")
+            self.fridgeImages = NSArray(objects: myFridgeImage)
         
         } else {
             print("Fridge not set, viewWillAppear")
@@ -75,11 +86,13 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
         
         if (MyFridge?.numOfDoors != 0) && (MyFridge != nil) {
 
+            checkFridgeImage()
+
             print("not zero! set page")
             // self.fridgeTitles = NSArray(objects: "A", "B")
             // self.fridgeImages = NSArray(objects: "1", "2")
             self.fridgeTitles = NSArray(object: (MyFridge?.fridgeName)!)
-            self.fridgeImages = NSArray(objects: "Fridge")
+            self.fridgeImages = NSArray(objects: myFridgeImage)
             
         } else {
 
@@ -180,9 +193,12 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
     
     @IBAction func unwindToMyFridge(sender: UIStoryboardSegue) {
         
-        if let sourceViewController = sender.sourceViewController as? ConfirmFridgeViewController {
+        if let sourceViewController = sender.sourceViewController as? ChooseAFridgeViewController {
             
             MyFridge = sourceViewController.myFridge
+            
+            let imageIndex = sourceViewController.imageIndex
+            myFridgeImage = sourceViewController.fridgeImages[imageIndex] as! String
             
             print("Saved Fridge")
             print(MyFridge!.numOfDoors)
@@ -205,7 +221,7 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
                 // self.fridgeTitles = NSArray(objects: "A", "B")
                 // self.fridgeImages = NSArray(objects: "1", "2")
                 self.fridgeTitles = NSArray(object: (MyFridge?.fridgeName)!)
-                self.fridgeImages = NSArray(objects: "1")
+                self.fridgeImages = NSArray(objects: myFridgeImage)
                 
             } else {
                 

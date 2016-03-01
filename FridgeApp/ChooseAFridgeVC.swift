@@ -13,8 +13,11 @@ class ChooseAFridgeViewController: UIViewController, UIPageViewControllerDataSou
     var pageViewController: UIPageViewController!
     var viewControllers: NSArray!
     
-    
+    var myFridge: FridgeInfo!
+    var numOfDoors: Int!
+  
     var fridgeImages: NSArray!
+    var imageIndex: Int!
     
     var fridgeInfo: FridgeInfo?
     
@@ -49,11 +52,11 @@ class ChooseAFridgeViewController: UIViewController, UIPageViewControllerDataSou
         //self.fridgeImages = NSArray(object: fridgeImageList)
         //self.fridgeImages = NSArray(object: "Blank")
         
-        self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("FridgePageView") as! UIPageViewController
+        self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ChooseAFridgePageView") as! UIPageViewController
         
         self.pageViewController.dataSource = self
         
-        let startVC = self.viewControllerAtIndex(0) as FridgePageContentViewController
+        let startVC = self.viewControllerAtIndex(0) as ChooseAFridgePageContentViewController
         viewControllers = NSArray(object: startVC)
         
         self.pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
@@ -72,16 +75,17 @@ class ChooseAFridgeViewController: UIViewController, UIPageViewControllerDataSou
         
     }
     
-    func viewControllerAtIndex(index: Int) -> FridgePageContentViewController {
+    func viewControllerAtIndex(index: Int) -> ChooseAFridgePageContentViewController {
         
         if ((self.fridgeImages.count == 0) || (index >= self.fridgeImages.count)) {
-            return FridgePageContentViewController()
+            return ChooseAFridgePageContentViewController()
         }
         
-        let vc: FridgePageContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("FridgePageContentViewController") as! FridgePageContentViewController
+        let vc: ChooseAFridgePageContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ChooseAFridgePageContentViewController") as! ChooseAFridgePageContentViewController
         
         vc.FridgeImage = self.fridgeImages[index] as! String
         vc.pageIndex = index
+        imageIndex = index
         
         return vc
         
@@ -92,8 +96,8 @@ class ChooseAFridgeViewController: UIViewController, UIPageViewControllerDataSou
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         
-        let vc = viewController as! FridgePageContentViewController
-        var index = vc.pageIndex as Int
+        let vc = viewController as! ChooseAFridgePageContentViewController
+        let index = vc.pageIndex as Int
         let previousIndex = index - 1
         
         guard previousIndex >= 0 else {
@@ -114,12 +118,12 @@ class ChooseAFridgeViewController: UIViewController, UIPageViewControllerDataSou
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
-        let vc = viewController as! FridgePageContentViewController
-        var index = vc.pageIndex as Int
+        let vc = viewController as! ChooseAFridgePageContentViewController
+        let index = vc.pageIndex as Int
         let nextIndex = index + 1
         
         guard self.fridgeImages.count != nextIndex else {
-            return self.viewControllerAtIndex(022)
+            return self.viewControllerAtIndex(0)
         }
         
         guard self.fridgeImages.count > nextIndex else {
@@ -138,20 +142,39 @@ class ChooseAFridgeViewController: UIViewController, UIPageViewControllerDataSou
         
     }
     
-    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        
-        return self.fridgeImages.count
-        
-    }
-    
-    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
-        
-        return 0
-        
-    }
+//    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+//        
+//        return self.fridgeImages.count
+//        
+//    }
+//    
+//    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+//        
+//        return 0
+//        
+//    }
 
     
     @IBAction func confirmRefridgeratorButton(sender: UIButton) {
+        
+        let actionTitle = "Do you have the selected refridgerator?"
+
+        let alertController = UIAlertController(title: "Fridge Confirmation", message: actionTitle, preferredStyle: .Alert)
+        alertController.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.Cancel,handler: {(alert: UIAlertAction!) in print("No");
+            return
+        }))
+        alertController.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in print("Confirm");
+            
+            self.performSegueWithIdentifier("fridgeChosen", sender: nil)
+            
+        }))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
+        
+    }
+    
+    
         
         //fridgeInfo = FridgeInfo()
         //print(refridgeratorCompartments.text!)
@@ -160,24 +183,47 @@ class ChooseAFridgeViewController: UIViewController, UIPageViewControllerDataSou
         //print(fridgeInfo!.numOfDoors)
         
         //performSegueWithIdentifier("confirmFridgeSegue", sender: refridgeratorCompartments.text)
+
     
-    }
-    
+    // MARK: Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "confirmFridgeSegue") {
-            let nextVC:ConfirmFridgeViewController = segue.destinationViewController as! ConfirmFridgeViewController
-            
-//            nextVC.numOfDoors = fridgeInfo!.numOfDoors
-            
-              //nextVC.numOfDoors = Int(refridgeratorCompartments.text!)
-            
-//            let data = sender as! FridgeInfo
-//            print(data)
-//            nextVC.confirmFridgeInfo = data
-//            print(nextVC.confirmFridgeInfo)
+        
+        if segue.identifier != "chooseAFridgeEmbedPVC" {
+        
+        // Default fridge name
+        let fridgeName = "My Fridge"
+        
+        // The number of doors is already defined so skip that.
+        
+        // Initialize an array for the door names. And then add default names.
+        var doorNames: [String] = []
+        
+        for x in 1...numOfDoors {
+            print("doors")
+            let tempName = "Area " + x.description + " Door"
+            doorNames.append(tempName)
+        }
+        
+        myFridge = FridgeInfo(fridgeName: fridgeName, numOfDoors: numOfDoors, doorNames: doorNames)!
+        
+        let fridgeImage = fridgeImages[imageIndex]
+
         }
     }
-
-
     
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if (segue.identifier == "confirmFridgeSegue") {
+//            let nextVC:ConfirmFridgeViewController = segue.destinationViewController as! ConfirmFridgeViewController
+//            
+////            nextVC.numOfDoors = fridgeInfo!.numOfDoors
+//            
+//              //nextVC.numOfDoors = Int(refridgeratorCompartments.text!)
+//            
+////            let data = sender as! FridgeInfo
+////            print(data)
+////            nextVC.confirmFridgeInfo = data
+////            print(nextVC.confirmFridgeInfo)
+//        }
+//    }
+
 }
