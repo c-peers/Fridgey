@@ -46,8 +46,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1cA-46-YcI">
-                                <rect key="frame" x="180" y="150" width="240" height="300"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1cA-46-YcI">
+                                <rect key="frame" x="20" y="20" width="560" height="560"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="f2c-FQ-1wc"/>
                                 </constraints>
@@ -62,7 +62,8 @@
                         <constraints>
                             <constraint firstItem="1cA-46-YcI" firstAttribute="centerX" secondItem="55Z-w7-AHw" secondAttribute="centerX" id="AoG-r8-VgK"/>
                             <constraint firstItem="1cA-46-YcI" firstAttribute="centerY" secondItem="55Z-w7-AHw" secondAttribute="centerY" id="Wpj-uM-x5g"/>
-                            <constraint firstItem="1cA-46-YcI" firstAttribute="top" secondItem="vCQ-YC-ywO" secondAttribute="bottom" constant="130" id="w5F-7y-deO"/>
+                            <constraint firstItem="1cA-46-YcI" firstAttribute="top" secondItem="vCQ-YC-ywO" secondAttribute="bottom" id="w5F-7y-deO"/>
+                            <constraint firstItem="1cA-46-YcI" firstAttribute="leading" secondItem="55Z-w7-AHw" secondAttribute="leadingMargin" id="xXD-6h-2JP"/>
                         </constraints>
                     </view>
                     <connections>
@@ -105,11 +106,10 @@
                                 <state key="normal" title="Confirm"/>
                                 <connections>
                                     <action selector="confirmRefridgeratorButton:" destination="Ztw-iK-lUn" eventType="touchUpInside" id="xQ9-2H-ynZ"/>
-                                    <segue destination="yD9-k1-wzs" kind="unwind" identifier="fridgeChosen" unwindAction="unwindToMyFridge:" id="WRU-EU-YST"/>
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phf-n0-bPq">
-                                <rect key="frame" x="70" y="171" width="460" height="302"/>
+                                <rect key="frame" x="0.0" y="171" width="600" height="302"/>
                                 <connections>
                                     <segue destination="4np-1l-UTo" kind="embed" identifier="chooseAFridgeEmbedPVC" id="Bbh-nP-S1t"/>
                                 </connections>
@@ -123,14 +123,17 @@
                             <constraint firstItem="gdb-b9-edV" firstAttribute="leading" secondItem="Dic-tB-mWp" secondAttribute="leadingMargin" constant="50" id="7Sd-2G-US5"/>
                             <constraint firstItem="phf-n0-bPq" firstAttribute="top" secondItem="gdb-b9-edV" secondAttribute="bottom" constant="8" symbolic="YES" id="7s7-hK-msZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gdb-b9-edV" secondAttribute="trailing" constant="50" id="Ay3-7B-dxt"/>
-                            <constraint firstItem="phf-n0-bPq" firstAttribute="leading" secondItem="gdb-b9-edV" secondAttribute="leading" id="BwR-o2-lbV"/>
-                            <constraint firstItem="phf-n0-bPq" firstAttribute="trailing" secondItem="gdb-b9-edV" secondAttribute="trailing" id="Kx3-UY-oyg"/>
+                            <constraint firstItem="phf-n0-bPq" firstAttribute="leading" secondItem="OhN-wk-sc9" secondAttribute="leading" id="ZW9-dP-uu2"/>
                             <constraint firstItem="OhN-wk-sc9" firstAttribute="centerX" secondItem="gdb-b9-edV" secondAttribute="centerX" id="aXs-D8-vFu"/>
                             <constraint firstItem="gdb-b9-edV" firstAttribute="top" secondItem="nFN-Gm-HVD" secondAttribute="bottom" multiplier="0.35" constant="100" id="bt7-9x-GzS"/>
                             <constraint firstItem="iBz-G3-noY" firstAttribute="top" secondItem="j6p-Qu-yzo" secondAttribute="bottom" constant="40" id="eYV-mp-9Hh"/>
+                            <constraint firstItem="phf-n0-bPq" firstAttribute="trailing" secondItem="OhN-wk-sc9" secondAttribute="trailing" id="pkj-fh-PFm"/>
                             <constraint firstItem="j6p-Qu-yzo" firstAttribute="centerX" secondItem="gdb-b9-edV" secondAttribute="centerX" id="snO-5M-gze"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="yD9-k1-wzs" kind="unwind" identifier="fridgeChosen" unwindAction="unwindToMyFridge:" id="iWa-eo-GSF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ra-ne-Hnv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="yD9-k1-wzs" userLabel="Exit" sceneMemberID="exit"/>
@@ -1080,10 +1083,10 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
             </objects>
             <point key="canvasLocation" x="1508" y="-2217"/>
         </scene>
-        <!--Page View Controller-->
+        <!--ChooseA Fridge Page View Controller-->
         <scene sceneID="ORR-cG-4nq">
             <objects>
-                <pageViewController storyboardIdentifier="ChooseAFridgePageView" autoresizesArchivedViewToFullSize="NO" modalPresentationStyle="overCurrentContext" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="mid" doubleSided="YES" id="4np-1l-UTo" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="ChooseAFridgePageView" autoresizesArchivedViewToFullSize="NO" modalPresentationStyle="overCurrentContext" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="mid" doubleSided="YES" id="4np-1l-UTo" customClass="ChooseAFridgePageViewController" customModule="FridgeApp" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8k-kh-mep" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2252" y="-2217"/>
