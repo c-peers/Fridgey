@@ -14,8 +14,8 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
     
     var pageViewController: UIPageViewController!
     var viewControllers: NSArray!
-    var fridgeTitles: NSArray!
-    var fridgeImages: NSArray!
+    var fridgeTitles: [String]!
+    var fridgeImages: [String]!
     var myFridgeImage: String!
     
     override func viewDidLoad() {
@@ -30,6 +30,7 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
         
         MyFridge = PersistManager.sharedManager.MyFridge
         
+        setFridgeInfo()
         setPageViewController()
 
     }
@@ -40,38 +41,53 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
     }
     
     func checkFridgeImage() {
-        if let _ = myFridgeImage {
+        if let _ = MyFridge?.fridgeImage {
             print("It's ok")
+            myFridgeImage = MyFridge!.fridgeImage
         } else {
             myFridgeImage = "Blank"
         }
         
     }
     
-    func viewWillAppear() {
+    func setFridgeInfo() {
         
         if (MyFridge?.numOfDoors != 0) && (MyFridge != nil) {
-
+            
             checkFridgeImage()
             
             print("not nil!")
             // self.fridgeTitles = NSArray(objects: "A", "B")
             // self.fridgeImages = NSArray(objects: "1", "2")
-            self.fridgeTitles = NSArray(object: (MyFridge?.fridgeName)!)
-            self.fridgeImages = NSArray(objects: myFridgeImage)
-        
+            self.fridgeTitles = [MyFridge!.fridgeName]
+            self.fridgeImages = [myFridgeImage]
+            
+            //self.fridgeTitles.append(MyFridge!.fridgeName)
+            //self.fridgeImages.append(myFridgeImage)
+            
+            print("fridge title")
+            print(self.fridgeTitles)
+            
         } else {
             print("Fridge not set, viewWillAppear")
-            self.fridgeTitles = NSArray(object: "Add a Fridge")
-            self.fridgeImages = NSArray(object: "Blank")
+            self.fridgeTitles.append("Add a Fridge")
+            self.fridgeImages.append("Blank")
             
         }
+        
+    }
+    
+    func viewWillAppear() {
+        
+        setFridgeInfo()
 
         if let pageViewController = parentViewController as? UIPageViewController {
             pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
         }
         
         pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
+        
+        setPageViewController()
         
     }
 
@@ -83,24 +99,6 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
     // MARK: PageView
     
     func setPageViewController() {
-        
-        if (MyFridge?.numOfDoors != 0) && (MyFridge != nil) {
-
-            checkFridgeImage()
-
-            print("not zero! set page")
-            // self.fridgeTitles = NSArray(objects: "A", "B")
-            // self.fridgeImages = NSArray(objects: "1", "2")
-            self.fridgeTitles = NSArray(object: (MyFridge?.fridgeName)!)
-            self.fridgeImages = NSArray(objects: myFridgeImage)
-            
-        } else {
-
-            print("zero! set page")
-            self.fridgeTitles = NSArray(object: "Add a Fridge")
-            self.fridgeImages = NSArray(object: "Blank")
-            
-        }
         
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("FridgePageView") as! UIPageViewController
         
@@ -133,9 +131,14 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
         
         let vc: FridgePageContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("FridgePageContentViewController") as! FridgePageContentViewController
         
-        vc.FridgeImage = self.fridgeImages[index] as! String
-        vc.fridgeIndex = self.fridgeTitles[index] as! String
+        vc.fridgeImage = self.fridgeImages[index]
+        vc.fridgeIndex = self.fridgeTitles[index] 
         vc.pageIndex = index
+        
+        print("fridge title")
+        print(self.fridgeTitles)
+        print(vc.fridgeIndex)
+
         
         return vc
         
@@ -198,16 +201,13 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
             MyFridge = sourceViewController.myFridge
             
             let imageIndex = sourceViewController.imageIndex
-            myFridgeImage = sourceViewController.fridgeImages[imageIndex] as! String
+            myFridgeImage = sourceViewController.selectedFridge
             
             print("Saved Fridge")
             print(MyFridge!.numOfDoors)
             print(MyFridge!.doorNames)
             print(MyFridge!.fridgeName)
-            
-            // Save ingredients
-            //PersistManager.sharedManager.saveFridge()
-            //PersistManager.sharedManager.encode()
+            print(MyFridge!.fridgeImage)
             
             PersistManager.sharedManager.MyFridge = MyFridge!
             
@@ -216,35 +216,31 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
             let saveSingleton = PersistenceHandler()
             saveSingleton.save()
             
-            if (MyFridge?.numOfDoors != 0) && (MyFridge != nil) {
-                
-                // self.fridgeTitles = NSArray(objects: "A", "B")
-                // self.fridgeImages = NSArray(objects: "1", "2")
-                self.fridgeTitles = NSArray(object: (MyFridge?.fridgeName)!)
-                self.fridgeImages = NSArray(objects: myFridgeImage)
-                
-            } else {
-                
-                self.fridgeTitles = NSArray(object: "Add a Fridge")
-                self.fridgeImages = NSArray(object: "Blank")
-                
-            }
+            setFridgeInfo()
             
-            //if let pageViewController = parentViewController as? UIPageViewController {
-            //    pageViewController.setViewControllers(viewControllers as! [UIViewController], direction: .Forward, animated: true, completion: nil)
-            //}
+//            if (MyFridge?.numOfDoors != 0) && (MyFridge != nil) {
+//                
+//                // self.fridgeTitles = NSArray(objects: "A", "B")
+//                // self.fridgeImages = NSArray(objects: "1", "2")
+//                //self.fridgeTitles.append(MyFridge!.fridgeName)
+//                //self.fridgeImages.append(myFridgeImage)
+//                self.fridgeTitles = [MyFridge!.fridgeName]
+//                self.fridgeImages = [myFridgeImage]
+//                
+//                print(MyFridge!.fridgeName)
+//                
+//            } else {
+//                
+//                self.fridgeTitles.append("Add a Fridge")
+//                self.fridgeImages.append("Blank")
+//                
+//            }
             
-            //self.pageViewController.setViewControllers(viewControllers as! [UIViewController], direction: .Forward, animated: true, completion: nil)
-
             setPageViewController()
-            
-            //loadView()
-            
-            
+        
         }
         
     }
-    
     
 }
 

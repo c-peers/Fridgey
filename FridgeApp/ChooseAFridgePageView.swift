@@ -59,9 +59,25 @@ class ChooseAFridgePageViewController: UIPageViewController, UIPageViewControlle
         
         vc.FridgeImage = self.fridgeImages[index] as! String
         vc.pageIndex = index
-        imageIndex = index
+        //imageIndex = index
         
         return vc
+        
+    }
+    
+    func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        
+        let pageContentViewController = pageViewController.viewControllers![0] as! ChooseAFridgePageContentViewController
+        imageIndex = pageContentViewController.pageIndex
+        
+        //let fridgeVC = self.storyboard?.instantiateViewControllerWithIdentifier("ChooseAFridge") as! ChooseAFridgeViewController
+        
+        //fridgeVC.imageIndex = imageIndex
+        
+        print("index")
+        print(imageIndex)
+        
+       PersistManager.sharedManager.fridgeChooser.imageIndex = imageIndex
         
     }
     

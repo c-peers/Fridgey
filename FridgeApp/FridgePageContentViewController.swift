@@ -17,14 +17,13 @@ class FridgePageContentViewController: UIViewController {
     
     var pageIndex: Int!
     var fridgeIndex: String!
-    var FridgeImage: String!
+    var fridgeImage: String!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        self.fridgeImageView.image = UIImage(named: self.FridgeImage)
+        self.fridgeImageView.image = UIImage(named: self.fridgeImage)
         self.fridgeTitle.text = self.fridgeIndex
         
     }

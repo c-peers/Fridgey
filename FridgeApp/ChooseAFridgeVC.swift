@@ -13,15 +13,17 @@ class ChooseAFridgeViewController: UIViewController {
     var pageViewController: UIPageViewController!
     var viewControllers: NSArray!
     
-    var myFridge: FridgeInfo!
-    var numOfDoors: Int!
-  
-    var fridgeImages: NSArray!
-    var imageIndex: Int!
+    var myFridge: FridgeInfo?
+    var fridgeInfo: FridgeInfo!
+    //let fridgeChooser: FridgeChooser!
     
-    var fridgeInfo: FridgeInfo?
+    var fridgeImages: NSArray!
+    var imageIndex: Int = 0
+    var selectedFridge: String!
     
     let fridgeImageList = ["2_door_mini", "2_door", "3_door", "4_door", "4_door-2", "5_door", "6_door", "6_door-2", "french_door", "side_by_side"]
+    let fridgeDict = ["2_door_mini": 2, "2_door": 2, "3_door": 3, "4_door": 4, "4_door-2": 4, "5_door": 5, "6_door": 6 , "6_door-2": 6, "french_door": 2, "side_by_side": 2]
+    
     
     //@IBOutlet weak var refridgeratorCompartments: UILabel!
     //@IBOutlet weak var stepper: UIStepper!
@@ -95,7 +97,11 @@ class ChooseAFridgeViewController: UIViewController {
         let fridgeName = "My Fridge"
         
         // The number of doors is already defined so skip that.
-        
+        let imageIndex = PersistManager.sharedManager.fridgeChooser.imageIndex
+            
+        selectedFridge = fridgeImageList[imageIndex]
+        let numOfDoors = fridgeDict[selectedFridge]!
+            
         // Initialize an array for the door names. And then add default names.
         var doorNames: [String] = []
         
@@ -105,9 +111,9 @@ class ChooseAFridgeViewController: UIViewController {
             doorNames.append(tempName)
         }
         
-        myFridge = FridgeInfo(fridgeName: fridgeName, numOfDoors: numOfDoors, doorNames: doorNames)!
-        
-        let fridgeImage = fridgeImages[imageIndex]
+            myFridge = FridgeInfo(fridgeName: fridgeName, numOfDoors: numOfDoors, doorNames: doorNames, fridgeImage: selectedFridge)!
+            
+        //let fridgeImage = fridgeImages[imageIndex]
 
         }
     }

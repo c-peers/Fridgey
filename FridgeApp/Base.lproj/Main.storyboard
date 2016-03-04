@@ -77,7 +77,7 @@
         <!--Choose Your Fridge-->
         <scene sceneID="0kF-P2-KCX">
             <objects>
-                <viewController title="Choose Your Fridge" id="Ztw-iK-lUn" customClass="ChooseAFridgeViewController" customModule="FridgeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChooseAFridge" title="Choose Your Fridge" id="Ztw-iK-lUn" customClass="ChooseAFridgeViewController" customModule="FridgeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nFN-Gm-HVD"/>
                         <viewControllerLayoutGuide type="bottom" id="iBz-G3-noY"/>
@@ -1104,7 +1104,7 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b4r-Qo-7Rh">
-                                <rect key="frame" x="180" y="155" width="240" height="290"/>
+                                <rect key="frame" x="70" y="169" width="460" height="331"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wa-hf-qUI">
                                 <rect key="frame" x="180" y="108" width="240" height="21"/>
@@ -1118,12 +1118,12 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="b4r-Qo-7Rh" firstAttribute="top" secondItem="5Wa-hf-qUI" secondAttribute="bottom" constant="26" id="7TI-zS-1nO"/>
-                            <constraint firstItem="5Wa-hf-qUI" firstAttribute="trailing" secondItem="b4r-Qo-7Rh" secondAttribute="trailing" id="CP9-kV-Kqq"/>
-                            <constraint firstItem="b4r-Qo-7Rh" firstAttribute="centerY" secondItem="cHZ-QL-9Z2" secondAttribute="centerY" id="Gi1-73-WMq"/>
+                            <constraint firstItem="b4r-Qo-7Rh" firstAttribute="leading" secondItem="cHZ-QL-9Z2" secondAttribute="leadingMargin" constant="50" id="2bk-Xu-NyV"/>
+                            <constraint firstItem="b4r-Qo-7Rh" firstAttribute="top" secondItem="5Wa-hf-qUI" secondAttribute="bottom" constant="40" id="7TI-zS-1nO"/>
                             <constraint firstItem="5Wa-hf-qUI" firstAttribute="top" secondItem="EBk-cF-mek" secondAttribute="bottom" constant="88" id="P9J-oz-aga"/>
                             <constraint firstItem="5Wa-hf-qUI" firstAttribute="centerX" secondItem="cHZ-QL-9Z2" secondAttribute="centerX" id="TAq-dr-euL"/>
-                            <constraint firstItem="b4r-Qo-7Rh" firstAttribute="leading" secondItem="5Wa-hf-qUI" secondAttribute="leading" id="fpQ-Hg-zr0"/>
+                            <constraint firstItem="brw-rv-NKf" firstAttribute="top" secondItem="b4r-Qo-7Rh" secondAttribute="bottom" constant="100" id="f5T-yG-2kg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b4r-Qo-7Rh" secondAttribute="trailing" constant="50" id="hUf-L9-cfp"/>
                         </constraints>
                     </view>
                     <connections>

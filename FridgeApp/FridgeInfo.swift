@@ -14,6 +14,7 @@ class FridgeInfo : NSObject, NSCoding {
     var fridgeName: String
     var numOfDoors: Int
     var doorNames: Array<String>
+    var fridgeImage: String
     
 
     struct PropertyKey {
@@ -21,6 +22,7 @@ class FridgeInfo : NSObject, NSCoding {
         static let fridgeNameKey = "fridgeName"
         static let numKey = "numOfDoors"
         static let doorNameKey = "doorNames"
+        static let fridgeImageKey = "fridgeImage"
         
     }
     
@@ -28,13 +30,15 @@ class FridgeInfo : NSObject, NSCoding {
         self.fridgeName = "Add a Fridge"
         self.numOfDoors = 0
         self.doorNames = ["Blank"]
+        self.fridgeImage = "Blank"
     }
     
-    init?(fridgeName: String, numOfDoors: Int, doorNames: Array<String>) {
+    init?(fridgeName: String, numOfDoors: Int, doorNames: Array<String>, fridgeImage: String) {
 
         self.fridgeName = fridgeName
         self.numOfDoors = numOfDoors
         self.doorNames = doorNames
+        self.fridgeImage = fridgeImage
         
         super.init()
         
@@ -46,6 +50,7 @@ class FridgeInfo : NSObject, NSCoding {
         aCoder.encodeObject(fridgeName, forKey: PropertyKey.fridgeNameKey)
         aCoder.encodeObject(numOfDoors, forKey: PropertyKey.numKey)
         aCoder.encodeObject(doorNames, forKey: PropertyKey.doorNameKey)
+        aCoder.encodeObject(fridgeImage, forKey: PropertyKey.fridgeImageKey)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -54,9 +59,11 @@ class FridgeInfo : NSObject, NSCoding {
         let numOfDoors = aDecoder.decodeObjectForKey(PropertyKey.numKey) as! Int
         
         let doorNames = aDecoder.decodeObjectForKey(PropertyKey.doorNameKey) as! Array<String>
+
+        let fridgeImage = aDecoder.decodeObjectForKey(PropertyKey.fridgeImageKey) as! String
         
         // Must call designated initializer.
-        self.init(fridgeName: fridgeName, numOfDoors: numOfDoors, doorNames: doorNames)
+        self.init(fridgeName: fridgeName, numOfDoors: numOfDoors, doorNames: doorNames, fridgeImage: fridgeImage)
         
     }
     

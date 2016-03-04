@@ -38,7 +38,7 @@ class PersistenceHandler {
                 } else {
                     
                     // No fridge, set defaults... for now.
-                    PersistManager.sharedManager.MyFridge = FridgeInfo(fridgeName: "Fridge", numOfDoors: 2, doorNames: ["1", "2"])!
+                    PersistManager.sharedManager.MyFridge = FridgeInfo(fridgeName: "Fridge", numOfDoors: 2, doorNames: ["1", "2"], fridgeImage: "Add A Fridge")!
                     return false
             }
 

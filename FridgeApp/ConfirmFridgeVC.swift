@@ -99,7 +99,7 @@ class ConfirmFridgeViewController: UIViewController {
                 doorNames.append(tempName)
             }
             
-            myFridge = FridgeInfo(fridgeName: fridgeName, numOfDoors: numOfDoors, doorNames: doorNames)!
+            //myFridge = FridgeInfo(fridgeName: fridgeName, numOfDoors: numOfDoors, doorNames: doorNames)!
             
 
         }

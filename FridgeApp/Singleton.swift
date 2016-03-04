@@ -14,6 +14,7 @@ class PersistManager: NSObject {
     var MyFridge = FridgeInfo()
     var Ingredients = [[Ingredient]]()
     var ShoppingLists = Lists()
+    var fridgeChooser = FridgeChooser()
     var Test = "Test"
     
     // Here is how you would get to it without there being a global collision of variables.
