@@ -677,7 +677,7 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
             }
             
             let controller = self.storyboard?.instantiateViewControllerWithIdentifier("AddToListFromIngredientTab") as! AddToListFromIngredientDetailsViewController
-            //controller.previousVC = "FoodsListTableViewController"
+            controller.previousVC = "ExpireTableView"
             //controller.selectedIngredient = ingredient.name
             controller.selectedIngredients = selectedIngredients
             controller.modalTransitionStyle = .CrossDissolve
@@ -872,7 +872,30 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         }
     }
     
-    
-    
+    @IBAction func unwindToExpiryList(sender: UIStoryboardSegue) {
+        
+        if let addToListFromIngredientDetailsViewController = sender.sourceViewController as? AddToListFromIngredientDetailsViewController {
+            
+            self.expiryTableView.setEditing(false, animated: true)
+            self.updateButtonsToMatchTableState()
+            self.tabBarController!.tabBar.hidden = false
+            
+            let selectedList = addToListFromIngredientDetailsViewController.selectedList
+            
+            print("unwind ingredient added")
+            print(selectedList)
+            
+            //self.listAddedText.text = selectedIngredient + " added to " + selectedList
+            //print(listAddedText.text)
+            
+           // self.listAddedView.hidden = false
+            
+            //dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1.5 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) { () -> Void in
+            //    self.fadeInOut()
+            //}
+        
+        }
+
+    }
     
 }

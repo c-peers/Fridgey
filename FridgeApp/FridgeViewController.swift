@@ -8,7 +8,9 @@
 
 import UIKit
 
-class FridgeViewController: UIViewController, UIPageViewControllerDataSource, TabBarDelegate {
+class FridgeViewController: UIViewController, UIPageViewControllerDataSource {
+
+    @IBOutlet weak var addEditFridge: UIBarButtonItem!
 
     var MyFridge: FridgeInfo?
     
@@ -26,9 +28,13 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
         loadSingleton.load("Ingredients")
         loadSingleton.load("Lists")
         
-        print(PersistManager.sharedManager.MyFridge.doorNames)
-        
         MyFridge = PersistManager.sharedManager.MyFridge
+        
+        if let _ = MyFridge?.fridgeName {
+            addEditFridge.title = "Change Fridge"
+            print("Plus title")
+            print(addEditFridge.title)
+        }
         
         setFridgeInfo()
         setPageViewController()
@@ -77,24 +83,22 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
         
     }
     
-    func viewWillAppear() {
-        
-        setFridgeInfo()
+//    func viewWillAppear() {
+//        
+//        print("check")
+//        
+//        setFridgeInfo()
+//
+//        if let pageViewController = parentViewController as? UIPageViewController {
+//            pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
+//        }
+//        
+//        pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
+//        
+//        setPageViewController()
+//        
+//    }
 
-        if let pageViewController = parentViewController as? UIPageViewController {
-            pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
-        }
-        
-        pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .Forward, animated: true, completion: nil)
-        
-        setPageViewController()
-        
-    }
-
-    func didSelectTab(tabBarController: FridgeTabBarController) {
-        print("first!")
-    }
-    
     
     // MARK: PageView
     
@@ -135,10 +139,11 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource, Ta
         vc.fridgeIndex = self.fridgeTitles[index] 
         vc.pageIndex = index
         
+        self.navigationItem.title = fridgeTitles[index]
+        
         print("fridge title")
         print(self.fridgeTitles)
         print(vc.fridgeIndex)
-
         
         return vc
         

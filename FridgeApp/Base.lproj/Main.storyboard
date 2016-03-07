@@ -23,12 +23,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="IiH-jU-TFz">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="m7D-iP-NHG">
+                        <barButtonItem key="rightBarButtonItem" title="Add Fridge" id="m7D-iP-NHG">
                             <connections>
                                 <segue destination="Ztw-iK-lUn" kind="show" id="OQo-Re-V29"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addEditFridge" destination="m7D-iP-NHG" id="qag-Gs-8hG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -504,6 +507,7 @@
                         <outlet property="newListText" destination="GCV-ax-Wvg" id="etU-W1-yTk"/>
                         <segue destination="UOh-jl-qdZ" kind="unwind" identifier="addToListSelected" unwindAction="unwindToNewIngredient:" id="y9i-8h-hHB"/>
                         <segue destination="UOh-jl-qdZ" kind="unwind" identifier="addToFullList" unwindAction="unwindToIngredientList:" id="KaE-ME-nRU"/>
+                        <segue destination="UOh-jl-qdZ" kind="unwind" identifier="addToListExpiry" unwindAction="unwindToExpiryList:" id="nWO-uc-QjP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="axM-YX-b5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1486,8 +1490,8 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
         <image name="Unselected" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Nig-TY-LJm"/>
-        <segue reference="xUh-LB-vRU"/>
         <segue reference="EUW-uB-UZa"/>
+        <segue reference="Nig-TY-LJm"/>
+        <segue reference="pQA-vO-Nhw"/>
     </inferredMetricsTieBreakers>
 </document>

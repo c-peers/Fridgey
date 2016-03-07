@@ -80,6 +80,23 @@ class ListDetailAddExistingIngredient: UIViewController, UITableViewDataSource, 
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        // Check for sections without anything in them
+        if section >= self.existingIngredients.count {
+            
+            let existingRows = self.existingIngredients.count
+            print(existingRows)
+            
+            // If the section doesn't exist in the array, create it
+            while section > self.existingIngredients.count - 1 {
+                
+                print("Section doesn't exist")
+                self.existingIngredients.append([])
+
+            }
+            
+        }
+
+        
         if self.existingIngredients[section].count != 0 {
             return self.existingIngredients[section].count
         } else {

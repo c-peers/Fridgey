@@ -26,6 +26,9 @@ class FridgePageContentViewController: UIViewController {
         self.fridgeImageView.image = UIImage(named: self.fridgeImage)
         self.fridgeTitle.text = self.fridgeIndex
         
+        print("Fridge title text")
+        print(self.fridgeTitle!.text)
+        
     }
     
     override func didReceiveMemoryWarning() {

@@ -171,7 +171,12 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         selectedList = list[indexPath.row]
         let selectedListCount = mainList.lists[selectedList]?.count
         print(mainList.lists[selectedList])
-        mainList.lists[selectedList]!.append(selectedIngredient)
+        
+        if selectedIngredient.isEmpty == false {
+            mainList.lists[selectedList]!.append(selectedIngredient)
+        } else {
+            mainList.lists[selectedList]! += selectedIngredients
+        }
         
         print(mainList.lists[selectedList])
         
@@ -191,6 +196,11 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
             self.performSegueWithIdentifier("addToFullList", sender: self)
             //let preVC = self.storyboard?.instantiateViewControllerWithIdentifier(previousVC) as! FoodsListTableViewController
             //self.unwindForSegue(unwindToIngredientList, towardsViewController: preVC)
+            
+        } else if previousVC == "ExpireTableView" {
+            
+            print("manual unwind to new/edit ingredient")
+            self.performSegueWithIdentifier("addToListExpiry", sender: self)
             
         } else {
             

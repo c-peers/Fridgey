@@ -708,7 +708,11 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             print("unwind ingredient added")
             print(selectedList)
             
-            self.listAddedText.text = selectedIngredient + " added to " + selectedList
+            if selectedIngredient.isEmpty != true {
+                self.listAddedText.text = selectedIngredient + " added to " + selectedList
+            } else {
+                self.listAddedText.text = "Ingredients added to " + selectedList
+            }
             print(listAddedText.text)
             
             self.listAddedView.hidden = false
@@ -838,6 +842,8 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
             selectedIngredients.append(self.ingredients[index.section].removeAtIndex(index.row).name)
         }
         
+        print("selcted ingredients")
+        print(selectedIngredients)
         showAddListView(selectedIngredients)
         
         
