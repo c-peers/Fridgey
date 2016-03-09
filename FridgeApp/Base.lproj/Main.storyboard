@@ -513,7 +513,86 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="axM-YX-b5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="UOh-jl-qdZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2588" y="-48"/>
+            <point key="canvasLocation" x="2613" y="-48"/>
+        </scene>
+        <!--Finished Shopping View Controller-->
+        <scene sceneID="U4h-Bc-VvG">
+            <objects>
+                <viewController storyboardIdentifier="FinishedShoppingViewController" id="wbC-Wr-j3w" customClass="FinishedShoppingViewController" customModule="FridgeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Wh-DA-4wE"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Hb-Uy-Aga"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZiK-eR-OAt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6QW-6a-92u">
+                                <rect key="frame" x="80" y="120" width="440" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tz7-Yw-vtk">
+                                        <rect key="frame" x="308" y="130" width="32" height="30"/>
+                                        <state key="normal" title="Next"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="plV-af-olN">
+                                        <rect key="frame" x="100" y="120" width="103" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="G0M-Nd-fOI"/>
+                                        </constraints>
+                                        <state key="normal" title="Add Remaining to selected"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tid-mc-1Mf">
+                                        <rect key="frame" x="7" y="8" width="48" height="30"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancel:" destination="wbC-Wr-j3w" eventType="touchUpInside" id="gIh-WL-nd7"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmB-FI-MaH">
+                                        <rect key="frame" x="120" y="8" width="200" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="w9c-Hq-fks"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRp-y3-nXr">
+                                        <rect key="frame" x="120" y="65" width="200" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="EID-Y9-DVc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Tid-mc-1Mf" firstAttribute="leading" secondItem="6QW-6a-92u" secondAttribute="leading" constant="7" id="3zJ-es-PWs"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tz7-Yw-vtk" secondAttribute="trailing" constant="100" id="9pd-XN-NCm"/>
+                                    <constraint firstAttribute="bottom" secondItem="plV-af-olN" secondAttribute="bottom" constant="30" id="HKH-x9-qs1"/>
+                                    <constraint firstItem="lmB-FI-MaH" firstAttribute="top" secondItem="Tid-mc-1Mf" secondAttribute="top" id="Kb5-UR-mQg"/>
+                                    <constraint firstItem="Tid-mc-1Mf" firstAttribute="top" secondItem="6QW-6a-92u" secondAttribute="topMargin" id="LSc-c1-2Hd"/>
+                                    <constraint firstItem="plV-af-olN" firstAttribute="leading" secondItem="6QW-6a-92u" secondAttribute="leading" constant="100" id="XR9-pR-kCl"/>
+                                    <constraint firstItem="plV-af-olN" firstAttribute="top" secondItem="dRp-y3-nXr" secondAttribute="bottom" constant="25" id="lVi-QN-26t"/>
+                                    <constraint firstItem="dRp-y3-nXr" firstAttribute="centerX" secondItem="lmB-FI-MaH" secondAttribute="centerX" id="mRK-O6-caR"/>
+                                    <constraint firstAttribute="height" constant="200" id="r0H-gz-nYV"/>
+                                    <constraint firstItem="lmB-FI-MaH" firstAttribute="centerX" secondItem="6QW-6a-92u" secondAttribute="centerX" id="sfd-Pb-WdK"/>
+                                    <constraint firstAttribute="bottom" secondItem="Tz7-Yw-vtk" secondAttribute="bottom" constant="40" id="zNB-lu-PlP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="6QW-6a-92u" secondAttribute="trailing" constant="60" id="14C-xv-mA3"/>
+                            <constraint firstItem="6QW-6a-92u" firstAttribute="leading" secondItem="ZiK-eR-OAt" secondAttribute="leadingMargin" constant="60" id="BBt-Hd-b7h"/>
+                            <constraint firstItem="6QW-6a-92u" firstAttribute="top" secondItem="6Wh-DA-4wE" secondAttribute="bottom" constant="100" id="Rbu-1F-N06"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fmD-Gv-NI2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1572" y="644"/>
         </scene>
         <!--Ingredients-->
         <scene sceneID="F4g-Y0-IEK">
@@ -707,7 +786,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zsa-fc-2y0">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="CNd-bA-eNs">
+                                    <navigationItem title="Shopping Lists" id="CNd-bA-eNs">
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="y3C-MG-xtA">
                                             <connections>
                                                 <segue destination="DP0-yO-Zwj" kind="show" identifier="AddList" id="vI4-Gk-9fo"/>
@@ -850,6 +929,7 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                     <tabBarItem key="tabBarItem" title="Shopping List" image="Cart" id="gcL-sK-XS4"/>
                     <connections>
                         <outlet property="collectionView" destination="ZpV-9a-zyZ" id="yjy-aC-1RU"/>
+                        <outlet property="listCollectionTitle" destination="CNd-bA-eNs" id="OIY-cO-TQg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hlu-Zd-DhP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1139,33 +1219,6 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
             </objects>
             <point key="canvasLocation" x="1508" y="-1537"/>
         </scene>
-        <!--List Details Add New Ingredient-->
-        <scene sceneID="s8h-ss-zN7">
-            <objects>
-                <viewController id="oY1-lP-qmn" customClass="ListDetailsAddNewIngredient" customModule="FridgeApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3hL-s9-8bR"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ws5-M7-kU8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5Dk-U1-LY9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rol-da-rOl">
-                                <rect key="frame" x="20" y="20" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="cancel:" destination="oY1-lP-qmn" eventType="touchUpInside" id="lrj-Vh-O6G"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MAN-3Z-DYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1572" y="644"/>
-        </scene>
         <!--List Details View Controller-->
         <scene sceneID="pCu-e3-ye1">
             <objects>
@@ -1335,6 +1388,7 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                         <outlet property="addNewButton" destination="mf0-UT-33Z" id="3wr-tP-4fw"/>
                         <outlet property="finishedShopping" destination="X6M-ur-RS1" id="P40-eO-KQd"/>
                         <outlet property="listTableView" destination="LGb-VX-kDl" id="Vt0-De-F9Y"/>
+                        <outlet property="listTitle" destination="n37-fN-1r3" id="3He-7l-45K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mS-wV-w3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1463,23 +1517,6 @@ Unicode: U+2297, UTF-8: E2 8A 97</string>
                 <exit id="Q2h-1Q-xXs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2252" y="1338"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="zWo-51-sHi">
-            <objects>
-                <viewController id="Lfl-Cr-Jy3" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0G5-hI-dsT"/>
-                        <viewControllerLayoutGuide type="bottom" id="gtV-Ez-ztP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="SWd-rj-5a6">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4pj-yP-aXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>

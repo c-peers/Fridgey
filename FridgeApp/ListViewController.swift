@@ -11,6 +11,7 @@ import UIKit
 class ListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate, TabBarDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var listCollectionTitle: UINavigationItem!
     
     var mainList = Lists()
     var list: [String] = []

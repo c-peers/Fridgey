@@ -39,7 +39,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
     // anyway except through the IB... not very useful.
     
     var navBar = UINavigationBar(frame: CGRect(x: 0, y: 20, width: 0, height: 44))
-    let navItem = UINavigationItem(title: "SomeTitle")
+    let navItem = UINavigationItem(title: "Your Fridge")
     
     let toolbar = UIToolbar()
     

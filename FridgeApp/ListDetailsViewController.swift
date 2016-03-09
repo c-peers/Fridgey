@@ -15,6 +15,7 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var addNewButton: UIButton!
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var finishedShopping: UIBarButtonItem!
+    @IBOutlet weak var listTitle: UINavigationItem!
     
     var listName: String?
     //var listDetailsDic: [String]?
@@ -45,6 +46,8 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
 //
 //        }
 
+        listTitle.title = listName
+        
         self.subscribeToKeyboardNotifications()
 
         print(listDetails)
@@ -346,23 +349,17 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
                 return
             }
             
-            var ingredients = PersistManager.sharedManager.Ingredients
-            var ingredientsToBeAdded = [Ingredient]()
+            let controller = self.storyboard?.instantiateViewControllerWithIdentifier("FinishedShoppingViewController") as! FinishedShoppingViewController
+            controller.selectedFromList = selectedFromList
+            controller.modalTransitionStyle = .CrossDissolve
+            controller.modalPresentationStyle = .OverCurrentContext
+            self.presentViewController(controller, animated: true, completion: nil)
+
             
-            for ingredient in 0...selectedFromList.count - 1 {
-                let addIngredient = [Ingredient(name: selectedFromList[ingredient], image: nil, expiry: "", amount: 0.0, location: "Area 1 Door")!]
-                ingredientsToBeAdded += addIngredient
-            }
+            //save()
             
-            if ingredientsToBeAdded.count > 0 {
-                ingredients[0] += ingredientsToBeAdded
-            }
-            
-            PersistManager.sharedManager.Ingredients = ingredients
-            save()
-            
-            print("Dismiss")
-            dismissViewControllerAnimated(true, completion: nil)
+            //print("Dismiss")
+            //dismissViewControllerAnimated(true, completion: nil)
             
         }
     
