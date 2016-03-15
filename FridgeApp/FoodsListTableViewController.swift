@@ -84,6 +84,12 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         // Remove the [""]
         ingredientNames.removeAll()
         
+        print(ingredients[4].count)
+        print(ingredients[3][0].name)
+        print(ingredients[2][0].name)
+        print(ingredients[1][0].name)
+        print(ingredients[0][0].name)
+
         for x in 0...ingredients.count - 1 {
             
             if ingredients[x].count != 0 {
@@ -146,18 +152,12 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         //load data here
         print("It actually ran?")
         self.tableView.reloadData()
+        self.tableView.reloadInputViews()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func viewDidAppear() {
-        
-        print("didappear")
-        self.tableView.reloadData()
-        
     }
     
     func didSelectTab(tabBarController: FridgeTabBarController) {
@@ -169,6 +169,7 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         
         print("Actually reload??")
         self.tableView.reloadData()
+        self.tableView.reloadInputViews()
         
     }
     

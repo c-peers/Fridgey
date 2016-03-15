@@ -10,12 +10,20 @@ import UIKit
 
 class ListDetailsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
+    /*
+    // MARK: - Outlets
+    */
+    
     @IBOutlet weak var listTableView: UITableView!
     @IBOutlet weak var addExistingButton: UIButton!
     @IBOutlet weak var addNewButton: UIButton!
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var finishedShopping: UIBarButtonItem!
     @IBOutlet weak var listTitle: UINavigationItem!
+    
+    /*
+    // MARK: - Properties
+    */
     
     var listName: String?
     //var listDetailsDic: [String]?
@@ -92,8 +100,10 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func subscribeToKeyboardNotifications() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        if (self.view.window != nil) {
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        }
     }
     
     func keyboardWillShow(notification: NSNotification) {
@@ -331,6 +341,13 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
             
             listTableView.reloadData()
         
+        } else if let FinishedShoppingView = sender.sourceViewController as? FinishedShoppingViewController {
+            
+            addNewButton.enabled = true
+            addExistingButton.enabled = true
+            finishedShopping.title = "Finished Shopping"
+            listTableView.reloadData()
+            
         }
         
     }
@@ -340,12 +357,16 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         
         if finishedShopping.title == "Finished Shopping" {
             finishedShopping.title = "Add Selected"
+            addNewButton.enabled = false
+            addExistingButton.enabled = false
             //finishedShopping.enabled = false
             listTableView.reloadData()
         } else {
             
             guard selectedFromList.count > 0 else {
                 finishedShopping.title = "Finished Shopping"
+                addNewButton.enabled = true
+                addExistingButton.enabled = true
                 return
             }
             
