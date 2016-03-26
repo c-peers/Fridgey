@@ -10,6 +10,10 @@ import UIKit
 
 class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource, TabBarDelegate {
     
+    /*
+    // MARK: Outlets
+    */
+    
     @IBOutlet weak var expiryTableView: UITableView!
     @IBOutlet weak var navbarTitleText: UILabel!
     @IBOutlet weak var hiddenTextField: UITextField!
@@ -19,7 +23,9 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var editButton: UIBarButtonItem!
     
+    /*
     // MARK: Properties
+    */
     
     // Ingredients
     var ingredients = [[Ingredient]]()
@@ -43,9 +49,10 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     var selectedIngredients: [String] = []
     
     lazy var refreshControl: UIRefreshControl = {
+        let refreshSelector = #selector(ExpireTableView.changeTable(_:))
         let refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: "Change to Date View")
-        refreshControl.addTarget(self, action: "changeTable:", forControlEvents: UIControlEvents.ValueChanged)
+        refreshControl.addTarget(self, action: refreshSelector, forControlEvents: UIControlEvents.ValueChanged)
         
         return refreshControl
     }()
@@ -151,7 +158,10 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
     
     
+    /*
     // MARK: Picker
+    */
+    
     @IBAction func navbarTitleWasTapped(recognizer:UITapGestureRecognizer) {
         print("tap!")
         
@@ -161,10 +171,12 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         //toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
         toolBar.sizeToFit()
         
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
+        let doneSelector = #selector(ExpireTableView.donePicker)
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: doneSelector)
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         let pickerTitle2 = UIBarButtonItem(title: "Choose an expiration window", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelPicker")
+        let cancelSelector = #selector(ExpireTableView.cancelPicker)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: cancelSelector)
         
         toolBar.setItems([cancelButton, pickerTitle2, doneButton], animated: false)
         toolBar.userInteractionEnabled = true
@@ -212,11 +224,13 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         //toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
         toolBar.sizeToFit()
         
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
+        let doneSelector = #selector(ExpireTableView.donePicker)
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: doneSelector)
         let pickerTitle = UINavigationItem(title: "Choose an expiration window")
         let pickerTitle2 = UIBarButtonItem(title: "Choose an expiration window", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
         //let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
+        let cancelSelector = #selector(ExpireTableView.donePicker)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: cancelSelector)
         
         toolBar.setItems([cancelButton, pickerTitle2, doneButton], animated: false)
         toolBar.userInteractionEnabled = true
@@ -239,7 +253,9 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         return 1
     }
     
+    /*
     // MARK: - (Re)Calculate expiration array
+    */
     func calculateExpired() {
         
         expiredIngredients.removeAll()
@@ -272,39 +288,47 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
             if ingredients[x].count > 0 {
                 for y in 0...ingredients[x].count - 1 {
                     
-                    //                print("y")
-                    //                print(y)
-                    //
-                    //                print("Ingredient.expiration")
-                    //                print(ingredients[x][y].expiry)
-                    //                print(ingredients[x][y].name)
-                    
                     dateAsString = ingredients[x][y].expiry
-                    let cellExpiryDate = dateFormatter.dateFromString(dateAsString)!
-                    //diffDateComponents = NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: cellExpiryDate, toDate: currentDate, options: NSCalendarOptions.init(rawValue: 0))
                     
-                    // Only remove if the expiration date is greater than the current date + offset
+                    //guard dateAsString != "" else {
+                    //    print(ingredients[x][y].name)
+                    //    print(dateAsString)
+                    //    expiredIngredients[x].removeAtIndex(arrayYValue)
+                    //}
                     
-                    let inExpiryWindow = cellExpiryDate.laterDate(currentDatePlusExpiryWindow!)
-                    let compareDates = inExpiryWindow.compare(cellExpiryDate)
-                    
-                    if inExpiryWindow == cellExpiryDate {
-                        //if compareDates == NSComparisonResult.OrderedAscending {
+                    if let cellExpiryDate = dateFormatter.dateFromString(dateAsString) {
                         
-                        //let appendIngredientToExpiryArr = ingredients[x][arrayYValue]
+                        // Only remove if the expiration date is greater than the current date + offset
                         
-                        //print("exp ingred")
-                        //print(expiredIngredients)
+                        let inExpiryWindow = cellExpiryDate.laterDate(currentDatePlusExpiryWindow!)
+                        let compareDates = inExpiryWindow.compare(cellExpiryDate)
                         
-                        //Use arrayYValue because the indexes will change after removing a value.
-                        expiredIngredients[x].removeAtIndex(arrayYValue)
+                        if inExpiryWindow == cellExpiryDate {
+                            //if compareDates == NSComparisonResult.OrderedAscending {
+                            
+                            //let appendIngredientToExpiryArr = ingredients[x][arrayYValue]
+                            
+                            //print("exp ingred")
+                            //print(expiredIngredients)
+                            
+                            //Use arrayYValue because the indexes will change after removing a value.
+                            expiredIngredients[x].removeAtIndex(arrayYValue)
+                            
+                        } else {
+                            // This index is fine so increment the counter
+                            print("no match")
+                            arrayYValue += 1
+                        }
                         
                     } else {
-                        // This index is fine so increment the counter
-                        print("no match")
-                        arrayYValue += 1
+                        
+                        print(ingredients[x][y].name)
+                        print(dateAsString)
+                        expiredIngredients[x].removeAtIndex(arrayYValue)
+                        
                     }
                     
+
                 }
             }
             
@@ -371,7 +395,9 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         
     }
     
+    /*
     // MARK: - PickerView
+    */
     // The number of rows of data
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return expirationPickerData.count
@@ -393,8 +419,9 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     //}
     
     
+    /*
     // MARK: - Table view data source
-    
+    */
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
         //if changeViewButton.titleLabel!.text == "Date View" {
@@ -430,15 +457,6 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        //if tableView == self.searchDisplayController!.searchResultsTableView {
-        
-        //    return self.filteredIngredients.count
-        
-        //} else {
-        
-        //return self.ingredients.count
-    
         
         if !isDateSeparatedTable {
     
@@ -504,14 +522,14 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         
     }
     
+    /*
     // MARK: Table Editing
-    
+    */
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // the cells you would like the actions to appear needs to be editable
         return true
     }
     
-    // Override to support editing the table view.
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
         if editingStyle == .Delete {
@@ -558,54 +576,9 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
     
     
-    // MARK: Search
-    
-    //    func filterContentForSearchText(searchText: String) {
-    //        //var ingredient : Ingredient
-    //
-    //        // Filter the array using the filter method
-    //        self.filteredIngredients = self.ingredients.filter({( ingredient : [Ingredient]) -> Bool in
-    //            print("Searching")
-    //            for x in 0...ingredient.count - 1 {
-    //                // let categoryMatch = (scope == "All") || (ingredient.category == scope)
-    //                let stringMatch = ingredient[x].name.rangeOfString(searchText)
-    //                // return categoryMatch && (stringMatch != nil)
-    //                return (stringMatch != nil)
-    //            }
-    //
-    //            return false
-    //
-    //        })
-    //
-    //    }
-    
-    //    func updateSearchResultsForSearchController(searchController: UISearchController) {
-    //        let searchText = searchController.searchBar.text
-    //
-    //        filteredData = searchText.isEmpty ? ingredient : ingredient.filter({(ingredientString: String) -> Bool in
-    //            return ingredientString.rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
-    //        })
-    //
-    //        tableView.reloadData()
-    //    }
-    //
-    //    func filterContentForSearchText(searchText: String, scope: String = "All") {
-    //  filteredIngredients = ingredients.filter { ingredient in
-    //    return ingredient.name.lowercaseString.containsString(searchText.lowercaseString)
-    //  }
-    //
-    //  tableView.reloadData()
-    //}
-    
-    //    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
-    //        self.filterContentForSearchText(searchString)
-    //        return true
-    //    }
-    //
-    //    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
-    //        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text!)
-    //        return true
-    //    }
+    /*
+    // MARK: Table Switching
+    */
     
     func changeTable(refreshControl: UIRefreshControl) {
         
@@ -747,9 +720,10 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         }
         
     }
-    
+
+    /*
     //MARK:- Nav Bar Buttons
-    
+    */
     @IBAction func editAction(sender: AnyObject) {
         self.expiryTableView.setEditing(true, animated: true)
         self.updateButtonsToMatchTableState()
@@ -823,7 +797,6 @@ class ExpireTableView: UIViewController, UITableViewDataSource, UITableViewDeleg
         self.presentViewController(alertController, animated: true, completion: nil)
         
     }
-    
     
     func updateButtonsToMatchTableState() {
         if self.expiryTableView.editing {

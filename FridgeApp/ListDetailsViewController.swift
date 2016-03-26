@@ -101,8 +101,8 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     
     func subscribeToKeyboardNotifications() {
         if (self.view.window != nil) {
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ListDetailsViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ListDetailsViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         }
     }
     
@@ -250,7 +250,9 @@ class ListDetailsViewController: UIViewController, UITableViewDataSource, UITabl
             cell.addToListText.alpha = 1.0
             cell.addToListText.returnKeyType = UIReturnKeyType.Default
             cell.addToListText.delegate = self
-            cell.addToListText.performSelector("becomeFirstResponder", withObject: nil, afterDelay: 0)
+            
+            let selector = #selector(UIResponder.becomeFirstResponder)
+            cell.addToListText.performSelector(selector, withObject: nil, afterDelay: 0)
         } else {
             cell.listItemName.text = listIngredient            
         }

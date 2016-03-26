@@ -61,7 +61,7 @@ class IngredientsByLocation: NSObject, NSCoding {
                     
                         tempArray.append(Ingredients[y].location)
                         //IBLArray[x].append(Ingredients[y].location)
-                        ++arrayYValue
+                        arrayYValue += 1
                     
                 } else {
                     print("no match")

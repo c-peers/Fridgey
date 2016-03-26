@@ -10,11 +10,19 @@ import UIKit
 
 class FinishedShoppingViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    /*
+    // MARK: - Outlets
+    */
+
     @IBOutlet weak var foregroundView: UIView!
     @IBOutlet weak var locationText: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var addRemainingButton: UIButton!
-    
+
+    /*
+    // MARK: - Properties
+    */
+
     var locationPickerData: [String] = [String]()
     var fridgeAreaTextFieldOriginalText = ""
     
@@ -58,13 +66,9 @@ class FinishedShoppingViewController: UIViewController, UITextFieldDelegate, UIP
         
     }
     
-    @IBAction func cancel(sender: AnyObject) {
-        //dismissViewControllerAnimated(true, completion: nil)
-        self.performSegueWithIdentifier("ChooseLocation", sender: self)
-        
-    }
-    
+    /*
     // MARK: Picker
+    */
     // The number of columns of data
     @IBAction func locationBeingChosen(sender: UITextField) {
         
@@ -85,9 +89,11 @@ class FinishedShoppingViewController: UIViewController, UITextFieldDelegate, UIP
         //toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
         toolBar.sizeToFit()
         
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "pickedLocation")
+        let doneSelector = #selector(FinishedShoppingViewController.pickedLocation)
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: doneSelector)
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelLocationPicker")
+        let cancelSelector = #selector(FinishedShoppingViewController.cancelLocationPicker)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: cancelSelector)
         
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.userInteractionEnabled = true
@@ -149,6 +155,10 @@ class FinishedShoppingViewController: UIViewController, UITextFieldDelegate, UIP
         
     }
     
+    /*
+    // MARK: First Responder
+    */
+
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         view.endEditing(true)
         super.touchesBegan(touches, withEvent: event)
@@ -166,7 +176,11 @@ class FinishedShoppingViewController: UIViewController, UITextFieldDelegate, UIP
         
         return true
     }
-    
+
+    /*
+    // MARK: Buttons
+    */
+
     func enableDisableButtons() {
         
         if addRemainingButton.enabled == true {
@@ -187,6 +201,12 @@ class FinishedShoppingViewController: UIViewController, UITextFieldDelegate, UIP
             self.nextButton.setTitle("Finish", forState: .Normal)
             self.addRemainingButton.enabled = false
         }
+        
+    }
+    
+    @IBAction func cancel(sender: AnyObject) {
+        //dismissViewControllerAnimated(true, completion: nil)
+        self.performSegueWithIdentifier("ChooseLocation", sender: self)
         
     }
     
@@ -241,7 +261,6 @@ class FinishedShoppingViewController: UIViewController, UITextFieldDelegate, UIP
         if selectedFromList.count < 1 {
             self.performSegueWithIdentifier("ChooseLocation", sender: self)
         }
-
         
     }
     

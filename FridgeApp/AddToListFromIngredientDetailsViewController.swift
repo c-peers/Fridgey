@@ -129,7 +129,8 @@ class AddToListFromIngredientDetailsViewController: UIViewController, UICollecti
         print(PersistManager.sharedManager.ShoppingLists.lists[textField.text!])
         save()
         
-        performSelector("dismissViewController", withObject: self, afterDelay: 1.5)
+        let selector = #selector(AddToListFromIngredientDetailsViewController.dismissViewController)
+        performSelector(selector, withObject: self, afterDelay: 1.5)
         
     }
     

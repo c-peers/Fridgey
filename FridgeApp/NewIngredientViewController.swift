@@ -270,9 +270,11 @@
             toolBar.barStyle = UIBarStyle.Default
             toolBar.translucent = true
             toolBar.sizeToFit()
-            let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "pickedDate")
+            let doneSelector = #selector(AddToListFromIngredientDetailsViewController.dismissViewController)
+            let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: doneSelector)
             let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
-            let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelDate")
+            let cancelSelector = #selector(NewIngredientViewController.cancelDate)
+            let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: cancelSelector)
             
             toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
             toolBar.userInteractionEnabled = true
@@ -329,9 +331,11 @@
             //toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
             toolBar.sizeToFit()
             
-            let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "pickedLocation")
+            let doneSelector = #selector(NewIngredientViewController.pickedLocation)
+            let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: doneSelector)
             let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
-            let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelLocationPicker")
+            let cancelSelector = #selector(NewIngredientViewController.cancelLocationPicker)
+            let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: cancelSelector)
             
             toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
             toolBar.userInteractionEnabled = true

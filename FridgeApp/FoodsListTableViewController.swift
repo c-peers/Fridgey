@@ -144,7 +144,9 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         
         self.updateButtonsToMatchTableState()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList:",name:"load", object: nil)
+        let selector = #selector(FoodsListTableViewController.loadList(_:))
+            
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:selector, name:"load", object: nil)
         
     }
     
@@ -819,7 +821,8 @@ class FoodsListTableViewController: UIViewController, UITableViewDataSource, UIT
         toolbar.translucent = false
         self.view.addSubview(toolbar)
         
-        let addToListButton = UIBarButtonItem(title: "Add to List", style: .Plain, target: self, action: "addToListBarButtonPressed:")
+        let selector = #selector(FoodsListTableViewController.addToListBarButtonPressed(_:))
+        let addToListButton = UIBarButtonItem(title: "Add to List", style: .Plain, target: self, action: selector)
         
         //toolbar.setItems(toolbarButtons, animated: true)
         toolbar.backgroundColor = UIColor.redColor()

@@ -162,7 +162,7 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource {
             return nil
         }
         
-        index--
+        index -= 1
         
         return self.viewControllerAtIndex(index)
     }
@@ -176,7 +176,7 @@ class FridgeViewController: UIViewController, UIPageViewControllerDataSource {
             return nil
         }
         
-        index++
+        index += 1
         
         if (index == self.fridgeTitles.count) {
             return nil
